@@ -1,0 +1,74 @@
+[
+ {
+  "id": "fan_jordan",
+  "role": "fan",
+  "display_name": "Jordan (USC fan)",
+  "bar_id": null,
+  "club_id": null,
+  "blurb": "Search, review bars, and see where fans gather."
+ },
+ {
+  "id": "bar_huddle",
+  "role": "bar",
+  "display_name": "Sam Rivera · The Huddle House",
+  "bar_id": 1,
+  "club_id": null,
+  "blurb": "Manage your bar profile and pitch fan clubs."
+ },
+ {
+  "id": "bar_fullerton",
+  "role": "bar",
+  "display_name": "Maya Brooks · Fullerton Field House",
+  "bar_id": 4,
+  "club_id": null,
+  "blurb": "Manage your bar profile and pitch fan clubs."
+ },
+ {
+  "id": "bar_commonwealth",
+  "role": "bar",
+  "display_name": "Chris Doyle · Commonwealth Kickoff",
+  "bar_id": 6,
+  "club_id": null,
+  "blurb": "Manage your bar profile and pitch fan clubs."
+ },
+ {
+  "id": "pres_usc_chi",
+  "role": "president",
+  "display_name": "Alex Kim · Trojans of Chicago",
+  "bar_id": null,
+  "club_id": 1,
+  "blurb": "Pick your season home bar and plan watch parties."
+ },
+ {
+  "id": "pres_yale_chi",
+  "role": "president",
+  "display_name": "Priya Shah · Yale Football Watch, Chicago",
+  "bar_id": null,
+  "club_id": 2,
+  "blurb": "Pick your season home bar and plan watch parties."
+ },
+ {
+  "id": "pres_harvard_chi",
+  "role": "president",
+  "display_name": "Ben Cohen · Harvard Game Watch, Chicago",
+  "bar_id": null,
+  "club_id": 3,
+  "blurb": "Pick your season home bar and plan watch parties."
+ },
+ {
+  "id": "pres_bears_bos",
+  "role": "president",
+  "display_name": "Dana Lopez · Bears Fans of Boston",
+  "bar_id": null,
+  "club_id": 6,
+  "blurb": "Pick your season home bar and plan watch parties."
+ },
+ {
+  "id": "pres_packers_bos",
+  "role": "president",
+  "display_name": "Erik Lund · Packers Backers of Boston",
+  "bar_id": null,
+  "club_id": 7,
+  "blurb": "Pick your season home bar and plan watch parties."
+ }
+]

@@ -1,0 +1,30 @@
+[
+ {
+  "bar_id": 1,
+  "club_id": 1,
+  "season": 2026,
+  "status": "confirmed",
+  "confirmed_by": "pres_usc_chi"
+ },
+ {
+  "bar_id": 1,
+  "club_id": 4,
+  "season": 2026,
+  "status": "confirmed",
+  "confirmed_by": "seed"
+ },
+ {
+  "bar_id": 2,
+  "club_id": 5,
+  "season": 2026,
+  "status": "confirmed",
+  "confirmed_by": "seed"
+ },
+ {
+  "bar_id": 6,
+  "club_id": 6,
+  "season": 2026,
+  "status": "confirmed",
+  "confirmed_by": "pres_bears_bos"
+ }
+]

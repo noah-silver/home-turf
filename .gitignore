@@ -1,0 +1,14 @@
+# secrets
+.env
+.env.*
+!.env.example
+**/.env
+# local environment and generated data
+.venv/
+__pycache__/
+*.pyc
+runtime/
+*.db
+*.log
+.DS_Store
+.claude/

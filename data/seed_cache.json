@@ -1,0 +1,1384 @@
+[
+ {
+  "key": "route|usc fans in chicago",
+  "kind": "route",
+  "payload": {
+   "intent": "find",
+   "team": "USC Trojans",
+   "team_b": null,
+   "sport": "college football",
+   "city": "Chicago, IL",
+   "reply_if_rejected": null
+  }
+ },
+ {
+  "key": "spots|usc trojans|chicago",
+  "kind": "spots",
+  "payload": {
+   "team": "USC Trojans",
+   "city": "Chicago, IL",
+   "spots": [
+    {
+     "bar_name": "Theory",
+     "address": "9 W Hubbard St, Chicago, IL 60654",
+     "club_name": "Chicago Trojan Network",
+     "evidence_quote": "Join local Trojans to cheer on the USC Football Team!",
+     "source_url": "https://fightonline.usc.edu/s/listing/a1URj000009I8mkMAC/2026-usc-vs-penn-state-signature-game-watch-party-in-chicago-il",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 41.8899141,
+     "lon": -87.6285193,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "ConnectError",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "2 independent sources agree, including an official one.",
+     "sources": [
+      {
+       "url": "https://fightonline.usc.edu/s/listing/a1URj000009I8mkMAC/2026-usc-vs-penn-state-signature-game-watch-party-in-chicago-il",
+       "quote": "Join local Trojans to cheer on the USC Football Team!",
+       "status": "likely",
+       "official": true,
+       "reason": "The page could not be loaded, but the Scout’s specific quote says local Trojans will gather to cheer on USC football.",
+       "page_loaded": false,
+       "name_on_page": false,
+       "season_on_page": false
+      },
+      {
+       "url": "https://www.theorychicago.com/our-teams/usc-trojans-bar-chicago/",
+       "quote": "Theory is home of the USC Trojans!",
+       "status": "likely",
+       "official": true,
+       "reason": "The page calls Theory Chicago’s home for USC Trojan sports, but it does not establish that this information is current for the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "team": "USC Trojans",
+     "bar_id": 9
+    }
+   ],
+   "club_name": "Chicago Trojan Network",
+   "club_contact_url": "https://alumni.usc.edu/regional-trojan-networks/chicago-trojan-network/",
+   "search_notes": "USC Alumni Association lists a 2026 Chicago watch party at Theory for USC–Penn State on October 10, 2026; that event date has passed. Theory’s own page identifies it as a home for USC fans, but current weekly watch arrangements are unknown. The Chicago Trojan Network page lists 2026 watch parties at various locations.",
+   "safety_notes": [],
+   "found_at": "2026-10-24T23:44:01+00:00"
+  }
+ },
+ {
+  "key": "route|chicago bears fans in boston",
+  "kind": "route",
+  "payload": {
+   "intent": "find",
+   "team": "Chicago Bears",
+   "team_b": null,
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "reply_if_rejected": null
+  }
+ },
+ {
+  "key": "spots|chicago bears|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Chicago Bears",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "The Point",
+     "address": "147 Hanover St, Boston, MA 02108",
+     "club_name": "Chicago Sports Club of New England",
+     "evidence_quote": "Chicago Sports Club of New England rallies here for Monsters of the Midway Sundays",
+     "source_url": "https://2ndhomesports.com/blogs/chicago-bears-bars-in-boston/",
+     "season_seen": "2026",
+     "official_source": false,
+     "lat": 42.3617706,
+     "lon": -71.0569489,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://2ndhomesports.com/blogs/chicago-bears-bars-in-boston/",
+       "quote": "Chicago Sports Club of New England rallies here for Monsters of the Midway Sundays",
+       "status": "confirmed",
+       "official": false,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "Chicago Bears",
+     "bar_id": 10
+    }
+   ],
+   "club_name": "Chicago Sports Club of New England",
+   "club_contact_url": null,
+   "search_notes": "A February 6, 2026 guide explicitly links The Point with the Chicago Sports Club of New England and Bears watch gatherings. No official club contact page was verified.",
+   "safety_notes": [],
+   "found_at": "2026-10-24T23:44:02+00:00"
+  }
+ },
+ {
+  "key": "route|yale fans in chicago",
+  "kind": "route",
+  "payload": {
+   "intent": "find",
+   "team": "Yale Bulldogs",
+   "team_b": null,
+   "sport": "college football",
+   "city": "Chicago, IL",
+   "reply_if_rejected": null
+  }
+ },
+ {
+  "key": "spots|yale bulldogs|chicago",
+  "kind": "spots",
+  "payload": {
+   "team": "Yale Bulldogs",
+   "city": "Chicago, IL",
+   "spots": [
+    {
+     "bar_name": "Piece Pizzeria and Brewery",
+     "address": "1927 W North Ave, Chicago IL",
+     "club_name": "Yale Club of Chicago",
+     "evidence_quote": "Join the Yale Club of Chicago at Piece Pizzeria and Brewery to cheer on the Bulldogs against Harvard!",
+     "source_url": "https://alumni.yale.edu/events/yale-club-chicago-yale-harvard-football-watch-party-yaa-pep-rally",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 41.9102937,
+     "lon": -87.6760621,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://alumni.yale.edu/events/yale-club-chicago-yale-harvard-football-watch-party-yaa-pep-rally",
+       "quote": "Join the Yale Club of Chicago at Piece Pizzeria and Brewery to cheer on the Bulldogs against Harvard!",
+       "status": "confirmed",
+       "official": true,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "Yale Bulldogs",
+     "bar_id": 11
+    }
+   ],
+   "club_name": "Yale Club of Chicago",
+   "club_contact_url": "https://www.yalechicago.org/",
+   "search_notes": "The Yale Alumni Association lists a 2026 Yale-Harvard football watch party at Piece Pizzeria and Brewery. This confirms a 2026 event, not a season-long watch venue.",
+   "safety_notes": [],
+   "found_at": "2026-10-24T23:44:03+00:00"
+  }
+ },
+ {
+  "key": "route|harvard fans in chicago",
+  "kind": "route",
+  "payload": {
+   "intent": "find",
+   "team": "Harvard Crimson",
+   "team_b": null,
+   "sport": "college football",
+   "city": "Chicago, IL",
+   "reply_if_rejected": null
+  }
+ },
+ {
+  "key": "spots|harvard crimson|chicago",
+  "kind": "spots",
+  "payload": {
+   "team": "Harvard Crimson",
+   "city": "Chicago, IL",
+   "spots": [
+    {
+     "bar_name": "Piece Brewery and Pizzeria",
+     "address": "1927 W North Ave, Chicago, IL 60622",
+     "club_name": "Harvard Club of Chicago",
+     "evidence_quote": "Location: Piece Brewery and Pizzeria, 1927 W. North Ave. (near Damen Ave.), Chicago",
+     "source_url": "https://hcchicago.clubs.harvard.edu/article.html?aid=968",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 41.9102937,
+     "lon": -87.6760621,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://hcchicago.clubs.harvard.edu/article.html?aid=968",
+       "quote": "Location: Piece Brewery and Pizzeria, 1927 W. North Ave. (near Damen Ave.), Chicago",
+       "status": "confirmed",
+       "official": true,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "Harvard Crimson",
+     "bar_id": 12
+    }
+   ],
+   "club_name": "Harvard Club of Chicago",
+   "club_contact_url": "https://www.harvardclubchicago.org/",
+   "search_notes": "The Harvard Club of Chicago lists Piece Brewery and Pizzeria for its 2026 Harvard–Yale football viewing party. This is direct evidence for that event, not a recurring watch spot for every Harvard football game.",
+   "safety_notes": [],
+   "found_at": "2026-10-24T23:44:04+00:00"
+  }
+ },
+ {
+  "key": "route|green bay packers fans in boston",
+  "kind": "route",
+  "payload": {
+   "intent": "find",
+   "team": "Green Bay Packers",
+   "team_b": null,
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "reply_if_rejected": null
+  }
+ },
+ {
+  "key": "spots|green bay packers|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Green Bay Packers",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "The Banshee Pub",
+     "address": "934 Dorchester Ave, Dorchester, MA",
+     "club_name": "Packers Boston",
+     "evidence_quote": "“NEXT UP: PACKERS vs. DETROIT LIONS! … The Banshee Pub | Dorchester, Boston”",
+     "source_url": "https://www.packersboston.com/",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 42.3189591,
+     "lon": -71.0564831,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "confirmed",
+     "status_reason": "The Packers Boston page, updated 10-21-26, names The Banshee Pub in Dorchester as the location for the upcoming Packers–Lions watch party.",
+     "sources": [
+      {
+       "url": "https://www.packersboston.com/",
+       "quote": "“NEXT UP: PACKERS vs. DETROIT LIONS! … The Banshee Pub | Dorchester, Boston”",
+       "status": "confirmed",
+       "official": true,
+       "reason": "The Packers Boston page, updated 10-21-26, names The Banshee Pub in Dorchester as the location for the upcoming Packers–Lions watch party.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "team": "Green Bay Packers",
+     "bar_id": 13
+    }
+   ],
+   "club_name": "Packers Boston",
+   "club_contact_url": "https://www.packersboston.com/",
+   "search_notes": "Packers Boston’s own site identifies The Banshee as its gathering place and lists a 2026 game watch. The site was updated October 21, 2026.",
+   "safety_notes": [],
+   "found_at": "2026-10-24T23:44:05+00:00"
+  }
+ },
+ {
+  "key": "route|notre dame fans in chicago",
+  "kind": "route",
+  "payload": {
+   "intent": "find",
+   "team": "Notre Dame Fighting Irish",
+   "team_b": null,
+   "sport": "college football",
+   "city": "Chicago, IL",
+   "reply_if_rejected": null
+  }
+ },
+ {
+  "key": "spots|notre dame fighting irish|chicago",
+  "kind": "spots",
+  "payload": {
+   "team": "Notre Dame Fighting Irish",
+   "city": "Chicago, IL",
+   "spots": [
+    {
+     "bar_name": "Commonwealth Tavern",
+     "address": "unknown",
+     "club_name": "Notre Dame Club of Chicago",
+     "evidence_quote": "2026-2027 NDCC Sponsor Bars Commonwealth Tavern",
+     "source_url": "https://my.nd.edu/topics/1078/page/sponsors-local-businesses",
+     "season_seen": "2026-2027",
+     "official_source": true,
+     "lat": 41.9433508,
+     "lon": -87.6786084,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The page text does not show Commonwealth Tavern, but the Scout's specific quote identifies it as a 2026–2027 Notre Dame Club of Chicago sponsor bar.",
+     "sources": [
+      {
+       "url": "https://my.nd.edu/topics/1078/page/sponsors-local-businesses",
+       "quote": "2026-2027 NDCC Sponsor Bars Commonwealth Tavern",
+       "status": "likely",
+       "official": true,
+       "reason": "The page text does not show Commonwealth Tavern, but the Scout's specific quote identifies it as a 2026–2027 Notre Dame Club of Chicago sponsor bar.",
+       "page_loaded": true,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "Notre Dame Fighting Irish",
+     "bar_id": 14
+    },
+    {
+     "bar_name": "Declan's Irish Pub",
+     "address": "1240 N. Wells St.",
+     "club_name": "Notre Dame Club of Chicago",
+     "evidence_quote": "2026-2027 NDCC Sponsor Bars ... Declan's Irish Pub",
+     "source_url": "https://my.nd.edu/topics/1078/page/sponsors-local-businesses",
+     "season_seen": "2026-2027",
+     "official_source": true,
+     "lat": 41.9050672,
+     "lon": -87.6348536,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The page text does not show Declan's Irish Pub, but the Scout's specific quote identifies it as a 2026–2027 Notre Dame Club of Chicago sponsor bar.",
+     "sources": [
+      {
+       "url": "https://my.nd.edu/topics/1078/page/sponsors-local-businesses",
+       "quote": "2026-2027 NDCC Sponsor Bars ... Declan's Irish Pub",
+       "status": "likely",
+       "official": true,
+       "reason": "The page text does not show Declan's Irish Pub, but the Scout's specific quote identifies it as a 2026–2027 Notre Dame Club of Chicago sponsor bar.",
+       "page_loaded": true,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "Notre Dame Fighting Irish",
+     "bar_id": 15
+    },
+    {
+     "bar_name": "Flo & Santos",
+     "address": "unknown",
+     "club_name": "Notre Dame Club of Chicago",
+     "evidence_quote": "2026-2027 NDCC Sponsor Bars ... Flo & Santos",
+     "source_url": "https://my.nd.edu/topics/1078/page/sponsors-local-businesses",
+     "season_seen": "2026-2027",
+     "official_source": true,
+     "lat": 41.865387,
+     "lon": -87.6263756,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The page text does not show Flo & Santos, but the Scout's specific quote identifies it as a 2026–2027 Notre Dame Club of Chicago sponsor bar.",
+     "sources": [
+      {
+       "url": "https://my.nd.edu/topics/1078/page/sponsors-local-businesses",
+       "quote": "2026-2027 NDCC Sponsor Bars ... Flo & Santos",
+       "status": "likely",
+       "official": true,
+       "reason": "The page text does not show Flo & Santos, but the Scout's specific quote identifies it as a 2026–2027 Notre Dame Club of Chicago sponsor bar.",
+       "page_loaded": true,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "Notre Dame Fighting Irish",
+     "bar_id": 16
+    },
+    {
+     "bar_name": "The Kerryman",
+     "address": "unknown",
+     "club_name": "Notre Dame Club of Chicago",
+     "evidence_quote": "2026-2027 NDCC Sponsor Bars ... The Kerryman",
+     "source_url": "https://my.nd.edu/topics/1078/page/sponsors-local-businesses",
+     "season_seen": "2026-2027",
+     "official_source": true,
+     "lat": 41.8941753,
+     "lon": -87.6309917,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The page text does not show The Kerryman, but the Scout's specific quote identifies it as a 2026–2027 Notre Dame Club of Chicago sponsor bar.",
+     "sources": [
+      {
+       "url": "https://my.nd.edu/topics/1078/page/sponsors-local-businesses",
+       "quote": "2026-2027 NDCC Sponsor Bars ... The Kerryman",
+       "status": "likely",
+       "official": true,
+       "reason": "The page text does not show The Kerryman, but the Scout's specific quote identifies it as a 2026–2027 Notre Dame Club of Chicago sponsor bar.",
+       "page_loaded": true,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "Notre Dame Fighting Irish",
+     "bar_id": 17
+    },
+    {
+     "bar_name": "Kincade's",
+     "address": "unknown",
+     "club_name": "Notre Dame Club of Chicago",
+     "evidence_quote": "2026-2027 NDCC Sponsor Bars ... Kincade's",
+     "source_url": "https://my.nd.edu/topics/1078/page/sponsors-local-businesses",
+     "season_seen": "2026-2027",
+     "official_source": true,
+     "lat": 41.9182758,
+     "lon": -87.6529267,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The page text does not show Kincade's, but the Scout's specific quote identifies it as a 2026–2027 Notre Dame Club of Chicago sponsor bar.",
+     "sources": [
+      {
+       "url": "https://my.nd.edu/topics/1078/page/sponsors-local-businesses",
+       "quote": "2026-2027 NDCC Sponsor Bars ... Kincade's",
+       "status": "likely",
+       "official": true,
+       "reason": "The page text does not show Kincade's, but the Scout's specific quote identifies it as a 2026–2027 Notre Dame Club of Chicago sponsor bar.",
+       "page_loaded": true,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "Notre Dame Fighting Irish",
+     "bar_id": 18
+    }
+   ],
+   "club_name": "Notre Dame Club of Chicago",
+   "club_contact_url": "https://my.nd.edu/topics/1078/page/sponsors-local-businesses",
+   "search_notes": "The Notre Dame Club of Chicago’s official sponsor-bar page lists these venues for 2026–2027. The club’s page names neighborhoods but does not provide street addresses; only Declan’s address was available in the venue’s own listing.",
+   "safety_notes": [],
+   "found_at": "2026-10-24T23:44:09+00:00"
+  }
+ },
+ {
+  "key": "route|michigan fans in chicago",
+  "kind": "route",
+  "payload": {
+   "intent": "find",
+   "team": "Michigan Wolverines",
+   "team_b": null,
+   "sport": "college football",
+   "city": "Chicago, IL",
+   "reply_if_rejected": null
+  }
+ },
+ {
+  "key": "spots|michigan wolverines|chicago",
+  "kind": "spots",
+  "payload": {
+   "team": "Michigan Wolverines",
+   "city": "Chicago, IL",
+   "spots": [
+    {
+     "bar_name": "Duffy's Tavern and Grille",
+     "address": "420 W Diversey Pkwy, Chicago, IL 60614",
+     "club_name": "U-M Club of Greater Chicago",
+     "evidence_quote": "Chicago — Duffy's Tavern and Grille ... All games",
+     "source_url": "https://alumni.umich.edu/athletics/game-watch-parties/",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 41.9330011,
+     "lon": -87.6403512,
+     "geocoded": true,
+     "page_loaded": false,
+     "page_error": "HTTP 403",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The source page returned HTTP 403, but the Scout specifically lists Duffy's Tavern and Grille for Chicago and all games.",
+     "sources": [
+      {
+       "url": "https://alumni.umich.edu/athletics/game-watch-parties/",
+       "quote": "Chicago — Duffy's Tavern and Grille ... All games",
+       "status": "likely",
+       "official": true,
+       "reason": "The source page returned HTTP 403, but the Scout specifically lists Duffy's Tavern and Grille for Chicago and all games.",
+       "page_loaded": false,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "Michigan Wolverines",
+     "bar_id": 19
+    },
+    {
+     "bar_name": "Moe's Cantina - River North",
+     "address": "155 W Kinzie St, Chicago, IL 60654",
+     "club_name": "U-M Club of Greater Chicago",
+     "evidence_quote": "Chicago — Moe's Cantina - River North ... All games",
+     "source_url": "https://alumni.umich.edu/athletics/game-watch-parties/",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 41.8889514,
+     "lon": -87.6332043,
+     "geocoded": true,
+     "page_loaded": false,
+     "page_error": "HTTP 403",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The source page returned HTTP 403, but the Scout specifically lists Moe's Cantina - River North for Chicago and all games.",
+     "sources": [
+      {
+       "url": "https://alumni.umich.edu/athletics/game-watch-parties/",
+       "quote": "Chicago — Moe's Cantina - River North ... All games",
+       "status": "likely",
+       "official": true,
+       "reason": "The source page returned HTTP 403, but the Scout specifically lists Moe's Cantina - River North for Chicago and all games.",
+       "page_loaded": false,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "Michigan Wolverines",
+     "bar_id": 20
+    },
+    {
+     "bar_name": "Sully's House",
+     "address": "1501 N Dayton St, Chicago, IL 60642",
+     "club_name": "U-M Club of Greater Chicago",
+     "evidence_quote": "Chicago — Sully's House ... All games",
+     "source_url": "https://alumni.umich.edu/athletics/game-watch-parties/",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 41.9086893,
+     "lon": -87.6491398,
+     "geocoded": true,
+     "page_loaded": false,
+     "page_error": "HTTP 403",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The source page returned HTTP 403, but the Scout specifically lists Sully's House for Chicago and all games.",
+     "sources": [
+      {
+       "url": "https://alumni.umich.edu/athletics/game-watch-parties/",
+       "quote": "Chicago — Sully's House ... All games",
+       "status": "likely",
+       "official": true,
+       "reason": "The source page returned HTTP 403, but the Scout specifically lists Sully's House for Chicago and all games.",
+       "page_loaded": false,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "Michigan Wolverines",
+     "bar_id": 21
+    },
+    {
+     "bar_name": "The Reveler",
+     "address": "3403 N Damen Ave, Chicago, IL 60657",
+     "club_name": "U-M Club of Greater Chicago",
+     "evidence_quote": "Chicago — The Reveler ... All games",
+     "source_url": "https://alumni.umich.edu/athletics/game-watch-parties/",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 41.9435223,
+     "lon": -87.6783231,
+     "geocoded": true,
+     "page_loaded": false,
+     "page_error": "HTTP 403",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The source page returned HTTP 403, but the Scout specifically lists The Reveler for Chicago and all games.",
+     "sources": [
+      {
+       "url": "https://alumni.umich.edu/athletics/game-watch-parties/",
+       "quote": "Chicago — The Reveler ... All games",
+       "status": "likely",
+       "official": true,
+       "reason": "The source page returned HTTP 403, but the Scout specifically lists The Reveler for Chicago and all games.",
+       "page_loaded": false,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "Michigan Wolverines",
+     "bar_id": 22
+    }
+   ],
+   "club_name": "U-M Club of Greater Chicago",
+   "club_contact_url": "https://alumni.umich.edu/communities-clubs/chicago/",
+   "search_notes": "The University of Michigan Alumni Association’s 2026 game-watch listing names these four Chicago locations for all games. The club’s Chicago page lists its public contact email: umclubchicago@gmail.com.",
+   "safety_notes": [],
+   "found_at": "2026-10-24T23:44:10+00:00"
+  }
+ },
+ {
+  "key": "schedule|usc trojans|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "USC Trojans",
+   "season": "2026",
+   "games": [
+    {
+     "date": "2026-08-29",
+     "opponent": "San José State",
+     "home_away": "home",
+     "kickoff_et": "3:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-04",
+     "opponent": "Fresno State",
+     "home_away": "home",
+     "kickoff_et": "9:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-12",
+     "opponent": "Louisiana",
+     "home_away": "home",
+     "kickoff_et": "11:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-19",
+     "opponent": "Rutgers",
+     "home_away": "away",
+     "kickoff_et": "3:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-26",
+     "opponent": "Oregon",
+     "home_away": "home",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-03",
+     "opponent": "Washington",
+     "home_away": "home",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-10",
+     "opponent": "Penn State",
+     "home_away": "away",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-24",
+     "opponent": "Wisconsin",
+     "home_away": "away",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-10-31",
+     "opponent": "Ohio State",
+     "home_away": "home",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-14",
+     "opponent": "Indiana",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-21",
+     "opponent": "Maryland",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-28",
+     "opponent": "UCLA",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://usctrojans.com/sports/football/schedule/2026"
+  }
+ },
+ {
+  "key": "schedule|notre dame fighting irish|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "Notre Dame Fighting Irish",
+   "season": "2026",
+   "games": [
+    {
+     "date": "2026-09-06",
+     "opponent": "Wisconsin",
+     "home_away": "neutral",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-09-12",
+     "opponent": "Rice",
+     "home_away": "home",
+     "kickoff_et": "3:30 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-09-19",
+     "opponent": "Michigan State",
+     "home_away": "home",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-09-26",
+     "opponent": "Purdue",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-03",
+     "opponent": "North Carolina",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-10",
+     "opponent": "Stanford",
+     "home_away": "home",
+     "kickoff_et": "3:30 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-10-17",
+     "opponent": "BYU",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-31",
+     "opponent": "Navy",
+     "home_away": "neutral",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-07",
+     "opponent": "Miami",
+     "home_away": "home",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-11-14",
+     "opponent": "Boston College",
+     "home_away": "home",
+     "kickoff_et": "3:30 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-11-21",
+     "opponent": "SMU",
+     "home_away": "home",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-11-28",
+     "opponent": "Syracuse",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://fightingirish.com/sports/football/schedule/season/2026-27"
+  }
+ },
+ {
+  "key": "schedule|michigan wolverines|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "Michigan Wolverines",
+   "season": "2026",
+   "games": [
+    {
+     "date": "2026-09-05",
+     "opponent": "Western Michigan",
+     "home_away": "home",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-09-12",
+     "opponent": "Oklahoma",
+     "home_away": "home",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "Fox"
+    },
+    {
+     "date": "2026-09-19",
+     "opponent": "UTEP",
+     "home_away": "home",
+     "kickoff_et": "3:30 PM ET",
+     "tv": "Big Ten Network"
+    },
+    {
+     "date": "2026-09-26",
+     "opponent": "Iowa",
+     "home_away": "home",
+     "kickoff_et": "3:30 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-10-03",
+     "opponent": "Minnesota",
+     "home_away": "away",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "Fox"
+    },
+    {
+     "date": "2026-10-17",
+     "opponent": "Penn State",
+     "home_away": "home",
+     "kickoff_et": "3:30 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-10-24",
+     "opponent": "Indiana",
+     "home_away": "home",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "Fox"
+    },
+    {
+     "date": "2026-10-31",
+     "opponent": "Rutgers",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-07",
+     "opponent": "Michigan State",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-14",
+     "opponent": "Oregon",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-21",
+     "opponent": "UCLA",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-28",
+     "opponent": "Ohio State",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://mgoblue.com/sports/football/schedule/2026"
+  }
+ },
+ {
+  "key": "schedule|yale bulldogs|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "Yale Bulldogs",
+   "season": "2026",
+   "games": [
+    {
+     "date": "2026-09-19",
+     "opponent": "Holy Cross",
+     "home_away": "away",
+     "kickoff_et": "2:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-26",
+     "opponent": "Cornell",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-03",
+     "opponent": "Merrimack",
+     "home_away": "home",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-10",
+     "opponent": "Dartmouth",
+     "home_away": "home",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "ESPNU"
+    },
+    {
+     "date": "2026-10-17",
+     "opponent": "Rhode Island",
+     "home_away": "home",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-23",
+     "opponent": "Pennsylvania",
+     "home_away": "away",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "ESPNU"
+    },
+    {
+     "date": "2026-10-31",
+     "opponent": "Columbia",
+     "home_away": "away",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-07",
+     "opponent": "Brown",
+     "home_away": "home",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-14",
+     "opponent": "Princeton",
+     "home_away": "home",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-21",
+     "opponent": "Harvard",
+     "home_away": "away",
+     "kickoff_et": "3:30 PM ET",
+     "tv": "ESPNU"
+    }
+   ],
+   "source_url": "https://yalebulldogs.com/sports/football/schedule/2026"
+  }
+ },
+ {
+  "key": "schedule|harvard crimson|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "Harvard Crimson",
+   "season": "2026",
+   "games": [
+    {
+     "date": "2026-09-19",
+     "opponent": "New Hampshire",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-25",
+     "opponent": "Brown",
+     "home_away": "away",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-03",
+     "opponent": "Colgate",
+     "home_away": "home",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-10",
+     "opponent": "Cornell",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-17",
+     "opponent": "Holy Cross",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-24",
+     "opponent": "Princeton",
+     "home_away": "home",
+     "kickoff_et": "3:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-30",
+     "opponent": "Dartmouth",
+     "home_away": "away",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-07",
+     "opponent": "Columbia",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-14",
+     "opponent": "Pennsylvania",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-21",
+     "opponent": "Yale",
+     "home_away": "neutral",
+     "kickoff_et": "3:30 PM ET",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://gocrimson.com/sports/football/schedule/2026"
+  }
+ },
+ {
+  "key": "schedule|chicago bears|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "Chicago Bears",
+   "season": "2026",
+   "games": [
+    {
+     "date": "2026-09-13",
+     "opponent": "Carolina Panthers",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-20",
+     "opponent": "Minnesota Vikings",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-28",
+     "opponent": "Philadelphia Eagles",
+     "home_away": "home",
+     "kickoff_et": "8:15 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-04",
+     "opponent": "New York Jets",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-11",
+     "opponent": "Green Bay Packers",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-18",
+     "opponent": "Atlanta Falcons",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-22",
+     "opponent": "New England Patriots",
+     "home_away": "home",
+     "kickoff_et": "8:15 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-02",
+     "opponent": "Seattle Seahawks",
+     "home_away": "away",
+     "kickoff_et": "8:15 PM ET",
+     "tv": "ESPN, ABC, ESPN2, ESPN Deportes"
+    },
+    {
+     "date": "2026-11-08",
+     "opponent": "Tampa Bay Buccaneers",
+     "home_away": "home",
+     "kickoff_et": "8:20 PM ET",
+     "tv": "NBC, Universo"
+    },
+    {
+     "date": "2026-11-22",
+     "opponent": "New Orleans Saints",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-11-26",
+     "opponent": "Detroit Lions",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-12-06",
+     "opponent": "Jacksonville Jaguars",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-12-13",
+     "opponent": "Miami Dolphins",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-12-19",
+     "opponent": "Buffalo Bills",
+     "home_away": "away",
+     "kickoff_et": "8:20 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-12-25",
+     "opponent": "Green Bay Packers",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "Netflix"
+    },
+    {
+     "date": "2027-01-03",
+     "opponent": "Detroit Lions",
+     "home_away": "home",
+     "kickoff_et": "4:25 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "TBD",
+     "opponent": "Minnesota Vikings",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://www.chicagobears.com/schedule/2026/"
+  }
+ },
+ {
+  "key": "schedule|green bay packers|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "Green Bay Packers",
+   "season": "2026",
+   "games": [
+    {
+     "date": "2026-09-13",
+     "opponent": "Minnesota Vikings",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-20",
+     "opponent": "New York Jets",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-24",
+     "opponent": "Atlanta Falcons",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-04",
+     "opponent": "Tampa Bay Buccaneers",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-11",
+     "opponent": "Chicago Bears",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-18",
+     "opponent": "Dallas Cowboys",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-25",
+     "opponent": "Detroit Lions",
+     "home_away": "away",
+     "kickoff_et": "4:25 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-10-29",
+     "opponent": "Carolina Panthers",
+     "home_away": "home",
+     "kickoff_et": "8:15 PM ET",
+     "tv": "Prime Video"
+    },
+    {
+     "date": "2026-11-08",
+     "opponent": "New England Patriots",
+     "home_away": "away",
+     "kickoff_et": "4:25 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-11-15",
+     "opponent": "Minnesota Vikings",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-11-25",
+     "opponent": "Los Angeles Rams",
+     "home_away": "away",
+     "kickoff_et": "8:00 PM ET",
+     "tv": "Netflix"
+    },
+    {
+     "date": "2026-12-06",
+     "opponent": "New Orleans Saints",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-12-13",
+     "opponent": "Buffalo Bills",
+     "home_away": "home",
+     "kickoff_et": "8:20 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-12-20",
+     "opponent": "Miami Dolphins",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-12-25",
+     "opponent": "Chicago Bears",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "Netflix"
+    },
+    {
+     "date": "2027-01-04",
+     "opponent": "Houston Texans",
+     "home_away": "home",
+     "kickoff_et": "8:15 PM ET",
+     "tv": "ESPN"
+    },
+    {
+     "date": "TBD",
+     "opponent": "Detroit Lions",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://www.packers.com/schedule/2026/"
+  }
+ }
+]

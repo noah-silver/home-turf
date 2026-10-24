@@ -1,0 +1,106 @@
+[
+ {
+  "bar_id": 1,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": "USC Trojans",
+  "rating": 5,
+  "text": "Sound was on for the whole USC game and the back room was all cardinal and gold. Got there 30 min before kickoff and still got a table."
+ },
+ {
+  "bar_id": 1,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": "Notre Dame Fighting Irish",
+  "rating": 4,
+  "text": "Huge Irish crowd, great energy. The two rooms meant the USC folks and us didn't have to fight over the sound."
+ },
+ {
+  "bar_id": 1,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": "USC Trojans",
+  "rating": 4,
+  "text": "Late kickoff and they stayed open past midnight for us. Wings were average but TVs everywhere."
+ },
+ {
+  "bar_id": 2,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": "Michigan Wolverines",
+  "rating": 5,
+  "text": "Maize and blue everywhere. Sound on, loud crowd, staff knew every fight song."
+ },
+ {
+  "bar_id": 2,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": null,
+  "rating": 3,
+  "text": "Fun on Saturdays but packed after Cubs games, hard to find a seat."
+ },
+ {
+  "bar_id": 3,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": "Harvard Crimson",
+  "rating": 4,
+  "text": "Small but they streamed ESPN+ on the big screen for us without any fuss."
+ },
+ {
+  "bar_id": 4,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": null,
+  "rating": 5,
+  "text": "Massive place, 40 TVs. Rivalry day they split the room down the middle, which was hilarious."
+ },
+ {
+  "bar_id": 4,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": "Yale Bulldogs",
+  "rating": 4,
+  "text": "Great for a big group. Service slowed down at halftime."
+ },
+ {
+  "bar_id": 5,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": null,
+  "rating": 3,
+  "text": "Cozy, but sound goes to whoever has the most people, so small clubs lose out."
+ },
+ {
+  "bar_id": 6,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": "Chicago Bears",
+  "rating": 5,
+  "text": "Best Bears bar in Boston. Sound on every Sunday and real Chicago dogs."
+ },
+ {
+  "bar_id": 6,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": "Chicago Bears",
+  "rating": 4,
+  "text": "Good crowd, TVs are great. Gets tight for prime-time games."
+ },
+ {
+  "bar_id": 7,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": "Green Bay Packers",
+  "rating": 4,
+  "text": "Three sound zones is genius. Packers zone was rowdy in the best way."
+ },
+ {
+  "bar_id": 8,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": null,
+  "rating": 3,
+  "text": "Tiny but friendly. Only a handful of TVs."
+ }
+]

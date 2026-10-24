@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 640" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b8902f"/>
+    </marker>
+    <style>
+      .lane { fill: #f5f6f9; stroke: #e3e7ee; }
+      .lane-t { font: 700 13px Georgia, serif; fill: #0f2240; letter-spacing: .04em; }
+      .box { fill: #ffffff; stroke: #cfd6e2; stroke-width: 1.2; }
+      .agent { fill: #0f2240; }
+      .agent-t { fill: #ffffff; font-weight: 700; font-size: 14px; }
+      .agent-s { fill: #c9d3e6; font-size: 11px; }
+      .human { fill: #f4ead2; stroke: #b8902f; stroke-width: 1.2; }
+      .human-t { fill: #0f2240; font-weight: 700; font-size: 13px; }
+      .t { fill: #1b2433; font-size: 12px; }
+      .s { fill: #5d6b82; font-size: 11px; }
+      .code { fill: #e3f3ea; stroke: #1f7a4d; stroke-width: 1.2; }
+      .code-t { fill: #1f7a4d; font-weight: 700; font-size: 12px; }
+      .ln { stroke: #b8902f; stroke-width: 2; fill: none; marker-end: url(#arr); }
+      .ln2 { stroke: #8a94a6; stroke-width: 1.5; fill: none; stroke-dasharray: 4 3; marker-end: url(#arr); }
+    </style>
+  </defs>
+
+  <!-- Lane 1: fan search -->
+  <rect class="lane" x="10" y="10" width="1080" height="170" rx="14"/>
+  <text class="lane-t" x="28" y="36">1 · FAN SEARCH  “USC fans in Chicago”</text>
+
+  <rect class="human" x="28" y="60" width="110" height="64" rx="10"/>
+  <text class="human-t" x="83" y="88" text-anchor="middle">Fan</text>
+  <text class="s" x="83" y="106" text-anchor="middle">types a search</text>
+
+  <rect class="agent" x="168" y="56" width="140" height="72" rx="10"/>
+  <text class="agent-t" x="238" y="84" text-anchor="middle">Router</text>
+  <text class="agent-s" x="238" y="101" text-anchor="middle">intent · team · city</text>
+  <text class="agent-s" x="238" y="116" text-anchor="middle">no tools · effort none</text>
+
+  <rect class="code" x="338" y="62" width="120" height="60" rx="10"/>
+  <text class="code-t" x="398" y="87" text-anchor="middle">Result cache</text>
+  <text class="s" x="398" y="104" text-anchor="middle">7 days · $0 on hit</text>
+
+  <rect class="agent" x="488" y="56" width="160" height="72" rx="10"/>
+  <text class="agent-t" x="568" y="84" text-anchor="middle">Scout</text>
+  <text class="agent-s" x="568" y="101" text-anchor="middle">web_search (max 3)</text>
+  <text class="agent-s" x="568" y="116" text-anchor="middle">sources + quotes</text>
+
+  <rect class="agent" x="678" y="56" width="180" height="72" rx="10"/>
+  <text class="agent-t" x="768" y="84" text-anchor="middle">Verifier</text>
+  <text class="agent-s" x="768" y="101" text-anchor="middle">code checks first: fetch_page,</text>
+  <text class="agent-s" x="768" y="116" text-anchor="middle">geocode · model only if unclear</text>
+
+  <rect class="box" x="888" y="56" width="186" height="72" rx="10"/>
+  <text class="t" x="981" y="82" text-anchor="middle" font-weight="700">Map + verified list</text>
+  <text class="s" x="981" y="99" text-anchor="middle">green / amber / gray pins</text>
+  <text class="s" x="981" y="114" text-anchor="middle">+ run receipt (tokens, $)</text>
+
+  <path class="ln" d="M138 92 H166"/>
+  <path class="ln" d="M308 92 H336"/>
+  <path class="ln" d="M458 92 H486"/>
+  <path class="ln" d="M648 92 H676"/>
+  <path class="ln" d="M858 92 H886"/>
+  <path class="ln2" d="M398 124 C 398 160, 960 160, 978 130"/>
+  <text class="s" x="640" y="166">cache hit skips Scout + Verifier</text>
+
+  <!-- Lane 2: marketplace -->
+  <rect class="lane" x="10" y="192" width="1080" height="262" rx="14"/>
+  <text class="lane-t" x="28" y="218">2 · MARKETPLACE  fan clubs ⇄ bars</text>
+
+  <rect class="human" x="28" y="240" width="130" height="64" rx="10"/>
+  <text class="human-t" x="93" y="267" text-anchor="middle">Club president</text>
+  <text class="s" x="93" y="285" text-anchor="middle">season · rivalry</text>
+
+  <rect class="agent" x="190" y="234" width="210" height="76" rx="10"/>
+  <text class="agent-t" x="295" y="262" text-anchor="middle">Matchmaker</text>
+  <text class="agent-s" x="295" y="279" text-anchor="middle">season: rank bars, explain clashes</text>
+  <text class="agent-s" x="295" y="294" text-anchor="middle">rivalry: one bar, one game, 3 drafts</text>
+
+  <rect class="agent" x="190" y="352" width="210" height="64" rx="10"/>
+  <text class="agent-t" x="295" y="378" text-anchor="middle">Schedule</text>
+  <text class="agent-s" x="295" y="396" text-anchor="middle">web_search (max 2) · cached 24 h</text>
+  <path class="ln" d="M295 352 V312"/>
+
+  <rect class="code" x="430" y="240" width="170" height="64" rx="10"/>
+  <text class="code-t" x="515" y="265" text-anchor="middle">Code facts + checks</text>
+  <text class="s" x="515" y="282" text-anchor="middle">capacity, conflicts, valid</text>
+  <text class="s" x="515" y="296" text-anchor="middle">bar_ids only</text>
+  <path class="ln" d="M158 272 H188"/>
+  <path class="ln" d="M400 272 H428"/>
+
+  <rect class="human" x="630" y="236" width="200" height="72" rx="10"/>
+  <text class="human-t" x="730" y="262" text-anchor="middle">Human approvals</text>
+  <text class="s" x="730" y="280" text-anchor="middle">home bar: president confirms</text>
+  <text class="s" x="730" y="295" text-anchor="middle">rivalry: both clubs + bar</text>
+  <path class="ln" d="M600 272 H628"/>
+
+  <rect class="human" x="28" y="352" width="130" height="64" rx="10"/>
+  <text class="human-t" x="93" y="379" text-anchor="middle">Bar manager</text>
+  <text class="s" x="93" y="397" text-anchor="middle">profile · pitches</text>
+
+  <rect class="agent" x="430" y="350" width="170" height="68" rx="10"/>
+  <text class="agent-t" x="515" y="377" text-anchor="middle">Pitch Writer</text>
+  <text class="agent-s" x="515" y="395" text-anchor="middle">grounded in bar profile</text>
+  <text class="agent-s" x="515" y="409" text-anchor="middle">number validator + retry</text>
+  <path class="ln" d="M93 416 V440 H515 V421"/>
+
+  <rect class="agent" x="630" y="350" width="200" height="68" rx="10"/>
+  <text class="agent-t" x="730" y="377" text-anchor="middle">Guard</text>
+  <text class="agent-s" x="730" y="395" text-anchor="middle">free code filter → model</text>
+  <text class="agent-s" x="730" y="409" text-anchor="middle">reviews · profiles · pitches</text>
+  <path class="ln" d="M600 384 H628"/>
+
+  <rect class="box" x="862" y="236" width="212" height="72" rx="10"/>
+  <text class="t" x="968" y="262" text-anchor="middle" font-weight="700">Confirmed season / event</text>
+  <text class="s" x="968" y="280" text-anchor="middle">nothing is booked or sent</text>
+  <text class="s" x="968" y="295" text-anchor="middle">until people approve</text>
+  <path class="ln" d="M830 272 H860"/>
+
+  <rect class="agent" x="862" y="350" width="212" height="68" rx="10"/>
+  <text class="agent-t" x="968" y="377" text-anchor="middle">Summarizer</text>
+  <text class="agent-s" x="968" y="395" text-anchor="middle">reviews → game-day score</text>
+  <text class="agent-s" x="968" y="409" text-anchor="middle">cached by review hash</text>
+  <path class="ln" d="M830 384 H860"/>
+  <path class="ln2" d="M730 350 V310"/>
+  <text class="s" x="740" y="333">pitch → club inbox</text>
+
+  <!-- Lane 3: doorway -->
+  <rect x="10" y="466" width="1080" height="164" rx="14" fill="#0f2240"/>
+  <text x="28" y="494" font-family="Georgia, serif" font-weight="700" font-size="13" fill="#b8902f" letter-spacing=".04em">3 · ONE DOORWAY TO THE MODEL  (agents/llm.py)</text>
+  <g font-size="12" fill="#ffffff">
+    <rect x="28" y="510" width="200" height="48" rx="8" fill="#17305a"/><text x="128" y="531" text-anchor="middle" font-weight="700">Spend caps</text><text x="128" y="547" text-anchor="middle" fill="#c9d3e6" font-size="11">run · session · day</text>
+    <rect x="240" y="510" width="200" height="48" rx="8" fill="#17305a"/><text x="340" y="531" text-anchor="middle" font-weight="700">Structured outputs</text><text x="340" y="547" text-anchor="middle" fill="#c9d3e6" font-size="11">Pydantic schemas</text>
+    <rect x="452" y="510" width="200" height="48" rx="8" fill="#17305a"/><text x="552" y="531" text-anchor="middle" font-weight="700">Untrusted-data fences</text><text x="552" y="547" text-anchor="middle" fill="#c9d3e6" font-size="11">web, profiles, reviews</text>
+    <rect x="664" y="510" width="200" height="48" rx="8" fill="#17305a"/><text x="764" y="531" text-anchor="middle" font-weight="700">Retries (429/5xx only)</text><text x="764" y="547" text-anchor="middle" fill="#c9d3e6" font-size="11">jittered backoff, max 4</text>
+    <rect x="876" y="510" width="198" height="48" rx="8" fill="#17305a"/><text x="975" y="531" text-anchor="middle" font-weight="700">Usage + audit log</text><text x="975" y="547" text-anchor="middle" fill="#c9d3e6" font-size="11">tokens, $, every step</text>
+  </g>
+  <text x="550" y="594" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="700">Portkey gateway  →  gpt-6-luna (Responses API)</text>
+  <text x="550" y="614" text-anchor="middle" font-size="11" fill="#c9d3e6">$0.10 / 1M input · $0.01 / 1M cached · $0.50 / 1M output · $0.01 per web search</text>
+</svg>

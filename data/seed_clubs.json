@@ -1,0 +1,93 @@
+[
+ {
+  "id": 1,
+  "name": "Trojans of Chicago (demo club)",
+  "team": "USC Trojans",
+  "sport": "college football",
+  "city": "Chicago, IL",
+  "typical_turnout": 70,
+  "preferred_area": "River North",
+  "needs": "Sound on for every USC game. Several kickoffs are late (10:30 PM ET), so the bar must stay open late. Want a reserved area for 60-80 fans.",
+  "home_bar_id": 1,
+  "contact_url": "",
+  "is_demo": 1
+ },
+ {
+  "id": 2,
+  "name": "Yale Alumni Football Watch, Chicago (demo club)",
+  "team": "Yale Bulldogs",
+  "sport": "college football",
+  "city": "Chicago, IL",
+  "typical_turnout": 40,
+  "preferred_area": "Lincoln Park",
+  "needs": "Ivy League games often stream only on ESPN+, so the bar needs streaming on a main screen. The Game in November is our biggest day.",
+  "home_bar_id": null,
+  "contact_url": "",
+  "is_demo": 1
+ },
+ {
+  "id": 3,
+  "name": "Harvard Game Watch, Chicago (demo club)",
+  "team": "Harvard Crimson",
+  "sport": "college football",
+  "city": "Chicago, IL",
+  "typical_turnout": 45,
+  "preferred_area": "The Loop",
+  "needs": "Need ESPN+ streaming and a reserved section for The Game.",
+  "home_bar_id": null,
+  "contact_url": "",
+  "is_demo": 1
+ },
+ {
+  "id": 4,
+  "name": "Irish Watch Club, Chicago (demo club)",
+  "team": "Notre Dame Fighting Irish",
+  "sport": "college football",
+  "city": "Chicago, IL",
+  "typical_turnout": 120,
+  "preferred_area": "Wrigleyville",
+  "needs": "Large crowd, sound on, every Saturday.",
+  "home_bar_id": 1,
+  "contact_url": "",
+  "is_demo": 1
+ },
+ {
+  "id": 5,
+  "name": "Maize & Blue Chicago (demo club)",
+  "team": "Michigan Wolverines",
+  "sport": "college football",
+  "city": "Chicago, IL",
+  "typical_turnout": 90,
+  "preferred_area": "Wrigleyville",
+  "needs": "Sound on, big screens, room for 90.",
+  "home_bar_id": 2,
+  "contact_url": "",
+  "is_demo": 1
+ },
+ {
+  "id": 6,
+  "name": "Bears Fans of Boston (demo club)",
+  "team": "Chicago Bears",
+  "sport": "NFL",
+  "city": "Boston, MA",
+  "typical_turnout": 50,
+  "preferred_area": "Back Bay",
+  "needs": "Sound on for every Bears game on Sundays and prime time.",
+  "home_bar_id": 6,
+  "contact_url": "",
+  "is_demo": 1
+ },
+ {
+  "id": 7,
+  "name": "Packers Backers of Boston (demo club)",
+  "team": "Green Bay Packers",
+  "sport": "NFL",
+  "city": "Boston, MA",
+  "typical_turnout": 60,
+  "preferred_area": "Seaport",
+  "needs": "Sound on, room for 60, cheese-friendly menu a plus.",
+  "home_bar_id": null,
+  "contact_url": "",
+  "is_demo": 1
+ }
+]

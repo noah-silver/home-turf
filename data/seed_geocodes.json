@@ -1,0 +1,121 @@
+[
+ {
+  "address": "9 W Hubbard St, Chicago, IL 60654",
+  "lat": 41.8899141,
+  "lon": -87.6285193,
+  "display": "Theory, 9, West Hubbard Street, River North, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60654, United States",
+  "ok": 1
+ },
+ {
+  "address": "9 W. Hubbard, Chicago, IL",
+  "lat": 41.8896741,
+  "lon": -87.6490424,
+  "display": "Kennedy Expressway, Fulton Market District, West Town, Chicago, West Chicago Township, Cook County, Illinois, 60661, United States",
+  "ok": 1
+ },
+ {
+  "address": "147 Hanover St, Boston, MA 02108",
+  "lat": 42.3617706,
+  "lon": -71.0569489,
+  "display": "147, Hanover Street, Government Center/Faneuil Hall, Downtown, Boston, Suffolk County, Massachusetts, 02108, United States",
+  "ok": 1
+ },
+ {
+  "address": "1927 W North Ave, Chicago IL",
+  "lat": 41.9102937,
+  "lon": -87.6760621,
+  "display": "Piece Brewery & Pizzeria, 1927, West North Avenue, Wicker Park, West Town, Chicago, West Chicago Township, Cook County, Illinois, 60622, United States",
+  "ok": 1
+ },
+ {
+  "address": "1927 W North Ave, Chicago, IL 60622",
+  "lat": 41.9102937,
+  "lon": -87.6760621,
+  "display": "Piece Brewery & Pizzeria, 1927, West North Avenue, Wicker Park, West Town, Chicago, West Chicago Township, Cook County, Illinois, 60622, United States",
+  "ok": 1
+ },
+ {
+  "address": "934 Dorchester Ave, Dorchester, MA, Boston, MA",
+  "lat": 42.3189591,
+  "lon": -71.0564831,
+  "display": "934A,934, Dorchester Avenue, Uphams Corner, Dorchester, Boston, Suffolk County, Massachusetts, 02125, United States",
+  "ok": 1
+ },
+ {
+  "address": "Commonwealth Tavern, Chicago, IL",
+  "lat": 41.9433508,
+  "lon": -87.6786084,
+  "display": "Commonwealth Tavern, 2000, West Roscoe Street, Roscoe Village, North Center, Chicago, Lake View Township, Cook County, Illinois, 60618, United States",
+  "ok": 1
+ },
+ {
+  "address": "1240 N. Wells St., Chicago, IL",
+  "lat": 41.9050672,
+  "lon": -87.6348536,
+  "display": "Declan's, 1240, North Wells Street, Old Town, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60610, United States",
+  "ok": 1
+ },
+ {
+  "address": "Flo & Santos, Chicago, IL",
+  "lat": 41.865387,
+  "lon": -87.6263756,
+  "display": "Flo & Santos, 1310, South Wabash Avenue, Central Station, South Loop, Near South Side, Chicago, South Chicago Township, Cook County, Illinois, 60605, United States",
+  "ok": 1
+ },
+ {
+  "address": "The Kerryman, Chicago, IL",
+  "lat": 41.8941753,
+  "lon": -87.6309917,
+  "display": "The Kerryman, 661, North Clark Street, River North, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60654, United States",
+  "ok": 1
+ },
+ {
+  "address": "Kincade's, Chicago, IL",
+  "lat": 41.9182758,
+  "lon": -87.6529267,
+  "display": "Kincade's, 950, West Armitage Avenue, Ranch Triangle, Lincoln Park, Chicago, North Chicago Township, Cook County, Illinois, 60614, United States",
+  "ok": 1
+ },
+ {
+  "address": "Guinness Open Gate Brewery, Chicago, IL",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "SPF Pickleball, Chicago, IL",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "420 W Diversey Pkwy, Chicago, IL 60614",
+  "lat": 41.9330011,
+  "lon": -87.6403512,
+  "display": "Duffy's Tavern & Bar, 420, West Diversey Parkway, Lake View, Chicago, Lake View Township, Cook County, Illinois, 60614, United States",
+  "ok": 1
+ },
+ {
+  "address": "155 W Kinzie St, Chicago, IL 60654",
+  "lat": 41.8889514,
+  "lon": -87.6332043,
+  "display": "155, West Kinzie Street, River North, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60654, United States",
+  "ok": 1
+ },
+ {
+  "address": "1501 N Dayton St, Chicago, IL 60642",
+  "lat": 41.9086893,
+  "lon": -87.6491398,
+  "display": "Sully’s House, 1501, North Dayton Street, River North, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60642, United States",
+  "ok": 1
+ },
+ {
+  "address": "3403 N Damen Ave, Chicago, IL 60657",
+  "lat": 41.9435223,
+  "lon": -87.6783231,
+  "display": "The Reveler, 3403, North Damen Avenue, Roscoe Village, North Center, Chicago, Lake View Township, Cook County, Illinois, 60657, United States",
+  "ok": 1
+ }
+]
