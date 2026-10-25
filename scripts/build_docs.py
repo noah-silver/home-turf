@@ -181,10 +181,15 @@ def table(headers, rows, num_cols=(), total=False):
 def user_test_section() -> str:
     if not USER_TESTS:
         return """
-<div class="callout red"><b>Pilot user tests: in progress.</b> The test protocol is in <code>docs/user_test_kit.md</code>: each tester times the old way
-(Google, Reddit, alumni pages) against Home Turf on the same team and city, rates confidence, and tries the club-president flow. Results go in
-<code>docs/user_tests.json</code> and this section rebuilds from them. Until then, the impact numbers below come from our own measured runs and
-public data, and are labeled as such.</div>"""
+<h3>User-testing plan</h3>
+<p>No outside user has tried Home Turf yet, so the numbers below come from measured runs, public data, and labeled estimates. The test is ready to run
+(15-minute sessions; protocol in <code>docs/user_test_kit.md</code>), and the report rebuilds from its results.</p>
+""" + table(["Who", "Task", "What we measure", "Success looks like"], [
+        ["4–5 SOM classmates (fans)", "Find their team's bar in another city: Google/Reddit, then Home Turf", "Minutes to answer; confidence (1–5)", "Under a minute, equal or higher confidence"],
+        ["1 Yale Club of NYC organizer", "Pick a season home bar; plan Yale–Princeton", "Done unaided? Hours today?", "Both flows unaided; would use it"],
+        ["1 New Haven bar manager", "Review a club; send a pitch", "Would claim a profile? Would pay?", "Sees a booked club as worth Pro"],
+    ]) + """
+"""
     rows = USER_TESTS["testers"]
     t = table(["Tester", "City + team", "Old way", "Home Turf", "Confidence (old → HT)"],
               [[html.escape(r["who"]), html.escape(r["task"]), html.escape(r["old_time"]), html.escape(r["ht_time"]), html.escape(r["confidence"])] for r in rows])
@@ -419,7 +424,7 @@ constantly, and there are only a few thousand realistic team + city pairs, each 
 would cover many times over. Hosting would cost more than the AI. Note that the app's built-in daily cap (3M tokens, about 190 new searches a day) is sized for a class pilot and
 would be raised for a real launch.</p>
 
-<p><b>Speed.</b> After pilot feedback that search felt slow, I profiled a live search: Router 1–2 s, Scout web search 5–6 s, source re-checks and geocoding 1–2 s, Verifier 1.5 s,
+<p><b>Speed.</b> In my own testing, search felt slow, so I profiled a live search: Router 1–2 s, Scout web search 5–6 s, source re-checks and geocoding 1–2 s, Verifier 1.5 s,
 and the wide pass another 7.5 s when it ran. Three changes followed: plain searches (“Bears fans in Boston”, “Boston”) are parsed locally against the team table and skip the
 Router call; all source re-checks run in parallel; and the wide pass runs automatically only when nothing at all is found (otherwise the fan gets a “Search wider” button).
 Four fresh searches afterward took 5.8, 6.6, 9.0, and 18.6 s (the last one needed the wide pass), down from about 12 s typical. The Scout's web search is now the floor.</p>
@@ -465,9 +470,9 @@ homework from this course.</p>
 {fig("router_off_topic", "<b>Figure 11.</b> Off-topic use of the paid model is declined by the Router.")}
 </div>
 </div>
-<p><b>Automated tests.</b> <code>tests/test_safety.py</code> has 22 tests: 19 offline (no API cost, stubbed model) covering injection, personal info, length caps, invented numbers,
-SSRF, run and daily caps, injected source pages, unmappable addresses, invented bars, three-party approval, schedule-clash math, logo and league matching, map escaping, and fan-suggestion screening; plus 3 live tests against
-<code>gpt-6-luna</code> (spam, false profile claims, off-topic search). All 22 pass, including from a fresh clone on Python 3.11.</p>
+<p><b>Automated tests.</b> <code>tests/test_safety.py</code> has 24 tests: 21 offline (no API cost, stubbed model) covering injection, personal info, length caps, invented numbers,
+SSRF, run and daily caps, injected source pages, unmappable addresses, invented bars, three-party approval, schedule-clash math, logo and league matching, map escaping, fan-suggestion screening, the instant search parser, and local kickoff times and calendar export; plus 3 live tests against
+<code>gpt-6-luna</code> (spam, false profile claims, off-topic search). All 24 pass, including from a fresh clone on Python 3.11.</p>
 <p><b>Agent malfunction.</b> Nothing can loop forever: every action is a fixed pipeline, not an open-ended agent loop, and each agent has a hard cap on
 model requests and tool calls (the Scout gets at most 3 web searches, the wide pass 4). The model never writes coordinates; a geocoder does. Every claim must carry a source and a quote, which code re-checks. Agent failures are contained:
 an exception becomes a polite message, the Guard fails <i>closed</i> (holds the post) if it can't reach the model, and a schedule failure lets matchmaking continue with a note.
@@ -480,7 +485,7 @@ and human approval, without secrets.</p>
 {user_test_section()}
 <h3>What the measured runs show</h3>
 {table(["Measure", "Home Turf", "Today", "Source"], [
-    ["Time to a sourced answer, new team + city", f"6–9 s typical after speed-ups ({L_MED_SEC:.0f} s median before)", "Minutes of Googling and Reddit; pilot tests will time this", "Measured live runs"],
+    ["Time to a sourced answer, new team + city", f"6–9 s typical after speed-ups ({L_MED_SEC:.0f} s median before)", "Minutes of Googling and Reddit; the user-testing plan above times this", "Measured live runs"],
     ["Time for a repeat search", "under 0.1 s", "Same as above", "8 measured cached runs"],
     ["Searches answered with at least one spot", f"{WITH_ANY}/{len(live)} ({WITH_CONFIRMED}/{len(live)} verified)", "No single tool covers every team", "8 measured live runs"],
     ["Share of returned spots verified against source", f"{STATUS['confirmed']}/{TOTAL_SPOTS} ({STATUS['confirmed'] / TOTAL_SPOTS:.0%}); the rest labeled", "Unverified listings; AI search wrong on 60%+ of citation tests", "Measured; Tow Center study<sup>8</sup>"],
@@ -516,7 +521,7 @@ Verified badge or a higher Matchmaker score; the Guard and the number check appl
 <li><b>Some sources block re-checking</b> (HTTP 403 or JavaScript-only pages), which caps those spots at Likely.</li>
 <li><b>Schedules can disagree across sources</b> (one source lists Packers–Bears as TBD, another as 1:00 PM ET); clash detection marks TBD overlaps as “possible.”</li>
 <li><b>The marketplace is seeded.</b> Bars, clubs, people, and seed reviews in the demo are fictional and labeled “demo.” Claiming a bar has no business verification yet, and logins are one-click demo accounts.</li>
-<li><b>Real-user evidence is from a small pilot</b> (see Section 7), not a bar or club that has run a season on it.</li>
+<li><b>No outside user has tested it yet.</b> The testing plan in Section 7 is the first thing to run.</li>
 <li><b>My own prompts are too short to use prompt caching</b>, and the per-day cap is sized for a pilot.</li>
 </ul>
 <p><b>With another month.</b></p>
