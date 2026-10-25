@@ -547,168 +547,292 @@ Verified badge or a higher Matchmaker score; the Guard and the number check appl
 
 # ---------------------------------------------------------------------------------- slides
 def build_slides() -> str:
+    """10-slide reveal.js deck: problem -> old way vs. Home Turf -> feature tour -> how -> cost/safety -> impact/business -> ask."""
     prod, cheap, pricey = (EXP[n] for n in EXP_NAMES)
-    def s_img(name, crop=None, w=1500):
-        return img_uri(name, w, crop, 78)
+
+    def s_img(name, w=1600, crop=None, q=80):
+        return img_uri(name, w, crop, q)
+
+    def callout(n, x, y):
+        return f'<span class="callout" style="left:{x}%;top:{y}%">{n}</span>'
+
+    teams = FC.get("teams_mapped", 0)
+    cities = FC.get("cities", 0)
     slides = f"""
-<section class="title" data-background-gradient="repeating-linear-gradient(90deg, rgba(255,255,255,.10) 0 3px, transparent 3px 9%), linear-gradient(170deg, #22a159 0%, #157a3e 60%, #0f6533 100%)">
-  <div class="eyebrow">AI Foundations for Managers · Final project</div>
-  <h1>Home <span class="g">Turf</span></h1>
-  <p class="pitch">AI agents that find where your team's fan club watches the game in any city, verified, and help clubs and bars team up for the season.</p>
-  <p class="by">Noah Silver · Yale SOM · {REPO_URL.replace('https://', '')}</p>
-</section>
-
-<section>
-  <h2>Two in three fans don't live where their team plays</h2>
-  <div class="cols">
-    <div class="stat"><div class="big">64%</div><div>of sports followers live outside their team's city<sup>1</sup></div></div>
-    <div class="stat"><div class="big">~500</div><div>Bills Backers chapters; ~275 Notre Dame clubs<sup>2</sup></div></div>
-    <div class="stat"><div class="big">18.2M</div><div>watched the 2026 Super Bowl at a bar or restaurant<sup>3</sup></div></div>
+<!-- 1. Title -->
+<section class="title" data-background-gradient="repeating-linear-gradient(90deg, rgba(255,255,255,.09) 0 3px, transparent 3px 9%), linear-gradient(170deg, #22a159 0%, #157a3e 55%, #0b5a2c 100%)">
+  <div class="t-wrap">
+    <div class="eyebrow light">AI Foundations for Managers · Final project · Yale SOM</div>
+    <h1>Home <span class="g">Turf</span></h1>
+    <p class="pitch">Find where <b>your people</b> watch the game, in any city.<br>AI agents find, verify, and map every fan club's bar, plan your whole season, and help clubs and bars team up.</p>
+    <p class="by">Noah Silver &nbsp;·&nbsp; {REPO_URL.replace('https://', '')}</p>
   </div>
-  <ul class="tight">
-    <li><b>Fans</b> sift Google and Reddit and can't tell if a listing is current</li>
-    <li><b>Club presidents</b> (volunteers) vet bars by hand every season: sound on, right channels, no minimum</li>
-    <li><b>Bars</b> want a 70-person club every Saturday but have no way to reach them</li>
-  </ul>
-  <p class="src">1 Digital Center 2019 · 2 Buffalo Bills 2022, Notre Dame · 3 NRF 2026</p>
+  <img class="t-shot" src="{s_img('home', 1500, 1200)}">
 </section>
 
+<!-- 2. The problem -->
 <section>
-  <h2>What's new</h2>
-  <table class="cmp">
-    <tr><th></th><th>Team bar maps</th><th>Alumni pages</th><th>Yelp / Maps</th><th>ChatGPT search</th><th class="ht">Home Turf</th></tr>
-    <tr><td>Any team, any city</td><td>✕</td><td>✕</td><td>✓</td><td>✓</td><td class="ht">✓</td></tr>
-    <tr><td>Knows which bar hosts which club</td><td>✓</td><td>✓</td><td>✕</td><td>~</td><td class="ht">✓</td></tr>
-    <tr><td>Verified against the source</td><td>✕</td><td>✓</td><td>✕</td><td>✕</td><td class="ht">✓</td></tr>
-    <tr><td>Season matching + clash check</td><td>✕</td><td>✕</td><td>✕</td><td>✕</td><td class="ht">✓</td></tr>
-    <tr><td>Rivalry watch-party planner</td><td>✕</td><td>✕</td><td>✕</td><td>✕</td><td class="ht">✓</td></tr>
-    <tr><td>Bars pitch clubs (grounded)</td><td>~</td><td>✕</td><td>✕</td><td>✕</td><td class="ht">✓</td></tr>
-    <tr><td>Season plan: a bar for every game, any city</td><td>✕</td><td>✕</td><td>✕</td><td>~</td><td class="ht">✓</td></tr>
-  </table>
+  <div class="kicker">The problem</div>
+  <h2>It's Saturday. You're in Chicago. Where do Yale fans watch The Game?</h2>
+  <div class="three">
+    <div class="pain"><div class="pi">📍</div><h3>The traveling fan</h3><p>Googles “Yale bar Chicago,” digs through Reddit threads and fan blogs of unknown age, and still can't tell if the club still meets there.</p></div>
+    <div class="pain"><div class="pi">🏈</div><h3>The club president</h3><p>A volunteer who vets bars by hand every season: sound on for <i>our</i> game, the right channels, room for 70, and no clash with another club.</p></div>
+    <div class="pain"><div class="pi">🍺</div><h3>The bar</h3><p>Wants a 70-fan club filling the room every game day, but has no way to find clubs or prove it's the right home.</p></div>
+  </div>
+  <div class="stats">
+    <div><b>64%</b><span>of sports fans don't live in their team's city<sup>1</sup></span></div>
+    <div><b>~500</b><span>Bills Backers chapters; ~275 Notre Dame clubs<sup>2</sup></span></div>
+    <div><b>18.2M</b><span>watched the 2026 Super Bowl at a bar or restaurant<sup>3</sup></span></div>
+  </div>
+  <p class="src">1 Digital Center 2019 · 2 Buffalo Bills 2022; Notre Dame · 3 NRF 2026</p>
 </section>
 
+<!-- 3. Old way vs Home Turf -->
 <section>
-  <h2>How the agents work</h2>
+  <div class="kicker">What's new</div>
+  <h2>Today it takes five tabs and a guess. Home Turf takes one search.</h2>
+  <div class="vs">
+    <div class="col old">
+      <h3>Today</h3>
+      <ul>
+        <li>Team bar maps cover <b>one team each</b> (Steelers, Packers, Bills)</li>
+        <li>Alumni pages list <b>one school, one event</b> at a time</li>
+        <li>Yelp &amp; Google don't know <b>which bar hosts which club</b></li>
+        <li>ChatGPT search answers, but <b>doesn't verify</b> (60%+ wrong on citations<sup>4</sup>)</li>
+        <li>Presidents and bars find each other by <b>cold calls</b></li>
+      </ul>
+    </div>
+    <div class="arrow">→</div>
+    <div class="col new">
+      <h3>Home Turf</h3>
+      <ul>
+        <li><b>Any team, any city</b>: {teams} teams mapped across {cities} cities so far</li>
+        <li>Every spot <b>re-checked against its source</b> and labeled Verified / Likely</li>
+        <li><b>City map of team logos</b>, filterable by league</li>
+        <li><b>My Season</b>: a bar for every game, wherever you'll be</li>
+        <li><b>Clubs ⇄ bars marketplace</b>: season matching, rivalry parties, pitches</li>
+      </ul>
+    </div>
+  </div>
+  <div class="logostrip"><img src="{s_img('home_logowall', 1800, 420)}"></div>
+  <p class="src">4 Columbia Journalism Review, Tow Center, 2025 (news citations)</p>
+</section>
+
+<!-- 4. Feature: find + city map -->
+<section>
+  <div class="kicker">Feature 1 · Find your people</div>
+  <h2>Every team's fans in a city, on one map</h2>
+  <div class="feature">
+    <div class="frame"><img src="{s_img('city_chicago', 1700)}">{callout(1, 44, 16)}{callout(2, 82, 16)}{callout(3, 64, 40)}{callout(4, 19, 24)}</div>
+    <ol class="notes">
+      <li><b>League filter</b>: NFL, NCAA, MLB, NBA, NHL, Soccer</li>
+      <li><b>Teams in this city</b>, toggle any team (folds away)</li>
+      <li><b>Team-logo pins</b>, ringed green when verified; click for the bar</li>
+      <li>Search a team + city, or just a city; popular searches load instantly</li>
+    </ol>
+  </div>
+</section>
+
+<!-- 5. Feature: My Season -->
+<section>
+  <div class="kicker">Feature 2 · My season</div>
+  <h2>Tell it where you'll be. Get a bar for every game.</h2>
+  <div class="feature">
+    <div class="frame"><img src="{s_img('season_plan', 1700)}">{callout(1, 7, 37)}{callout(2, 50.5, 43)}{callout(3, 94, 27)}{callout(4, 30, 70)}</div>
+    <ol class="notes">
+      <li>“Home in New Haven, NYC for Columbia, Chicago for The Game”</li>
+      <li>A <b>bar, backup, and local kickoff</b> for each game, in each city</li>
+      <li><b>Add to calendar</b> (.ics)</li>
+      <li>The team's real schedule, found and cached by the Schedule agent</li>
+    </ol>
+  </div>
+</section>
+
+<!-- 6. Feature: clubs & bars -->
+<section>
+  <div class="kicker">Feature 3 · Clubs ⇄ bars</div>
+  <h2>Presidents pick a home bar. Rivals share one.</h2>
+  <div class="trio">
+    <figure><div class="frame tall"><img src="{s_img('season_card', 1000, 1250)}"></div><figcaption><b>Season home bar</b>: ranked by room, TVs, sound, location, with schedule clashes flagged</figcaption></figure>
+    <figure><div class="frame tall"><img src="{s_img('rivalry_card', 1000, 1250)}"></div><figcaption><b>Rivalry party</b>: Yale vs. Princeton, neutral bar for 125, three drafts, nothing sent until all three approve</figcaption></figure>
+    <figure><div class="frame tall fit"><img src="{s_img('bar_quickview_crop', 1300)}"></div><figcaption><b>Click any bar</b>: photos, reviews, menu, Google Maps, and Street View</figcaption></figure>
+  </div>
+  <p class="foot">Bars get a dashboard too: claim a profile and send pitches the Pitch Writer drafts only from what the bar actually offers.</p>
+</section>
+
+<!-- 7. How it works -->
+<section>
+  <div class="kicker">How it works</div>
+  <h2>12 agents, fixed pipelines, people decide</h2>
   <div class="svgwrap">{ARCH_SVG}</div>
-  <p class="note">8 agents on gpt-6-luna · fixed pipelines, not a free-roaming boss · code does the facts, the model does judgment · people make every commitment</p>
+  <p class="foot">All on <b>gpt-6-luna</b> via Portkey · code does the facts (addresses, capacity, clashes, times), the model does judgment · nothing is booked or sent by an agent</p>
 </section>
 
+<!-- 8. Cost & safety -->
 <section>
-  <h2>Demo: every team's fans, on one map</h2>
-  <div class="shot-row">
-    <img src="{s_img('city_chicago', 1250, 900)}" class="shot wide">
-    <div class="side">
-      <img src="{s_img('receipt_live')}" class="shot">
-      <ul class="tight small"><li>Team-logo pins, ringed by verification status</li><li>Filter by league: NFL · NCAA · MLB · NBA · NHL · Soccer</li><li>Any team + city: verified in ~7 s for ~1–2¢</li></ul>
+  <div class="kicker">Cost &amp; safety</div>
+  <h2>About a penny a search, and hard to fool</h2>
+  <div class="split">
+    <div>
+      <div class="kpis">
+        <div><b>{money(L_COST, 3)}</b><span>per new search (8 measured runs)</span></div>
+        <div><b>$0</b><span>repeat search, from cache</span></div>
+        <div><b>{money(10_000 * blended(0.85), 0)}</b><span>AI per month for 10,000 users</span></div>
+      </div>
+      <div class="costbar"><div class="cb-fee" style="width:{WS_FEE / L_COST * 100:.0f}%">web-search fee {WS_FEE / L_COST:.0%}</div><div class="cb-tok">tokens</div></div>
+      <ul class="tight">
+        <li><b>Cache first</b>: repeat team + city searches skip the model entirely</li>
+        <li><b>Free code checks</b> before any model call; search caps; low reasoning effort</li>
+        <li><b>Experiment</b>: 1 web search vs 3 was {1 - cheap['avg_cost'] / prod['avg_cost']:.0%} cheaper, same quality</li>
+        <li><b>Spend caps</b> per request, session, and day</li>
+      </ul>
     </div>
-  </div>
-</section>
-
-<section>
-  <h2>Demo: Yale vs. Princeton in New York</h2>
-  <div class="shot-row">
-    <img src="{s_img('rivalry_card', 1500, 1100)}" class="shot tall">
-    <div class="side">
-      <img src="{s_img('approvals_confirmed')}" class="shot">
-      <ul class="tight small"><li>Finds Yale–Princeton (Nov 14), neutral bar for 125</li><li>3 drafted invitations, nothing sent</li><li>Click any bar: photos, reviews, Street View</li><li>Confirmed only after all 3 parties approve · <b>{money(ACT['rivalry_match']['cost'], 4)}</b></li></ul>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Cost to run</h2>
-  <div class="cols">
-    <div class="stat"><div class="big">{money(L_COST, 3)}</div><div>new search (8 measured runs)<br>{WS_FEE / L_COST:.0%} of it is the web-search fee</div></div>
-    <div class="stat"><div class="big">$0</div><div>repeat search, from cache, under 0.1 s</div></div>
-    <div class="stat"><div class="big">{money(10_000 * blended(0.85), 0)}</div><div>AI cost per month for 10,000 users (85% cache hits)</div></div>
-  </div>
-  <ul class="tight">
-    <li>Matchmaker {money(ACT['season_match']['cost'], 4)} · rivalry plan {money(ACT['rivalry_match']['cost'], 4)} · pitch {money(ACT['pitch']['cost'], 4)} · Guard {money(ACT['guard']['cost'], 5)}</li>
-    <li>Cost cuts: result cache, code-first Verifier ({CODE_DECIDED}/{CODE_DECIDED + MODEL_DECIDED} settled free), search caps, low reasoning effort</li>
-    <li>Experiment: 1 search vs 3 = {1 - cheap['avg_cost'] / prod['avg_cost']:.0%} cheaper, same quality; medium effort = {pricey['avg_cost'] / prod['avg_cost'] - 1:.0%} pricier, fewer verified spots</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Safety: built, tested, shown</h2>
-  <div class="shot-row">
-    <img src="{s_img('pitch_blocked', 1300)}" class="shot half">
-    <div class="side">
-      <img src="{s_img('review_blocked')}" class="shot">
-      <ul class="tight small">
-        <li>Injection blocked by free filter, then Guard agent</li>
-        <li>Model never writes addresses or map pins</li>
-        <li>No agent can book, send, or approve</li>
-        <li>Caps per action, session, day · URL allowlist</li>
-        <li><b>22/22 safety + feature tests pass</b></li>
+    <div>
+      <div class="frame shot-b"><img src="{s_img('review_blocked', 1100)}"></div>
+      <div class="frame shot-b"><img src="{s_img('pitch_blocked', 1100)}"></div>
+      <ul class="tight">
+        <li>Hidden instructions in reviews are <b>blocked before any tokens are spent</b></li>
+        <li>Pitches <b>can't promise</b> what a bar doesn't offer ("$1 beers, 300 TVs")</li>
+        <li>The model never writes addresses or pins · <b>24/24 tests pass</b></li>
       </ul>
     </div>
   </div>
 </section>
 
+<!-- 9. Impact & business -->
 <section>
-  <h2>Impact</h2>
-  <div class="cols">
-    <div class="stat"><div class="big">~7 s</div><div>typical time to a sourced answer for a new team + city (was 12 s before speed-ups)</div></div>
-    <div class="stat"><div class="big">{WITH_CONFIRMED}/{len(live)}</div><div>new searches returned a verified spot ({STATUS['confirmed']}/{TOTAL_SPOTS} spots verified)</div></div>
-    <div class="stat"><div class="big">$25k</div><div>season revenue for a bar from one 70-fan club (estimate: $30 per fan, 12 games)</div></div>
+  <div class="kicker">Impact &amp; business model</div>
+  <h2>Fans stay free. Bars and alumni groups pay.</h2>
+  <div class="kpis wide">
+    <div><b>~7 s</b><span>to a sourced answer for a new team + city</span></div>
+    <div><b>{WITH_CONFIRMED}/{len(live)}</b><span>new searches found a verified spot</span></div>
+    <div><b>$25k</b><span>season revenue for a bar from one 70-fan club (est.)</span></div>
+    <div><b>&lt;1%</b><span>of revenue goes to AI at 10,000 users</span></div>
   </div>
-  <div class="shot-row"><img src="{s_img('season_plan_card', 1000, 1300)}" class="shot half" style="max-height:360px;object-fit:cover;object-position:top"><div class="side"><ul class="tight small">
-    <li><b>Something new is possible:</b> a bar for every game of your season, in whatever city you're in, plus rivalry parties with three sign-offs</li>
-    <li><b>Any team, any city:</b> {WITH_ANY}/{len(live)} new searches answered, {STATUS['confirmed'] / TOTAL_SPOTS:.0%} of spots verified</li>
-    <li><b>Club season shortlist + clash check:</b> {ACT['season_match']['sec']:.0f} s instead of a volunteer's phone calls</li>
-    <li>{"Pilot users: " + html.escape(USER_TESTS.get("summary", "")) if USER_TESTS else "Pilot user tests (old way vs. Home Turf, timed) are running with classmates and alumni"}</li>
-  </ul></div></div>
+  <div class="biz">
+    <div class="tier"><h3>Bar Pro · $49/mo</h3><p>Pitch clubs, season and rivalry bookings, a labeled Featured slot, demand analytics (“212 Packers fans searched near you”).</p></div>
+    <div class="tier"><h3>Alumni licensing · $5–25k/yr</h3><p>A white-label watch-party finder and season matchmaking for every chapter, from the Yale Alumni Association to Bills Backers.</p></div>
+    <div class="tier rule"><h3>One trust rule</h3><p>Money buys visibility (labeled), never a Verified badge or a higher match score.</p></div>
+  </div>
+  <div class="yr1">
+    <div class="yr1-label">Illustrative year one</div>
+    <div class="bar-row"><span>Revenue</span><div class="bar rev" style="width:100%">{money(200 * 49 * 12 + 100_000, 0)} · 200 Pro bars + 10 licenses</div></div>
+    <div class="bar-row"><span>AI cost</span><div class="bar ai" style="width:{max(1.2, (10_000 * blended(0.85) * 12) / (200 * 49 * 12 + 100_000) * 100):.1f}%"></div><em>{money(10_000 * blended(0.85) * 12, 0)} at 10,000 users</em></div>
+  </div>
 </section>
 
-<section>
-  <h2>What's next</h2>
-  <ul class="tight">
-    <li><b>Real supply:</b> 5 bars + 5 clubs in one city, business verification, real accounts</li>
-    <li><b>Fans as verifiers:</b> post-game “was the club here, was the sound on?”</li>
-    <li><b>Send with approval:</b> email invitations only after a human clicks send</li>
-    <li><b>Adaptive Scout:</b> 1 search first, escalate only if nothing verifies</li>
-    <li><b>Hosted + mobile</b>, and the MCP server so assistants can use Home Turf</li>
-    <li><b>Business model:</b> bars pay $49/mo for Pro (pitch clubs, bookings, labeled Featured slot, analytics); alumni associations license a white-label finder ($5–25k/yr). Fans stay free; AI is about 1.4¢ per user per month</li>
-  </ul>
-  <div class="ask"><b>The ask:</b> a Yale Alumni Association club (start with the Yale Club of New York) and one partner bar to run a real season pilot.<br>
-  Everything shown is live in the repo: <b>{REPO_URL.replace('https://', '')}</b></div>
+<!-- 10. Next + ask -->
+<section class="title" data-background-gradient="linear-gradient(160deg, #0f2240 0%, #0a1830 100%)">
+  <div class="kicker light">What's next</div>
+  <h2 class="light">Pilot with the Yale Club of New York</h2>
+  <div class="next">
+    <div><b>Real supply</b><span>a Yale alumni club and one partner bar run a full season</span></div>
+    <div><b>Fans as verifiers</b><span>post-game check-in: “was the club here, was the sound on?”</span></div>
+    <div><b>Send with approval</b><span>invitations go out by email only after a human clicks send</span></div>
+    <div><b>Hosted + mobile</b><span>for fans on a sidewalk in a new city; MCP server already built</span></div>
+  </div>
+  <div class="ask">Try it: <b>{REPO_URL.replace('https://', '')}</b> · runs locally in about 5 minutes</div>
+  <img class="end-shot" src="{s_img('rivalry_card', 900, 900)}">
 </section>
 """
     css = """
-.reveal { font-family: "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: #1b2433; }
+:root { --navy:#0f2240; --gold:#e8a91b; --turf:#1d8a4a; --ink:#1b2433; --muted:#5d6b82; --line:#e3e7ee; }
+.reveal { font-family: "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--ink); font-size: 34px; }
 .reveal .slides { text-align: left; }
-.reveal section { height: 100%; padding: 10px 30px; }
-.reveal h1, .reveal h2 { font-family: "Bebas Neue", Impact, sans-serif; color: #0f2240; text-transform: uppercase; letter-spacing: .02em; font-weight: 400; }
-.reveal h2 { font-size: 1.9em; border-bottom: 6px solid; border-image: repeating-linear-gradient(90deg, #1d8a4a 0 40px, #fff 40px 44px) 1; padding-bottom: 6px; margin-bottom: 22px; }
-.reveal section.title { color: #fff; padding: 90px 40px; }
-.reveal section.title h1 { font-size: 5em; }
-.reveal section.title h1 { color: #fff; font-size: 3.6em; margin: 10px 0; }
+.reveal .slides > section { height: 100%; padding: 26px 48px !important; box-sizing: border-box; }
+.reveal h1, .reveal h2, .reveal h3 { font-family: "Bebas Neue", Impact, sans-serif; color: var(--navy); text-transform: none; letter-spacing: .02em; font-weight: 400; margin: 0; }
+.reveal h2 { font-size: 1.85em; line-height: 1.02; margin: 4px 0 18px; }
+.reveal h3 { font-size: 1.05em; letter-spacing: .03em; }
+.reveal .kicker { display: inline-block; font: 700 .42em "Inter", sans-serif; text-transform: uppercase; letter-spacing: .16em; color: #0b5a2c; background: #e3f3ea; padding: 5px 12px; border-radius: 999px; }
+.reveal .kicker.light { background: rgba(255,255,255,.12); color: #ffd36b; }
+.reveal .light { color: #fff !important; }
+.reveal p, .reveal li { line-height: 1.35; }
+.reveal .src { position: absolute; bottom: 14px; left: 48px; font-size: .32em; color: var(--muted); }
+.reveal .foot { font-size: .48em; color: var(--muted); margin-top: 12px; }
+/* title */
+.reveal section.title { color: #fff; }
+.reveal .t-wrap { position: absolute; left: 60px; top: 150px; width: 560px; z-index: 2; }
+.reveal .eyebrow.light { font: 700 .4em "Inter", sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #ffd36b; }
+.reveal section.title h1 { color: #fff; font-size: 4.3em; line-height: .9; margin: 10px 0 16px; text-shadow: 0 5px 0 rgba(0,0,0,.25); white-space: nowrap; }
 .reveal .g { color: #ffd36b; }
-.reveal .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: .5em; font-weight: 700; color: #b8902f; }
-.reveal .pitch { font-size: .9em; color: #c9d3e6; max-width: 900px; }
-.reveal .by { font-size: .55em; color: #8ea0bf; margin-top: 30px; }
-.reveal .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 18px; }
-.reveal .stat { background: #0a1830; color: #c9d3e6; border-top: 5px solid #e8a91b; border-radius: 12px; padding: 18px 20px; font-size: .55em; line-height: 1.35; }
-.reveal .stat .big { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 3.2em; font-weight: 400; color: #ffd36b; line-height: 1.05; text-shadow: 0 0 14px rgba(255,211,107,.4); }
-.reveal ul.tight { font-size: .58em; line-height: 1.5; padding-right: 20px; }
-.reveal ul.tight.small { font-size: .5em; }
-.reveal .src, .reveal .note { font-size: .45em; color: #5d6b82; }
-.reveal .note { font-size: .5em; text-align: center; margin-top: 10px; }
-.reveal .note.left { text-align: left; }
-.reveal table.cmp { font-size: .52em; border-collapse: collapse; width: 100%; }
-.reveal table.cmp th { background: #0f2240; color: #fff; padding: 10px; font-weight: 600; border: none; }
-.reveal table.cmp td { padding: 9px 10px; border-bottom: 1px solid #e3e7ee; text-align: center; }
-.reveal table.cmp td:first-child { text-align: left; font-weight: 600; }
-.reveal table.cmp .ht { background: #f4ead2; color: #0f2240; font-weight: 700; }
-.reveal .svgwrap svg { width: 100%; height: auto; max-height: 520px; }
-.reveal .shot-row { display: flex; gap: 18px; align-items: flex-start; }
-.reveal img.shot { border: 1px solid #e3e7ee; border-radius: 8px; box-shadow: 0 6px 20px rgba(15,34,64,.12); margin: 0; }
-.reveal img.wide { width: 64%; } .reveal img.narrow { width: 34%; } .reveal img.half { width: 48%; }
-.reveal img.tall { width: 50%; height: 470px; object-fit: cover; object-position: top; }
-.reveal .ask { background: #0f2240; color: #fff; border-radius: 12px; padding: 18px 22px; font-size: .6em; margin-top: 18px; }
-.reveal .ask b { color: #b8902f; }
-.reveal .side { flex: 1; } .reveal .side img { width: 100%; }
+.reveal .pitch { font-size: .64em; color: #eef7f0; }
+.reveal .pitch b { color: #ffd36b; }
+.reveal .by { font-size: .45em; color: #c8e8d3; margin-top: 26px; }
+.reveal .t-shot { position: absolute; right: -70px; top: 150px; width: 640px; border-radius: 16px; box-shadow: 0 30px 70px rgba(0,0,0,.45); transform: rotate(3deg); border: 6px solid #fff; margin: 0; }
+/* problem */
+.reveal .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.reveal .pain { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 20px 24px; min-height: 215px; box-shadow: 0 8px 24px rgba(15,34,64,.08); }
+.reveal .pain .pi { font-size: 1.3em; }
+.reveal .pain h3 { font-size: 1.05em; margin: 4px 0 6px; }
+.reveal .pain p { font-size: .5em; color: #3c475a; margin: 0; }
+.reveal .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; }
+.reveal .stats div, .reveal .kpis div, .reveal .next div { background: #0a1830; border-radius: 16px; padding: 14px 18px; border-top: 5px solid var(--gold); }
+.reveal .stats b, .reveal .kpis b { display: block; font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; font-size: 2.1em; color: #ffd36b; line-height: 1; }
+.reveal .stats span, .reveal .kpis span { display: block; font-size: .44em; color: #c9d3e6; margin-top: 4px; }
+/* vs */
+.reveal .vs { display: grid; grid-template-columns: 1fr 50px 1fr; gap: 14px; align-items: stretch; }
+.reveal .vs .col { border-radius: 18px; padding: 16px 22px; }
+.reveal .vs .old { background: #f1f3f7; border: 2px dashed #c8d1df; }
+.reveal .vs .new { background: linear-gradient(160deg, #22a159, #136b37); color: #fff; box-shadow: 0 14px 34px rgba(19,107,55,.3); }
+.reveal .vs .new h3 { color: #ffd36b; }
+.reveal .vs ul { margin: 8px 0 0 18px; padding: 0; font-size: .5em; }
+.reveal .logostrip { margin-top: 16px; border-radius: 14px; overflow: hidden; height: 110px; box-shadow: 0 10px 26px rgba(15,34,64,.15); }
+.reveal .logostrip img { width: 100%; margin: 0; border: 0; object-fit: cover; object-position: top; }
+.reveal .vs li { margin: 7px 0; }
+.reveal .vs .arrow { display: grid; place-items: center; font-family: "Bebas Neue", sans-serif; font-size: 2.2em; color: var(--gold); }
+/* feature slides */
+.reveal .feature { display: grid; grid-template-columns: 1fr 300px; gap: 22px; align-items: start; }
+.reveal .frame { position: relative; border-radius: 14px; overflow: hidden; box-shadow: 0 18px 44px rgba(15,34,64,.22); border: 1px solid #d5dbe6; background: #fff; }
+.reveal .frame img { display: block; width: 100%; margin: 0; border: 0; }
+.reveal .frame.tall { height: 430px; }
+.reveal .frame.tall.fit img { object-fit: contain; background: #eef0f4; }
+.reveal .frame.tall img { height: 100%; object-fit: cover; object-position: top; }
+.reveal .callout { position: absolute; width: 34px; height: 34px; margin: -17px 0 0 -17px; border-radius: 50%; background: var(--gold); color: var(--navy);
+  font: 700 18px/34px "Inter", sans-serif; text-align: center; box-shadow: 0 0 0 4px rgba(255,255,255,.9), 0 6px 14px rgba(0,0,0,.35); }
+.reveal ol.notes { list-style: none; counter-reset: n; margin: 0; padding: 0; font-size: .5em; }
+.reveal ol.notes li { counter-increment: n; position: relative; padding-left: 46px; margin: 0 0 16px; min-height: 34px; }
+.reveal ol.notes li::before { content: counter(n); position: absolute; left: 0; top: -3px; width: 32px; height: 32px; border-radius: 50%; background: var(--gold); color: var(--navy);
+  font: 700 17px/32px "Inter", sans-serif; text-align: center; }
+.reveal .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.reveal .trio figure { margin: 0; }
+.reveal .trio figcaption { font-size: .44em; color: #3c475a; margin-top: 8px; }
+/* how */
+.reveal .svgwrap svg { width: 100%; height: auto; max-height: 500px; display: block; margin: 0 auto; }
+/* cost & safety */
+.reveal .split { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.reveal .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.reveal .kpis.wide { grid-template-columns: repeat(4, 1fr); margin-bottom: 16px; }
+.reveal .kpis b { font-size: 1.6em; }
+.reveal ul.tight { font-size: .46em; margin: 12px 0 0 18px; padding: 0; }
+.reveal ul.tight li { margin: 5px 0; }
+.reveal .frame.shot-b { height: 140px; margin-bottom: 10px; }
+.reveal .frame.shot-b img { height: 100%; object-fit: cover; object-position: bottom; }
+.reveal .costbar { display: flex; height: 38px; border-radius: 10px; overflow: hidden; margin-top: 16px; font: 700 .4em/38px "Inter", sans-serif; }
+.reveal .cb-fee { background: var(--gold); color: var(--navy); padding-left: 12px; }
+.reveal .cb-tok { flex: 1; background: var(--turf); color: #fff; text-align: center; }
+/* business */
+.reveal .biz { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.reveal .tier { background: #fff; border: 2px solid #ffe2a1; border-radius: 16px; padding: 14px 18px; }
+.reveal .tier h3 { font-size: 1em; }
+.reveal .tier p { font-size: .44em; margin: 6px 0 0; color: #3c475a; }
+.reveal .tier.rule { background: #e3f3ea; border-color: #b7dfc6; }
+.reveal .yr1 { margin-top: 18px; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 14px 20px; }
+.reveal .yr1-label { font: 700 .38em "Inter", sans-serif; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 6px; }
+.reveal .bar-row { display: flex; align-items: center; gap: 12px; margin: 6px 0; font-size: .44em; }
+.reveal .bar-row > span { width: 80px; font-weight: 700; color: var(--navy); }
+.reveal .bar { height: 30px; border-radius: 8px; }
+.reveal .bar.rev { background: linear-gradient(90deg, #22a159, #136b37); color: #fff; font-weight: 700; line-height: 30px; padding-left: 12px; max-width: calc(100% - 92px); }
+.reveal .bar.ai { background: var(--gold); min-width: 8px; }
+.reveal .bar-row em { color: var(--muted); font-style: normal; }
+/* next */
+.reveal .next { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 10px; width: 760px; }
+.reveal .end-shot { position: absolute; right: 40px; top: 150px; width: 380px; border-radius: 14px; border: 5px solid #fff; transform: rotate(3deg); box-shadow: 0 24px 60px rgba(0,0,0,.5); margin: 0; }
+.reveal .next div { background: rgba(255,255,255,.07); border-top-color: var(--turf); padding: 18px 20px; }
+.reveal .next b { display: block; font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: 1.15em; color: #ffd36b; }
+.reveal .next span { display: block; font-size: .46em; color: #c9d3e6; }
+.reveal .ask { margin-top: 24px; background: var(--gold); color: var(--navy); border-radius: 14px; padding: 14px 20px; font-size: .55em; font-weight: 600; display: inline-block; }
+.reveal .slide-number { background: rgba(15,34,64,.7); font-size: 14px; }
+.reveal .progress { color: var(--gold); height: 5px; }
 """
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Home Turf · Noah Silver</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -718,7 +842,7 @@ def build_slides() -> str:
 <style>{css}</style></head><body>
 <div class="reveal"><div class="slides">{slides}</div></div>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
-<script>Reveal.initialize({{hash: true, width: 1280, height: 760, margin: 0.04, transition: 'fade', controls: true, progress: true, slideNumber: 'c/t'}});</script>
+<script>Reveal.initialize({{hash: true, width: 1280, height: 720, margin: 0.03, center: false, transition: 'slide', backgroundTransition: 'fade', controls: true, progress: true, slideNumber: 'c/t'}});</script>
 </body></html>"""
 
 
