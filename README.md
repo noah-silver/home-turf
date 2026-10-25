@@ -10,15 +10,17 @@ Home Turf is a multi-agent web app with three kinds of users:
 
 Built for Yale SOM *AI Foundations for Managers* (final project, fall 2026) by Noah Silver. Model: `gpt-6-luna` via Portkey (the course key).
 
-![Find page](docs/screenshots/find_usc_chicago.png)
+![Home Turf city map of Chicago](docs/screenshots/city_chicago.jpg)
 
 ---
 
-## Run it (about 5 minutes)
+## Run it (about 2 minutes)
 
-You need **Python 3.11 or newer** and an internet connection. The API key is read from a `.env` file **in this folder or the folder above it**, so the teaching staff's shared `submissions/.env` works as is.
+**You need:** Python **3.10 or newer** (check with `python3 --version`; tested on 3.10, 3.11, and 3.14) and an internet connection. Nothing else to install: no database server, no Node, no extra API keys.
 
-**macOS / Linux**
+**API key:** the app reads `PORTKEY_API_KEY` (or `OPENAI_API_KEY`) from a `.env` file **in this folder or the folder above it**. So if this repo is cloned into `submissions/` next to the teaching staff's `submissions/.env`, it just works. Otherwise: `cp .env.example .env` and paste the key in.
+
+**macOS / Linux** (run from the folder that holds your `.env`, e.g. `submissions/`):
 
 ```bash
 git clone https://github.com/noah-silver/home-turf.git
@@ -29,24 +31,32 @@ pip install -r requirements.txt
 python app.py
 ```
 
-**Windows (PowerShell)**
+**Windows (PowerShell):**
 
 ```powershell
 git clone https://github.com/noah-silver/home-turf.git
 cd home-turf
 py -m venv .venv
-.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-python app.py
+.venv\Scripts\python -m pip install -r requirements.txt
+.venv\Scripts\python app.py
 ```
 
-Then open **http://127.0.0.1:8050**.
+When the terminal prints **`Home Turf is running at http://127.0.0.1:8050`**, open that address in a browser. Leave the terminal open while you use the app; press **Ctrl+C** to stop it.
 
-**API key:** if there is no `.env` in this folder or the one above, copy `.env.example` to `.env` and fill in `PORTKEY_API_KEY` (or `OPENAI_API_KEY`). Without a key the app still opens, and the seeded demo searches load from cache, but new AI calls fail with a clear message.
+The first `pip install` takes about 1–2 minutes. A fresh clone to a working app took 31 seconds in my dry run (with the `.env` one folder up and no key in the shell).
 
-**Operator mode:** the public site hides costs and agent details. Start with `HOME_TURF_OPS=1 python app.py` to show a token/cost receipt under every result; the operator console is always at http://127.0.0.1:8050/admin.
+**If something goes wrong**
 
-The first start creates `runtime/home_turf.db` from the seed files in `data/`. To reset all demo data, use the **Reset demo data** button on the *Cost & safety* page, or delete the `runtime/` folder.
+| Problem | Fix |
+|---|---|
+| `python3 --version` is 3.9 or older | Install Python 3.12 from python.org, then use `python3.12 -m venv .venv` |
+| "Address already in use" / port 8050 busy | `PORT=8051 python app.py` (Windows: `$env:PORT=8051; .venv\Scripts\python app.py`) and open http://127.0.0.1:8051 |
+| Searches say the AI can't be reached | No key was found: put `PORTKEY_API_KEY=...` in `.env` here or in the folder above. Cached demo searches (Chicago, Boston, New York, New Haven, Phoenix) still work without a key |
+| Want a clean slate | Stop the app, delete the `runtime/` folder, start again (it rebuilds from the seed files in `data/`) |
+
+**Operator mode (for graders):** the public site hides costs and agent details. Start with `HOME_TURF_OPS=1 python app.py` (Windows: `$env:HOME_TURF_OPS=1`) to show a token/cost receipt under every result. The operator console (spend, budget meters, Guard decisions, audit trail, prompt-injection tester, and a *Reset demo data* button) is always at **http://127.0.0.1:8050/admin**.
+
+**Tests:** `python -m unittest -v tests.test_safety` (21 offline tests, no API cost; `HOME_TURF_LIVE=1` adds 3 live ones).
 
 ---
 
