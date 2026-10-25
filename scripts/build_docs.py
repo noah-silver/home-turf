@@ -119,7 +119,7 @@ CSS = """
 @page { size: letter; margin: 0.55in 0.6in 0.6in; }
 :root { --navy:#0f2240; --gold:#b8902f; --gold-soft:#f4ead2; --ink:#1b2433; --muted:#5d6b82; --line:#e3e7ee; --green:#1f7a4d; --red:#b42d2d; --amber:#b7791f; }
 * { box-sizing: border-box; }
-body { margin: 0; background: #eef0f4; color: var(--ink); font: 9.8pt/1.42 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+body { margin: 0; background: #eef0f4; color: var(--ink); font: 9.6pt/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
 main { max-width: 8.5in; margin: 0 auto; background: #fff; padding: 0.7in 0.75in; box-shadow: 0 0 30px rgba(15,34,64,.12); }
 h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; color: var(--navy); line-height: 1.2; }
 h1 { font-size: 30pt; margin: 0 0 6px; }
@@ -139,8 +139,8 @@ a { color: #22406f; }
 figure { margin: 8px 0 12px; page-break-inside: avoid; }
 figure img, figure svg { width: 100%; border: 1px solid var(--line); border-radius: 6px; display: block; }
 figcaption { font-size: 8.5pt; color: var(--muted); margin-top: 4px; }
-figure img { max-height: 3.7in; object-fit: cover; object-position: top left; }
-.two figure img { max-height: 3.0in; }
+figure img { max-height: 3.3in; object-fit: cover; object-position: top left; }
+.two figure img { max-height: 2.7in; }
 figcaption b { color: var(--navy); }
 .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
 .two figure { margin-top: 0; }
@@ -275,8 +275,8 @@ def build_report() -> str:
     <b>Author</b><span>Noah Silver</span>
     <b>GitHub repo</b><span><a href="{REPO_URL}">{REPO_URL}</a></span>
     <b>App</b><span>Runs locally from a fresh clone in about 5 minutes (README). Python + Dash; model <code>gpt-6-luna</code> via the course Portkey key.</span>
-    <b>One sentence</b><span>Type “USC fans in Chicago” and Home Turf's agents return the bar where the Trojan club gathers, with sources and a map,
-    while club presidents and bars use the same agents to pick season home bars and plan joint rivalry watch parties.</span>
+    <b>One sentence</b><span>Type “Yale fans in Chicago” and Home Turf's agents return the bar where Yale alumni gather for the game, with sources and a map of
+    every team's fans in the city; fans plan their whole season city by city, and club presidents and bars use the same agents to pick home bars and plan rivalry watch parties.</span>
   </div>
 </div>
 
@@ -309,7 +309,7 @@ and only one can have the sound on.</li>
 </ul>
 <p><b>What it costs them.</b> For the fan: a wasted trip to a bar where the game isn't on, or with the sound on for someone else's team. For the president: hours of calls and
 visits each season, with no tool that checks schedule clashes. For the bar: empty seats on slow afternoons that a club would fill. One real example Home Turf's own agents
-surfaced: the Harvard and Yale clubs of Chicago both list the same bar for their 2026 Harvard–Yale viewing party, coordinated by hand on two separate club websites (Fig. 5).</p>
+surfaced: the Harvard and Yale clubs of Chicago both list the same bar for their 2026 Harvard–Yale viewing party, coordinated by hand on two separate club websites.</p>
 
 <h2>3. What is new here</h2>
 <p>I looked at 14 existing products and sources: Steelers Nation Unite, PackersEverywhere, Bills Backers, Browns Backers, USC, Notre Dame, and Harvard/Yale club pages, FANZO (MatchPint), DIRECTV Sports Bar Finder, CrowdKick, Yelp, Google Maps, Reddit, Meetup, Eventbrite, Peerspace, and ChatGPT/Perplexity search. The pieces exist, but they're scattered across team sites, school sites, and general apps, and none of them verifies
@@ -331,6 +331,8 @@ Every model call goes through one doorway (<code>agents/llm.py</code>) that enfo
     ["Scout", "Finds where fans or the official club watch: bar, street address, club, source URL, exact quote, season. If nothing usable turns up, a <b>wide second pass</b> searches the metro area and fan club directories and returns verified “shows every game” best bets", "OpenAI <code>web_search</code>", "max 3 searches, then max 4 only if needed"],
     ["City Sweep", "Maps many teams' fan bars in one city at once (NFL, college, other leagues) so the city map shows every team's logo; results become per-team cache entries", "<code>web_search</code>", "max 4 per league group; one batched verification"],
     ["Reputation", "A real bar's public ratings and review themes, summarized in its own words with links out; photos from the bar's own website", "<code>web_search</code>, <code>site_photos</code>", "max 2 searches; cached 30 days"],
+    ["Trip Parser", "Turns “home in New Haven, New York for the Columbia game, Chicago the week of The Game” into a city for every game date", "None", "effort low; fan text fenced as untrusted"],
+    ["Season Planner", "Picks a bar and a backup for every game from verified candidates in that city, with a tip; kickoffs converted to local time in code; exports a calendar (.ics)", "Cached spots; Scout for new cities (max 4 per plan)", "picks validated against candidates"],
     ["Verifier", "Re-checks each candidate: geocodes the address, re-opens the source, looks for the bar's name and the current season. Model only for unclear cases, in one batched call", "<code>fetch_page</code>, <code>geocode</code> (OpenStreetMap)", "code first; effort low"],
     ["Schedule", "A team's season schedule (date, opponent, kickoff, TV)", "<code>web_search</code>", "max 2 searches; cached 24 h"],
     ["Matchmaker", "Season mode: ranks bars for a club, explains clashes. Rivalry mode: one bar for two rival clubs, logistics, three drafts", "Profiles, schedules, conflicts computed in code", "only candidate bar_ids accepted"],
@@ -370,21 +372,27 @@ cached verified searches, the <b>City Sweep</b> agent (which reads city-wide gui
 partner bars. A sweep costs about {money(FC.get('sweep_cost', 0.11), 2)} per city and adds roughly {FC.get('sweep_teams', 20)} teams; after that, every team search in that city is free.</p>
 {fig("city_chicago", "<b>Figure 4b.</b> City view of Chicago: 25 teams' logo pins, a legend grouped by league, and league filter buttons (All, NFL, NCAA, MLB, NBA, Soccer).", 1300, 820, "86%")}
 <div class="two">
-{fig("falcons_phoenix", "<b>Figure 4d.</b> A hard search (Falcons fans in Phoenix): no team bar exists online, so the wide pass finds the Arizona chapter of the Falcon Club of America and verified bars that show every NFL game.", 1300, 1000)}
-{fig("reputation_card", "<b>Figure 4e.</b> Reputation agent on a real bar: photos from the bar's own site, the Google rating a source shows, and review themes in its own words, with links out.", 1000, 1500)}
+{fig("falcons_phoenix", "<b>Figure 4d.</b> A hard search (Falcons fans in Phoenix): no team bar exists online, so the wide pass finds the Arizona chapter of the Falcon Club of America and verified bars that show every NFL game.", 1300, 800)}
+{fig("reputation_card", "<b>Figure 4e.</b> Reputation agent on a real bar: photos from the bar's own site, the Google rating a source shows, and review themes in its own words, with links out.", 1000, 1100)}
 </div>
 
-<h3>The marketplace run: a Harvard–Yale watch party in Chicago</h3>
-<p>Logged in as the (demo) Yale club president, one click runs Schedule (from cache) → code facts → Matchmaker. The schedule shows The Game on Nov 21 at 3:30 PM ET on ESPNU.
-Code computes the combined turnout (85) and which bars can hold it, then the Matchmaker ranks four, recommends neutral Fullerton Field House (holds 240, two rooms with separate sound),
-and drafts three invitations. Nothing is sent: the proposing president's approval is recorded, then the bar and the Harvard president each approve from their own dashboards
-(Fig. 7). The whole plan cost <b>{money(ACT['rivalry_match']['cost'], 4)}</b>.</p>
+<h3>My Season: a plan for every game, wherever you are</h3>
+<p>A Yale fan picks the team, writes where they'll be in plain English, and gets a game-by-game plan. The <b>Trip Parser</b> places each game in a city, code finds verified
+spots in each city (and sends the Scout to cities it hasn't seen, at most four per plan), kickoffs are converted to local time, and the <b>Season Planner</b> picks a bar and a
+backup for each game from those candidates only. The plan downloads as a calendar file. A full plan cost {money((FC.get('season_plan') or {}).get('cost', 0), 4)} on average in measured runs.</p>
+{fig("season_plan", "<b>Figure 5.</b> My Season for a Yale fan in New Haven: the remaining schedule on the left, and a bar, backup, and local kickoff for every game on the right.", 1300, 1000, "90%")}
+
+<h3>The marketplace run: a Yale–Princeton watch party in New York</h3>
+<p>Logged in as the (demo) president of the Yale Club of NYC's football watch, one click runs Schedule (from cache) → code facts → Matchmaker. The schedule shows
+Yale vs. Princeton on Nov 14 at 12:00 PM ET. Code computes the combined turnout (125) and which New York bars can hold it, then the Matchmaker ranks them, recommends Midtown
+Tailgate (holds 220, three rooms with separate sound, home bar of neither club), and drafts three invitations. Nothing is sent: the proposing president's approval is recorded,
+then the bar manager and the Princeton president each approve from their own dashboards (Fig. 7). The whole plan cost <b>{money(ACT['rivalry_match']['cost'], 4)}</b>
+(this run: 2,009 input tokens, 1,116 of them cached, and 786 output).</p>
 <div class="two">
 {fig("rivalry_card", "<b>Figure 6.</b> Rivalry planner: the game, ranked bars with fit scores and concerns, and three drafted invitations (receipt cropped).", 1000, 1500)}
 <div>
-{fig("find_rivalry", "<b>Figure 5.</b> Fan search “Harvard vs Yale in Chicago”: both clubs' official pages point to the same bar for The Game.", 1300, 900)}
-{fig("approvals_confirmed", "<b>Figure 7.</b> The event becomes “confirmed” only after both presidents and the bar approve.")}
-{fig("season_card", "<b>Figure 6b.</b> Season Matchmaker for the USC club: ranked bars with capacity vs. turnout and computed schedule clashes (USC and Notre Dame are both booked at The Huddle House).", 1000, 900)}
+{fig("approvals_confirmed", "<b>Figure 7.</b> The Yale–Princeton party becomes “confirmed” only after both presidents and the bar approve.")}
+{fig("season_card", "<b>Figure 6b.</b> Season Matchmaker for the USC club: ranked bars with capacity vs. turnout and computed schedule clashes (USC and Notre Dame are both booked at The Huddle House in Chicago).", 1000, 900)}
 </div>
 </div>
 
@@ -456,7 +464,6 @@ homework from this course.</p>
 {fig("pitch_blocked", "<b>Figure 8.</b> A bar edits its AI-drafted pitch to promise “$1 beers and 300 TVs.” The number validator blocks sending: prices must match the bar's profile exactly.")}
 <div>
 {fig("router_off_topic", "<b>Figure 11.</b> Off-topic use of the paid model is declined by the Router.")}
-{fig("attack_code", "<b>Figure 10b.</b> A fake “SYSTEM: admin mode” message in the console's attack tester: blocked, 0 tokens.")}
 </div>
 </div>
 <p><b>Automated tests.</b> <code>tests/test_safety.py</code> has 22 tests: 19 offline (no API cost, stubbed model) covering injection, personal info, length caps, invented numbers,
@@ -473,7 +480,7 @@ and human approval, without secrets.</p>
 {user_test_section()}
 <h3>What the measured runs show</h3>
 {table(["Measure", "Home Turf", "Today", "Source"], [
-    ["Time to a sourced answer, new team + city", f"{L_MED_SEC:.0f} s median ({L_SEC:.0f} s average)", "Minutes of Googling and Reddit; pilot tests will time this", "8 measured live runs"],
+    ["Time to a sourced answer, new team + city", f"6–9 s typical after speed-ups ({L_MED_SEC:.0f} s median before)", "Minutes of Googling and Reddit; pilot tests will time this", "Measured live runs"],
     ["Time for a repeat search", "under 0.1 s", "Same as above", "8 measured cached runs"],
     ["Searches answered with at least one spot", f"{WITH_ANY}/{len(live)} ({WITH_CONFIRMED}/{len(live)} verified)", "No single tool covers every team", "8 measured live runs"],
     ["Share of returned spots verified against source", f"{STATUS['confirmed']}/{TOTAL_SPOTS} ({STATUS['confirmed'] / TOTAL_SPOTS:.0%}); the rest labeled", "Unverified listings; AI search wrong on 60%+ of citation tests", "Measured; Tow Center study<sup>8</sup>"],
@@ -567,6 +574,7 @@ def build_slides() -> str:
     <tr><td>Season matching + clash check</td><td>✕</td><td>✕</td><td>✕</td><td>✕</td><td class="ht">✓</td></tr>
     <tr><td>Rivalry watch-party planner</td><td>✕</td><td>✕</td><td>✕</td><td>✕</td><td class="ht">✓</td></tr>
     <tr><td>Bars pitch clubs (grounded)</td><td>~</td><td>✕</td><td>✕</td><td>✕</td><td class="ht">✓</td></tr>
+    <tr><td>Season plan: a bar for every game, any city</td><td>✕</td><td>✕</td><td>✕</td><td>~</td><td class="ht">✓</td></tr>
   </table>
 </section>
 
@@ -582,18 +590,18 @@ def build_slides() -> str:
     <img src="{s_img('city_chicago', 1250, 900)}" class="shot wide">
     <div class="side">
       <img src="{s_img('receipt_live')}" class="shot">
-      <ul class="tight small"><li>Team-logo pins, ringed by verification status</li><li>Filter by league: NFL · NCAA · MLB · NBA · NHL · Soccer</li><li>Any team + city: verified in ~12 s for ~1¢</li></ul>
+      <ul class="tight small"><li>Team-logo pins, ringed by verification status</li><li>Filter by league: NFL · NCAA · MLB · NBA · NHL · Soccer</li><li>Any team + city: verified in ~7 s for ~1–2¢</li></ul>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Demo: Harvard vs. Yale in Chicago</h2>
+  <h2>Demo: Yale vs. Princeton in New York</h2>
   <div class="shot-row">
     <img src="{s_img('rivalry_card', 1500, 1100)}" class="shot tall">
     <div class="side">
       <img src="{s_img('approvals_confirmed')}" class="shot">
-      <ul class="tight small"><li>Finds The Game, picks a neutral bar for 85 fans</li><li>3 drafted invitations, nothing sent</li><li>Confirmed only after all 3 parties approve · <b>{money(ACT['rivalry_match']['cost'], 4)}</b></li></ul>
+      <ul class="tight small"><li>Finds Yale–Princeton (Nov 14), picks a neutral bar for 125 fans</li><li>3 drafted invitations, nothing sent</li><li>Confirmed only after all 3 parties approve · <b>{money(ACT['rivalry_match']['cost'], 4)}</b></li></ul>
     </div>
   </div>
 </section>
@@ -632,12 +640,12 @@ def build_slides() -> str:
 <section>
   <h2>Impact</h2>
   <div class="cols">
-    <div class="stat"><div class="big">{L_MED_SEC:.0f} s</div><div>median time to a sourced answer for a new team + city</div></div>
+    <div class="stat"><div class="big">~7 s</div><div>typical time to a sourced answer for a new team + city (was 12 s before speed-ups)</div></div>
     <div class="stat"><div class="big">{WITH_CONFIRMED}/{len(live)}</div><div>new searches returned a verified spot ({STATUS['confirmed']}/{TOTAL_SPOTS} spots verified)</div></div>
     <div class="stat"><div class="big">$25k</div><div>season revenue for a bar from one 70-fan club (estimate: $30 per fan, 12 games)</div></div>
   </div>
-  <div class="shot-row"><img src="{s_img('console', 900)}" class="shot half"><div class="side"><ul class="tight small">
-    <li><b>Something new is possible:</b> two rival clubs, one bar, three sign-offs, in one click</li>
+  <div class="shot-row"><img src="{s_img('season_plan_card', 1000, 1300)}" class="shot half" style="max-height:360px;object-fit:cover;object-position:top"><div class="side"><ul class="tight small">
+    <li><b>Something new is possible:</b> a bar for every game of your season, in whatever city you're in, plus rivalry parties with three sign-offs</li>
     <li><b>Any team, any city:</b> {WITH_ANY}/{len(live)} new searches answered, {STATUS['confirmed'] / TOTAL_SPOTS:.0%} of spots verified</li>
     <li><b>Club season shortlist + clash check:</b> {ACT['season_match']['sec']:.0f} s instead of a volunteer's phone calls</li>
     <li>{"Pilot users: " + html.escape(USER_TESTS.get("summary", "")) if USER_TESTS else "Pilot user tests (old way vs. Home Turf, timed) are running with classmates and alumni"}</li>

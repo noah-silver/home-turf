@@ -1,21 +1,13 @@
 {
- "sweep": {
-  "input": 60247.6,
-  "output": 3445.2,
-  "cached": 14694.4,
-  "web_searches": 8.4,
-  "cost": 0.09062568900000001,
-  "seconds": 20.1826,
-  "runs": 5
- },
+ "sweep": null,
  "wide": {
-  "input": 36721,
-  "output": 898,
-  "cached": 0,
-  "web_searches": 5,
-  "cost": 0.0544364,
-  "seconds": 7.459,
-  "runs": 1
+  "input": 32632.5,
+  "output": 622.5,
+  "cached": 10720,
+  "web_searches": 3.5,
+  "cost": 0.0376322125,
+  "seconds": 15.536999999999999,
+  "runs": 2
  },
  "reputation": {
   "input": 11871,
@@ -23,11 +15,20 @@
   "cached": 0,
   "web_searches": 1,
   "cost": 0.011491525,
-  "seconds": 0.281,
+  "seconds": 0.296,
+  "runs": 1
+ },
+ "season_plan": {
+  "input": 1881,
+  "output": 535,
+  "cached": 0,
+  "web_searches": 0,
+  "cost": 0.000482225,
+  "seconds": 5.519,
   "runs": 1
  },
  "sweep_teams": 15,
- "sweep_cost": 0.09062568900000001,
- "teams_mapped": 55,
+ "sweep_cost": 0,
+ "teams_mapped": 60,
  "cities": 6
 }

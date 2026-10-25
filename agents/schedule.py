@@ -16,14 +16,15 @@ def cache_key(team: str) -> str:
 def get_schedule(run: Run, team: str) -> TeamSchedule | None:
     key = cache_key(team)
     cached = db.cache_get(key, config.SCHEDULE_CACHE_HOURS)
-    if cached:
+    if cached and cached.get("games"):
         run.add_step("Schedule", f"{team}: schedule from cache (no tokens)")
         return TeamSchedule(**cached)
     try:
         sched = run_agent(
             run,
             "schedule",
-            f"Team: {team}\nSeason: {config.CURRENT_SEASON}\nList the regular-season schedule.",
+            f"Team: {team}\nToday: {db.today()}\nList the team's upcoming games from today onward (at most 25). "
+            "For football, include the whole current regular season. If the season is over, list the next season's games if published.",
             TeamSchedule,
             tools=[{"type": "web_search"}],
             max_tool_calls=2,
@@ -33,6 +34,7 @@ def get_schedule(run: Run, team: str) -> TeamSchedule | None:
     except Exception as exc:  # contained failure (GUARDRAILS S13)
         run.add_step("Schedule", f"{team}: schedule unavailable ({exc})")
         return None
-    db.cache_put(key, "schedule", sched.model_dump())
+    if sched.games:  # never cache an empty schedule
+        db.cache_put(key, "schedule", sched.model_dump())
     run.add_step("Schedule", f"{team}: {len(sched.games)} games found")
     return sched

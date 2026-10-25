@@ -8,7 +8,7 @@ from core import db
 from ui.components import search_href
 from ui.fun import floating_logos, logo_wall, mapped_teams
 
-EXAMPLES = ["USC fans in Chicago", "Chicago Bears fans in Boston", "Harvard vs Yale in Chicago", "Steelers fans in Denver", "Boston", "Chicago"]
+EXAMPLES = ["Yale fans in Chicago", "Yale fans in New York", "Yale vs Princeton in New York", "Patriots fans in New York", "Boston", "New Haven"]
 
 
 def _stats() -> list[tuple[str, str]]:
@@ -53,7 +53,7 @@ def layout() -> html.Div:
                     html.Div(
                         className="hero-search",
                         children=[
-                            dcc.Input(id="home-q", type="text", placeholder="Try “USC fans in Chicago” or “Bears fans in Boston”", debounce=False, n_submit=0, maxLength=300),
+                            dcc.Input(id="home-q", type="text", placeholder="Try “Yale fans in Chicago” or “Bears fans in Boston”", debounce=False, n_submit=0, maxLength=300),
                             html.Button("Find my people", id="home-go", className="btn btn-gold"),
                         ],
                     ),
@@ -72,7 +72,8 @@ def layout() -> html.Div:
                         html.Div("📍", className="icon"), html.H3("Traveling and transplanted fans"),
                         html.P("You’re in Chicago on a Saturday and want to watch USC with other Trojans.", className="muted"),
                         html.Ul([html.Li("Verified watch spots on a map"), html.Li("Sources and evidence for every bar"), html.Li("Game-day reviews from other fans")]),
-                        dcc.Link("Find a watch spot →", href="/find", className="btn btn-navy btn-sm"),
+                        html.Div(className="row", children=[dcc.Link("Find a watch spot →", href="/find", className="btn btn-navy btn-sm"),
+                                                            dcc.Link("Plan my season →", href="/season", className="btn btn-gold btn-sm")]),
                     ]),
                     html.Div(className="card role-card", children=[
                         html.Div("🏈", className="icon"), html.H3("Fan-club presidents"),
@@ -98,9 +99,9 @@ def layout() -> html.Div:
                 style={"background": "linear-gradient(120deg, #fff 60%, #f4ead2)"},
                 children=html.Div(className="row", children=[
                     html.Div([
-                        html.Div("The Game · Saturday, November 21, 2026", className="eyebrow"),
-                        html.H2("Harvard vs. Yale, together in Chicago 🍻"),
-                        html.P("Two alumni clubs, one neutral bar, three drafted invitations, and nothing happens until all three parties approve.", className="muted"),
+                        html.Div("Rivalry week · Yale vs. Princeton · Nov 14", className="eyebrow"),
+                        html.H2("Bulldogs and Tigers, one bar in New York 🍻"),
+                        html.P("Two rival alumni clubs, one neutral bar, three drafted invitations, and nothing happens until all three say yes. (USC vs. UCLA in Chicago works too.)", className="muted"),
                     ], style={"flex": 1}),
                     dcc.Link("Plan it as a club president →", href="/clubs", className="btn btn-gold"),
                 ]),

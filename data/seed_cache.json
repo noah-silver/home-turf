@@ -60,7 +60,7 @@
       }
      ],
      "team": "USC Trojans",
-     "bar_id": 9
+     "bar_id": 14
     }
    ],
    "club_name": "Chicago Trojan Network",
@@ -121,7 +121,7 @@
       }
      ],
      "team": "Chicago Bears",
-     "bar_id": 10
+     "bar_id": 15
     }
    ],
    "club_name": "Chicago Sports Club of New England",
@@ -182,7 +182,7 @@
       }
      ],
      "team": "Yale Bulldogs",
-     "bar_id": 11
+     "bar_id": 16
     }
    ],
    "club_name": "Yale Club of Chicago",
@@ -243,7 +243,7 @@
       }
      ],
      "team": "Harvard Crimson",
-     "bar_id": 12
+     "bar_id": 17
     }
    ],
    "club_name": "Harvard Club of Chicago",
@@ -316,7 +316,7 @@
       }
      ],
      "team": "Notre Dame Fighting Irish",
-     "bar_id": 14
+     "bar_id": 18
     },
     {
      "bar_name": "Declan's Irish Pub",
@@ -350,7 +350,7 @@
       }
      ],
      "team": "Notre Dame Fighting Irish",
-     "bar_id": 15
+     "bar_id": 19
     },
     {
      "bar_name": "Flo & Santos",
@@ -384,7 +384,7 @@
       }
      ],
      "team": "Notre Dame Fighting Irish",
-     "bar_id": 16
+     "bar_id": 20
     },
     {
      "bar_name": "The Kerryman",
@@ -418,7 +418,7 @@
       }
      ],
      "team": "Notre Dame Fighting Irish",
-     "bar_id": 17
+     "bar_id": 21
     },
     {
      "bar_name": "Kincade's",
@@ -452,7 +452,7 @@
       }
      ],
      "team": "Notre Dame Fighting Irish",
-     "bar_id": 18
+     "bar_id": 22
     }
    ],
    "club_name": "Notre Dame Club of Chicago",
@@ -1586,7 +1586,7 @@
       }
      ],
      "team": "Green Bay Packers",
-     "bar_id": 13
+     "bar_id": 31
     }
    ],
    "club_name": "Packers Boston",
@@ -1636,7 +1636,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 31
+     "bar_id": 32
     }
    ],
    "allgames": [],
@@ -1687,7 +1687,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 32
+     "bar_id": 33
     }
    ],
    "allgames": [],
@@ -1738,7 +1738,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 33
+     "bar_id": 34
     }
    ],
    "allgames": [],
@@ -1789,7 +1789,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 34
+     "bar_id": 35
     }
    ],
    "allgames": [],
@@ -1840,7 +1840,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 35
+     "bar_id": 36
     }
    ],
    "allgames": [],
@@ -1891,7 +1891,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 36
+     "bar_id": 37
     }
    ],
    "allgames": [],
@@ -1942,7 +1942,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 37
+     "bar_id": 38
     }
    ],
    "allgames": [],
@@ -1993,7 +1993,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 38
+     "bar_id": 39
     }
    ],
    "allgames": [],
@@ -2044,7 +2044,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 38
+     "bar_id": 39
     }
    ],
    "allgames": [],
@@ -2095,7 +2095,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 38
+     "bar_id": 39
     }
    ],
    "allgames": [],
@@ -2146,7 +2146,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 38
+     "bar_id": 39
     }
    ],
    "allgames": [],
@@ -2197,7 +2197,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 38
+     "bar_id": 39
     }
    ],
    "allgames": [],
@@ -2248,7 +2248,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 38
+     "bar_id": 39
     }
    ],
    "allgames": [],
@@ -2299,7 +2299,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 38
+     "bar_id": 39
     }
    ],
    "allgames": [],
@@ -2350,7 +2350,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 38
+     "bar_id": 39
     }
    ],
    "allgames": [],
@@ -2401,7 +2401,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 38
+     "bar_id": 39
     }
    ],
    "allgames": [],
@@ -2452,7 +2452,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 39
+     "bar_id": 40
     },
     {
      "bar_name": "The Chemist",
@@ -2486,7 +2486,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 40
+     "bar_id": 41
     }
    ],
    "allgames": [],
@@ -2546,7 +2546,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 41
+     "bar_id": 42
     }
    ],
    "allgames": [],
@@ -2597,7 +2597,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 42
+     "bar_id": 43
     }
    ],
    "allgames": [],
@@ -2648,7 +2648,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 43
+     "bar_id": 44
     }
    ],
    "allgames": [],
@@ -2699,7 +2699,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 44
+     "bar_id": 45
     }
    ],
    "allgames": [],
@@ -2750,7 +2750,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 45
+     "bar_id": 46
     }
    ],
    "allgames": [],
@@ -2801,7 +2801,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 46
+     "bar_id": 47
     }
    ],
    "allgames": [],
@@ -2852,7 +2852,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 47
+     "bar_id": 48
     },
     {
      "bar_name": "City Nikki’s",
@@ -2886,7 +2886,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 48
+     "bar_id": 49
     },
     {
      "bar_name": "Old Crow Smokehouse",
@@ -2920,7 +2920,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 49
+     "bar_id": 50
     },
     {
      "bar_name": "Bandit",
@@ -2954,7 +2954,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 50
+     "bar_id": 51
     },
     {
      "bar_name": "Gaslight",
@@ -2988,7 +2988,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 51
+     "bar_id": 52
     },
     {
      "bar_name": "Woodie’s Flat",
@@ -3022,7 +3022,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 52
+     "bar_id": 53
     },
     {
      "bar_name": "Fadó Irish Pub",
@@ -3056,7 +3056,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 53
+     "bar_id": 54
     }
    ],
    "allgames": [],
@@ -3106,7 +3106,7 @@
       }
      ],
      "team": "Michigan Wolverines",
-     "bar_id": 19
+     "bar_id": 55
     },
     {
      "bar_name": "Moe's Cantina - River North",
@@ -3140,7 +3140,7 @@
       }
      ],
      "team": "Michigan Wolverines",
-     "bar_id": 20
+     "bar_id": 56
     },
     {
      "bar_name": "Sully's House",
@@ -3174,7 +3174,7 @@
       }
      ],
      "team": "Michigan Wolverines",
-     "bar_id": 21
+     "bar_id": 57
     },
     {
      "bar_name": "The Reveler",
@@ -3208,7 +3208,7 @@
       }
      ],
      "team": "Michigan Wolverines",
-     "bar_id": 22
+     "bar_id": 58
     },
     {
      "bar_name": "Fatpour Tap Works-Wicker Park",
@@ -3242,7 +3242,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 54
+     "bar_id": 59
     },
     {
      "bar_name": "Moe’s Cantina River North",
@@ -3276,7 +3276,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 55
+     "bar_id": 60
     },
     {
      "bar_name": "Sully’s House",
@@ -3310,7 +3310,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 56
+     "bar_id": 61
     },
     {
      "bar_name": "Duffy’s Tavern and Grille",
@@ -3344,7 +3344,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 57
+     "bar_id": 62
     }
    ],
    "club_name": "U-M Club of Greater Chicago",
@@ -3394,7 +3394,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 58
+     "bar_id": 63
     }
    ],
    "allgames": [],
@@ -3445,7 +3445,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 59
+     "bar_id": 64
     },
     {
      "bar_name": "Illini Joe’s",
@@ -3479,7 +3479,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 60
+     "bar_id": 65
     }
    ],
    "allgames": [],
@@ -3530,7 +3530,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 61
+     "bar_id": 66
     }
    ],
    "allgames": [],
@@ -3581,7 +3581,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 62
+     "bar_id": 67
     }
    ],
    "allgames": [],
@@ -3632,7 +3632,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 63
+     "bar_id": 68
     }
    ],
    "allgames": [],
@@ -3683,7 +3683,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 64
+     "bar_id": 69
     }
    ],
    "allgames": [],
@@ -3734,7 +3734,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 65
+     "bar_id": 70
     }
    ],
    "allgames": [],
@@ -3785,7 +3785,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 61
+     "bar_id": 66
     }
    ],
    "allgames": [],
@@ -3836,7 +3836,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 62
+     "bar_id": 67
     }
    ],
    "allgames": [],
@@ -3887,7 +3887,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 66
+     "bar_id": 71
     }
    ],
    "allgames": [],
@@ -3938,7 +3938,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 67
+     "bar_id": 72
     }
    ],
    "allgames": [],
@@ -3989,7 +3989,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 68
+     "bar_id": 73
     }
    ],
    "allgames": [],
@@ -4040,7 +4040,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 68
+     "bar_id": 73
     }
    ],
    "allgames": [],
@@ -4091,7 +4091,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 69
+     "bar_id": 74
     }
    ],
    "allgames": [],
@@ -4151,7 +4151,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 70
+     "bar_id": 75
     }
    ],
    "allgames": [],
@@ -4202,7 +4202,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 71
+     "bar_id": 76
     }
    ],
    "allgames": [],
@@ -4253,7 +4253,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 72
+     "bar_id": 77
     }
    ],
    "allgames": [],
@@ -4304,7 +4304,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 73
+     "bar_id": 78
     },
     {
      "bar_name": "East End Bar & Grill",
@@ -4338,7 +4338,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 74
+     "bar_id": 79
     },
     {
      "bar_name": "Kelley’s Sports Bar",
@@ -4372,7 +4372,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 75
+     "bar_id": 80
     },
     {
      "bar_name": "Pennsylvania 6",
@@ -4406,7 +4406,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 76
+     "bar_id": 81
     },
     {
      "bar_name": "The Rutherford",
@@ -4440,7 +4440,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 77
+     "bar_id": 82
     }
    ],
    "allgames": [],
@@ -4491,7 +4491,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 78
+     "bar_id": 83
     }
    ],
    "allgames": [],
@@ -4542,7 +4542,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 79
+     "bar_id": 84
     },
     {
      "bar_name": "Brickyard Bar",
@@ -4576,7 +4576,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 80
+     "bar_id": 85
     },
     {
      "bar_name": "Central Park Tavern",
@@ -4610,7 +4610,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 73
+     "bar_id": 78
     },
     {
      "bar_name": "Blue Haven East",
@@ -4644,7 +4644,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 81
+     "bar_id": 86
     },
     {
      "bar_name": "Fools Gold",
@@ -4678,7 +4678,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 82
+     "bar_id": 87
     }
    ],
    "allgames": [],
@@ -4729,7 +4729,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 83
+     "bar_id": 88
     }
    ],
    "allgames": [],
@@ -4780,7 +4780,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 84
+     "bar_id": 89
     }
    ],
    "allgames": [],
@@ -4831,7 +4831,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 84
+     "bar_id": 89
     }
    ],
    "allgames": [],
@@ -4882,7 +4882,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 84
+     "bar_id": 89
     }
    ],
    "allgames": [],
@@ -4933,7 +4933,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 84
+     "bar_id": 89
     }
    ],
    "allgames": [],
@@ -4984,7 +4984,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 85
+     "bar_id": 90
     }
    ],
    "allgames": [],
@@ -5035,7 +5035,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 86
+     "bar_id": 91
     }
    ],
    "allgames": [],
@@ -5086,7 +5086,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 87
+     "bar_id": 92
     }
    ],
    "allgames": [],
@@ -5137,7 +5137,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 88
+     "bar_id": 93
     }
    ],
    "allgames": [],
@@ -5188,7 +5188,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 88
+     "bar_id": 93
     }
    ],
    "allgames": [],
@@ -5239,7 +5239,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 88
+     "bar_id": 93
     }
    ],
    "allgames": [],
@@ -5290,7 +5290,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 89
+     "bar_id": 94
     },
     {
      "bar_name": "Playwright Tavern",
@@ -5324,7 +5324,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 90
+     "bar_id": 95
     },
     {
      "bar_name": "Walter's Bar",
@@ -5358,7 +5358,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 91
+     "bar_id": 96
     },
     {
      "bar_name": "Break Billiards",
@@ -5392,7 +5392,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 92
+     "bar_id": 97
     },
     {
      "bar_name": "Beer Authority",
@@ -5426,7 +5426,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 93
+     "bar_id": 98
     },
     {
      "bar_name": "Murphy’s Astoria",
@@ -5460,7 +5460,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 94
+     "bar_id": 99
     }
    ],
    "allgames": [],
@@ -5511,7 +5511,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 95
+     "bar_id": 100
     },
     {
      "bar_name": "Blue Haven South",
@@ -5545,7 +5545,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 96
+     "bar_id": 101
     },
     {
      "bar_name": "Rocco's Sports & Recreation",
@@ -5579,7 +5579,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 97
+     "bar_id": 102
     },
     {
      "bar_name": "3 Sheets",
@@ -5613,7 +5613,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 98
+     "bar_id": 103
     },
     {
      "bar_name": "The Stumble Inn",
@@ -5647,7 +5647,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 99
+     "bar_id": 104
     },
     {
      "bar_name": "Mustang Harry's",
@@ -5681,7 +5681,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 100
+     "bar_id": 105
     },
     {
      "bar_name": "Pig n Whistle Pub",
@@ -5715,7 +5715,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 101
+     "bar_id": 106
     },
     {
      "bar_name": "Magic Hour Rooftop Bar & Lounge",
@@ -5749,7 +5749,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 102
+     "bar_id": 107
     }
    ],
    "allgames": [],
@@ -5809,7 +5809,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 103
+     "bar_id": 108
     }
    ],
    "allgames": [],
@@ -5860,7 +5860,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 104
+     "bar_id": 109
     }
    ],
    "allgames": [],
@@ -5911,7 +5911,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 105
+     "bar_id": 110
     }
    ],
    "allgames": [],
@@ -5962,7 +5962,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 106
+     "bar_id": 111
     }
    ],
    "allgames": [],
@@ -6013,7 +6013,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 107
+     "bar_id": 112
     }
    ],
    "allgames": [],
@@ -6064,7 +6064,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 108
+     "bar_id": 113
     },
     {
      "bar_name": "Upper Crust Pizza",
@@ -6098,7 +6098,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 109
+     "bar_id": 114
     }
    ],
    "allgames": [],
@@ -6149,7 +6149,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 110
+     "bar_id": 115
     }
    ],
    "allgames": [],
@@ -6200,7 +6200,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 111
+     "bar_id": 116
     }
    ],
    "allgames": [],
@@ -6251,7 +6251,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 112
+     "bar_id": 117
     }
    ],
    "allgames": [],
@@ -6302,7 +6302,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 113
+     "bar_id": 118
     }
    ],
    "allgames": [],
@@ -6353,7 +6353,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 114
+     "bar_id": 119
     }
    ],
    "allgames": [],
@@ -6404,7 +6404,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 115
+     "bar_id": 120
     }
    ],
    "allgames": [],
@@ -6464,7 +6464,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 116
+     "bar_id": 121
     }
    ],
    "allgames": [],
@@ -6515,7 +6515,7 @@
        "season_on_page": true
       }
      ],
-     "bar_id": 116
+     "bar_id": 121
     }
    ],
    "allgames": [],
@@ -6566,7 +6566,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 117
+     "bar_id": 122
     }
    ],
    "allgames": [],
@@ -6617,7 +6617,7 @@
        "season_on_page": false
       }
      ],
-     "bar_id": 117
+     "bar_id": 122
     }
    ],
    "allgames": [],
@@ -6635,6 +6635,2679 @@
    "city": "New Haven, CT",
    "teams": 4,
    "at": "2026-10-25T00:30:14+00:00"
+  }
+ },
+ {
+  "key": "spots|ucla bruins|chicago",
+  "kind": "spots",
+  "payload": {
+   "team": "UCLA Bruins",
+   "sport": "college football",
+   "city": "Chicago, IL",
+   "spots": [
+    {
+     "bar_name": "Dog Haus Biergarten – Lincoln Park",
+     "address": "2464 N Lincoln Ave, Chicago, IL",
+     "club_name": "UCLA Alumni Chicago Network",
+     "evidence_quote": "Join the Chicago Network as we cheer on UCLA football!",
+     "source_url": "https://alumni.ucla.edu/event/chicago-network-ucla-football-game-watch-party-cal/",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 41.9266848,
+     "lon": -87.6509521,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The UCLA Alumni Association page names Doghaus Biergarten at 2464 N Lincoln Ave in Chicago as the Chicago Network watch-party venue, but the event is for a past season rather than 2026.",
+     "sources": [
+      {
+       "url": "https://alumni.ucla.edu/event/chicago-network-ucla-football-game-watch-party-cal/",
+       "quote": "Join the Chicago Network as we cheer on UCLA football!",
+       "status": "likely",
+       "official": true,
+       "reason": "The UCLA Alumni Association page names Doghaus Biergarten at 2464 N Lincoln Ave in Chicago as the Chicago Network watch-party venue, but the event is for a past season rather than 2026.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "team": "UCLA Bruins",
+     "bar_id": 123
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "UCLA Alumni Chicago Network",
+   "club_contact_url": "https://alumni.ucla.edu/organizer/chicago-network/",
+   "search_notes": "UCLA Alumni lists 2026 Chicago football watch parties at Dog Haus Biergarten, including an October 31 event. The address and team connection are from UCLA Alumni event listings.",
+   "safety_notes": [],
+   "found_at": "2026-10-25T00:57:06+00:00"
+  }
+ },
+ {
+  "key": "spots|liverpool|chicago",
+  "kind": "spots",
+  "payload": {
+   "team": "Liverpool",
+   "sport": "soccer",
+   "city": "Chicago, IL",
+   "spots": [
+    {
+     "bar_name": "AJ Hudson’s Public House",
+     "address": "3801 N Ashland",
+     "club_name": "OLSC Chicago",
+     "evidence_quote": "eventually AJ Hudson’s, where our supporters have been meeting for more than a decade",
+     "source_url": "https://www.liverpoolfc.com/news/we-love-you-liverpool-meet-official-lfc-supporters-club-chicago",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 41.9507984,
+     "lon": -87.668702,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "confirmed",
+     "status_reason": "The Liverpool FC page says OLSC Chicago eventually moved to AJ Hudson’s, where supporters have met for more than a decade.",
+     "sources": [
+      {
+       "url": "https://www.liverpoolfc.com/news/we-love-you-liverpool-meet-official-lfc-supporters-club-chicago",
+       "quote": "eventually AJ Hudson’s, where our supporters have been meeting for more than a decade",
+       "status": "confirmed",
+       "official": true,
+       "reason": "The Liverpool FC page says OLSC Chicago eventually moved to AJ Hudson’s, where supporters have met for more than a decade.",
+       "page_loaded": true,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "Liverpool",
+     "bar_id": 124
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "OLSC Chicago",
+   "club_contact_url": "https://www.liverpoolfc.com/info/find-olsc",
+   "search_notes": "Liverpool FC’s official feature identifies OLSC Chicago and says its supporters meet at AJ Hudson’s. The feature was published in 2026; it does not provide a street address, so the address is listed as unknown.",
+   "safety_notes": [],
+   "found_at": "2026-10-25T00:57:20+00:00"
+  }
+ },
+ {
+  "key": "spots|manchester united|chicago",
+  "kind": "spots",
+  "payload": {
+   "team": "Manchester United",
+   "sport": "soccer",
+   "city": "Chicago, IL",
+   "spots": [
+    {
+     "bar_name": "Theory",
+     "address": "9 W Hubbard St, Chicago, IL 60654",
+     "club_name": "Manchester United Fans of Chicago",
+     "evidence_quote": "Join us at Theory in Chicago for all ManUtd matches: 9 W Hubbard street.",
+     "source_url": "https://mufchicago.com/about/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 41.8899141,
+     "lon": -87.6285193,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "confirmed",
+     "status_reason": "The Manchester United Fans of Chicago page identifies Theory as the club’s new home pub and invites fans to join there for all ManUtd matches at 9 W Hubbard Street, Chicago.",
+     "sources": [
+      {
+       "url": "https://mufchicago.com/about/",
+       "quote": "Join us at Theory in Chicago for all ManUtd matches: 9 W Hubbard street.",
+       "status": "confirmed",
+       "official": true,
+       "reason": "The Manchester United Fans of Chicago page identifies Theory as the club’s new home pub and invites fans to join there for all ManUtd matches at 9 W Hubbard Street, Chicago.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "team": "Manchester United",
+     "bar_id": 14
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "Manchester United Fans of Chicago",
+   "club_contact_url": "https://mufchicago.com/",
+   "search_notes": "The club’s own website identifies Theory as its home pub and says it gathers there for all Manchester United matches. The page does not specify a season or year.",
+   "safety_notes": [],
+   "found_at": "2026-10-25T00:57:27+00:00"
+  }
+ },
+ {
+  "key": "spots|new york yankees|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "New York Yankees",
+   "sport": "MLB",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "Greatest Bar",
+     "address": "262 Friend St, Boston, MA 02114",
+     "club_name": "unknown",
+     "evidence_quote": "Calling all Yankees fans!!! Come watch the game tonight and Thursday at the Greatest Bar.",
+     "source_url": "https://watchpartyradar.com/mlb/boston/",
+     "season_seen": "unknown",
+     "official_source": false,
+     "lat": 42.3645642,
+     "lon": -71.0614221,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The provided page text does not mention Greatest Bar or tie it to Yankees fans; the Scout’s quote is not corroborated there.",
+     "sources": [
+      {
+       "url": "https://watchpartyradar.com/mlb/boston/",
+       "quote": "Calling all Yankees fans!!! Come watch the game tonight and Thursday at the Greatest Bar.",
+       "status": "unverified",
+       "official": false,
+       "reason": "The provided page text does not mention Greatest Bar or tie it to Yankees fans; the Scout’s quote is not corroborated there.",
+       "page_loaded": true,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "New York Yankees",
+     "bar_id": 125
+    }
+   ],
+   "allgames": [],
+   "wide_done": true,
+   "club_name": null,
+   "club_contact_url": null,
+   "search_notes": "Found a Boston listing explicitly connecting Greatest Bar with Yankees fans, but the source does not identify a fan club or specify a season. Checked Yankees-in-Boston listings and broader Boston MLB bar results; no source found confirming a Boston bar shows every MLB game.",
+   "safety_notes": [],
+   "found_at": "2026-10-25T00:57:46+00:00"
+  }
+ },
+ {
+  "key": "spots|new york knicks|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "New York Knicks",
+   "sport": "NBA",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "The Greatest Bar",
+     "address": "262 Friend St, Boston, Massachusetts 02114",
+     "club_name": "unknown",
+     "evidence_quote": "Game 1 New York Knicks Watch Party @ The Greatest Bar",
+     "source_url": "https://bostonviplist.com/event/game-1-new-york-knicks-watch-party-the-greatest-bar/",
+     "season_seen": "unknown",
+     "official_source": false,
+     "lat": 42.3645642,
+     "lon": -71.0614221,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The page lists a New York Knicks watch party at The Greatest Bar in Boston on May 21, 2025, but it is an event from an older season, not 2026.",
+     "sources": [
+      {
+       "url": "https://bostonviplist.com/event/game-1-new-york-knicks-watch-party-the-greatest-bar/",
+       "quote": "Game 1 New York Knicks Watch Party @ The Greatest Bar",
+       "status": "likely",
+       "official": false,
+       "reason": "The page lists a New York Knicks watch party at The Greatest Bar in Boston on May 21, 2025, but it is an event from an older season, not 2026.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "team": "New York Knicks",
+     "bar_id": 126
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": null,
+   "club_contact_url": null,
+   "search_notes": "Found one past Knicks watch-party listing for The Greatest Bar. No official Knicks fan club or current 2026 season watch location was found.",
+   "safety_notes": [],
+   "found_at": "2026-10-25T00:57:55+00:00"
+  }
+ },
+ {
+  "key": "spots|new england patriots|new york",
+  "kind": "spots",
+  "payload": {
+   "team": "New England Patriots",
+   "sport": "NFL",
+   "city": "New York, NY",
+   "spots": [
+    {
+     "bar_name": "Eastpoint",
+     "address": "25 Avenue B New York, NY 10009",
+     "club_name": "unknown",
+     "evidence_quote": "we're hosting weekly watch parties for every patriots game this season",
+     "source_url": "https://fanclubs.patriots.com/bar/eastpoint",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 40.722242,
+     "lon": -73.9830182,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://fanclubs.patriots.com/bar/eastpoint",
+       "quote": "we're hosting weekly watch parties for every patriots game this season",
+       "status": "confirmed",
+       "official": true,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "New England Patriots",
+     "bar_id": 127
+    },
+    {
+     "bar_name": "The Joye Public House",
+     "address": "315 West 39th Street New York, NY 10018",
+     "club_name": "Patriots fans (no club named)",
+     "evidence_quote": "Game day specials are offered to Patriots Fans",
+     "source_url": "https://fanclubs.patriots.com/bar/the-joye-public-house",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 40.7559521,
+     "lon": -73.9920605,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://fanclubs.patriots.com/bar/the-joye-public-house",
+       "quote": "Game day specials are offered to Patriots Fans",
+       "status": "confirmed",
+       "official": true,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "New England Patriots",
+     "bar_id": 128
+    },
+    {
+     "bar_name": "Tir na nOg Times Square",
+     "address": "315 W. 39th St. New York, NY 10018",
+     "club_name": "NYC Fans of New England Patriots",
+     "evidence_quote": "We meet at Tir na nOg Times Square for every game.",
+     "source_url": "https://fanclubs.patriots.com/bar/nyc-fans-of-new-england-patriots",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 40.7559521,
+     "lon": -73.9920605,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://fanclubs.patriots.com/bar/nyc-fans-of-new-england-patriots",
+       "quote": "We meet at Tir na nOg Times Square for every game.",
+       "status": "confirmed",
+       "official": true,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "New England Patriots",
+     "bar_id": 129
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "NYC Fans of New England Patriots",
+   "club_contact_url": "https://fanclubs.patriots.com/bar/nyc-fans-of-new-england-patriots",
+   "search_notes": "The Patriots’ official registry lists Eastpoint for weekly 2026-season watch parties and lists The Joye Public House as a Patriots fan bar. The club page names Tir na nOg at the same address; a separate registry listing says The Joye Public House was formerly Tir na Nog, so confirm the club’s current meetup details before attending.",
+   "safety_notes": [],
+   "found_at": "2026-10-25T00:58:05+00:00"
+  }
+ },
+ {
+  "key": "spots|boston bruins|new york",
+  "kind": "spots",
+  "payload": {
+   "team": "Boston Bruins",
+   "sport": "NHL",
+   "city": "New York, NY",
+   "spots": [
+    {
+     "bar_name": "Windy City Ale House",
+     "address": "unknown",
+     "club_name": "unknown",
+     "evidence_quote": "Bruins fans have watched games here in the past",
+     "source_url": "https://gamewatch.info/cities/new-york-ny/boston-bruins",
+     "season_seen": "unknown",
+     "official_source": false,
+     "lat": null,
+     "lon": null,
+     "geocoded": false,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The supplied source page is empty and does not mention Windy City Ale House or tie it to Bruins fans in New York.",
+     "sources": [
+      {
+       "url": "https://gamewatch.info/cities/new-york-ny/boston-bruins",
+       "quote": "Bruins fans have watched games here in the past",
+       "status": "unverified",
+       "official": false,
+       "reason": "The supplied source page is empty and does not mention Windy City Ale House or tie it to Bruins fans in New York.",
+       "page_loaded": true,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "Boston Bruins",
+     "bar_id": 130
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": null,
+   "club_contact_url": null,
+   "search_notes": "Found one low-confidence nearby listing in Brooklyn, not a confirmed New York City fan-club venue. The source reports no recent activity; no street address or official local club was found.",
+   "safety_notes": [],
+   "found_at": "2026-10-25T00:58:12+00:00"
+  }
+ },
+ {
+  "key": "spots|boston red sox|new york",
+  "kind": "spots",
+  "payload": {
+   "team": "Boston Red Sox",
+   "sport": "MLB",
+   "city": "New York, NY",
+   "spots": [
+    {
+     "bar_name": "The Three Monkeys",
+     "address": "832 8th Ave, New York, NY 10019",
+     "club_name": "The New York City, Boston Red Sox meetup group",
+     "evidence_quote": "Red Sox v Yanks - Game 2 Wild Card ... The Three Monkeys, 832 8th Ave",
+     "source_url": "https://www.meetup.com/nycsox/",
+     "season_seen": "2026",
+     "official_source": false,
+     "lat": 40.7623354,
+     "lon": -73.9857106,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The Meetup page lists the Red Sox group’s Wild Card event at The Three Monkeys, 832 8th Ave, but the event is undated and the page also shows an older Three Monkeys address.",
+     "sources": [
+      {
+       "url": "https://www.meetup.com/nycsox/",
+       "quote": "Red Sox v Yanks - Game 2 Wild Card ... The Three Monkeys, 832 8th Ave",
+       "status": "likely",
+       "official": false,
+       "reason": "The Meetup page lists the Red Sox group’s Wild Card event at The Three Monkeys, 832 8th Ave, but the event is undated and the page also shows an older Three Monkeys address.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "team": "Boston Red Sox",
+     "bar_id": 131
+    },
+    {
+     "bar_name": "Joyce Public House",
+     "address": "315 west 39th street",
+     "club_name": "The New York City, Boston Red Sox meetup group",
+     "evidence_quote": "Red sox v Yanks ... Joyce Public House, 315 west 39th street",
+     "source_url": "https://www.meetup.com/nycsox/",
+     "season_seen": "2026",
+     "official_source": false,
+     "lat": 40.7559521,
+     "lon": -73.9920605,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The Meetup page lists a Red Sox vs. Yankees event at Joyce Public House, 315 West 39th Street, but it is undated and does not establish a current-season home bar.",
+     "sources": [
+      {
+       "url": "https://www.meetup.com/nycsox/",
+       "quote": "Red sox v Yanks ... Joyce Public House, 315 west 39th street",
+       "status": "likely",
+       "official": false,
+       "reason": "The Meetup page lists a Red Sox vs. Yankees event at Joyce Public House, 315 West 39th Street, but it is undated and does not establish a current-season home bar.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "team": "Boston Red Sox",
+     "bar_id": 132
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "The New York City, Boston Red Sox meetup group",
+   "club_contact_url": "https://www.meetup.com/nycsox/",
+   "search_notes": "The meetup page identifies the NYC Red Sox group and lists watch events at these bars, including 2026 events. The page also shows older events; no more recent 2026 season source was found.",
+   "safety_notes": [],
+   "found_at": "2026-10-25T00:58:24+00:00"
+  }
+ },
+ {
+  "key": "spots|usc trojans|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "USC Trojans",
+   "sport": "college football",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "Cask 'N Flagon",
+     "address": "62 Brookline Ave Boston, MA 02215",
+     "club_name": "Boston Trojan Network",
+     "evidence_quote": "“Join local Trojans to cheer on the USC Football Team!”",
+     "source_url": "https://fightonline.usc.edu/s/listing/a1URj000009ICFFMA4/2026-usc-vs-penn-state-signature-game-watch-party-in-boston-ma",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 42.3474523,
+     "lon": -71.0979427,
+     "geocoded": true,
+     "page_loaded": false,
+     "page_error": "ConnectError",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The page could not be loaded, but the Scout’s specific quote says local Trojans will gather to cheer on USC football; it does not confirm the bar name or address.",
+     "sources": [
+      {
+       "url": "https://fightonline.usc.edu/s/listing/a1URj000009ICFFMA4/2026-usc-vs-penn-state-signature-game-watch-party-in-boston-ma",
+       "quote": "“Join local Trojans to cheer on the USC Football Team!”",
+       "status": "likely",
+       "official": true,
+       "reason": "The page could not be loaded, but the Scout’s specific quote says local Trojans will gather to cheer on USC football; it does not confirm the bar name or address.",
+       "page_loaded": false,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "USC Trojans",
+     "bar_id": 133
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "Boston Trojan Network",
+   "club_contact_url": "https://alumni.usc.edu/regional-trojan-networks/boston-trojan-network/",
+   "search_notes": "USC Alumni Association lists a 2026 Boston game watch at Cask 'N Flagon. The event listing is for USC vs. Penn State on October 10, 2026; it does not confirm a venue for every game.",
+   "safety_notes": [],
+   "found_at": "2026-10-25T00:58:30+00:00"
+  }
+ },
+ {
+  "key": "spots|usc trojans|phoenix",
+  "kind": "spots",
+  "payload": {
+   "team": "USC Trojans",
+   "sport": "college football",
+   "city": "Phoenix, AZ",
+   "spots": [
+    {
+     "bar_name": "Backyards",
+     "address": "9261 East Vía de Ventura, Scottsdale, AZ 85258",
+     "club_name": "USC Trojans fans (club unknown)",
+     "evidence_quote": "USC fans have watched games here in the past, though recent activity is limited.",
+     "source_url": "https://gamewatch.info/cities/scottsdale-az/usc-trojans",
+     "season_seen": "unknown",
+     "official_source": false,
+     "lat": 33.5530701,
+     "lon": -111.8810209,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The source page text is unavailable; the Scout's specific quote says USC fans watched games here in the past, but notes limited recent activity.",
+     "sources": [
+      {
+       "url": "https://gamewatch.info/cities/scottsdale-az/usc-trojans",
+       "quote": "USC fans have watched games here in the past, though recent activity is limited.",
+       "status": "likely",
+       "official": false,
+       "reason": "The source page text is unavailable; the Scout's specific quote says USC fans watched games here in the past, but notes limited recent activity.",
+       "page_loaded": true,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "USC Trojans",
+     "bar_id": 134
+    }
+   ],
+   "allgames": [
+    {
+     "bar_name": "Q Bar & Grill",
+     "address": "20818 N 19th Ave, Phoenix, AZ 85027",
+     "club_name": "unknown",
+     "evidence_quote": "You will find your team on one of our screens…watch every matchup.",
+     "source_url": "https://qbarandgrill.net/nfl-college-football-phoenix/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 33.6756356,
+     "lon": -112.100406,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The page says Q Bar shows college football Saturdays and invites fans to wear team colors, but it does not specifically tie the bar to USC Trojans fans or a USC club in Phoenix.",
+     "sources": [
+      {
+       "url": "https://qbarandgrill.net/nfl-college-football-phoenix/",
+       "quote": "You will find your team on one of our screens…watch every matchup.",
+       "status": "unverified",
+       "official": true,
+       "reason": "The page says Q Bar shows college football Saturdays and invites fans to wear team colors, but it does not specifically tie the bar to USC Trojans fans or a USC club in Phoenix.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "USC Trojans",
+     "bar_id": 23
+    }
+   ],
+   "wide_done": true,
+   "club_name": "Phoenix Trojan Network",
+   "club_contact_url": "https://alumni.usc.edu/regional-trojan-networks/phoenix-trojan-network/",
+   "search_notes": "USC Alumni Association identifies the Phoenix Trojan Network but does not name a bar for its game watches in the accessible listings. A Scottsdale directory identifies Backyards as a past USC fan watch spot, but notes limited recent activity; contact the venue or local USC group to confirm current plans.",
+   "safety_notes": [],
+   "found_at": "2026-10-25T00:58:52+00:00"
+  }
+ },
+ {
+  "key": "schedule|ucla bruins|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "UCLA Bruins",
+   "season": "2026",
+   "games": [
+    {
+     "date": "2026-09-05",
+     "opponent": "California",
+     "home_away": "away",
+     "kickoff_et": "10:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-12",
+     "opponent": "San Diego State",
+     "home_away": "home",
+     "kickoff_et": "7:15 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-19",
+     "opponent": "Purdue",
+     "home_away": "home",
+     "kickoff_et": "11:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-26",
+     "opponent": "Maryland",
+     "home_away": "away",
+     "kickoff_et": "1:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-10",
+     "opponent": "Oregon",
+     "home_away": "away",
+     "kickoff_et": "3:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-17",
+     "opponent": "Wisconsin",
+     "home_away": "home",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-24",
+     "opponent": "Michigan State",
+     "home_away": "home",
+     "kickoff_et": "3:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-31",
+     "opponent": "Nevada",
+     "home_away": "home",
+     "kickoff_et": "4:15 PM ET",
+     "tv": "BTN"
+    },
+    {
+     "date": "2026-11-07",
+     "opponent": "Minnesota",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-13",
+     "opponent": "Illinois",
+     "home_away": "home",
+     "kickoff_et": "9:00 PM ET",
+     "tv": "Fox"
+    },
+    {
+     "date": "2026-11-21",
+     "opponent": "Michigan",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-28",
+     "opponent": "USC",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://uclabruins.com/sports/football/schedule/season/2026"
+  }
+ },
+ {
+  "key": "schedule|ohio state buckeyes|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "Ohio State Buckeyes",
+   "season": "2026",
+   "games": [
+    {
+     "date": "2026-09-05",
+     "opponent": "Ball State",
+     "home_away": "home",
+     "kickoff_et": "12:30 PM ET",
+     "tv": "Big Ten Network"
+    },
+    {
+     "date": "2026-09-12",
+     "opponent": "Texas",
+     "home_away": "away",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "ABC"
+    },
+    {
+     "date": "2026-09-19",
+     "opponent": "Kent State",
+     "home_away": "home",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "FOX, Fox One"
+    },
+    {
+     "date": "2026-09-26",
+     "opponent": "Illinois",
+     "home_away": "home",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "FOX, Fox One"
+    },
+    {
+     "date": "2026-10-03",
+     "opponent": "Iowa",
+     "home_away": "away",
+     "kickoff_et": "3:30 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-10-10",
+     "opponent": "Maryland",
+     "home_away": "home",
+     "kickoff_et": "4:15 PM ET",
+     "tv": "Big Ten Network"
+    },
+    {
+     "date": "2026-10-17",
+     "opponent": "Indiana",
+     "home_away": "away",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "FOX, Fox One"
+    },
+    {
+     "date": "2026-10-31",
+     "opponent": "USC",
+     "home_away": "away",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-11-07",
+     "opponent": "Oregon",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-14",
+     "opponent": "Northwestern",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-21",
+     "opponent": "Nebraska",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-28",
+     "opponent": "Michigan",
+     "home_away": "home",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "FOX, Fox One"
+    }
+   ],
+   "source_url": "https://ohiostatebuckeyes.com/sports/football/schedule/print"
+  }
+ },
+ {
+  "key": "schedule|liverpool|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "Liverpool",
+   "season": "2026-27",
+   "games": [
+    {
+     "date": "2026-08-23",
+     "opponent": "Newcastle United",
+     "home_away": "away",
+     "kickoff_et": "11:30 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-08-29",
+     "opponent": "Nottingham Forest",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-05",
+     "opponent": "Ipswich Town",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-12",
+     "opponent": "Fulham",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-19",
+     "opponent": "AFC Bournemouth",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-10",
+     "opponent": "Manchester City",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-17",
+     "opponent": "Brentford",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-24",
+     "opponent": "Brighton & Hove Albion",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-25",
+     "opponent": "Brighton & Hove Albion",
+     "home_away": "home",
+     "kickoff_et": "9:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-31",
+     "opponent": "Arsenal",
+     "home_away": "home",
+     "kickoff_et": "11:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-01",
+     "opponent": "Arsenal",
+     "home_away": "home",
+     "kickoff_et": "8:30 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-07",
+     "opponent": "Crystal Palace",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-08",
+     "opponent": "Crystal Palace",
+     "home_away": "away",
+     "kickoff_et": "6:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-21",
+     "opponent": "Manchester United",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-22",
+     "opponent": "Manchester United",
+     "home_away": "home",
+     "kickoff_et": "8:30 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-28",
+     "opponent": "Everton",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-29",
+     "opponent": "Everton",
+     "home_away": "away",
+     "kickoff_et": "4:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-02",
+     "opponent": "Sunderland",
+     "home_away": "home",
+     "kickoff_et": "2:30 PM ET",
+     "tv": "Sky Sports"
+    },
+    {
+     "date": "2026-12-05",
+     "opponent": "Chelsea",
+     "home_away": "away",
+     "kickoff_et": "7:30 AM ET",
+     "tv": "TNT Sports"
+    },
+    {
+     "date": "2026-12-12",
+     "opponent": "Leeds United",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-19",
+     "opponent": "Tottenham Hotspur",
+     "home_away": "home",
+     "kickoff_et": "12:30 PM ET",
+     "tv": "Sky Sports"
+    },
+    {
+     "date": "2026-12-26",
+     "opponent": "Hull City",
+     "home_away": "away",
+     "kickoff_et": "9:30 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-30",
+     "opponent": "Aston Villa",
+     "home_away": "away",
+     "kickoff_et": "3:15 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-01-02",
+     "opponent": "Coventry City",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-01-06",
+     "opponent": "Sunderland",
+     "home_away": "away",
+     "kickoff_et": "3:15 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-01-16",
+     "opponent": "Crystal Palace",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-01-23",
+     "opponent": "Manchester United",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-01-30",
+     "opponent": "Everton",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-02-06",
+     "opponent": "Arsenal",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-02-10",
+     "opponent": "Coventry City",
+     "home_away": "away",
+     "kickoff_et": "3:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-02-20",
+     "opponent": "Hull City",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-02-27",
+     "opponent": "Tottenham Hotspur",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-03",
+     "opponent": "Aston Villa",
+     "home_away": "home",
+     "kickoff_et": "3:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-13",
+     "opponent": "Ipswich Town",
+     "home_away": "home",
+     "kickoff_et": "11:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-20",
+     "opponent": "Fulham",
+     "home_away": "away",
+     "kickoff_et": "11:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-10",
+     "opponent": "Newcastle United",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-17",
+     "opponent": "Nottingham Forest",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-24",
+     "opponent": "Leeds United",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-05-01",
+     "opponent": "Chelsea",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-05-08",
+     "opponent": "Manchester City",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-05-15",
+     "opponent": "Brentford",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-05-23",
+     "opponent": "Brighton & Hove Albion",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-05-30",
+     "opponent": "AFC Bournemouth",
+     "home_away": "home",
+     "kickoff_et": "11:00 AM ET",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://www.liverpoolfc.com/news/revealed-liverpools-2026-27-premier-league-fixture-list"
+  }
+ },
+ {
+  "key": "schedule|manchester united|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "Manchester United",
+   "season": "2026",
+   "games": [
+    {
+     "date": "2026-08-22",
+     "opponent": "Hull City",
+     "home_away": "away",
+     "kickoff_et": "7:30 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-08-29",
+     "opponent": "Ipswich Town",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-05",
+     "opponent": "Everton",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-12",
+     "opponent": "Manchester City",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-19",
+     "opponent": "Fulham",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-10",
+     "opponent": "Tottenham Hotspur",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-17",
+     "opponent": "Leeds United",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-24",
+     "opponent": "Bournemouth",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-31",
+     "opponent": "Chelsea",
+     "home_away": "away",
+     "kickoff_et": "8:30 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-07",
+     "opponent": "Aston Villa",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-21",
+     "opponent": "Liverpool",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-28",
+     "opponent": "Brentford",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-02",
+     "opponent": "Newcastle United",
+     "home_away": "away",
+     "kickoff_et": "3:15 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-05",
+     "opponent": "Coventry City",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-12",
+     "opponent": "Crystal Palace",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-19",
+     "opponent": "Arsenal",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-26",
+     "opponent": "Nottingham Forest",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-30",
+     "opponent": "Sunderland",
+     "home_away": "home",
+     "kickoff_et": "2:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-01-02",
+     "opponent": "Brighton & Hove Albion",
+     "home_away": "away",
+     "kickoff_et": "7:30 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-01-06",
+     "opponent": "Newcastle United",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-01-16",
+     "opponent": "Aston Villa",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-01-23",
+     "opponent": "Liverpool",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-01-30",
+     "opponent": "Brentford",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-02-06",
+     "opponent": "Chelsea",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-02-10",
+     "opponent": "Brighton & Hove Albion",
+     "home_away": "home",
+     "kickoff_et": "3:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-02-20",
+     "opponent": "Nottingham Forest",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-02-27",
+     "opponent": "Arsenal",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-03",
+     "opponent": "Sunderland",
+     "home_away": "away",
+     "kickoff_et": "3:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-13",
+     "opponent": "Everton",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-20",
+     "opponent": "Manchester City",
+     "home_away": "away",
+     "kickoff_et": "11:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-10",
+     "opponent": "Hull City",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-17",
+     "opponent": "Ipswich Town",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-24",
+     "opponent": "Crystal Palace",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-05-01",
+     "opponent": "Coventry City",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-05-08",
+     "opponent": "Bournemouth",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-05-15",
+     "opponent": "Leeds United",
+     "home_away": "home",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-05-23",
+     "opponent": "Tottenham Hotspur",
+     "home_away": "away",
+     "kickoff_et": "10:00 AM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-05-30",
+     "opponent": "Fulham",
+     "home_away": "home",
+     "kickoff_et": "11:00 AM ET",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://www.premierleague.com/en/news/4675130/all-of-manchester-uniteds-fixtures-for-202627-premier-league-season"
+  }
+ },
+ {
+  "key": "schedule|new england patriots|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "New England Patriots",
+   "season": "2026",
+   "games": [
+    {
+     "date": "2026-09-09",
+     "opponent": "Seattle Seahawks",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-20",
+     "opponent": "Pittsburgh Steelers",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-09-27",
+     "opponent": "Jacksonville Jaguars",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-04",
+     "opponent": "Buffalo Bills",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-11",
+     "opponent": "Las Vegas Raiders",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-18",
+     "opponent": "New York Jets",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-22",
+     "opponent": "Chicago Bears",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-01",
+     "opponent": "Miami Dolphins",
+     "home_away": "away",
+     "kickoff_et": "4:25 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-11-08",
+     "opponent": "Green Bay Packers",
+     "home_away": "home",
+     "kickoff_et": "4:25 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-11-15",
+     "opponent": "Detroit Lions",
+     "home_away": "neutral",
+     "kickoff_et": "9:30 AM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-11-29",
+     "opponent": "Los Angeles Chargers",
+     "home_away": "away",
+     "kickoff_et": "8:20 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-12-06",
+     "opponent": "Buffalo Bills",
+     "home_away": "home",
+     "kickoff_et": "4:25 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-12-10",
+     "opponent": "Minnesota Vikings",
+     "home_away": "home",
+     "kickoff_et": "8:15 PM ET",
+     "tv": "PRIME VIDEO"
+    },
+    {
+     "date": "2026-12-21",
+     "opponent": "Kansas City Chiefs",
+     "home_away": "away",
+     "kickoff_et": "8:15 PM ET",
+     "tv": "ESPN"
+    },
+    {
+     "date": "2026-12-27",
+     "opponent": "New York Jets",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "TBD",
+     "opponent": "Denver Broncos",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "TBD",
+     "opponent": "Miami Dolphins",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://www.patriots.com/schedule/"
+  }
+ },
+ {
+  "key": "schedule|buffalo bills|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "Buffalo Bills",
+   "season": "2026",
+   "games": [
+    {
+     "date": "2026-09-13",
+     "opponent": "Houston Texans",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-09-17",
+     "opponent": "Detroit Lions",
+     "home_away": "home",
+     "kickoff_et": "8:15 PM ET",
+     "tv": "Prime Video"
+    },
+    {
+     "date": "2026-09-27",
+     "opponent": "Los Angeles Chargers",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-10-04",
+     "opponent": "New England Patriots",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-10-12",
+     "opponent": "Los Angeles Rams",
+     "home_away": "away",
+     "kickoff_et": "8:15 PM ET",
+     "tv": "ESPN"
+    },
+    {
+     "date": "2026-10-18",
+     "opponent": "Las Vegas Raiders",
+     "home_away": "away",
+     "kickoff_et": "4:25 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-11-01",
+     "opponent": "Baltimore Ravens",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-11-09",
+     "opponent": "Minnesota Vikings",
+     "home_away": "away",
+     "kickoff_et": "8:15 PM ET",
+     "tv": "ESPN"
+    },
+    {
+     "date": "2026-11-15",
+     "opponent": "New York Jets",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-11-22",
+     "opponent": "Miami Dolphins",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-11-26",
+     "opponent": "Kansas City Chiefs",
+     "home_away": "home",
+     "kickoff_et": "8:20 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-12-06",
+     "opponent": "New England Patriots",
+     "home_away": "away",
+     "kickoff_et": "4:25 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-12-13",
+     "opponent": "Green Bay Packers",
+     "home_away": "away",
+     "kickoff_et": "8:20 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-12-19",
+     "opponent": "Chicago Bears",
+     "home_away": "home",
+     "kickoff_et": "8:20 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-12-25",
+     "opponent": "Denver Broncos",
+     "home_away": "away",
+     "kickoff_et": "4:30 PM ET",
+     "tv": "Netflix"
+    },
+    {
+     "date": "2027-01-03",
+     "opponent": "Miami Dolphins",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "TBD",
+     "opponent": "New York Jets",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://www.buffalobills.com/schedule/2026/"
+  }
+ },
+ {
+  "key": "schedule|new york yankees|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "New York Yankees",
+   "season": "2027",
+   "games": [
+    {
+     "date": "2027-03-25",
+     "opponent": "Toronto Blue Jays",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-27",
+     "opponent": "Toronto Blue Jays",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-28",
+     "opponent": "Toronto Blue Jays",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-29",
+     "opponent": "Athletics",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-30",
+     "opponent": "Athletics",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-31",
+     "opponent": "Athletics",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-01",
+     "opponent": "Cleveland Guardians",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-02",
+     "opponent": "Cleveland Guardians",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-03",
+     "opponent": "Cleveland Guardians",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-04",
+     "opponent": "Cleveland Guardians",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-05",
+     "opponent": "Pittsburgh Pirates",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-06",
+     "opponent": "Pittsburgh Pirates",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-07",
+     "opponent": "Pittsburgh Pirates",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-09",
+     "opponent": "Arizona Diamondbacks",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-10",
+     "opponent": "Arizona Diamondbacks",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-11",
+     "opponent": "Arizona Diamondbacks",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-13",
+     "opponent": "Detroit Tigers",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-14",
+     "opponent": "Detroit Tigers",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-15",
+     "opponent": "Detroit Tigers",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-16",
+     "opponent": "Washington Nationals",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-17",
+     "opponent": "Washington Nationals",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-18",
+     "opponent": "Washington Nationals",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-19",
+     "opponent": "Milwaukee Brewers",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-20",
+     "opponent": "Milwaukee Brewers",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-21",
+     "opponent": "Milwaukee Brewers",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://www.mlb.com/yankees/schedule/2027/fullseason"
+  }
+ },
+ {
+  "key": "schedule|new york knicks|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "New York Knicks",
+   "season": "2026-27",
+   "games": [
+    {
+     "date": "2026-10-25",
+     "opponent": "Orlando Magic",
+     "home_away": "home",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-27",
+     "opponent": "Detroit Pistons",
+     "home_away": "home",
+     "kickoff_et": "8:00 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-10-28",
+     "opponent": "Chicago Bulls",
+     "home_away": "away",
+     "kickoff_et": "8:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-30",
+     "opponent": "Philadelphia 76ers",
+     "home_away": "away",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "Prime Video"
+    },
+    {
+     "date": "2026-11-02",
+     "opponent": "Brooklyn Nets",
+     "home_away": "home",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-04",
+     "opponent": "Chicago Bulls",
+     "home_away": "home",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-07",
+     "opponent": "Cleveland Cavaliers",
+     "home_away": "away",
+     "kickoff_et": "8:00 PM ET",
+     "tv": "NBA TV"
+    },
+    {
+     "date": "2026-11-10",
+     "opponent": "Milwaukee Bucks",
+     "home_away": "home",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-11",
+     "opponent": "Cleveland Cavaliers",
+     "home_away": "home",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "ESPN"
+    },
+    {
+     "date": "2026-11-13",
+     "opponent": "Indiana Pacers",
+     "home_away": "away",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "Prime Video"
+    },
+    {
+     "date": "2026-11-15",
+     "opponent": "Toronto Raptors",
+     "home_away": "away",
+     "kickoff_et": "6:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-17",
+     "opponent": "Toronto Raptors",
+     "home_away": "away",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-19",
+     "opponent": "Minnesota Timberwolves",
+     "home_away": "away",
+     "kickoff_et": "8:00 PM ET",
+     "tv": "NBA TV"
+    },
+    {
+     "date": "2026-11-21",
+     "opponent": "Portland Trail Blazers",
+     "home_away": "home",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "NBA TV"
+    },
+    {
+     "date": "2026-11-22",
+     "opponent": "Indiana Pacers",
+     "home_away": "home",
+     "kickoff_et": "8:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-25",
+     "opponent": "Cleveland Cavaliers",
+     "home_away": "home",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-27",
+     "opponent": "Miami Heat",
+     "home_away": "home",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "Prime Video"
+    },
+    {
+     "date": "2026-11-29",
+     "opponent": "Atlanta Hawks",
+     "home_away": "home",
+     "kickoff_et": "6:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-01",
+     "opponent": "Chicago Bulls",
+     "home_away": "away",
+     "kickoff_et": "8:00 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-12-02",
+     "opponent": "Milwaukee Bucks",
+     "home_away": "away",
+     "kickoff_et": "8:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-12",
+     "opponent": "Miami Heat",
+     "home_away": "away",
+     "kickoff_et": "8:30 PM ET",
+     "tv": "ABC"
+    },
+    {
+     "date": "2026-12-14",
+     "opponent": "Houston Rockets",
+     "home_away": "away",
+     "kickoff_et": "8:30 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-16",
+     "opponent": "New Orleans Pelicans",
+     "home_away": "away",
+     "kickoff_et": "8:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-18",
+     "opponent": "Washington Wizards",
+     "home_away": "away",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-21",
+     "opponent": "Cleveland Cavaliers",
+     "home_away": "away",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "Peacock"
+    }
+   ],
+   "source_url": "https://www.nba.com/knicks/schedule"
+  }
+ },
+ {
+  "key": "schedule|boston bruins|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "Boston Bruins",
+   "season": "2026-27",
+   "games": [
+    {
+     "date": "2026-10-27",
+     "opponent": "Carolina Hurricanes",
+     "home_away": "away",
+     "kickoff_et": "8:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-10-29",
+     "opponent": "St. Louis Blues",
+     "home_away": "away",
+     "kickoff_et": "8:00 PM ET",
+     "tv": "NESN"
+    },
+    {
+     "date": "2026-10-31",
+     "opponent": "Chicago Blackhawks",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "NESN"
+    },
+    {
+     "date": "2026-11-02",
+     "opponent": "Vegas Golden Knights",
+     "home_away": "home",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "NHL Network"
+    },
+    {
+     "date": "2026-11-05",
+     "opponent": "Pittsburgh Penguins",
+     "home_away": "away",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-08",
+     "opponent": "Florida Panthers",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "NHL Network"
+    },
+    {
+     "date": "2026-11-12",
+     "opponent": "Montreal Canadiens",
+     "home_away": "home",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-14",
+     "opponent": "Minnesota Wild",
+     "home_away": "home",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-17",
+     "opponent": "Los Angeles Kings",
+     "home_away": "home",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-18",
+     "opponent": "Detroit Red Wings",
+     "home_away": "away",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "TNT, truTV"
+    },
+    {
+     "date": "2026-11-21",
+     "opponent": "Washington Capitals",
+     "home_away": "home",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-25",
+     "opponent": "Winnipeg Jets",
+     "home_away": "home",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-27",
+     "opponent": "Toronto Maple Leafs",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-29",
+     "opponent": "Vancouver Canucks",
+     "home_away": "home",
+     "kickoff_et": "5:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-01",
+     "opponent": "Colorado Avalanche",
+     "home_away": "home",
+     "kickoff_et": "7:30 PM ET",
+     "tv": "TNT, truTV"
+    },
+    {
+     "date": "2026-12-05",
+     "opponent": "Detroit Red Wings",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-08",
+     "opponent": "Florida Panthers",
+     "home_away": "away",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-10",
+     "opponent": "Tampa Bay Lightning",
+     "home_away": "away",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-12",
+     "opponent": "New Jersey Devils",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-13",
+     "opponent": "Carolina Hurricanes",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-15",
+     "opponent": "Florida Panthers",
+     "home_away": "home",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TNT, truTV"
+    },
+    {
+     "date": "2026-12-17",
+     "opponent": "St. Louis Blues",
+     "home_away": "home",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-19",
+     "opponent": "New Jersey Devils",
+     "home_away": "away",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-20",
+     "opponent": "Philadelphia Flyers",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-12-22",
+     "opponent": "New York Islanders",
+     "home_away": "away",
+     "kickoff_et": "7:00 PM ET",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://www.espn.com/nhl/team/schedule/_/name/bos/season/2027/seasontype/2"
+  }
+ },
+ {
+  "key": "schedule|boston red sox|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "Boston Red Sox",
+   "season": "2027 regular season",
+   "games": [
+    {
+     "date": "2027-03-25",
+     "opponent": "Seattle Mariners",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-26",
+     "opponent": "Seattle Mariners",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-27",
+     "opponent": "Seattle Mariners",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-28",
+     "opponent": "Seattle Mariners",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-29",
+     "opponent": "Houston Astros",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-30",
+     "opponent": "Houston Astros",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-03-31",
+     "opponent": "Houston Astros",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-01",
+     "opponent": "Cincinnati Reds",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-02",
+     "opponent": "Cincinnati Reds",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-03",
+     "opponent": "Cincinnati Reds",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-04",
+     "opponent": "Cincinnati Reds",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-05",
+     "opponent": "Houston Astros",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-06",
+     "opponent": "Houston Astros",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-07",
+     "opponent": "Houston Astros",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-09",
+     "opponent": "Washington Nationals",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-10",
+     "opponent": "Washington Nationals",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-11",
+     "opponent": "Tampa Bay Rays",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-12",
+     "opponent": "Tampa Bay Rays",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-13",
+     "opponent": "Tampa Bay Rays",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-14",
+     "opponent": "Tampa Bay Rays",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-15",
+     "opponent": "Cleveland Guardians",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-16",
+     "opponent": "Cleveland Guardians",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-17",
+     "opponent": "Cleveland Guardians",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-18",
+     "opponent": "Cleveland Guardians",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "2027-04-19",
+     "opponent": "Tampa Bay Rays",
+     "home_away": "away",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://www.mlb.com/redsox/schedule/2027/fullseason"
+  }
+ },
+ {
+  "key": "spots|yale bulldogs|new york",
+  "kind": "spots",
+  "payload": {
+   "team": "Yale Bulldogs",
+   "sport": "college football",
+   "city": "New York, NY",
+   "spots": [],
+   "allgames": [
+    {
+     "bar_name": "one4one Sports Club & Lounge",
+     "address": "141 Chrystie St., New York, NY 10002",
+     "club_name": "unknown",
+     "evidence_quote": "We show every game from the obscure to the expected ... college sports",
+     "source_url": "https://www.one4onenyc.com/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 40.7197979,
+     "lon": -73.9933383,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The page gives the address and says it shows all sports, but does not mention Yale Bulldogs or a Yale fan club.",
+     "sources": [
+      {
+       "url": "https://www.one4onenyc.com/",
+       "quote": "We show every game from the obscure to the expected ... college sports",
+       "status": "unverified",
+       "official": true,
+       "reason": "The page gives the address and says it shows all sports, but does not mention Yale Bulldogs or a Yale fan club.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "Yale Bulldogs",
+     "bar_id": 135
+    },
+    {
+     "bar_name": "Dalton’s Bar & Grill",
+     "address": "unknown",
+     "club_name": "unknown",
+     "evidence_quote": "from college football Saturdays to NFL Sundays, we play every game",
+     "source_url": "https://www.daltonsbarnyc.com/about-our-nyc-sports-bar/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": null,
+     "lon": null,
+     "geocoded": false,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The page says it shows every game on college football Saturdays, but does not mention Yale Bulldogs or a Yale fan club.",
+     "sources": [
+      {
+       "url": "https://www.daltonsbarnyc.com/about-our-nyc-sports-bar/",
+       "quote": "from college football Saturdays to NFL Sundays, we play every game",
+       "status": "unverified",
+       "official": true,
+       "reason": "The page says it shows every game on college football Saturdays, but does not mention Yale Bulldogs or a Yale fan club.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "Yale Bulldogs",
+     "bar_id": 136
+    }
+   ],
+   "wide_done": true,
+   "club_name": "Yale Club of New York City",
+   "club_contact_url": "https://www.yaleclubnyc.org/",
+   "search_notes": "Checked YaleNYC and Yale Club of NYC pages, New York Yale football watch-party searches, and wider metro results. Found no reliable source tying a New York City bar to Yale Bulldogs football fans or a 2026 watch party; the official Yale-Harvard watch-party results found were outside NYC.",
+   "safety_notes": [],
+   "found_at": "2026-10-25T01:08:47+00:00"
+  }
+ },
+ {
+  "key": "spots|yale bulldogs|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Yale Bulldogs",
+   "sport": "college football",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "730 Tavern",
+     "address": "730 Massachusetts Avenue, Cambridge, Massachusetts, 02139",
+     "club_name": "Yale Club of Boston",
+     "evidence_quote": "join us at 730 Tavern in Cambridge to cheer them to victory!",
+     "source_url": "https://www.yale.boston/events/yale-harvard-game-730-tavern-viewing-party",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 42.3660159,
+     "lon": -71.1051419,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The provided page text identifies a Yale Club of Boston event titled “Yale-Harvard Game: 730 Tavern Viewing Party,” but the excerpt does not include the event details or season.",
+     "sources": [
+      {
+       "url": "https://www.yale.boston/events/yale-harvard-game-730-tavern-viewing-party",
+       "quote": "join us at 730 Tavern in Cambridge to cheer them to victory!",
+       "status": "likely",
+       "official": true,
+       "reason": "The provided page text identifies a Yale Club of Boston event titled “Yale-Harvard Game: 730 Tavern Viewing Party,” but the excerpt does not include the event details or season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "team": "Yale Bulldogs",
+     "bar_id": 137
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "Yale Club of Boston",
+   "club_contact_url": "https://www.yale.boston/events",
+   "search_notes": "Found an official Yale Club of Boston watch party for the Yale-Harvard game on November 21, 2026, at 730 Tavern. This source establishes a game-specific watch party, not regular-season viewing.",
+   "safety_notes": [],
+   "found_at": "2026-10-25T01:08:48+00:00"
+  }
+ },
+ {
+  "key": "spots|princeton tigers|new york",
+  "kind": "spots",
+  "payload": {
+   "team": "Princeton Tigers",
+   "sport": "college football",
+   "city": "New York, NY",
+   "spots": [],
+   "allgames": [
+    {
+     "bar_name": "Ainslie Bowery",
+     "address": "199 BOWERY, NYC",
+     "club_name": "unknown",
+     "evidence_quote": "Every Saturday is game day — the marquee matchup of the week, live all season at Ainslie Bowery.",
+     "source_url": "https://ainsliebowery.com/collegefootball.html",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 40.7210487,
+     "lon": -73.993252,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://ainsliebowery.com/collegefootball.html",
+       "quote": "Every Saturday is game day — the marquee matchup of the week, live all season at Ainslie Bowery.",
+       "status": "confirmed",
+       "official": true,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "kind": "allgames",
+     "team": "Princeton Tigers",
+     "bar_id": 138
+    }
+   ],
+   "wide_done": true,
+   "club_name": "Princeton Association of New York City",
+   "club_contact_url": "https://panyc.tigernet2.princeton.edu/",
+   "search_notes": "Checked PANYC’s official alumni page, team-specific NYC watch-bar searches, and 2026 college-football bar listings. No reliable source found tying a specific NYC bar to Princeton football fans or a PANYC watch party; Ainslie Bowery advertises Saturday college football, but not Princeton-specific gatherings.",
+   "safety_notes": [],
+   "found_at": "2026-10-25T01:09:00+00:00"
+  }
+ },
+ {
+  "key": "schedule|princeton tigers|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "Princeton Tigers",
+   "season": "2026 football",
+   "games": [
+    {
+     "date": "2026-10-31",
+     "opponent": "Cornell",
+     "home_away": "home",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-07",
+     "opponent": "Dartmouth",
+     "home_away": "home",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-14",
+     "opponent": "Yale",
+     "home_away": "away",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "TBD"
+    },
+    {
+     "date": "2026-11-21",
+     "opponent": "Penn",
+     "home_away": "home",
+     "kickoff_et": "12:00 PM ET",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://goprincetontigers.com/sports/football/schedule/text/2026"
   }
  }
 ]

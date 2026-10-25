@@ -15,7 +15,7 @@ from ui.components import empty_state, notice, receipt, search_href, spot_card
 from ui.logo_map import iframe_style, map_src
 from ui.team_logos import LEAGUE_ORDER, lookup
 
-CHIPS = ["USC fans in Chicago", "Chicago Bears fans in Boston", "Harvard vs Yale in Chicago", "Packers fans in Boston", "Boston", "Chicago"]
+CHIPS = ["Yale fans in Chicago", "Yale fans in New York", "Yale vs Princeton in New York", "Patriots fans in New York", "New Haven", "Boston", "New York"]
 
 
 def team_badge(team: str, sport: str = "", size: int = 34) -> html.Span:

@@ -41,6 +41,7 @@ def main() -> None:
     out["sweep"] = avg(runs(seed_db, "run_kind = 'city_sweep'"))
     out["wide"] = avg(runs(seed_db, "run_id IN (SELECT run_id FROM usage WHERE agent = 'scout_wide')"))
     out["reputation"] = avg(runs(app_db, "run_kind = 'reputation' AND web_searches >= 0 AND agent = 'reputation'"))
+    out["season_plan"] = avg(runs(app_db, "run_kind = 'season_plan'"))
     config.DB_PATH = seed_db
     from core.citymap import known_points
 

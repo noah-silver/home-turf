@@ -52,6 +52,7 @@ def main() -> None:
     with sync_playwright() as p:
         browser = p.chromium.launch(channel="chrome", headless=True)
         ctx = browser.new_context(viewport={"width": 1440, "height": 900}, device_scale_factor=1.5)
+        ctx.add_init_script("window.__HT_NO_CONFETTI = true;")
         page = ctx.new_page()
 
         # Fan views
@@ -80,7 +81,7 @@ def main() -> None:
         time.sleep(5)
         shot(page, "falcons_phoenix")
 
-        page.goto(BASE + "/find?q=USC%20fans%20in%20Chicago")
+        page.goto(BASE + "/find?q=Yale%20fans%20in%20Chicago")
         wait_for(page, ".receipt")
         time.sleep(5)  # map tiles
         shot(page, "find_usc_chicago")
@@ -125,6 +126,17 @@ def main() -> None:
         wait_for(page, ".notice")
         shot(page, "router_off_topic", "#find-results")
 
+        # My Season planner
+        page.goto(BASE + "/season")
+        page.wait_for_selector(".sched-row", timeout=120000)
+        page.click("#season-example")
+        time.sleep(0.5)
+        page.click("#season-go")
+        page.wait_for_selector(".plan-card", timeout=300000)
+        time.sleep(2)
+        shot(page, "season_plan")
+        shot(page, "season_plan_card", "#season-out >> xpath=ancestor::div[contains(@class,'card')][1]")
+
         # Club president: season + rivalry
         login(page, "pres_usc_chi", "shots-usc")
         page.goto(BASE + "/clubs")
@@ -134,7 +146,7 @@ def main() -> None:
         shot(page, "club_season", full=True)
         shot(page, "season_card", "#season-go >> xpath=ancestor::div[contains(@class,'card')][1]")
 
-        login(page, "pres_yale_chi", "shots-yale")
+        login(page, "pres_yale_nyc", "shots-yale-nyc")
         page.goto(BASE + "/clubs")
         wait_idle(page)
         click_text(page, "Plan rivalry watch party")
@@ -144,12 +156,17 @@ def main() -> None:
         wait_for(page, "#propose-msg .notice")
         shot(page, "club_rivalry_full", full=True)
 
-        # Bar manager: approve + pitch + blocked pitch
-        login(page, "bar_fullerton", "shots-bar")
+        # Bar manager of the recommended bar approves (if that bar has a demo login), then pitches
+        import sqlite3 as _sq
+        con = _sq.connect(str(ROOT / "runtime" / "home_turf.db"))
+        ev_bar = con.execute("select bar_id from events order by id desc limit 1").fetchone()
+        mgr = con.execute("select id from users where role='bar' and bar_id=?", (ev_bar[0],)).fetchone() if ev_bar else None
+        login(page, mgr[0] if mgr else "bar_fullerton", "shots-bar")
         page.goto(BASE + "/bars")
         wait_idle(page)
-        page.get_by_role("button", name="Approve").first.click()
-        time.sleep(2)
+        if page.get_by_role("button", name="Approve").count():
+            page.get_by_role("button", name="Approve").first.click()
+            time.sleep(2)
         page.get_by_role("button", name="Draft a pitch").first.click()
         wait_for(page, "#pitch-status .receipt", timeout=120)
         page.locator("#pitch-card").scroll_into_view_if_needed()
@@ -165,7 +182,7 @@ def main() -> None:
         shot(page, "bar_dashboard", full=True)
 
         # Rival president approves -> confirmed
-        login(page, "pres_harvard_chi", "shots-harvard")
+        login(page, "pres_princeton_nyc", "shots-princeton")
         page.goto(BASE + "/clubs")
         wait_idle(page)
         page.get_by_role("button", name="Approve").first.click()

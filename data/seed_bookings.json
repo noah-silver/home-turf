@@ -26,5 +26,40 @@
   "season": 2026,
   "status": "confirmed",
   "confirmed_by": "pres_bears_bos"
+ },
+ {
+  "bar_id": 13,
+  "club_id": 10,
+  "season": 2026,
+  "status": "confirmed",
+  "confirmed_by": "seed"
+ },
+ {
+  "bar_id": 12,
+  "club_id": 12,
+  "season": 2026,
+  "status": "confirmed",
+  "confirmed_by": "seed"
+ },
+ {
+  "bar_id": 8,
+  "club_id": 13,
+  "season": 2026,
+  "status": "confirmed",
+  "confirmed_by": "seed"
+ },
+ {
+  "bar_id": 9,
+  "club_id": 14,
+  "season": 2026,
+  "status": "confirmed",
+  "confirmed_by": "seed"
+ },
+ {
+  "bar_id": 10,
+  "club_id": 16,
+  "season": 2026,
+  "status": "confirmed",
+  "confirmed_by": "seed"
  }
 ]

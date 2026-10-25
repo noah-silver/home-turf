@@ -4,8 +4,8 @@
 
 Home Turf is a multi-agent web app with three kinds of users:
 
-- **Fans**: search "USC fans in Chicago" and get verified watch spots on a map of **team logos**, with sources, evidence quotes, photos, public review summaries, and game-day reviews. Search just "Boston" to see every team's fans in the city, and filter the map by league (NFL, NCAA, MLB, NBA, NHL, Soccer).
-- **Fan-club presidents**: the Season Matchmaker ranks bars for the club's season and flags schedule clashes. The rivalry planner drafts a joint watch party, for example Harvard vs. Yale in Chicago.
+- **Fans**: search "Yale fans in Chicago" and get verified watch spots on a map of **team logos**, with sources, evidence quotes, photos, public review summaries, and game-day reviews. Search just "Boston" to see every team's fans in the city, filter the map by league, and plan a whole season: tell the agent where you'll be and get a bar for every game.
+- **Fan-club presidents**: the Season Matchmaker ranks bars for the club's season and flags schedule clashes. The rivalry planner drafts a joint watch party, for example Yale vs. Princeton in New York.
 - **Bars**: claim a profile, then let the Pitch Writer draft invitations to clubs, grounded only in what the bar's profile says.
 
 Built for Yale SOM *AI Foundations for Managers* (final project, fall 2026) by Noah Silver. Model: `gpt-6-luna` via Portkey (the course key).
@@ -50,18 +50,21 @@ The first start creates `runtime/home_turf.db` from the seed files in `data/`. T
 
 ---
 
-## A 3-minute tour
+## A 5-minute tour
 
-1. **Home → the "Chicago" chip**. This shows every team with a known fan spot in Chicago as logo pins. Use the league buttons on the map (NFL, NCAA, MLB, Soccer…) and click a logo for the bar's popup.
-2. **"USC fans in Chicago"** (chip). This one is cached, so it loads instantly at zero cost: Theory, 9 W Hubbard St, *Verified*, with two sources. In operator mode, a dark *receipt* under the results shows tokens, cost, and what each agent did.
-3. **Type a new search**, e.g. "Seahawks fans in Denver". This runs live in about 10–20 s: Router → Scout (web search) → Verifier (re-opens each source, checks the bar's name and the season, places the address on the map). If nothing team-specific exists, a wider second pass searches the metro area and fan club directories, and returns verified "shows every game" best bets so you're never left empty-handed. You can also add a spot we missed.
-4. **Click "Bar page, photos & reviews"** on a real bar. The Reputation agent summarizes its public Google/Yelp reputation in its own words, with photos from the bar's own website and an embedded Google Maps place card.
-5. **Demo login (top right) → "Club president: Priya Shah · Yale Football Watch, Chicago"** → *For fan clubs*:
-   - **Rank bars for our season** runs the Season Matchmaker. It ranks the bars, quotes capacity against turnout, and flags schedule clashes with other clubs.
-   - **Plan rivalry watch party** (Harvard preselected) finds The Game (Nov 21), picks a neutral bar that holds both clubs, and drafts three invitations. Then click **Propose**.
-6. **Demo login → "Bar manager: Maya Brooks · Fullerton Field House"** → *For bars*: approve the watch party, **Draft a pitch** to a club, and try editing in "$1 beers" before sending. The number check blocks it.
-7. **Demo login → "Club president: Ben Cohen · Harvard"** → approve. The event becomes *confirmed* only after all three humans approve.
-8. **Operator console (`/admin`, not linked from the public site)**: live spend per agent, budget meters, cache savings, the Guard's decisions, and the audit trail. Use **Try to break it** to send a prompt injection through the Guard.
+You start logged in as **Jordan, a Yale fan in New Haven**. Switch roles any time under **Demo login** (top right).
+
+1. **Home → "New Haven" or "Chicago" chip**: every team with a known fan spot in the city, as logo pins. Filter with the league buttons on the map (NFL, NCAA, MLB, NBA, NHL, Soccer) and click a logo for the bar's popup.
+2. **"Yale fans in Chicago"** (chip): cached, so instant. Piece Brewery and Pizzeria, *Verified*, from the Yale Club of Chicago's own page.
+3. **A new search**, e.g. "Seahawks fans in Denver": runs live in a few seconds. Router → Scout (web search) → Verifier (re-opens each source, checks the bar's name and the season, places the address). If nothing team-specific exists ("Falcons fans in Phoenix"), a wider pass finds the fan club chapter and verified bars that show every game, and fans can add a spot.
+4. **"Bar page, photos & reviews"** on a real bar: public rating and review themes in the agent's own words, photos from the bar's own site, and an embedded Google Maps card.
+5. **My season** (nav): Yale is preselected. *Use example* → *Build my game-day plan* gives a bar, backup, and local kickoff for every remaining game in the cities you'll be in. *Add to my calendar (.ics)* exports it.
+6. **Demo login → "Chris Park · Yale Club of NYC Football Watch"** → *For fan clubs*:
+   - **Find our season home bar** ranks New York bars for the club and flags clashes with other clubs' games.
+   - **Plan rivalry watch party** (Princeton preselected) finds Yale–Princeton (Nov 14), picks a neutral bar that holds both clubs, and drafts three invitations. Click **Propose**. (USC vs. UCLA in Chicago works the same way.)
+7. **Demo login → the recommended bar's manager** (e.g. "Leo Grant · Brooklyn Bullpen" or "Rosa Diaz · Midtown Tailgate") → *For bars*: approve the watch party, **Draft a pitch** to a club, and try adding "$1 beers" before sending; the number check blocks it.
+8. **Demo login → "Hannah Kim · Princeton Tigers of NYC"** → approve. The party is *confirmed* only after all three people approve.
+9. **Operator console** at http://127.0.0.1:8050/admin (not linked from the site): spend per agent, budget meters, cache savings, Guard decisions, the audit trail, and a "Try to break it" box for prompt-injection tests.
 
 All demo clubs, bars, people, and seed reviews are fictional and labeled **demo**. Watch spots in search results are real, from live web sources.
 
@@ -75,6 +78,8 @@ All demo clubs, bars, people, and seed reviews are fictional and labeled **demo*
 | Scout | Finds where fans or the official club watch, with source URLs and quoted evidence. If nothing usable, a wide second pass (metro area, fan club directories) also returns verified "shows every game" best bets | `web_search` (max 3, then max 4) |
 | City Sweep | Maps many teams' fan bars in one city at once (NFL, college, other leagues) so the city map shows every logo | `web_search` (max 4 per league group) |
 | Reputation | A real bar's public ratings and review themes, summarized in its own words (no copying), plus photos from the bar's own site | `web_search` (max 2), `site_photos` |
+| Trip Parser | Turns "Boston until Nov 10, then Chicago" into a city for each game date | none |
+| Season Planner | A bar, backup, local kickoff, and tip for every game; calendar export | cached spots, Scout for new cities (max 4 per plan) |
 | Verifier | Re-checks each candidate. Code checks first; the model only for unclear cases | `fetch_page`, `geocode` |
 | Schedule | A team's season schedule (cached 24 h) | `web_search` (max 2) |
 | Matchmaker | Season mode (club → home bar) and rivalry mode (two clubs → one bar, one game) | profiles, schedules, computed conflicts |

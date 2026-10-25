@@ -149,3 +149,26 @@ class CitySweep(BaseModel):
     spots: list[SweepSpot]
     notes: str
     safety_notes: list[str]
+
+
+# ---- My Season (Trip Parser + Season Planner) ---------------------------------------------
+class GameCity(BaseModel):
+    date: str = Field(description="YYYY-MM-DD, copied from the schedule")
+    city: Optional[str] = Field(description="'City, ST' where the fan will be that day, or null if the fan didn't say")
+
+
+class TripParse(BaseModel):
+    assignments: list[GameCity]
+    notes: str = Field(description="One sentence on anything ambiguous, or ''")
+
+
+class PlannedGame(BaseModel):
+    date: str
+    pick: Optional[str] = Field(description="Bar name chosen from that game's candidates, or null if none fit")
+    backup: Optional[str] = Field(description="Second choice from the candidates, or null")
+    tip: str = Field(description="One short, friendly, specific tip (arrive early, home game, late kickoff, travel day...)")
+
+
+class SeasonItinerary(BaseModel):
+    games: list[PlannedGame]
+    summary: str = Field(description="Two sentences summarizing the fan's season plan")

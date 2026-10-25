@@ -20,7 +20,10 @@ _LOCK = threading.RLock()
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS users (
     id TEXT PRIMARY KEY, role TEXT NOT NULL, display_name TEXT NOT NULL,
-    bar_id INTEGER, club_id INTEGER, blurb TEXT
+    bar_id INTEGER, club_id INTEGER, blurb TEXT, favorite_team TEXT, home_city TEXT
+);
+CREATE TABLE IF NOT EXISTS plans (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, user_id TEXT, team TEXT, trip_text TEXT, payload TEXT, created_at TEXT
 );
 CREATE TABLE IF NOT EXISTS bars (
     id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, address TEXT, city TEXT,

@@ -12,7 +12,7 @@ from core import db
 QUOTE_CHARS = ' "“”\''
 STATUS_LABEL = {"confirmed": "Verified", "likely": "Likely", "unverified": "Unverified", "rejected": "Rejected"}
 STATUS_COLOR = {"confirmed": "#1f7a4d", "likely": "#b7791f", "unverified": "#7b8699", "rejected": "#b42d2d"}
-NAV = [("/", "Home"), ("/find", "Find a watch spot"), ("/clubs", "For fan clubs"), ("/bars", "For bars")]
+NAV = [("/", "Home"), ("/find", "Find a watch spot"), ("/season", "My season"), ("/clubs", "For fan clubs"), ("/bars", "For bars")]
 
 
 def login_options() -> list[dict]:
@@ -39,7 +39,7 @@ def topbar(pathname: str) -> html.Div:
                     className="login-box",
                     children=[
                         html.Span("Demo login", className="label"),
-                        dcc.Dropdown(id="login-dd", options=login_options(), value="guest", clearable=False, searchable=False),
+                        dcc.Dropdown(id="login-dd", options=login_options(), value="guest", clearable=False, searchable=True),
                     ],
                 ),
             ],

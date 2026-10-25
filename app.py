@@ -22,6 +22,7 @@ from ui.pages import clubs as clubs_page  # noqa: E402
 from ui.pages import console as console_page  # noqa: E402
 from ui.pages import find as find_page  # noqa: E402
 from ui.pages import home as home_page  # noqa: E402
+from ui.pages import season as season_page  # noqa: E402
 
 FONTS = "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
 app = Dash(__name__, title="Home Turf · find your fans on game day", suppress_callback_exceptions=True, update_title=None,
@@ -40,11 +41,14 @@ def mapframe(token: str):
         return Response("Map expired. Reload the page.", status=404, mimetype="text/plain")
     return Response(page, mimetype="text/html")
 
+DEFAULT_USER = "fan_jordan"  # visitors start as a Yale fan in New Haven (switch any time in Demo login)
+
+
 def serve_layout() -> html.Div:
     # A browser tab keeps its stored session; a new tab gets a fresh session id.
     return html.Div([
         dcc.Location(id="url", refresh="callback-nav"),
-        dcc.Store(id="session", storage_type="session", data={"sid": uuid.uuid4().hex[:12], "user": None}),
+        dcc.Store(id="session", storage_type="session", data={"sid": uuid.uuid4().hex[:12], "user": DEFAULT_USER}),
         dcc.Store(id="page-user", data="__none__"),
         html.Div(id="topbar-slot"),
         html.Div(id="page"),
@@ -93,6 +97,8 @@ def _render(path, session, search):
             return bar_page.layout(int(path.split("/")[2]), session)
         except ValueError:
             pass
+    if path == "/season":
+        return season_page.layout(session)
     if path == "/clubs":
         return clubs_page.layout(session)
     if path == "/bars":

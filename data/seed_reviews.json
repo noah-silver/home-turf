@@ -40,14 +40,6 @@
   "text": "Fun on Saturdays but packed after Cubs games, hard to find a seat."
  },
  {
-  "bar_id": 3,
-  "user_id": "seed",
-  "author": "Seed review",
-  "team": "Harvard Crimson",
-  "rating": 4,
-  "text": "Small but they streamed ESPN+ on the big screen for us without any fuss."
- },
- {
   "bar_id": 4,
   "user_id": "seed",
   "author": "Seed review",
@@ -102,5 +94,53 @@
   "team": null,
   "rating": 3,
   "text": "Tiny but friendly. Only a handful of TVs."
+ },
+ {
+  "bar_id": 9,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": "New England Patriots",
+  "rating": 5,
+  "text": "Patriots room was packed and the sound was on all game. Felt like Foxborough in Midtown."
+ },
+ {
+  "bar_id": 9,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": "Buffalo Bills",
+  "rating": 4,
+  "text": "They split the rooms for Bills-Pats. Friendly trash talk, great TVs."
+ },
+ {
+  "bar_id": 10,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": "Boston Bruins",
+  "rating": 5,
+  "text": "Hockey sound on by default. Bruins-Rangers night was electric."
+ },
+ {
+  "bar_id": 12,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": "New York Yankees",
+  "rating": 4,
+  "text": "Brave bar. Yankees game on with sound in the back room, Red Sox fans were good sports."
+ },
+ {
+  "bar_id": 13,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": "Liverpool",
+  "rating": 5,
+  "text": "Opened at 6:30 for a 7:00 kickoff with a full English. You'll Never Walk Alone at full volume."
+ },
+ {
+  "bar_id": 11,
+  "user_id": "seed",
+  "author": "Seed review",
+  "team": null,
+  "rating": 4,
+  "text": "Big neutral space, good for rival clubs. Pretzels are huge."
  }
 ]

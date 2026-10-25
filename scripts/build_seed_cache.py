@@ -31,9 +31,26 @@ SEARCHES = [
     "Michigan fans in Chicago",
     "Atlanta Falcons fans in Phoenix",
     "Pittsburgh Steelers fans in Denver",
+    "UCLA fans in Chicago",
+    "Ohio State fans in Chicago",
+    "Liverpool fans in Chicago",
+    "Manchester United fans in Chicago",
+    "New York Yankees fans in Boston",
+    "New York Knicks fans in Boston",
+    "New England Patriots fans in New York",
+    "Buffalo Bills fans in New York",
+    "Boston Bruins fans in New York",
+    "Boston Red Sox fans in New York",
+    "USC fans in Boston",
+    "USC fans in Phoenix",
+    "Yale fans in New York",
+    "Yale fans in Boston",
+    "Princeton fans in New York",
+    "Yale fans in New Haven",
 ]
-TEAMS = ["USC Trojans", "Notre Dame Fighting Irish", "Michigan Wolverines", "Yale Bulldogs",
-         "Harvard Crimson", "Chicago Bears", "Green Bay Packers"]
+TEAMS = ["USC Trojans", "Notre Dame Fighting Irish", "Michigan Wolverines", "Yale Bulldogs", "Harvard Crimson",
+         "Chicago Bears", "Green Bay Packers", "UCLA Bruins", "Ohio State Buckeyes", "Liverpool", "Manchester United",
+         "New York Yankees", "New York Knicks", "New England Patriots", "Buffalo Bills", "Boston Bruins", "Boston Red Sox", "Princeton Tigers"]
 
 
 def main() -> None:

@@ -2,10 +2,12 @@
  {
   "id": "fan_jordan",
   "role": "fan",
-  "display_name": "Jordan (USC fan)",
+  "display_name": "Jordan (Yale '27, New Haven)",
   "bar_id": null,
   "club_id": null,
-  "blurb": "Search, review bars, and see where fans gather."
+  "blurb": "Yale fan: search, review bars, and plan your season.",
+  "favorite_team": "Yale Bulldogs",
+  "home_city": "New Haven, CT"
  },
  {
   "id": "bar_huddle",
@@ -13,7 +15,9 @@
   "display_name": "Sam Rivera · The Huddle House",
   "bar_id": 1,
   "club_id": null,
-  "blurb": "Manage your bar profile and pitch fan clubs."
+  "blurb": "Manage your bar profile and pitch fan clubs.",
+  "favorite_team": null,
+  "home_city": null
  },
  {
   "id": "bar_fullerton",
@@ -21,7 +25,9 @@
   "display_name": "Maya Brooks · Fullerton Field House",
   "bar_id": 4,
   "club_id": null,
-  "blurb": "Manage your bar profile and pitch fan clubs."
+  "blurb": "Manage your bar profile and pitch fan clubs.",
+  "favorite_team": null,
+  "home_city": null
  },
  {
   "id": "bar_commonwealth",
@@ -29,7 +35,9 @@
   "display_name": "Chris Doyle · Commonwealth Kickoff",
   "bar_id": 6,
   "club_id": null,
-  "blurb": "Manage your bar profile and pitch fan clubs."
+  "blurb": "Manage your bar profile and pitch fan clubs.",
+  "favorite_team": null,
+  "home_city": null
  },
  {
   "id": "pres_usc_chi",
@@ -37,7 +45,9 @@
   "display_name": "Alex Kim · Trojans of Chicago",
   "bar_id": null,
   "club_id": 1,
-  "blurb": "Pick your season home bar and plan watch parties."
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
  },
  {
   "id": "pres_yale_chi",
@@ -45,15 +55,9 @@
   "display_name": "Priya Shah · Yale Football Watch, Chicago",
   "bar_id": null,
   "club_id": 2,
-  "blurb": "Pick your season home bar and plan watch parties."
- },
- {
-  "id": "pres_harvard_chi",
-  "role": "president",
-  "display_name": "Ben Cohen · Harvard Game Watch, Chicago",
-  "bar_id": null,
-  "club_id": 3,
-  "blurb": "Pick your season home bar and plan watch parties."
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
  },
  {
   "id": "pres_bears_bos",
@@ -61,7 +65,9 @@
   "display_name": "Dana Lopez · Bears Fans of Boston",
   "bar_id": null,
   "club_id": 6,
-  "blurb": "Pick your season home bar and plan watch parties."
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
  },
  {
   "id": "pres_packers_bos",
@@ -69,6 +75,168 @@
   "display_name": "Erik Lund · Packers Backers of Boston",
   "bar_id": null,
   "club_id": 7,
-  "blurb": "Pick your season home bar and plan watch parties."
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
+ },
+ {
+  "id": "pres_ucla_chi",
+  "role": "president",
+  "display_name": "Jordan Lee · Bruins of Westwood, Chicago",
+  "bar_id": null,
+  "club_id": 8,
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
+ },
+ {
+  "id": "pres_osu_chi",
+  "role": "president",
+  "display_name": "Maria Gonzalez · Buckeyes of Chicago",
+  "bar_id": null,
+  "club_id": 9,
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
+ },
+ {
+  "id": "pres_lfc_chi",
+  "role": "president",
+  "display_name": "Liam Byrne · Chicago Kop (Liverpool)",
+  "bar_id": null,
+  "club_id": 10,
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
+ },
+ {
+  "id": "pres_mufc_chi",
+  "role": "president",
+  "display_name": "Aisha Patel · Chicago Red Devils (Man United)",
+  "bar_id": null,
+  "club_id": 11,
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
+ },
+ {
+  "id": "pres_nyy_bos",
+  "role": "president",
+  "display_name": "Tony Russo · Yankees Fans of Boston",
+  "bar_id": null,
+  "club_id": 12,
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
+ },
+ {
+  "id": "pres_nyk_bos",
+  "role": "president",
+  "display_name": "Keisha Brown · Knicks Fans of Boston",
+  "bar_id": null,
+  "club_id": 13,
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
+ },
+ {
+  "id": "pres_ne_nyc",
+  "role": "president",
+  "display_name": "Mike Sullivan · Patriots Backers of NYC",
+  "bar_id": null,
+  "club_id": 14,
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
+ },
+ {
+  "id": "pres_buf_nyc",
+  "role": "president",
+  "display_name": "Dan Kowalski · Bills Backers of NYC",
+  "bar_id": null,
+  "club_id": 15,
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
+ },
+ {
+  "id": "pres_bos_nyc",
+  "role": "president",
+  "display_name": "Erin Walsh · Bruins Fans of NYC",
+  "bar_id": null,
+  "club_id": 16,
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
+ },
+ {
+  "id": "pres_bsox_nyc",
+  "role": "president",
+  "display_name": "Pat Murphy · Red Sox Nation NYC",
+  "bar_id": null,
+  "club_id": 17,
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
+ },
+ {
+  "id": "bar_midtown",
+  "role": "bar",
+  "display_name": "Rosa Diaz · Midtown Tailgate",
+  "bar_id": 9,
+  "club_id": null,
+  "blurb": "Manage your bar profile and pitch fan clubs.",
+  "favorite_team": null,
+  "home_city": null
+ },
+ {
+  "id": "fan_sam",
+  "role": "fan",
+  "display_name": "Sam (Patriots fan)",
+  "bar_id": null,
+  "club_id": null,
+  "blurb": "Search, review bars, and plan your season.",
+  "favorite_team": "New England Patriots",
+  "home_city": "New York, NY"
+ },
+ {
+  "id": "pres_yale_nyc",
+  "role": "president",
+  "display_name": "Chris Park · Yale Club of NYC Football Watch",
+  "bar_id": null,
+  "club_id": 18,
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
+ },
+ {
+  "id": "pres_princeton_nyc",
+  "role": "president",
+  "display_name": "Hannah Kim · Princeton Tigers of NYC",
+  "bar_id": null,
+  "club_id": 19,
+  "blurb": "Pick your season home bar and plan watch parties.",
+  "favorite_team": null,
+  "home_city": null
+ },
+ {
+  "id": "bar_bullpen",
+  "role": "bar",
+  "display_name": "Leo Grant · Brooklyn Bullpen",
+  "bar_id": 11,
+  "club_id": null,
+  "blurb": "Manage your bar profile and pitch fan clubs.",
+  "favorite_team": null,
+  "home_city": null
+ },
+ {
+  "id": "fan_casey",
+  "role": "fan",
+  "display_name": "Casey (USC fan)",
+  "bar_id": null,
+  "club_id": null,
+  "blurb": "Search, review bars, and plan your season.",
+  "favorite_team": "USC Trojans",
+  "home_city": "New Haven, CT"
  }
 ]

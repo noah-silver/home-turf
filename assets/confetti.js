@@ -3,6 +3,7 @@
 (function () {
   const colors = ["#e8a91b", "#1d8a4a", "#0f2240", "#d7263d", "#ffffff", "#2f6db3"];
   function burst() {
+    if (window.__HT_NO_CONFETTI) return;  // screenshots
     let c = document.getElementById("confetti-canvas");
     if (!c) { c = document.createElement("canvas"); c.id = "confetti-canvas"; document.body.appendChild(c); }
     c.width = innerWidth; c.height = innerHeight;

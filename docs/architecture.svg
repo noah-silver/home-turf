@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 640" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 770" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
   <defs>
     <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0,0 L10,5 L0,10 z" fill="#b8902f"/>
@@ -122,16 +122,42 @@
   <path class="ln2" d="M730 350 V310"/>
   <text class="s" x="740" y="333">pitch → club inbox</text>
 
+  <!-- Lane 4: personal + city tools -->
+  <rect class="lane" x="10" y="466" width="1080" height="118" rx="14"/>
+  <text class="lane-t" x="28" y="492">3 · MY SEASON &amp; CITY TOOLS</text>
+  <rect class="human" x="28" y="506" width="110" height="64" rx="10"/>
+  <text class="human-t" x="83" y="533" text-anchor="middle">Fan</text>
+  <text class="s" x="83" y="551" text-anchor="middle">“Boston till Nov…”</text>
+  <rect class="agent" x="168" y="502" width="150" height="72" rx="10"/>
+  <text class="agent-t" x="243" y="530" text-anchor="middle">Trip Parser</text>
+  <text class="agent-s" x="243" y="547" text-anchor="middle">a city for every game</text>
+  <text class="agent-s" x="243" y="562" text-anchor="middle">no tools</text>
+  <rect class="agent" x="348" y="502" width="170" height="72" rx="10"/>
+  <text class="agent-t" x="433" y="530" text-anchor="middle">Season Planner</text>
+  <text class="agent-s" x="433" y="547" text-anchor="middle">bar + backup per game</text>
+  <text class="agent-s" x="433" y="562" text-anchor="middle">local kickoff · .ics export</text>
+  <path class="ln" d="M138 538 H166"/>
+  <path class="ln" d="M318 538 H346"/>
+  <rect class="agent" x="620" y="502" width="210" height="72" rx="10"/>
+  <text class="agent-t" x="725" y="530" text-anchor="middle">City Sweep</text>
+  <text class="agent-s" x="725" y="547" text-anchor="middle">many teams per city at once</text>
+  <text class="agent-s" x="725" y="562" text-anchor="middle">web_search · 1 batched verify</text>
+  <rect class="agent" x="862" y="502" width="212" height="72" rx="10"/>
+  <text class="agent-t" x="968" y="530" text-anchor="middle">Reputation</text>
+  <text class="agent-s" x="968" y="547" text-anchor="middle">ratings + themes (own words)</text>
+  <text class="agent-s" x="968" y="562" text-anchor="middle">bar-site photos · Maps embed</text>
+  <text class="s" x="560" y="542" text-anchor="middle">uses Scout +</text>
+  <text class="s" x="560" y="556" text-anchor="middle">cached spots</text>
   <!-- Lane 3: doorway -->
-  <rect x="10" y="466" width="1080" height="164" rx="14" fill="#0f2240"/>
-  <text x="28" y="494" font-family="Georgia, serif" font-weight="700" font-size="13" fill="#b8902f" letter-spacing=".04em">3 · ONE DOORWAY TO THE MODEL  (agents/llm.py)</text>
+  <rect x="10" y="594" width="1080" height="164" rx="14" fill="#0f2240"/>
+  <text x="28" y="622" font-family="Georgia, serif" font-weight="700" font-size="13" fill="#b8902f" letter-spacing=".04em">4 · ONE DOORWAY TO THE MODEL  (agents/llm.py)</text>
   <g font-size="12" fill="#ffffff">
-    <rect x="28" y="510" width="200" height="48" rx="8" fill="#17305a"/><text x="128" y="531" text-anchor="middle" font-weight="700">Spend caps</text><text x="128" y="547" text-anchor="middle" fill="#c9d3e6" font-size="11">run · session · day</text>
-    <rect x="240" y="510" width="200" height="48" rx="8" fill="#17305a"/><text x="340" y="531" text-anchor="middle" font-weight="700">Structured outputs</text><text x="340" y="547" text-anchor="middle" fill="#c9d3e6" font-size="11">Pydantic schemas</text>
-    <rect x="452" y="510" width="200" height="48" rx="8" fill="#17305a"/><text x="552" y="531" text-anchor="middle" font-weight="700">Untrusted-data fences</text><text x="552" y="547" text-anchor="middle" fill="#c9d3e6" font-size="11">web, profiles, reviews</text>
-    <rect x="664" y="510" width="200" height="48" rx="8" fill="#17305a"/><text x="764" y="531" text-anchor="middle" font-weight="700">Retries (429/5xx only)</text><text x="764" y="547" text-anchor="middle" fill="#c9d3e6" font-size="11">jittered backoff, max 4</text>
-    <rect x="876" y="510" width="198" height="48" rx="8" fill="#17305a"/><text x="975" y="531" text-anchor="middle" font-weight="700">Usage + audit log</text><text x="975" y="547" text-anchor="middle" fill="#c9d3e6" font-size="11">tokens, $, every step</text>
+    <rect x="28" y="638" width="200" height="48" rx="8" fill="#17305a"/><text x="128" y="659" text-anchor="middle" font-weight="700">Spend caps</text><text x="128" y="675" text-anchor="middle" fill="#c9d3e6" font-size="11">run · session · day</text>
+    <rect x="240" y="638" width="200" height="48" rx="8" fill="#17305a"/><text x="340" y="659" text-anchor="middle" font-weight="700">Structured outputs</text><text x="340" y="675" text-anchor="middle" fill="#c9d3e6" font-size="11">Pydantic schemas</text>
+    <rect x="452" y="638" width="200" height="48" rx="8" fill="#17305a"/><text x="552" y="659" text-anchor="middle" font-weight="700">Untrusted-data fences</text><text x="552" y="675" text-anchor="middle" fill="#c9d3e6" font-size="11">web, profiles, reviews</text>
+    <rect x="664" y="638" width="200" height="48" rx="8" fill="#17305a"/><text x="764" y="659" text-anchor="middle" font-weight="700">Retries (429/5xx only)</text><text x="764" y="675" text-anchor="middle" fill="#c9d3e6" font-size="11">jittered backoff, max 4</text>
+    <rect x="876" y="638" width="198" height="48" rx="8" fill="#17305a"/><text x="975" y="659" text-anchor="middle" font-weight="700">Usage + audit log</text><text x="975" y="675" text-anchor="middle" fill="#c9d3e6" font-size="11">tokens, $, every step</text>
   </g>
-  <text x="550" y="594" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="700">Portkey gateway  →  gpt-6-luna (Responses API)</text>
-  <text x="550" y="614" text-anchor="middle" font-size="11" fill="#c9d3e6">$0.10 / 1M input · $0.01 / 1M cached · $0.50 / 1M output · $0.01 per web search</text>
+  <text x="550" y="722" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="700">Portkey gateway  →  gpt-6-luna (Responses API)</text>
+  <text x="550" y="742" text-anchor="middle" font-size="11" fill="#c9d3e6">$0.10 / 1M input · $0.01 / 1M cached · $0.50 / 1M output · $0.01 per web search</text>
 </svg>

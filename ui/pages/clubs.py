@@ -19,6 +19,20 @@ def _login_needed(role_word: str) -> html.Div:
         "🔑", f"Log in as a {role_word}", "Use the Demo login menu at the top right. Each demo account is a fictional person running a labeled demo club or bar.")))
 
 
+RIVAL_PAIRS = [("Yale", "Princeton"), ("USC", "UCLA"), ("Michigan", "Ohio State"), ("Yale", "Harvard"), ("Bears", "Packers"), ("Patriots", "Bills"),
+               ("Liverpool", "Manchester United"), ("Yankees", "Red Sox"), ("Bruins", "Rangers"), ("Knicks", "Celtics"), ("Notre Dame", "USC")]
+
+
+def _default_rival(club: dict, rivals: list[dict]) -> int | None:
+    for a, b in RIVAL_PAIRS:
+        for mine, theirs in ((a, b), (b, a)):
+            if mine in club["team"]:
+                for r in rivals:
+                    if theirs in r["team"]:
+                        return r["id"]
+    return None
+
+
 def _team_avatar(team: str, sport: str) -> html.Div:
     from ui.team_logos import lookup
 
@@ -68,8 +82,7 @@ def layout(session: dict | None) -> html.Div:
                     html.Div(className="card-head", children=[html.H3("Rivalry watch party"), html.Span("⚔️", className="badge gold")]),
                     html.P("Pick a rival club in your city. We find your game, shortlist neutral bars that can hold both crowds, and draft invitations for both presidents and the bar. Nothing is sent or booked until all three say yes.", className="small muted"),
                     dcc.Dropdown(id="rival-dd", options=[{"label": f"{r['name']} ({r['team']})", "value": r["id"]} for r in rivals],
-                                 value=next((r["id"] for r in rivals if ("Harvard" in r["team"] and "Yale" in c["team"]) or ("Yale" in r["team"] and "Harvard" in c["team"])
-                                             or ("Packers" in r["team"] and "Bears" in c["team"]) or ("Bears" in r["team"] and "Packers" in c["team"])), None),
+                                 value=_default_rival(c, rivals),
                                  placeholder="Choose a rival club", clearable=False),
                     html.Button("Plan rivalry watch party", id="rivalry-go", className="btn btn-gold", style={"marginTop": "10px"}),
                     dcc.Loading(html.Div(id="rivalry-out"), custom_spinner=football_spinner()),
