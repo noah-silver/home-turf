@@ -186,3 +186,43 @@ def post_review(bar_id: int, user_id: str, author: str, team: str, rating: int, 
 
 def reviews_for(bar_id: int) -> list[dict]:
     return db.query("SELECT * FROM reviews WHERE bar_id = ? AND status = 'posted' ORDER BY id DESC", (bar_id,))
+
+
+# ---- fan suggestions ------------------------------------------------------------------------
+
+def suggest_spot(bar_name: str, address: str, city: str, team: str, source_url: str, user_id: str | None, session_id: str) -> dict:
+    """A fan adds a watch spot we missed. Guard-screened, geocoded, and verified if a link is given."""
+    from core.orchestrator import _link_bar  # local import avoids a cycle
+    from tools.fetch_page import fetch_text
+    from tools.geocode import geocode
+
+    bar_name, address, city, team, source_url = (x.strip()[:200] for x in (bar_name, address, city, team, source_url or ""))
+    if not (bar_name and city and team):
+        return {"ok": False, "message": "Please give the bar's name, the team, and the city."}
+    verdict = screen("review", f"Suggested watch spot: {bar_name}, {address}, {city}, for {team} fans. Source: {source_url}", session_id=session_id)
+    if not verdict["allow"]:
+        return {"ok": False, "message": f"Not added. Guard: {verdict['reason']}"}
+    geo = geocode(address, city) if address else None
+    geo = geo or geocode(f"{bar_name}, {city}")
+    status, reason = "suggested", "Added by a fan; not yet verified."
+    if source_url:
+        page = fetch_text(source_url)
+        if page["ok"] and all(w in page["text"].lower() for w in bar_name.lower().split()[:2]) and team.split()[-1].lower() in page["text"].lower():
+            status, reason = "verified", "The linked page names this bar and the team."
+        elif not page["ok"]:
+            reason = f"Added by a fan; the link could not be checked ({page['error']})."
+    spot = {"bar_name": bar_name, "address": address or "unknown", "lat": geo["lat"] if geo else None, "lon": geo["lon"] if geo else None,
+            "status": "confirmed" if status == "verified" else "likely", "team": team, "source_url": source_url, "official_source": False}
+    bar_id = _link_bar(spot, city)
+    db.insert("suggestions", {"bar_name": bar_name, "address": address, "city": city, "team": team, "source_url": source_url, "note": "",
+                              "lat": spot["lat"], "lon": spot["lon"], "bar_id": bar_id, "user_id": user_id or "guest", "status": status,
+                              "verify_reason": reason, "created_at": db.now_iso()})
+    audit.log("spot_suggested", bar=bar_name, city=city, team=team, status=status, by=user_id or "guest")
+    where = "" if geo else " We couldn't place the address on the map yet."
+    return {"ok": True, "message": f"Thanks! Added as {'verified' if status == 'verified' else 'fan-suggested'}: {reason}{where}", "status": status}
+
+
+def suggestions_for(team: str, city: str) -> list[dict]:
+    key = city.split(",")[0].strip().lower()
+    return [s for s in db.query("SELECT * FROM suggestions WHERE lower(team) = lower(?) AND status != 'blocked' ORDER BY id DESC", (team,))
+            if s["city"].split(",")[0].strip().lower() == key]

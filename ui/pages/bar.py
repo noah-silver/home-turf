@@ -4,10 +4,17 @@ from __future__ import annotations
 
 from dash import Input, Output, State, callback, dcc, html, no_update
 
+import time
+
+from agents.llm import AgentError
+from agents.reputation import external_links, reputation
 from agents.summarizer import summarize
 from core import marketplace as mk
-from core.budget import Run
-from ui.components import empty_state, map_figure, notice, stars
+from core.budget import BudgetExceeded, Run
+from core.citymap import known_points
+from ui.fun import football_spinner
+from ui.components import empty_state, notice, receipt, stars
+from ui.logo_map import iframe_style, map_src
 
 
 def _score_block(bar_id: int, sid: str) -> html.Div:
@@ -66,7 +73,12 @@ def layout(bar_id: int, session: dict | None) -> html.Div:
     claim = None
     if not b["claimed"] and user and user["role"] == "bar":
         claim = html.Div([html.Button("Claim this bar", id="claim-btn", className="btn btn-gold btn-sm"), html.Div(id="claim-msg")], style={"marginTop": "12px"})
-    point = [{"lat": b["lat"], "lon": b["lon"], "status": "confirmed" if not b["is_demo"] else "demo", "label": b["name"], "bar_id": b["id"]}] if b["lat"] else []
+    here = [p for p in known_points(b["city"]) if p.get("bar_id") == bar_id or p["bar_name"].lower() == b["name"].lower()]
+    if not here and b["lat"] is not None:
+        here = [{"bar_name": b["name"], "address": b["address"], "lat": b["lat"], "lon": b["lon"], "bar_id": b["id"],
+                 "teams": [{"team": t.strip(), "status": "partner" if b["is_demo"] else "likely", "club": ""} for t in (b["teams_hosted"] or "").split(",") if t.strip()]
+                 or [{"team": b["name"], "status": "unverified", "club": ""}]}]
+    links = external_links(b["name"], b["address"] or "", b["city"] or "")
     return html.Div(className="page", children=[
         dcc.Store(id="bar-id", data=bar_id),
         html.Div(className="dash-head", children=[
@@ -78,11 +90,24 @@ def layout(bar_id: int, session: dict | None) -> html.Div:
                 html.Div(className="card", children=[html.H3("Profile"), html.Div([x for k, v in facts for x in (html.Div(k, className="k"), html.Div(str(v)))], className="kv"),
                     html.Div(f"Season home bar for: {', '.join(clubs_here)}", className="small", style={"marginTop": "10px"}) if clubs_here else None,
                     html.Div(f"“{b['pitch_line']}”", className="quote") if b["pitch_line"] else None, claim]),
+                html.Div(className="card", children=[
+                    html.Div(className="card-head", children=[html.H3("Photos & public reviews"), html.Span("Reputation agent", className="badge gold")]),
+                    html.Div(className="ext-links", children=[
+                        html.A("Open in Google Maps ↗", href=links["google"], target="_blank", className="btn btn-ghost btn-sm"),
+                        html.A("Open on Yelp ↗", href=links["yelp"], target="_blank", className="btn btn-ghost btn-sm"),
+                    ]),
+                    dcc.Loading(html.Div(id="rep-slot", style={"marginTop": "10px"}), custom_spinner=football_spinner()),
+                ]),
                 html.Div(className="card", children=[_score_block(bar_id, sid)]),
             ]),
             html.Div([
-                html.Div(className="card", style={"padding": 0, "overflow": "hidden", "height": "260px"},
-                         children=dcc.Graph(figure=map_figure(point, zoom=14), config={"displayModeBar": False, "responsive": True}, style={"height": "260px", "width": "100%"})) if point else None,
+                html.Div(className="card", style={"padding": 0, "overflow": "hidden", "height": "280px"},
+                         children=html.Iframe(src=map_src(here, highlight=[t["team"] for p in here for t in p["teams"]], title="Teams that watch here"), style=iframe_style("280px"))) if here else None,
+                html.Div(className="card", style={"padding": "0", "overflow": "hidden"}, children=[
+                    html.Div("Google Maps · place card, rating, and reviews", className="tiny muted", style={"padding": "10px 14px 6px"}),
+                    html.Iframe(src=links["google_embed"], style={"width": "100%", "height": "340px", "border": "0", "display": "block"},
+                                referrerPolicy="no-referrer-when-downgrade"),
+                ]) if not b["is_demo"] else None,
                 html.Div(className="card", children=[
                     html.H3("Review a game here"),
                     html.P("Every review is screened by the Guard before it posts (spam, abuse, personal info, and AI-manipulation attempts are blocked).", className="small muted"),
@@ -128,3 +153,43 @@ def claim(_n, bar_id, session):
     if not user or user["role"] != "bar":
         return notice("info", "Log in as a bar manager to claim a bar.")
     return notice("ok", mk.claim_bar(bar_id, user["id"])["message"])
+
+
+@callback(Output("rep-slot", "children"), Input("bar-id", "data"), State("session", "data"))
+def load_reputation(bar_id, session):
+    b = mk.bar(bar_id)
+    if not b:
+        return no_update
+    if b["is_demo"]:
+        return html.Div("Demo profile: this venue is fictional, so it has no public reviews or photos. Real bars found by the Scout show their web reputation here.", className="small muted")
+    run = Run(kind="reputation", session_id=(session or {}).get("sid", "anon"))
+    t0 = time.perf_counter()
+    try:
+        rep = reputation(run, b)
+    except (BudgetExceeded, AgentError) as exc:
+        return notice("warn", f"Public reviews unavailable right now: {exc}")
+    if not rep:
+        return no_update
+    photos = rep.get("photos") or []
+    ratings = []
+    if rep.get("google_rating"):
+        ratings.append(html.Span([html.B(f"{rep['google_rating']:.1f}"), " ★ Google"], className="badge navy"))
+    if rep.get("yelp_rating"):
+        ratings.append(html.Span([html.B(f"{rep['yelp_rating']:.1f}"), " ★ Yelp"], className="badge navy"))
+    icon = {"positive": "▲", "mixed": "◆", "negative": "▼"}
+    color = {"positive": "#1f7a4d", "mixed": "#b7791f", "negative": "#b42d2d"}
+    return html.Div([
+        html.Div(className="grid-2", style={"gap": "8px", "marginBottom": "10px"},
+                 children=[html.A(html.Img(src=u, className="bar-photo", style={"height": "140px"}), href=u, target="_blank") for u in photos[:4]]) if photos else
+        html.Div("No photos published on the bar's website.", className="tiny muted"),
+        html.Div(photos and f"Photos: the bar's own website ({(rep.get('official_site') or '').replace('https://', '').strip('/')})" or "", className="tiny muted"),
+        html.Div(ratings + [html.Span(rep.get("review_volume") or "", className="tiny muted")], className="row", style={"marginTop": "10px"}),
+        html.P(rep.get("game_day_take") or "", style={"marginTop": "8px", "fontWeight": 600}),
+        html.Div([html.Div([html.Span(icon[t["sentiment"]] + " ", style={"color": color[t["sentiment"]]}), html.B(t["theme"] + ": "), t["detail"]], className="rep-theme")
+                  for t in rep.get("themes", [])]),
+        html.Div(["Summarized by the Reputation agent in its own words from: "] +
+                 [x for i, u in enumerate(rep.get("sources", [])[:4]) for x in ((" · " if i else ""), html.A(u.split("/")[2], href=u, target="_blank"))],
+                 className="tiny muted", style={"marginTop": "8px"}),
+        html.Div("from cache · no tokens" if rep.get("cached") else "", className="tiny muted"),
+        html.Div(receipt(run.totals(), run.steps, time.perf_counter() - t0, title="Reputation run"), style={"marginTop": "10px"}) if not rep.get("cached") else None,
+    ])

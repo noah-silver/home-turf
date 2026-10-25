@@ -97,6 +97,8 @@ def merge_duplicates(spots: list[dict]) -> list[dict]:
 def _spots_for(run: Run, team: str, city: str, sport: str | None) -> dict[str, Any]:
     key = search_key(team, city)
     cached = db.cache_get(key, config.SEARCH_CACHE_DAYS * 24)
+    if cached and not cached.get("spots") and not cached.get("allgames"):
+        cached = db.cache_get(key, config.EMPTY_RESULT_CACHE_HOURS)  # retry empty results sooner
     if cached:
         run.add_step("Cache", f"{team} in {city}: verified results from cache (no tokens, no web search)")
         audit.log("cache_hit", run_id=run.run_id, key=key)
@@ -106,13 +108,31 @@ def _spots_for(run: Run, team: str, city: str, sport: str | None) -> dict[str, A
     audit.log("cache_miss", run_id=run.run_id, key=key)
     report = scout(run, team, city, sport)
     spots = merge_duplicates(verify(run, team, city, report.spots[:5])) if report.spots else []
-    for spot in spots:
+    allgames: list[dict] = []
+    if not any(s["status"] in ("confirmed", "likely") for s in spots):
+        # Adaptive escalation: only hard searches pay for a second, wider pass.
+        wide = scout(run, team, city, sport, wide=True, max_searches=config.MAX_WEB_SEARCHES_WIDE, tried=report.search_notes)
+        if wide.spots:
+            seen = {s["bar_name"].lower() for s in spots}
+            fresh = [w for w in wide.spots if w.bar_name.lower() not in seen][:5]
+            spots = merge_duplicates(spots + verify(run, team, city, fresh)) if fresh else spots
+        if wide.allgames_spots:
+            # Best bets so the fan is never left empty-handed: verified bars that show every game.
+            allgames = [a for a in merge_duplicates(verify(run, team, city, wide.allgames_spots[:3])) if a["status"] != "rejected"]
+            for a in allgames:
+                a["kind"] = "allgames"
+        report.search_notes = wide.search_notes or report.search_notes
+        report.club_name = report.club_name or wide.club_name
+        report.club_contact_url = report.club_contact_url or wide.club_contact_url
+    for spot in spots + allgames:
         spot["team"] = team
         spot["bar_id"] = _link_bar(spot, city)
     result = {
         "team": team,
+        "sport": sport or "",
         "city": city,
         "spots": spots,
+        "allgames": allgames,
         "club_name": report.club_name,
         "club_contact_url": report.club_contact_url,
         "search_notes": report.search_notes,
@@ -151,13 +171,16 @@ def find_watch_spots(query: str, session_id: str = "cli") -> dict[str, Any]:
         intent = route(run, query)
         if intent.intent in ("off_topic", "unsafe"):
             return {"ok": False, "message": intent.reply_if_rejected or "I can only help find where fans watch games.", "run": run, "blocked": intent.intent == "unsafe"}
+        if intent.intent == "city" and intent.city:
+            run.add_step("City view", f"every team with a known fan spot in {intent.city} (no extra tokens)")
+            return {"ok": True, "intent": intent.model_dump(), "groups": [], "city": intent.city, "run": run}
         if not intent.city or not intent.team:
             missing = "city" if not intent.city else "team"
             return {"ok": False, "message": f"Which {missing}? Try “{intent.team or 'USC'} fans in {intent.city or 'Chicago'}”.", "run": run}
         groups = [_spots_for(run, intent.team, intent.city, intent.sport)]
         if intent.intent == "rivalry" and intent.team_b:
             groups.append(_spots_for(run, intent.team_b, intent.city, intent.sport))
-        return {"ok": True, "intent": intent.model_dump(), "groups": groups, "run": run}
+        return {"ok": True, "intent": intent.model_dump(), "groups": groups, "city": intent.city, "run": run}
     except BudgetExceeded as exc:
         audit.log("budget_stop", run_id=run.run_id, message=str(exc))
         return {"ok": False, "message": str(exc), "run": run, "budget": True}

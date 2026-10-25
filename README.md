@@ -4,7 +4,7 @@
 
 Home Turf is a multi-agent web app with three kinds of users:
 
-- **Fans**: search "USC fans in Chicago" and get verified watch spots on a map, with sources, evidence quotes, and game-day reviews.
+- **Fans**: search "USC fans in Chicago" and get verified watch spots on a map of **team logos**, with sources, evidence quotes, photos, public review summaries, and game-day reviews. Search just "Boston" to see every team's fans in the city, and filter the map by league (NFL, NCAA, MLB, NBA, NHL, Soccer).
 - **Fan-club presidents**: the Season Matchmaker ranks bars for the club's season and flags schedule clashes. The rivalry planner drafts a joint watch party, for example Harvard vs. Yale in Chicago.
 - **Bars**: claim a profile, then let the Pitch Writer draft invitations to clubs, grounded only in what the bar's profile says.
 
@@ -50,14 +50,16 @@ The first start creates `runtime/home_turf.db` from the seed files in `data/`. T
 
 ## A 3-minute tour
 
-1. **Home → "USC fans in Chicago"** (chip). This one is cached, so it loads instantly at zero cost: Theory, 9 W Hubbard St, *Verified*, with two sources. The dark *receipt* under the results shows tokens, cost, and what each agent did.
-2. **Type a new search**, e.g. "Steelers fans in Denver". This runs live in about 10–20 s: Router → Scout (web search) → Verifier (re-opens each source, checks the bar's name and the season, places the address on the map). Gray and red cards show what the Verifier didn't trust.
-3. **Demo login (top right) → "Club president: Priya Shah · Yale Football Watch, Chicago"** → *For fan clubs*:
+1. **Home → the "Chicago" chip**. This shows every team with a known fan spot in Chicago as logo pins. Use the league buttons on the map (NFL, NCAA, MLB, Soccer…) and click a logo for the bar's popup.
+2. **"USC fans in Chicago"** (chip). This one is cached, so it loads instantly at zero cost: Theory, 9 W Hubbard St, *Verified*, with two sources. The dark *receipt* under the results shows tokens, cost, and what each agent did.
+3. **Type a new search**, e.g. "Seahawks fans in Denver". This runs live in about 10–20 s: Router → Scout (web search) → Verifier (re-opens each source, checks the bar's name and the season, places the address on the map). If nothing team-specific exists, a wider second pass searches the metro area and fan club directories, and returns verified "shows every game" best bets so you're never left empty-handed. You can also add a spot we missed.
+4. **Click "Bar page, photos & reviews"** on a real bar. The Reputation agent summarizes its public Google/Yelp reputation in its own words, with photos from the bar's own website and an embedded Google Maps place card.
+5. **Demo login (top right) → "Club president: Priya Shah · Yale Football Watch, Chicago"** → *For fan clubs*:
    - **Rank bars for our season** runs the Season Matchmaker. It ranks the bars, quotes capacity against turnout, and flags schedule clashes with other clubs.
    - **Plan rivalry watch party** (Harvard preselected) finds The Game (Nov 21), picks a neutral bar that holds both clubs, and drafts three invitations. Then click **Propose**.
-4. **Demo login → "Bar manager: Maya Brooks · Fullerton Field House"** → *For bars*: approve the watch party, **Draft a pitch** to a club, and try editing in "$1 beers" before sending. The number check blocks it.
-5. **Demo login → "Club president: Ben Cohen · Harvard"** → approve. The event becomes *confirmed* only after all three humans approve.
-6. **Cost & safety**: live spend per agent, budget meters, cache savings, the Guard's decisions, and the audit trail. Use **Try to break it** to send a prompt injection through the Guard.
+6. **Demo login → "Bar manager: Maya Brooks · Fullerton Field House"** → *For bars*: approve the watch party, **Draft a pitch** to a club, and try editing in "$1 beers" before sending. The number check blocks it.
+7. **Demo login → "Club president: Ben Cohen · Harvard"** → approve. The event becomes *confirmed* only after all three humans approve.
+8. **Cost & safety**: live spend per agent, budget meters, cache savings, the Guard's decisions, and the audit trail. Use **Try to break it** to send a prompt injection through the Guard.
 
 All demo clubs, bars, people, and seed reviews are fictional and labeled **demo**. Watch spots in search results are real, from live web sources.
 
@@ -68,7 +70,9 @@ All demo clubs, bars, people, and seed reviews are fictional and labeled **demo*
 | Agent | Job | Tools |
 |---|---|---|
 | Router | Turns a search into `{intent, team, city}`; declines off-topic or unsafe requests | none (structured output) |
-| Scout | Finds where fans or the official club watch, with source URLs and quoted evidence | `web_search` (max 3) |
+| Scout | Finds where fans or the official club watch, with source URLs and quoted evidence. If nothing usable, a wide second pass (metro area, fan club directories) also returns verified "shows every game" best bets | `web_search` (max 3, then max 4) |
+| City Sweep | Maps many teams' fan bars in one city at once (NFL, college, other leagues) so the city map shows every logo | `web_search` (max 4 per league group) |
+| Reputation | A real bar's public ratings and review themes, summarized in its own words (no copying), plus photos from the bar's own site | `web_search` (max 2), `site_photos` |
 | Verifier | Re-checks each candidate. Code checks first; the model only for unclear cases | `fetch_page`, `geocode` |
 | Schedule | A team's season schedule (cached 24 h) | `web_search` (max 2) |
 | Matchmaker | Season mode (club → home bar) and rivalry mode (two clubs → one bar, one game) | profiles, schedules, computed conflicts |
@@ -85,12 +89,12 @@ home-turf/
 ├── agents/                router, scout, verifier, schedule, matchmaker, pitch_writer, guard, summarizer
 │   ├── llm.py             the one doorway to the model: caps, retries, structured output, usage + audit logging
 │   └── prompts/           shared_rules.md + one prompt per agent
-├── tools/                 geocode.py (OpenStreetMap Nominatim, no key), fetch_page.py (public URLs only)
+├── tools/                 geocode.py (OpenStreetMap Nominatim, no key), fetch_page.py (public URLs only, site photos)
 ├── core/                  orchestrator, database, budget caps, audit trail, marketplace actions
-├── ui/                    pages: home, find, bar, clubs, bars, console
+├── ui/                    pages: home, find, bar, clubs, bars, console; logo_map.py (MapLibre logo map), team_logos.py, fun.py (ticker, logo wall)
 ├── mcp_server/server.py   optional MCP server (read-only + drafts)
 ├── data/                  seed profiles, reviews, and a cache of real searches for instant demos
-├── tests/test_safety.py   17 safety + cost-control tests
+├── tests/test_safety.py   22 safety, cost-control, and feature tests
 ├── scripts/               measure_tokens.py, build_seed_cache.py, mcp_smoke_test.py
 └── docs/                  GUARDRAILS.md, measurements.json, screenshots, report.html, slides.html
 ```
@@ -98,7 +102,7 @@ home-turf/
 ## Tests
 
 ```bash
-python -m unittest -v tests.test_safety                      # 14 offline tests, no API cost
+python -m unittest -v tests.test_safety                      # 19 offline tests, no API cost
 HOME_TURF_LIVE=1 python -m unittest -v tests.test_safety     # + 3 live tests (~$0.001)
 ```
 
@@ -115,7 +119,9 @@ Client config: command `<path>/.venv/bin/python`, args `["<path>/mcp_server/serv
 
 ## Data and costs
 
-- **Seed data** (`data/`): 8 demo bars, 7 demo clubs, 9 demo logins, 13 seed reviews, plus cached results of 7 real searches and 7 real team schedules (built with `scripts/build_seed_cache.py`), so the demo works instantly.
+- **Seed data** (`data/`): 8 demo bars, 7 demo clubs, 9 demo logins, 13 seed reviews, plus cached real searches, City Sweeps of Boston, Chicago, New York, Phoenix, and New Haven, and 7 team schedules (built with `scripts/build_seed_cache.py`), so the demo maps are full from the first click.
+- **Team logos** (`data/team_logos.json`, built by `scripts/build_team_logos.py` from ESPN's public team lists): about 1,000 NFL, college, MLB, NBA, NHL, WNBA, and soccer teams. Logos are linked, not copied.
+- **Reviews and photos**: Yelp's and Google's APIs need extra keys that this project can't require, and their terms forbid scraping. So review themes are summarized from public pages with links out, photos come from each bar's own website, and the Google Maps place card is Google's official embed.
 - **Live data**: any new team and city runs the agents against the live web.
 - **Cost**: a new search costs about 1–2 cents (mostly the $0.01 web-search fee). A cached search costs $0. Matchmaking, pitches, and Guard checks cost fractions of a cent. Measured numbers are in `docs/measurements.json` and the report.
 - **Caps**: 120k tokens per action, 600k per browser session, 3M per day for the whole app.

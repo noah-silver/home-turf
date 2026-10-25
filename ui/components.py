@@ -63,15 +63,21 @@ def spot_card(spot: dict) -> html.Div:
         src_links.append(html.A(f"{host}{' (official)' if s.get('official') else ''}", href=s["url"], target="_blank", className="small"))
         if i < min(len(sources), 3) - 1:
             src_links.append(html.Span(" · ", className="muted"))
+    from agents.reputation import external_links  # local import keeps ui light
+
     actions = []
     if spot.get("bar_id"):
-        actions.append(dcc.Link("Bar page and reviews →", href=f"/bar/{spot['bar_id']}", className="btn btn-ghost btn-sm"))
+        actions.append(dcc.Link("Bar page, photos & reviews →", href=f"/bar/{spot['bar_id']}", className="btn btn-ghost btn-sm"))
+    gm = external_links(spot["bar_name"], spot.get("address", ""), spot.get("city", "") or "")["google"]
+    actions.append(html.A("Google Maps ↗", href=gm, target="_blank", className="btn btn-ghost btn-sm"))
+    every_game = spot.get("kind") == "allgames"
     return html.Div(
-        className=f"spot {spot['status']}",
+        className=f"spot {'allgames' if every_game else spot['status']}",
         children=[
-            html.Div(className="row", children=[html.H4(spot["bar_name"]), html.Div(className="spacer"), badge(spot["status"])]),
+            html.Div(className="row", children=[html.H4(spot["bar_name"]), html.Div(className="spacer"),
+                                                html.Span("Shows every game", className="badge allgames") if every_game else badge(spot["status"])]),
             html.Div(spot["address"] if spot["address"] != "unknown" else "Address not listed by the source", className="small muted"),
-            html.Div(f"Club: {spot['club_name']}" if spot.get("club_name") and spot["club_name"] != "unknown" else "", className="small"),
+            html.Div(f"Club: {spot['club_name']}" if spot.get("club_name") and spot["club_name"] != "unknown" and not every_game else "", className="small"),
             html.Div("“" + spot["evidence_quote"].strip(QUOTE_CHARS) + "”", className="quote"),
             html.Div(className="small", children=[html.Span("Sources: ", className="muted"), *src_links]),
             html.Div(

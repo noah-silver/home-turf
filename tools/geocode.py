@@ -29,7 +29,11 @@ def geocode(address: str, city_hint: str = "") -> dict | None:
     address = _normalize(address)
     if not address or address.lower() == "unknown":
         return None
-    query_text = address if (not city_hint or city_hint.split(",")[0].lower() in address.lower()) else f"{address}, {city_hint}"
+    has_place = bool(re.search(r",\s*[A-Z]{2}\b|\b\d{5}\b", address))
+    if not city_hint or has_place or city_hint.split(",")[0].lower() in address.lower():
+        query_text = address
+    else:
+        query_text = f"{address}, {city_hint}"
     cached = db.one("SELECT * FROM geocode_cache WHERE address = ?", (query_text,))
     if cached:
         return {"lat": cached["lat"], "lon": cached["lon"], "display": cached["display"]} if cached["ok"] else None

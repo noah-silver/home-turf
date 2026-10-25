@@ -82,7 +82,7 @@ def verify(run: Run, team: str, city: str, spots: list[ScoutSpot]) -> list[dict]
             ambiguous.append(
                 (
                     i,
-                    f"### Candidate {i}\nBar: {spot.bar_name}\nAddress claimed: {spot.address}\n"
+                    f"### Candidate {i}\nTeam: {getattr(spot, 'team', team)}\nBar: {spot.bar_name}\nAddress claimed: {spot.address}\n"
                     f"Club claimed: {spot.club_name}\nScout's quote: {spot.evidence_quote}\n"
                     f"Season claimed: {spot.season_seen}\nSource: {spot.source_url}\n"
                     f"Bar name found on page: {name_at >= 0}\n{evidence}",

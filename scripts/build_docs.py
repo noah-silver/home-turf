@@ -23,6 +23,7 @@ M = json.loads((DOCS / "measurements.json").read_text())
 USER_TESTS = json.loads((DOCS / "user_tests.json").read_text()) if (DOCS / "user_tests.json").exists() else None
 REPO_URL = "https://github.com/noah-silver/home-turf"
 ARCH_SVG = (DOCS / "architecture.svg").read_text()
+FC = json.loads((DOCS / "feature_costs.json").read_text()) if (DOCS / "feature_costs.json").exists() else {}
 
 
 # ---------------------------------------------------------------------------------- images
@@ -118,7 +119,7 @@ CSS = """
 @page { size: letter; margin: 0.6in 0.65in 0.65in; }
 :root { --navy:#0f2240; --gold:#b8902f; --gold-soft:#f4ead2; --ink:#1b2433; --muted:#5d6b82; --line:#e3e7ee; --green:#1f7a4d; --red:#b42d2d; --amber:#b7791f; }
 * { box-sizing: border-box; }
-body { margin: 0; background: #eef0f4; color: var(--ink); font: 10.5pt/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+body { margin: 0; background: #eef0f4; color: var(--ink); font: 10pt/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
 main { max-width: 8.5in; margin: 0 auto; background: #fff; padding: 0.7in 0.75in; box-shadow: 0 0 30px rgba(15,34,64,.12); }
 h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; color: var(--navy); line-height: 1.2; }
 h1 { font-size: 30pt; margin: 0 0 6px; }
@@ -137,7 +138,9 @@ a { color: #22406f; }
 .kpi .l { font-size: 8.5pt; color: var(--muted); line-height: 1.3; }
 figure { margin: 8px 0 12px; page-break-inside: avoid; }
 figure img, figure svg { width: 100%; border: 1px solid var(--line); border-radius: 6px; display: block; }
-figcaption { font-size: 9pt; color: var(--muted); margin-top: 5px; }
+figcaption { font-size: 8.5pt; color: var(--muted); margin-top: 4px; }
+figure img { max-height: 4.1in; object-fit: cover; object-position: top left; }
+.two figure img { max-height: 3.3in; }
 figcaption b { color: var(--navy); }
 .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
 .two figure { margin-top: 0; }
@@ -215,6 +218,11 @@ def build_report() -> str:
         ["Guard (free code layer)", "0", "0", "0", "under 0.01 s", "$0.00000"],
         ["Game-day Summarizer", f"{ACT['summarizer']['input']:,.0f}", f"{ACT['summarizer']['output']:,.0f}", "0", f"{ACT['summarizer']['sec']:.1f} s", money(ACT["summarizer"]["cost"], 5)],
     ]
+    timing = {"wide": lambda f: f"{f['seconds']:.0f} s model", "reputation": lambda f: "~5 s", "sweep": lambda f: "1–2 min (geocoding)"}
+    for label, key in (("Hard search with wide pass (Falcons in Phoenix)", "wide"), ("Reputation (photos + review themes, one bar)", "reputation"), ("City Sweep (one city, 3 league groups, avg of 5)", "sweep")):
+        f = FC.get(key)
+        if f:
+            action_rows.append([label, f"{f['input']:,.0f}", f"{f['output']:,.0f}", f"{f['web_searches']:.1f}".rstrip("0").rstrip("."), timing[key](f), money(f["cost"], 4)])
 
     persona_rows = []
     for name, p in PERSONAS.items():
@@ -251,6 +259,9 @@ def build_report() -> str:
         ["Runaway loop or abuse burns the budget", "Max 3 searches per Scout; token caps per action, session, day; caches", "test_run_budget_stops_runaway, test_daily_cap", "<span class='ok'>Capped</span>"],
         ["Personal data exposed", "Reviews with phone or email blocked; only public club and business contacts used", "test_phone_and_email_blocked", "<span class='ok'>Blocked</span>"],
         ["Off-topic use of the paid model", "Router declines non-sports requests", "Fig. 11", "<span class='ok'>Declined</span>"],
+        ["Copying reviews or photos we don't own", "Reputation agent summarizes themes in its own words, reports ratings only if a source shows them, links out; photos and logos are linked from their owners", "Fig. 4e; GUARDRAILS S15", "<span class='ok'>By design</span>"],
+        ["Fans submitting fake or malicious spots", "Suggestions pass the Guard, are labeled Fan-suggested, and become Verified only if a linked page names the bar and team", "test_suggestion_with_injection_blocked", "<span class='ok'>Blocked</span>"],
+        ["Script injection through map data", "Map data JSON-escaped and HTML-escaped; maps served from our own origin", "test_map_escapes_script_breakout", "<span class='ok'>Blocked</span>"],
     ]
 
     body = f"""
@@ -273,7 +284,7 @@ def build_report() -> str:
   <div class="kpi"><div class="n">{money(L_COST, 3)}</div><div class="l">average cost of a new search (8 measured live runs)</div></div>
   <div class="kpi"><div class="n">$0</div><div class="l">cost of a repeat search (served from cache in under 0.1 s)</div></div>
   <div class="kpi"><div class="n">{WITH_CONFIRMED}/{len(live)}</div><div class="l">new searches returned at least one verified watch spot</div></div>
-  <div class="kpi"><div class="n">17/17</div><div class="l">safety and cost-control tests pass (14 offline, 3 live)</div></div>
+  <div class="kpi"><div class="n">{FC.get("teams_mapped", 0)}</div><div class="l">teams mapped with verified spots across {FC.get("cities", 0)} cities</div></div>
 </div>
 
 <p class="small"><b>Contents:</b></p>
@@ -304,7 +315,7 @@ surfaced: the Harvard and Yale clubs of Chicago both list the same bar for their
 <p>I looked at 14 existing products and sources (full list with links in the appendix). The pieces exist, but they're scattered across team sites, school sites, and general apps, and none of them verifies
 what it shows or coordinates the people involved.</p>
 {table(["Existing option", "What it's good at", "What it lacks"], prior)}
-<p><b>What Home Turf does differently.</b> (1) <b>Any team, any city, one search</b>, instead of one team's map or one school's page. (2) <b>Verification as a feature</b>:
+<p><b>What Home Turf does differently.</b> (1) <b>Any team, any city, one search</b>, instead of one team's map or one school's page, and a <b>city view</b> that shows every team's logo where its fans gather, filterable by league. (2) <b>Verification as a feature</b>:
 every spot is re-checked by code against its source, labeled Verified, Likely, or Unverified, and shown with the quote and link, so a fan can judge
 freshness. This addresses the specific weakness of plain AI search, which confidently cites wrong or stale pages. (3) <b>A two-sided marketplace with planning agents</b>:
 the Season Matchmaker ranks bars for a club and computes schedule clashes with other clubs at the same bar; the rivalry planner builds a joint watch party for two rival
@@ -316,8 +327,10 @@ clubs at a neutral bar; bars pitch clubs with a writer that cannot promise anyth
 Every model call goes through one doorway (<code>agents/llm.py</code>) that enforces caps, schemas, retries, and logging.</figcaption></figure>
 
 {table(["Agent", "What it does", "Tools", "Settings"], [
-    ["Router", "Turns “Bears fans in Boston” into intent, team, city; declines off-topic or unsafe requests", "None", "effort none; cached 30 days"],
-    ["Scout", "Finds where fans or the official club watch: bar, street address, club, source URL, exact quote, season", "OpenAI <code>web_search</code>", "max 3 searches; effort low"],
+    ["Router", "Turns “Bears fans in Boston” (or just “Boston”) into intent, team, city; declines off-topic or unsafe requests", "None", "effort none; cached 30 days"],
+    ["Scout", "Finds where fans or the official club watch: bar, street address, club, source URL, exact quote, season. If nothing usable turns up, a <b>wide second pass</b> searches the metro area and fan club directories and returns verified “shows every game” best bets", "OpenAI <code>web_search</code>", "max 3 searches, then max 4 only if needed"],
+    ["City Sweep", "Maps many teams' fan bars in one city at once (NFL, college, other leagues) so the city map shows every team's logo; results become per-team cache entries", "<code>web_search</code>", "max 4 per league group; one batched verification"],
+    ["Reputation", "A real bar's public ratings and review themes, summarized in its own words with links out; photos from the bar's own website", "<code>web_search</code>, <code>site_photos</code>", "max 2 searches; cached 30 days"],
     ["Verifier", "Re-checks each candidate: geocodes the address, re-opens the source, looks for the bar's name and the current season. Model only for unclear cases, in one batched call", "<code>fetch_page</code>, <code>geocode</code> (OpenStreetMap)", "code first; effort low"],
     ["Schedule", "A team's season schedule (date, opponent, kickoff, TV)", "<code>web_search</code>", "max 2 searches; cached 24 h"],
     ["Matchmaker", "Season mode: ranks bars for a club, explains clashes. Rivalry mode: one bar for two rival clubs, logistics, three drafts", "Profiles, schedules, conflicts computed in code", "only candidate bar_ids accepted"],
@@ -334,20 +347,31 @@ gets only what it needs. Agents never get tools that commit anything; the only c
 retrieved text, which suits a small, cheap model. I varied <i>reasoning effort</i> per agent rather than the model: “none” for Router and Summarizer, “low” elsewhere. I tested
 “medium” effort for the Scout (Section 5): it cost 25% more without finding more verified spots.</p>
 
-<h3>One real run, step by step: “Pittsburgh Steelers fans in Denver”</h3>
+<h3>One real run, step by step: “Seattle Seahawks fans in Denver”</h3>
 <ol class="steps">
-<li><b>Router</b> (918 tokens, about $0.0001): <i>find: Pittsburgh Steelers in Denver, CO</i>. Not in the cache, so the Scout runs.</li>
-<li><b>Scout</b> runs one web search, reads results, and returns 3 candidates with addresses, quotes, and sources: The Rusty Bucket (Lakewood), Jackson's LoDo, and a third bar.
-The official club it found is “Steeler Nation of North Denver.”</li>
-<li><b>Verifier</b> re-opens each source page. For all 3, the page names the bar and mentions 2026, so code settles them with no model call. One address couldn't be placed
-on the map, so that spot drops from Verified to Likely.</li>
-<li><b>Result</b>: 2 green pins and 1 amber, each card showing its checks (source re-checked, bar named, current season, address mapped). The run receipt: 2 AI calls,
-14,500 input tokens (5,245 cached), 458 output, 1 web search, 11.7 s, <b>$0.0112</b>.</li>
+<li><b>Router</b> (about 920 tokens, $0.0001): <i>find: Seattle Seahawks in Denver, CO</i>. Not in the cache, so the Scout runs.</li>
+<li><b>Scout</b> runs two web searches and returns two candidates with addresses, quotes, and sources: Rhein Haus Denver (1415 Market St) and Clock Tower Grill.
+It also finds the official club, the Rocky Mountain Sea Hawkers.</li>
+<li><b>Verifier</b> re-opens each source. For Rhein Haus the page names the bar and mentions 2026, so free code settles it (“It's the official home of the Mile High Sea Hawkers”).
+The other goes to the model in one batched call and comes back Likely.</li>
+<li><b>Result</b>: a large Seahawks logo pin for each spot, ringed green (Verified) or amber (Likely), on a Denver map that also shows the Steelers bars already known in the city.
+The run receipt: 3 AI calls, 17,561 input tokens (5,311 cached), 592 output, 2 web searches, <b>$0.0216</b>.</li>
 </ol>
-{fig("find_live", "<b>Figure 2.</b> A live search. Each card shows the evidence quote, the source, and which checks passed. Pins come from the geocoder, never from the model.", 1300, 1000, "88%")}
+{fig("find_live", "<b>Figure 2.</b> A live search. Each card shows the evidence quote, the source, and which checks passed. Pins are team logos placed by the geocoder, never by the model.", 1300, 1000, "88%")}
 <div class="two">
 {fig("receipt_live", "<b>Figure 3.</b> The receipt under every result: tokens, cache, web searches, time, cost, and each agent's step.")}
-{fig("find_unverified", "<b>Figure 4.</b> When the Verifier can't confirm a claim (the source doesn't name the bar), the card is gray and says why, instead of hiding uncertainty.", 1300, 1050)}
+{fig("city_chicago_nfl", "<b>Figure 4.</b> City view of Chicago filtered to the NFL: one logo pin per team's bar, ringed by verification status.", 1300, 900)}
+</div>
+
+<h3>The city view: every team's logo on one map</h3>
+<p>Search just “Chicago” (or click a city) and the map shows every team whose fans have a known spot there, each pin a <b>team logo</b> ringed in its
+verification color, with bars that host several clubs showing several logos. League buttons filter the map to NFL, NCAA, MLB, NBA, NHL, or Soccer. The data comes from
+cached verified searches, the <b>City Sweep</b> agent (which reads city-wide guides such as “a bar for every NFL team” and alumni watch-party listings), fan suggestions, and
+partner bars. A sweep costs about {money(FC.get('sweep_cost', 0.11), 2)} per city and adds roughly {FC.get('sweep_teams', 20)} teams; after that, every team search in that city is free.</p>
+{fig("city_chicago", "<b>Figure 4b.</b> City view of Chicago: 25 teams' logo pins, a legend grouped by league, and league filter buttons (All, NFL, NCAA, MLB, NBA, Soccer).", 1300, 820, "86%")}
+<div class="two">
+{fig("falcons_phoenix", "<b>Figure 4d.</b> A hard search (Falcons fans in Phoenix): no team bar exists online, so the wide pass finds the Arizona chapter of the Falcon Club of America and verified bars that show every NFL game.", 1300, 1000)}
+{fig("reputation_card", "<b>Figure 4e.</b> Reputation agent on a real bar: photos from the bar's own site, the Google rating a source shows, and review themes in its own words, with links out.", 1000, 1500)}
 </div>
 
 <h3>The marketplace run: a Harvard–Yale watch party in Chicago</h3>
@@ -356,11 +380,11 @@ Code computes the combined turnout (85) and which bars can hold it, then the Mat
 and drafts three invitations. Nothing is sent: the proposing president's approval is recorded, then the bar and the Harvard president each approve from their own dashboards
 (Fig. 7). The whole plan cost <b>{money(ACT['rivalry_match']['cost'], 4)}</b>.</p>
 <div class="two">
-{fig("rivalry_card", "<b>Figure 6.</b> Rivalry planner: the game, ranked bars with fit scores and concerns, and three drafted invitations (receipt cropped).", 1000, 1750)}
+{fig("rivalry_card", "<b>Figure 6.</b> Rivalry planner: the game, ranked bars with fit scores and concerns, and three drafted invitations (receipt cropped).", 1000, 1500)}
 <div>
 {fig("find_rivalry", "<b>Figure 5.</b> Fan search “Harvard vs Yale in Chicago”: both clubs' official pages point to the same bar for The Game.", 1300, 900)}
 {fig("approvals_confirmed", "<b>Figure 7.</b> The event becomes “confirmed” only after both presidents and the bar approve.")}
-{fig("season_card", "<b>Figure 6b.</b> Season Matchmaker for the USC club: ranked bars with capacity vs. turnout and computed schedule clashes (USC and Notre Dame are both booked at The Huddle House).", 1000, 1150)}
+{fig("season_card", "<b>Figure 6b.</b> Season Matchmaker for the USC club: ranked bars with capacity vs. turnout and computed schedule clashes (USC and Notre Dame are both booked at The Huddle House).", 1000, 900)}
 </div>
 </div>
 
@@ -430,9 +454,9 @@ homework from this course.</p>
 {fig("attack_code", "<b>Figure 10b.</b> A fake “SYSTEM: admin mode” message in the console's attack tester: blocked, 0 tokens.")}
 </div>
 </div>
-<p><b>Automated tests.</b> <code>tests/test_safety.py</code> has 17 tests: 14 offline (no API cost, stubbed model) covering injection, personal info, length caps, invented numbers,
-SSRF, run and daily caps, injected source pages, unmappable addresses, invented bars, three-party approval, and schedule-clash math; plus 3 live tests against
-<code>gpt-6-luna</code> (spam, false profile claims, off-topic search). All 17 pass, including from a fresh clone on Python 3.11.</p>
+<p><b>Automated tests.</b> <code>tests/test_safety.py</code> has 22 tests: 19 offline (no API cost, stubbed model) covering injection, personal info, length caps, invented numbers,
+SSRF, run and daily caps, injected source pages, unmappable addresses, invented bars, three-party approval, schedule-clash math, logo and league matching, map escaping, and fan-suggestion screening; plus 3 live tests against
+<code>gpt-6-luna</code> (spam, false profile claims, off-topic search). All 22 pass, including from a fresh clone on Python 3.11.</p>
 <p><b>Agent malfunction.</b> The model never writes coordinates; a geocoder does. Every claim must carry a source and a quote, which code re-checks. Agent failures are contained:
 an exception becomes a polite message, the Guard fails <i>closed</i> (holds the post) if it can't reach the model, and a schedule failure lets matchmaking continue with a note.
 <b>Overspending.</b> Every call passes a budget check first (120k tokens per action, 600k per browser session, 3M per day app-wide), web searches are capped per agent,
@@ -463,7 +487,8 @@ crowds, and get three parties to sign off. Home Turf does it in one click and un
 <h2>8. Limits and next steps</h2>
 <p><b>What doesn't work yet.</b></p>
 <ul>
-<li><b>Coverage depends on the web.</b> Where no page ties a bar to a team (Notre Dame in Boston), Home Turf returns Unverified spots rather than a confident answer. Correct, but less useful.</li>
+<li><b>Coverage depends on the web.</b> Where no page ties a bar to a team (Falcons in Phoenix), Home Turf says so, offers verified “shows every game” bars, and asks fans to add the spot. Honest, but not the answer a fan hoped for.</li>
+<li><b>No direct Yelp or Google review feed.</b> Their APIs need keys this project can't require and their terms forbid scraping, so review themes are summarized from public pages and the Google card is an embed.</li>
 <li><b>Some sources block re-checking</b> (HTTP 403 or JavaScript-only pages), which caps those spots at Likely.</li>
 <li><b>Schedules can disagree across sources</b> (one source lists Packers–Bears as TBD, another as 1:00 PM ET); clash detection marks TBD overlaps as “possible.”</li>
 <li><b>The marketplace is seeded.</b> Bars, clubs, people, and seed reviews in the demo are fictional and labeled “demo.” Claiming a bar has no business verification yet, and logins are one-click demo accounts.</li>
@@ -509,7 +534,7 @@ def build_slides() -> str:
     def s_img(name, crop=None, w=1500):
         return img_uri(name, w, crop, 78)
     slides = f"""
-<section class="title" data-background-color="#0f2240">
+<section class="title" data-background-gradient="repeating-linear-gradient(90deg, rgba(255,255,255,.10) 0 3px, transparent 3px 9%), linear-gradient(170deg, #22a159 0%, #157a3e 60%, #0f6533 100%)">
   <div class="eyebrow">AI Foundations for Managers · Final project</div>
   <h1>Home <span class="g">Turf</span></h1>
   <p class="pitch">AI agents that find where your team's fan club watches the game in any city, verified, and help clubs and bars team up for the season.</p>
@@ -517,7 +542,7 @@ def build_slides() -> str:
 </section>
 
 <section>
-  <h2>The problem: two in three fans don't live where their team plays</h2>
+  <h2>Two in three fans don't live where their team plays</h2>
   <div class="cols">
     <div class="stat"><div class="big">64%</div><div>of sports followers live outside their team's city<sup>1</sup></div></div>
     <div class="stat"><div class="big">~500</div><div>Bills Backers chapters; ~275 Notre Dame clubs<sup>2</sup></div></div>
@@ -551,12 +576,14 @@ def build_slides() -> str:
 </section>
 
 <section>
-  <h2>Demo: a live search, verified</h2>
+  <h2>Demo: every team's fans, on one map</h2>
   <div class="shot-row">
-    <img src="{s_img('find_live', 1250)}" class="shot wide">
-    <img src="{s_img('receipt_live')}" class="shot narrow">
+    <img src="{s_img('city_chicago', 1250, 900)}" class="shot wide">
+    <div class="side">
+      <img src="{s_img('receipt_live')}" class="shot">
+      <ul class="tight small"><li>Team-logo pins, ringed by verification status</li><li>Filter by league: NFL · NCAA · MLB · NBA · NHL · Soccer</li><li>Any team + city: verified in ~12 s for ~1¢</li></ul>
+    </div>
   </div>
-  <p class="note">“Steelers fans in Denver” → 3 spots, each re-checked against its source · 11.7 s · $0.011</p>
 </section>
 
 <section>
@@ -565,7 +592,7 @@ def build_slides() -> str:
     <img src="{s_img('rivalry_card', 1500, 1100)}" class="shot tall">
     <div class="side">
       <img src="{s_img('approvals_confirmed')}" class="shot">
-      <ul class="tight small"><li>Finds The Game in the schedules; picks a neutral bar for 85 fans</li><li>3 drafted invitations, nothing sent</li><li>Confirmed only after both presidents and the bar approve</li><li>Cost: <b>{money(ACT['rivalry_match']['cost'], 4)}</b>, 8 s</li></ul>
+      <ul class="tight small"><li>Finds The Game, picks a neutral bar for 85 fans</li><li>3 drafted invitations, nothing sent</li><li>Confirmed only after all 3 parties approve · <b>{money(ACT['rivalry_match']['cost'], 4)}</b></li></ul>
     </div>
   </div>
 </section>
@@ -595,7 +622,7 @@ def build_slides() -> str:
         <li>Model never writes addresses or map pins</li>
         <li>No agent can book, send, or approve</li>
         <li>Caps per action, session, day · URL allowlist</li>
-        <li><b>17/17 safety tests pass</b></li>
+        <li><b>22/22 safety + feature tests pass</b></li>
       </ul>
     </div>
   </div>
@@ -630,20 +657,21 @@ def build_slides() -> str:
 </section>
 """
     css = """
-.reveal { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: #1b2433; }
+.reveal { font-family: "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: #1b2433; }
 .reveal .slides { text-align: left; }
 .reveal section { height: 100%; padding: 10px 30px; }
-.reveal h1, .reveal h2 { font-family: Georgia, serif; color: #0f2240; text-transform: none; letter-spacing: -0.01em; }
-.reveal h2 { font-size: 1.45em; border-bottom: 4px solid #b8902f; padding-bottom: 8px; margin-bottom: 24px; }
+.reveal h1, .reveal h2 { font-family: "Bebas Neue", Impact, sans-serif; color: #0f2240; text-transform: uppercase; letter-spacing: .02em; font-weight: 400; }
+.reveal h2 { font-size: 1.9em; border-bottom: 6px solid; border-image: repeating-linear-gradient(90deg, #1d8a4a 0 40px, #fff 40px 44px) 1; padding-bottom: 6px; margin-bottom: 22px; }
 .reveal section.title { color: #fff; padding: 90px 40px; }
+.reveal section.title h1 { font-size: 5em; }
 .reveal section.title h1 { color: #fff; font-size: 3.6em; margin: 10px 0; }
-.reveal .g { color: #b8902f; }
+.reveal .g { color: #ffd36b; }
 .reveal .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: .5em; font-weight: 700; color: #b8902f; }
 .reveal .pitch { font-size: .9em; color: #c9d3e6; max-width: 900px; }
 .reveal .by { font-size: .55em; color: #8ea0bf; margin-top: 30px; }
 .reveal .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 18px; }
-.reveal .stat { background: #f4ead2; border-top: 5px solid #b8902f; border-radius: 12px; padding: 18px 20px; font-size: .55em; line-height: 1.35; }
-.reveal .stat .big { font-family: Georgia, serif; font-size: 2.6em; font-weight: 700; color: #0f2240; line-height: 1.1; }
+.reveal .stat { background: #0a1830; color: #c9d3e6; border-top: 5px solid #e8a91b; border-radius: 12px; padding: 18px 20px; font-size: .55em; line-height: 1.35; }
+.reveal .stat .big { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 3.2em; font-weight: 400; color: #ffd36b; line-height: 1.05; text-shadow: 0 0 14px rgba(255,211,107,.4); }
 .reveal ul.tight { font-size: .58em; line-height: 1.5; padding-right: 20px; }
 .reveal ul.tight.small { font-size: .5em; }
 .reveal .src, .reveal .note { font-size: .45em; color: #5d6b82; }
@@ -658,7 +686,7 @@ def build_slides() -> str:
 .reveal .shot-row { display: flex; gap: 18px; align-items: flex-start; }
 .reveal img.shot { border: 1px solid #e3e7ee; border-radius: 8px; box-shadow: 0 6px 20px rgba(15,34,64,.12); margin: 0; }
 .reveal img.wide { width: 64%; } .reveal img.narrow { width: 34%; } .reveal img.half { width: 48%; }
-.reveal img.tall { width: 50%; height: 500px; object-fit: cover; object-position: top; }
+.reveal img.tall { width: 50%; height: 470px; object-fit: cover; object-position: top; }
 .reveal .ask { background: #0f2240; color: #fff; border-radius: 12px; padding: 18px 22px; font-size: .6em; margin-top: 18px; }
 .reveal .ask b { color: #b8902f; }
 .reveal .side { flex: 1; } .reveal .side img { width: 100%; }
@@ -667,6 +695,7 @@ def build_slides() -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap">
 <style>{css}</style></head><body>
 <div class="reveal"><div class="slides">{slides}</div></div>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>

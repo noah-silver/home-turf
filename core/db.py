@@ -73,6 +73,11 @@ CREATE TABLE IF NOT EXISTS usage (
     output_tokens INTEGER, reasoning_tokens INTEGER, cache_write_tokens INTEGER, web_searches INTEGER,
     latency_ms INTEGER, cost_usd REAL, status TEXT
 );
+CREATE TABLE IF NOT EXISTS suggestions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, bar_name TEXT, address TEXT, city TEXT, team TEXT,
+    source_url TEXT, note TEXT, lat REAL, lon REAL, bar_id INTEGER, user_id TEXT, status TEXT,
+    verify_reason TEXT, created_at TEXT
+);
 CREATE TABLE IF NOT EXISTS guard_log (
     id INTEGER PRIMARY KEY AUTOINCREMENT, ts TEXT, kind TEXT, layer TEXT, allowed INTEGER,
     category TEXT, reason TEXT, excerpt TEXT
@@ -189,7 +194,19 @@ def _seed() -> None:
         )
     for entry in _load_seed("seed_cache.json") or []:
         # Seeded search results are stamped "now" so graders get instant demo cities.
+        payload = entry["payload"]
+        if entry["kind"] == "spots":
+            payload = _relink(payload)
         execute(
             "INSERT OR REPLACE INTO cache (key, kind, payload, created_at) VALUES (?, ?, ?, ?)",
-            (entry["key"], entry["kind"], json.dumps(entry["payload"]), stamp),
+            (entry["key"], entry["kind"], json.dumps(payload), stamp),
         )
+
+
+def _relink(payload: dict) -> dict:
+    """Seeded spots point at bar profiles; create those profiles in this fresh database."""
+    from core.orchestrator import _link_bar  # local import avoids a cycle
+
+    for spot in payload.get("spots", []) + payload.get("allgames", []):
+        spot["bar_id"] = _link_bar(spot, payload.get("city", ""))
+    return payload

@@ -16,7 +16,7 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "docs" / "screenshots"
 BASE = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:8050"
-LIVE_QUERY = "Pittsburgh Steelers fans in Denver"
+LIVE_QUERY = "Seattle Seahawks fans in Denver"
 
 
 def login(page, user: str | None, sid: str) -> None:
@@ -61,9 +61,28 @@ def main() -> None:
         shot(page, "home")
         shot(page, "home_full", full=True)
 
+        shot(page, "home_logowall", ".logo-wall")
+
+        page.goto(BASE + "/find?q=Chicago")
+        wait_for(page, ".receipt")
+        time.sleep(5)  # map tiles + logos
+        shot(page, "city_chicago")
+        page.frame_locator("#find-map").locator("button[data-g='NFL']").click()
+        time.sleep(1.5)
+        shot(page, "city_chicago_nfl")
+        page.goto(BASE + "/find?q=Boston")
+        wait_for(page, ".receipt")
+        time.sleep(5)
+        shot(page, "city_boston")
+
+        page.goto(BASE + "/find?q=Atlanta%20Falcons%20fans%20in%20Phoenix")
+        wait_for(page, ".receipt")
+        time.sleep(5)
+        shot(page, "falcons_phoenix")
+
         page.goto(BASE + "/find?q=USC%20fans%20in%20Chicago")
         wait_for(page, ".receipt")
-        time.sleep(3)  # map tiles
+        time.sleep(5)  # map tiles
         shot(page, "find_usc_chicago")
         shot(page, "receipt_cached", ".receipt")
 
@@ -82,6 +101,15 @@ def main() -> None:
         wait_for(page, ".receipt")
         time.sleep(3)
         shot(page, "find_unverified")
+
+        import sqlite3
+        theory = sqlite3.connect(str(ROOT / "runtime" / "home_turf.db")).execute("select id from bars where name = 'Theory'").fetchone()
+        if theory:
+            page.goto(BASE + f"/bar/{theory[0]}")
+            page.wait_for_selector("#rep-slot .rep-theme", timeout=120000)
+            time.sleep(6)
+            shot(page, "bar_reputation", full=True)
+            shot(page, "reputation_card", "#rep-slot >> xpath=ancestor::div[contains(@class,'card')][1]")
 
         page.goto(BASE + "/bar/1")
         wait_idle(page, 3)

@@ -117,5 +117,761 @@
   "lon": -87.6783231,
   "display": "The Reveler, 3403, North Damen Avenue, Roscoe Village, North Center, Chicago, Lake View Township, Cook County, Illinois, 60657, United States",
   "ok": 1
+ },
+ {
+  "address": "Q Bar & Grill, Phoenix, AZ",
+  "lat": 33.6756356,
+  "lon": -112.100406,
+  "display": "Q Bar & Grill, 20818, North 19th Avenue, Deer Valley, Phoenix, Maricopa County, Arizona, 85027, United States",
+  "ok": 1
+ },
+ {
+  "address": "830 E Greenway Pkwy #100, Phoenix, AZ 85022",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "Lookout Tavern, Phoenix, AZ",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "10710 Westminster Blvd, Westminster, CO 80020",
+  "lat": 39.8930667,
+  "lon": -105.0724056,
+  "display": "10710, North Westminster Boulevard, Westminster, Jefferson County, Colorado, 80020, United States",
+  "ok": 1
+ },
+ {
+  "address": "1520 20th St, Denver, CO 80202",
+  "lat": 39.7544951,
+  "lon": -104.9951467,
+  "display": "1520, 20th Street, Ballpark, Denver, Colorado, 80202, United States",
+  "ok": 1
+ },
+ {
+  "address": "3355 S Wadsworth Blvd, Lakewood, CO 80227",
+  "lat": 39.6553935,
+  "lon": -105.0819162,
+  "display": "Colpar's HobbyTown, 3355, South Wadsworth Boulevard, Lakewood, Jefferson County, Colorado, 80227, United States",
+  "ok": 1
+ },
+ {
+  "address": "1601 19th Street Unit 101, Denver, CO 80202",
+  "lat": 39.754589,
+  "lon": -104.996734,
+  "display": "Crispin Porter + Bogusky, 1601, 19th Street, Central Business District, Highland, Denver, Colorado, 80202, United States",
+  "ok": 1
+ },
+ {
+  "address": "2 Center Plaza, (Cambridge St.) Boston, Massachusetts 02108",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "The Kinsale, Boston, MA",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "Causeway Restaurant & Bar, Boston, MA",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "934 Dorchester Ave, Dorchester, MA",
+  "lat": 42.3189591,
+  "lon": -71.0564831,
+  "display": "934A,934, Dorchester Avenue, Uphams Corner, Dorchester, Boston, Suffolk County, Massachusetts, 02125, United States",
+  "ok": 1
+ },
+ {
+  "address": "40 Broad St, Boston, MA 02109",
+  "lat": 42.3581128,
+  "lon": -71.0539425,
+  "display": "Warehouse Kitchen and Sports Bar, 40, Broad Street, Dock Square, Downtown, Boston, Suffolk County, Massachusetts, 02109, United States",
+  "ok": 1
+ },
+ {
+  "address": "82 Lansdowne St Boston, Massachusetts 02215-3411",
+  "lat": 42.3470487,
+  "lon": -71.0984891,
+  "display": "Game On!, 82, Lansdowne Street, Fenway-Kenmore, Boston, Suffolk County, Massachusetts, 02215, United States",
+  "ok": 1
+ },
+ {
+  "address": "M.J. O’Connor’s, Boston, MA",
+  "lat": 42.3464386,
+  "lon": -71.0430745,
+  "display": "M.J. O'Connor's, 425, Summer Street, Seaport, Boston, Suffolk County, Massachusetts, 02210, United States",
+  "ok": 1
+ },
+ {
+  "address": "Central Wharf Co., Boston, MA",
+  "lat": 42.359079,
+  "lon": -71.0495695,
+  "display": "Central Wharf (New England Aquarium), Downtown, Boston, Suffolk County, Massachusetts, United States",
+  "ok": 1
+ },
+ {
+  "address": "Clery's, Boston, MA",
+  "lat": 42.3461504,
+  "lon": -71.0751841,
+  "display": "Clery's, 113, Dartmouth Street, South End, Boston, Suffolk County, Massachusetts, 02116, United States",
+  "ok": 1
+ },
+ {
+  "address": "2 Center Plz, Boston",
+  "lat": 42.3597125,
+  "lon": -71.0601922,
+  "display": "Center Plaza, 1,2,3, Center Plaza, Government Center/Faneuil Hall, Downtown, Boston, Suffolk County, Massachusetts, 02108, United States",
+  "ok": 1
+ },
+ {
+  "address": "955 Boylston St, Boston",
+  "lat": 42.348012,
+  "lon": -71.0859644,
+  "display": "955, Boylston Street, Back Bay, Boston, Suffolk County, Massachusetts, 02115, United States",
+  "ok": 1
+ },
+ {
+  "address": "934 Dorchester Ave, Dorchester, MA 02125",
+  "lat": 42.3189591,
+  "lon": -71.0564831,
+  "display": "934A,934, Dorchester Avenue, Uphams Corner, Dorchester, Boston, Suffolk County, Massachusetts, 02125, United States",
+  "ok": 1
+ },
+ {
+  "address": "512 Massachusetts Ave Cambridge, MA 02139",
+  "lat": 42.3640906,
+  "lon": -71.1018824,
+  "display": "Phoenix Landing, 512, Massachusetts Avenue, Cambridgeport, Cambridge, Middlesex County, Massachusetts, 02139, United States",
+  "ok": 1
+ },
+ {
+  "address": "109 High St. Boston, MA 02110",
+  "lat": 42.3780076,
+  "lon": -71.0656395,
+  "display": "109, High Street, Charlestown, Boston, Suffolk County, Massachusetts, 02129, United States",
+  "ok": 1
+ },
+ {
+  "address": "1059 West Addison Street, Chicago, IL",
+  "lat": 41.9469428,
+  "lon": -87.6566341,
+  "display": "Cubby Bear, 1059, West Addison Street, Wrigleyville, Lake View, Chicago, Lake View Township, Cook County, Illinois, 60613, United States",
+  "ok": 1
+ },
+ {
+  "address": "2858 North Halsted Street, Chicago, IL",
+  "lat": 41.9344071,
+  "lon": -87.6492749,
+  "display": "George Street Pub, 2858, North Halsted Street, Lakeview East, Lake View, Chicago, Lake View Township, Cook County, Illinois, 60614, United States",
+  "ok": 1
+ },
+ {
+  "address": "2771 North Lincoln Avenue, Chicago, IL",
+  "lat": 41.9323675,
+  "lon": -87.6579912,
+  "display": "2771, North Lincoln Avenue, Wrightwood Neighbors, Lincoln Park, Chicago, Lake View Township, Cook County, Illinois, 60657, United States",
+  "ok": 1
+ },
+ {
+  "address": "1622 West Belmont Avenue, Chicago, IL",
+  "lat": 41.9398839,
+  "lon": -87.6696397,
+  "display": "1622, West Belmont Avenue, Lake View, Chicago, Lake View Township, Cook County, Illinois, 60657, United States",
+  "ok": 1
+ },
+ {
+  "address": "950 West Armitage Avenue, Chicago, IL",
+  "lat": 41.918336,
+  "lon": -87.6529252,
+  "display": "950, West Armitage Avenue, Ranch Triangle, Lincoln Park, Chicago, North Chicago Township, Cook County, Illinois, 60614, United States",
+  "ok": 1
+ },
+ {
+  "address": "15 West Division Street, Chicago, Illinois",
+  "lat": 41.9037476,
+  "lon": -87.6293594,
+  "display": "Hopsmith, 15, West Division Street, Gold Coast, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60610, United States",
+  "ok": 1
+ },
+ {
+  "address": "3553 N. Southport Ave. Chicago, IL",
+  "lat": 41.9467903,
+  "lon": -87.6637385,
+  "display": "3553, North Southport Avenue, Southport Corridor, Lake View, Chicago, Lake View Township, Cook County, Illinois, 60657, United States",
+  "ok": 1
+ },
+ {
+  "address": "605 N. Wells St. Chicago, IL",
+  "lat": 41.8926684,
+  "lon": -87.6339185,
+  "display": "Bar Cargo, 605, North Wells Street, River North, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60654, United States",
+  "ok": 1
+ },
+ {
+  "address": "3506 N. Clark St. Chicago, IL",
+  "lat": 41.945797,
+  "lon": -87.6557812,
+  "display": "3506, North Clark Street, Wrigleyville, Lake View, Chicago, Lake View Township, Cook County, Illinois, 60657, United States",
+  "ok": 1
+ },
+ {
+  "address": "841 W. Randolph St. Chicago, IL",
+  "lat": 41.8840928,
+  "lon": -87.6490983,
+  "display": "Bandit, 841, West Randolph Street, Restaurant Row, West Loop, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60607, United States",
+  "ok": 1
+ },
+ {
+  "address": "2450 N. Clark St. Chicago, IL",
+  "lat": 41.9268031,
+  "lon": -87.6415082,
+  "display": "Gaslight, 2450, North Clark Street, Park West, Lincoln Park, Chicago, Lake View Township, Cook County, Illinois, 60614, United States",
+  "ok": 1
+ },
+ {
+  "address": "1535 N. Wells St. Chicago, IL",
+  "lat": 41.9102535,
+  "lon": -87.6339769,
+  "display": "1535, North Wells Street, Old Town, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60610, United States",
+  "ok": 1
+ },
+ {
+  "address": "100 W. Grand Ave Chicago, IL",
+  "lat": 41.8918094,
+  "lon": -87.6314242,
+  "display": "Fado Irish Pub, 100, West Grand Avenue, River North, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60654, United States",
+  "ok": 1
+ },
+ {
+  "address": "2005 W. Division St., Chicago, IL 60622",
+  "lat": 41.9029399,
+  "lon": -87.6776329,
+  "display": "Fatpour Tap Works, 2005, West Division Street, Wicker Park, West Town, Chicago, West Chicago Township, Cook County, Illinois, 60622, United States",
+  "ok": 1
+ },
+ {
+  "address": "155 W. Kinzie St., Chicago, IL 60654",
+  "lat": 41.8889514,
+  "lon": -87.6332043,
+  "display": "155, West Kinzie Street, River North, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60654, United States",
+  "ok": 1
+ },
+ {
+  "address": "1501 N. Dayton St., Chicago, IL 60642",
+  "lat": 41.9086893,
+  "lon": -87.6491398,
+  "display": "Sully’s House, 1501, North Dayton Street, River North, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60642, United States",
+  "ok": 1
+ },
+ {
+  "address": "658 W. Belden Ave, Chicago",
+  "lat": 41.9237973,
+  "lon": -87.6461095,
+  "display": "The Bad Apple, 658, West Belden Avenue, Mid-North District, Lincoln Park, Chicago, North Chicago Township, Cook County, Illinois, 60614, United States",
+  "ok": 1
+ },
+ {
+  "address": "Brickhouse, Chicago, IL",
+  "lat": 41.8898888,
+  "lon": -87.6238655,
+  "display": "Jack Brickhouse, Pioneer Court, Streeterville, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60611, United States",
+  "ok": 1
+ },
+ {
+  "address": "Illini Joe’s, Chicago, IL",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "2483 N Clark St, Chicago, 60614",
+  "lat": 41.9277023,
+  "lon": -87.6415754,
+  "display": "The Tin Lizzie, 2483, North Clark Street, Park West, Lincoln Park, Chicago, Lake View Township, Cook County, Illinois, 60614, United States",
+  "ok": 1
+ },
+ {
+  "address": "3032-3034 N Racine Ave, Chicago, 60657",
+  "lat": 41.9425718,
+  "lon": -87.6590486,
+  "display": "North Racine Avenue, Wrigleyville, Lake View, Chicago, Lake View Township, Cook County, Illinois, 60657, United States",
+  "ok": 1
+ },
+ {
+  "address": "3259 S Princeton Ave, Chicago, IL, USA",
+  "lat": 41.8348138,
+  "lon": -87.6341297,
+  "display": "3259, South Princeton Avenue, Armour Square, Chicago, South Chicago Township, Cook County, Illinois, 60616, United States",
+  "ok": 1
+ },
+ {
+  "address": "1935 N Sedgwick St 1, Chicago, 60614",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "Sedgwick’s, Chicago, IL",
+  "lat": 41.9176173,
+  "lon": -87.6386253,
+  "display": "Sedgwick's, North Sedgwick Street, Old Town Triangle, Lincoln Park, Chicago, North Chicago Township, Cook County, Illinois, 60614, United States",
+  "ok": 1
+ },
+ {
+  "address": "5 W Hubbard St 1, Chicago, 60654",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "Mother Hubbard’s, Chicago, IL",
+  "lat": 41.889758,
+  "lon": -87.6283525,
+  "display": "Mother Hubbard's Sports Pub, 5, West Hubbard Street, River North, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60654, United States",
+  "ok": 1
+ },
+ {
+  "address": "3857 N Southport Ave 1, Chicago, 60613",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "Toon’s Bar & Grill, Chicago, IL",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "2455 N Clark St 1, Chicago, 60614",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "The Field House, Chicago, IL",
+  "lat": 41.9270976,
+  "lon": -87.6412309,
+  "display": "The Field House, 2455, North Clark Street, Park West, Lincoln Park, Chicago, Lake View Township, Cook County, Illinois, 60614, United States",
+  "ok": 1
+ },
+ {
+  "address": "3801-3805 N Ashland Ave, Chicago, 60613",
+  "lat": 41.9588621,
+  "lon": -87.6692341,
+  "display": "North Ashland Avenue, Graceland West, Lake View, Chicago, Lake View Township, Cook County, Illinois, 60613, United States",
+  "ok": 1
+ },
+ {
+  "address": "5062 N. Lincoln Ave., Chicago, IL 60625",
+  "lat": 41.9733458,
+  "lon": -87.6920611,
+  "display": "5062, North Lincoln Avenue, West Ravenswood, Lincoln Square, Chicago, Jefferson Township, Cook County, Illinois, 60625, United States",
+  "ok": 1
+ },
+ {
+  "address": "43 East 7th Street, New York, New York",
+  "lat": 40.7283609,
+  "lon": -73.9885644,
+  "display": "43, East 7th Street, East Village, Manhattan Community Board 3, Manhattan, New York County, New York, 10003, United States",
+  "ok": 1
+ },
+ {
+  "address": "16 – 1st Avenue, New York, NY",
+  "lat": 40.7234078,
+  "lon": -73.9880293,
+  "display": "16, 1st Avenue, Manhattan Community Board 3, Manhattan, New York County, New York, 10009, United States",
+  "ok": 1
+ },
+ {
+  "address": "352 – 7th Avenue, New York, New York",
+  "lat": 40.6662514,
+  "lon": -73.9823999,
+  "display": "352, 7th Avenue, Park Slope, Brooklyn, Kings County, New York, 11215, United States",
+  "ok": 1
+ },
+ {
+  "address": "327 West 57th Street, New York, New York",
+  "lat": 40.7674456,
+  "lon": -73.9840489,
+  "display": "327, West 57th Street, Columbus Circle, Manhattan Community Board 4, Manhattan, New York County, New York, 10019, United States",
+  "ok": 1
+ },
+ {
+  "address": "1672 3rd Avenue, New York, New York",
+  "lat": 40.783775,
+  "lon": -73.9507195,
+  "display": "1672, 3rd Avenue, Carnegie Hill, Manhattan Community Board 8, Manhattan, New York County, New York, 10128, United States",
+  "ok": 1
+ },
+ {
+  "address": "12 Avenue A, New York, New York",
+  "lat": 40.6143745,
+  "lon": -73.7508894,
+  "display": "12, Avenue A, Inwood, Town of Hempstead, Nassau County, New York, 11096, United States",
+  "ok": 1
+ },
+ {
+  "address": "132 West 31st Street, New York, New York",
+  "lat": 40.7483096,
+  "lon": -73.9904415,
+  "display": "Ichiran, 132, West 31st Street, Chelsea District, Manhattan Community Board 5, Manhattan, New York County, New York, 10002, United States",
+  "ok": 1
+ },
+ {
+  "address": "West 33rd Street, New York, New York",
+  "lat": 40.7484021,
+  "lon": -73.9865275,
+  "display": "West 33rd Street, Herald Square, Manhattan Community Board 5, Manhattan, New York County, New York, 10118, United States",
+  "ok": 1
+ },
+ {
+  "address": "7 E 36th St, New York, New York 10016-3301",
+  "lat": 40.7495975,
+  "lon": -73.9830977,
+  "display": "7, East 36th Street, Midtown South, Manhattan Community Board 5, Manhattan, New York County, New York, 10016, United States",
+  "ok": 1
+ },
+ {
+  "address": "VERSA, New York, NY",
+  "lat": 40.7515882,
+  "lon": -73.9911676,
+  "display": "Versa, 218, West 35th Street, Garment District, Manhattan Community Board 5, Manhattan, New York County, New York, 10001, United States",
+  "ok": 1
+ },
+ {
+  "address": "Brickyard Bar, New York, NY",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "Central Park Tavern, New York, NY",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "Blue Haven East, New York, NY",
+  "lat": 40.7452161,
+  "lon": -73.9782737,
+  "display": "Blue Haven, 493, 3rd Avenue, Murray Hill, Manhattan Community Board 6, Manhattan, New York County, New York, 10016, United States",
+  "ok": 1
+ },
+ {
+  "address": "Fools Gold, New York, NY",
+  "lat": 40.723084,
+  "lon": -73.9897897,
+  "display": "Fools Gold, 145, East Houston Street, Manhattan Community Board 3, Manhattan, New York County, New York, 10002, United States",
+  "ok": 1
+ },
+ {
+  "address": "45 E. 33rd St., Midtown East, Manhattan, New York, NY",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "The Ainsworth Midtown, New York, NY",
+  "lat": 40.7467911,
+  "lon": -73.9824398,
+  "display": "The Ainsworth Midtown, 45, East 33rd Street, Koreatown, Manhattan Community Board 5, Manhattan, New York County, New York, 10016, United States",
+  "ok": 1
+ },
+ {
+  "address": "6 W. 33rd St. (Fifth Ave.), New York, NY",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "The Football Factory at Legends, New York, NY",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "119 E. 27th St. (between Park & Lexington Ave.), New York, NY",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "Turnmill, New York, NY",
+  "lat": 40.7424507,
+  "lon": -73.9836446,
+  "display": "Turnmill, 119, East 27th Street, Rose Hill, Manhattan Community Board 5, Manhattan, New York County, New York, 10016, United States",
+  "ok": 1
+ },
+ {
+  "address": "510 E11th St. (Ave A & B), New York, NY",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "11th Street Bar, New York, NY",
+  "lat": 40.7280803,
+  "lon": -73.9812286,
+  "display": "11th Street Bar, 510, East 11th Street, Alphabet City, Manhattan Community Board 3, Manhattan, New York County, New York, 10009, United States",
+  "ok": 1
+ },
+ {
+  "address": "349 E 14th St, New York",
+  "lat": 40.7317717,
+  "lon": -73.9828393,
+  "display": "349, East 14th Street, East Village, Manhattan Community Board 6, Manhattan, New York County, New York, 10003, United States",
+  "ok": 1
+ },
+ {
+  "address": "138 West 25th St, New York, NY",
+  "lat": 40.7447181,
+  "lon": -73.9936271,
+  "display": "138, West 25th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10001, United States",
+  "ok": 1
+ },
+ {
+  "address": "45-01 23rd Ave | Astoria, NY 11105",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "Murphy’s Astoria, New York, NY",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "44 Berry St. | Brooklyn, NY 11249",
+  "lat": 40.7211109,
+  "lon": -73.9566364,
+  "display": "44, Berry Street, Williamsburg, Brooklyn, Kings County, New York, 11249, United States",
+  "ok": 1
+ },
+ {
+  "address": "27 W 35th St. | New York, NY 10018",
+  "lat": 40.7498755,
+  "lon": -73.9853513,
+  "display": "27, West 35th Street, Midtown South, Manhattan Community Board 5, Manhattan, New York County, New York, 10018, United States",
+  "ok": 1
+ },
+ {
+  "address": "389 8th Ave | New York, NY 10001",
+  "lat": 40.7493754,
+  "lon": -73.9958476,
+  "display": "389, 8th Avenue, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10001, United States",
+  "ok": 1
+ },
+ {
+  "address": "32-04 Broadway | Astoria, NY 11106",
+  "lat": 40.7665188,
+  "lon": -73.9340389,
+  "display": "Broadway, Astoria, Queens, Queens County, New York, 11106, United States",
+  "ok": 1
+ },
+ {
+  "address": "300 W 40th St. | New York, NY 10018",
+  "lat": 40.7559874,
+  "lon": -73.9910754,
+  "display": "Beer Authority, 300, West 40th Street, Manhattan Community Board 4, Manhattan, New York County, New York, 10018, United States",
+  "ok": 1
+ },
+ {
+  "address": "505 8th Ave, New York, NY 10018",
+  "lat": 40.7531008,
+  "lon": -73.9930311,
+  "display": "505, 8th Avenue, Garment District, Manhattan Community Board 4, Manhattan, New York County, New York, 10018, United States",
+  "ok": 1
+ },
+ {
+  "address": "121 Fulton St, New York, NY 10038",
+  "lat": 40.7100179,
+  "lon": -74.0071276,
+  "display": "121, Fulton Street, Financial District, Lower Manhattan, Manhattan, New York County, New York, 10038, United States",
+  "ok": 1
+ },
+ {
+  "address": "1 W 3rd St, New York, NY 10012",
+  "lat": 40.7287222,
+  "lon": -73.9973639,
+  "display": "1, West 3rd Street, University Village, Manhattan, New York County, New York, 10012, United States",
+  "ok": 1
+ },
+ {
+  "address": "134 W 3rd St, New York, NY 10012",
+  "lat": 40.7306793,
+  "lon": -74.0010286,
+  "display": "134, West 3rd Street, University Village, Manhattan, New York County, New York, 10012, United States",
+  "ok": 1
+ },
+ {
+  "address": "1454 2nd Ave, New York, NY 10021",
+  "lat": 40.771213,
+  "lon": -73.9563888,
+  "display": "Stumble Inn, 1454, 2nd Avenue, Upper East Side, Manhattan Community Board 8, Manhattan, New York County, New York, 10021, United States",
+  "ok": 1
+ },
+ {
+  "address": "485 7th Ave 18th floor, New York, NY 10018",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "Magic Hour Rooftop Bar & Lounge, New York, NY",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "352 7th Ave, New York, NY 10001",
+  "lat": 40.7482815,
+  "lon": -73.992821,
+  "display": "Mustang Harry's, 352, 7th Avenue, Chelsea District, Manhattan Community Board 5, Manhattan, New York County, New York, 10001, United States",
+  "ok": 1
+ },
+ {
+  "address": "202 W 36th St, New York, NY 10018",
+  "lat": 40.752366,
+  "lon": -73.9901541,
+  "display": "202, West 36th Street, Garment District, Manhattan Community Board 5, Manhattan, New York County, New York, 10018, United States",
+  "ok": 1
+ },
+ {
+  "address": "4245 N Craftsman Ct, Scottsdale, AZ",
+  "lat": 33.4976144,
+  "lon": -111.9274367,
+  "display": "4245, North Craftsman Court, 5th Avenue Shops and Boutiques, Scottsdale, Maricopa County, Arizona, 85251, United States",
+  "ok": 1
+ },
+ {
+  "address": "7340 E Indian Plaza #100, Scottsdale, AZ",
+  "lat": 33.5017133,
+  "lon": -111.9227241,
+  "display": "Bottled Blonde, 7340, East Indian Plaza, Entertainment District, Scottsdale, Maricopa County, Arizona, 85251, United States",
+  "ok": 1
+ },
+ {
+  "address": "7295 E Stetson Dr, Scottsdale, AZ",
+  "lat": 33.4994932,
+  "lon": -111.9237711,
+  "display": "7295, East Stetson Drive, Entertainment District, Scottsdale, Maricopa County, Arizona, 85251, United States",
+  "ok": 1
+ },
+ {
+  "address": "7330 E Stetson Dr, Scottsdale, AZ",
+  "lat": 33.4998,
+  "lon": -111.9231,
+  "display": "7330, East Stetson Drive, Entertainment District, Scottsdale, Maricopa County, Arizona, 85251, United States",
+  "ok": 1
+ },
+ {
+  "address": "4420 N Saddlebag Trail, Scottsdale, AZ",
+  "lat": 33.501038,
+  "lon": -111.9224536,
+  "display": "4420, North Saddlebag Trail, Entertainment District, Scottsdale, Maricopa County, Arizona, 85251, United States",
+  "ok": 1
+ },
+ {
+  "address": "5002 E Van Buren St, Phoenix, Arizona 85008-7007",
+  "lat": 33.4510679,
+  "lon": -111.974008,
+  "display": "5002, East Van Buren Street, Minnesota Court, Camelback East, Phoenix, Maricopa County, Arizona, 85008, United States",
+  "ok": 1
+ },
+ {
+  "address": "20235 N Cave Creek Rd Ste 111, Phoenix, Arizona 85024-4455",
+  "lat": 33.6712139,
+  "lon": -112.0301024,
+  "display": "Jimmy John's, 20235, North Cave Creek Road, Paradise Valley, Phoenix, Maricopa County, Arizona, 85024, United States",
+  "ok": 1
+ },
+ {
+  "address": "4017 E. Indian School Rd., Phoenix, AZ 85018",
+  "lat": 33.4948168,
+  "lon": -111.9946442,
+  "display": "Little Shanghai, 4017, East Indian School Road, Camelback East, Phoenix, Maricopa County, Arizona, 85018, United States",
+  "ok": 1
+ },
+ {
+  "address": "The Kettle Black Kitchen and Pub, Phoenix, AZ",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "Crown Public House, Phoenix, AZ",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "29 W Southern Ave, Tempe, AZ 85282",
+  "lat": 33.392619,
+  "lon": -111.9406193,
+  "display": "Yucca Tap Room, 29, West Southern Avenue, Tempe, Maricopa County, Arizona, 85282, United States",
+  "ok": 1
+ },
+ {
+  "address": "3935 E Thomas Rd, Phoenix, AZ, 85018",
+  "lat": 33.47953,
+  "lon": -111.9965,
+  "display": "3935, East Thomas Road, Camelback East, Phoenix, Maricopa County, Arizona, 85018, United States",
+  "ok": 1
+ },
+ {
+  "address": "4221 N 7th Ave, Phoenix, AZ, 85013",
+  "lat": 33.4974891,
+  "lon": -112.0832908,
+  "display": "Title 9 Sports Grill, 4221, North 7th Avenue, Melrose District, Encanto, Phoenix, Maricopa County, Arizona, 85013, United States",
+  "ok": 1
+ },
+ {
+  "address": "Elicit Brewing Co, New Haven, CT",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "157 Orange St. New Haven, CT 06511",
+  "lat": 41.3060595,
+  "lon": -72.9237292,
+  "display": "157, Orange Street, Ninth Square Historic District, Dixwell, New Haven, Connecticut, 06511, United States",
+  "ok": 1
  }
 ]

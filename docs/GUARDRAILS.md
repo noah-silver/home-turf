@@ -19,6 +19,9 @@ Every rule below comes from this semester's lectures (L2 to L11) or homeworks (H
 | S11 | Privacy | No personal emails or phone numbers scraped from the web shown to users; only public club and bar contact info | HW3 harness, L5 prompt |
 | S12 | Input caps before any AI call | Query 300 chars, review 1,500 chars, profile fields capped; rejected inputs still logged | HW3 harness |
 | S13 | Contained failures | An agent exception becomes an error result for the orchestrator, never a crash; polite message to the user | L10/L11 specialists.py |
+| S15 | Respect content owners | Reputation agent summarizes review themes in its own words (no copied review text), reports ratings only when a source shows them, links out to Google/Yelp; photos and logos are linked from their owners, never copied into the repo | Course copyright norms; Yelp/Google terms |
+| S16 | Fan-supplied data is screened and labeled | Suggested spots go through the Guard, are labeled "Fan-suggested", and become "Verified" only if a linked page names the bar and team | HW4 Guard pattern |
+| S17 | Map data cannot inject script | All map data is JSON-encoded with `</` escaped and HTML-escaped in the page; maps are served from the app's own origin | Lecture 5 untrusted content |
 | S14 | Append-only audit trail | Every step logged: agent, prompt hash, tool calls + args, results clipped, usage, stop reason, human decisions; locked atomic writes; never secrets | HW5 audit.py, L8 agent.py |
 
 ## Efficiency and cost
@@ -34,6 +37,8 @@ Every rule below comes from this semester's lectures (L2 to L11) or homeworks (H
 | E7 | Retrieval caps | Fetched pages clipped (about 5,000 chars), max results per search, long fields clipped | L11 retrieval caps, L7 tools.py |
 | E8 | Retries only where useful | Backoff with jitter, max 4, only on 429, 5xx, and timeouts | HW3 build_catalogue.py |
 | E9 | Measure every call | Log `input_tokens`, `input_tokens_details.cached_tokens`, `output_tokens`, reasoning tokens, latency; show cost per run in the UI | L10 tracing.py, L11 events.py |
+| E11 | Escalate only when needed | Scout's wide pass and best bets run only when the first pass finds nothing usable; City Sweep runs on a button or seed, batching all verification into one call | Experiment in report |
+| E12 | Don't cache failure for long | Empty results expire after 6 hours instead of 7 days | Falcons-in-Phoenix bug |
 | E10 | Price constants are explicit | gpt-6-luna prices set in `config.py` with their source; no price found in course files, so confirm before the report | HW and lecture gap |
 
 ## Engineering hygiene

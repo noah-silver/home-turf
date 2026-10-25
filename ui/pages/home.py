@@ -6,21 +6,20 @@ from dash import Input, Output, State, callback, dcc, html, no_update
 
 from core import db
 from ui.components import search_href
+from ui.fun import floating_logos, logo_wall, mapped_teams
 
-EXAMPLES = ["USC fans in Chicago", "Chicago Bears fans in Boston", "Harvard vs Yale in Chicago", "Packers fans in Boston", "Michigan fans in Chicago"]
+EXAMPLES = ["USC fans in Chicago", "Chicago Bears fans in Boston", "Harvard vs Yale in Chicago", "Steelers fans in Denver", "Boston", "Chicago"]
 
 
 def _stats() -> list[tuple[str, str]]:
-    spots = db.one("SELECT COUNT(*) n FROM cache WHERE kind = 'spots'")["n"]
+    teams = mapped_teams(limit=10_000)
+    cities = {c for t in teams for c in t["cities"]}
     bars = db.one("SELECT COUNT(*) n FROM bars")["n"]
-    clubs = db.one("SELECT COUNT(*) n FROM clubs")["n"]
-    runs = db.one("SELECT COUNT(DISTINCT run_id) n, COALESCE(SUM(cost_usd), 0) c FROM usage WHERE run_kind = 'search'")
-    avg = (runs["c"] / runs["n"]) if runs["n"] else 0.0
     return [
-        (f"{spots}", "team + city searches on file"),
-        (f"{bars}", "bar profiles (claimed + found)"),
-        (f"{clubs}", "fan clubs on Home Turf"),
-        (f"${avg:.3f}" if avg else "≈ $0.02", "average cost of a new search"),
+        (f"{len(teams)}", "teams mapped"),
+        (f"{len(cities)}", "cities"),
+        (f"{bars}", "bars on Home Turf"),
+        ("$0.01", "about what a new search costs"),
     ]
 
 
@@ -43,7 +42,8 @@ def layout() -> html.Div:
             html.Div(
                 className="hero",
                 children=[
-                    html.Div("Game day, away from home", className="eyebrow"),
+                    floating_logos(),
+                    html.Div("🏈 Game day, away from home", className="eyebrow"),
                     html.H1(["Find where ", html.Em("your people"), " watch the game, in any city."]),
                     html.P(
                         "Home Turf’s AI agents find the bar where your team’s fan club gathers, verify it against the source, "
@@ -61,7 +61,10 @@ def layout() -> html.Div:
                 ],
             ),
             html.Div([html.Div([html.Div(n, className="num"), html.Div(l, className="lbl")], className="stat") for n, l in _stats()], className="stat-strip"),
-            html.Div("One app, three kinds of people", className="section-title", style={"marginTop": "40px"}),
+            html.Div("Teams on Home Turf", className="section-title", style={"marginTop": "40px"}),
+            html.P("Every logo is a team whose fans we've found a verified spot for. Tap one to see where they watch.", className="muted"),
+            logo_wall(),
+            html.Div("One app, three kinds of people", className="section-title"),
             html.Div(
                 className="grid-3",
                 children=[
@@ -96,7 +99,7 @@ def layout() -> html.Div:
                 children=html.Div(className="row", children=[
                     html.Div([
                         html.Div("The Game · Saturday, November 21, 2026", className="eyebrow"),
-                        html.H2("Harvard vs. Yale, together in Chicago"),
+                        html.H2("Harvard vs. Yale, together in Chicago 🍻"),
                         html.P("Two alumni clubs, one neutral bar, three drafted invitations, and nothing happens until all three parties approve.", className="muted"),
                     ], style={"flex": 1}),
                     dcc.Link("Plan it as a club president →", href="/clubs", className="btn btn-gold"),

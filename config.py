@@ -35,6 +35,7 @@ PRICE_WEB_SEARCH_PER_CALL = float(os.environ.get("PRICE_WEB_SEARCH_PER_CALL", "0
 
 # ---- Loop limits and spend caps (GUARDRAILS E2, E3) ----------------------------------
 MAX_WEB_SEARCHES_PER_SCOUT = 3
+MAX_WEB_SEARCHES_WIDE = 4          # second pass, only when the first finds nothing usable
 MAX_OUTPUT_TOKENS = 4000
 MAX_TOKENS_PER_RUN = 120_000       # one search, one matchmaking run, one pitch
 MAX_TOKENS_PER_SESSION = 600_000   # one browser session
@@ -43,6 +44,7 @@ MAX_RIVALRY_SCOUTS = 2
 
 # ---- Caches (GUARDRAILS E4) ------------------------------------------------------------
 SEARCH_CACHE_DAYS = 7
+EMPTY_RESULT_CACHE_HOURS = 6
 SCHEDULE_CACHE_HOURS = 24
 
 # ---- Input caps (GUARDRAILS S12) -------------------------------------------------------

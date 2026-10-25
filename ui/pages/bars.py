@@ -10,6 +10,7 @@ from agents.llm import AgentError
 from agents.pitch_writer import write_pitch
 from core import marketplace as mk
 from core.budget import BudgetExceeded, Run
+from ui.fun import football_spinner
 from ui.components import notice, receipt
 from ui.pages.clubs import _login_needed, approvals_view
 
@@ -68,7 +69,7 @@ def layout(session: dict | None) -> html.Div:
                 ]),
                 html.Div(className="card", id="pitch-card", children=[
                     html.H3("Pitch draft"),
-                    dcc.Loading(html.Div(id="pitch-status", children=html.Div("Choose “Draft a pitch” on a club above.", className="muted small")), type="dot", color="#b8902f"),
+                    dcc.Loading(html.Div(id="pitch-status", children=html.Div("Choose “Draft a pitch” on a club above.", className="muted small")), custom_spinner=football_spinner()),
                     html.Label("Subject", className="field"), dcc.Input(id="pitch-subject", type="text", maxLength=200),
                     html.Label("Message", className="field"), dcc.Textarea(id="pitch-body", maxLength=2000, style={"minHeight": "200px"}),
                     html.Button("Send to the club's Home Turf inbox", id="pitch-send", className="btn btn-gold", style={"marginTop": "10px"}),

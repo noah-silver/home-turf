@@ -1,0 +1,33 @@
+{
+ "sweep": {
+  "input": 60247.6,
+  "output": 3445.2,
+  "cached": 14694.4,
+  "web_searches": 8.4,
+  "cost": 0.09062568900000001,
+  "seconds": 20.1826,
+  "runs": 5
+ },
+ "wide": {
+  "input": 36721,
+  "output": 898,
+  "cached": 0,
+  "web_searches": 5,
+  "cost": 0.0544364,
+  "seconds": 7.459,
+  "runs": 1
+ },
+ "reputation": {
+  "input": 11871,
+  "output": 351,
+  "cached": 0,
+  "web_searches": 1,
+  "cost": 0.011491525,
+  "seconds": 0.373,
+  "runs": 1
+ },
+ "sweep_teams": 15,
+ "sweep_cost": 0.09062568900000001,
+ "teams_mapped": 55,
+ "cities": 6
+}

@@ -227,3 +227,22 @@ table.clean td.num { text-align: right; font-variant-numeric: tabular-nums; }
   .map-card { position: relative; top: 0; height: 420px; }
   .results { max-height: none; }
 }
+
+/* ---------- team logos, city view, suggestions ---------- */
+.team-logo { object-fit: contain; background: #fff; border-radius: 8px; padding: 2px; flex: none; }
+.team-mono { display: inline-block; border-radius: 50%; color: #fff; text-align: center; font-weight: 700; font-size: .72rem; flex: none; }
+.group-head .row { gap: 12px; flex-wrap: nowrap; }
+.team-list { display: flex; flex-direction: column; gap: 8px; }
+.team-row { display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; color: var(--ink) !important; text-decoration: none !important; }
+.team-row:hover { border-color: var(--gold); box-shadow: var(--shadow); }
+.section-sub { font-family: var(--serif); color: var(--navy); font-weight: 700; margin-top: 4px; }
+.spot.suggested { border-left-color: #7a5bc4; }
+.spot.allgames { border-left-color: #2f6db3; }
+.badge.suggested { background: #efe9fb; color: #5b3fa0; }
+.badge.allgames { background: #e3edf9; color: #2f6db3; }
+.suggest { background: #fff; border: 1px dashed #c8d1df; border-radius: 12px; padding: 10px 14px; }
+.suggest summary { cursor: pointer; font-weight: 600; color: var(--navy); font-size: .9rem; }
+.bar-photo { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; display: block; }
+.ext-links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.rep-theme { padding: 6px 0; border-bottom: 1px solid var(--line); font-size: .9rem; }
+.rep-theme:last-child { border-bottom: none; }

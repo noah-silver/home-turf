@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field
 
 # ---- Router -----------------------------------------------------------------------------
 class Intent(BaseModel):
-    intent: Literal["find", "rivalry", "off_topic", "unsafe"]
+    intent: Literal["find", "rivalry", "city", "off_topic", "unsafe"]
     team: Optional[str] = Field(description="Official team name, e.g. 'USC Trojans'")
     team_b: Optional[str] = Field(description="Second team for a rivalry, else null")
     sport: Optional[str] = Field(description="e.g. 'college football', 'NFL', 'NBA'")
@@ -30,6 +30,7 @@ class ScoutSpot(BaseModel):
 
 class ScoutReport(BaseModel):
     spots: list[ScoutSpot]
+    allgames_spots: list[ScoutSpot] = Field(description="Wide pass only: sports bars in the city known to show every game of this team's league. Empty otherwise.")
     club_name: Optional[str]
     club_contact_url: Optional[str]
     search_notes: str = Field(description="One or two sentences on what was found and how current it is")
@@ -120,3 +121,31 @@ class Pitch(BaseModel):
     subject: str
     body: str
     facts_used: list[str] = Field(description="Each bar-profile fact the pitch relies on")
+
+
+# ---- Reputation ---------------------------------------------------------------------
+class ReviewTheme(BaseModel):
+    theme: str = Field(description="2-5 words, e.g. 'Great TV setup'")
+    sentiment: Literal["positive", "mixed", "negative"]
+    detail: str = Field(description="One sentence in your own words summarizing what reviewers say. No verbatim review text.")
+
+
+class Reputation(BaseModel):
+    google_rating: Optional[float] = Field(description="Google rating out of 5 if a source shows it, else null")
+    yelp_rating: Optional[float] = Field(description="Yelp rating out of 5 if a source shows it, else null")
+    review_volume: str = Field(description="e.g. '1,200+ Google reviews' if shown, else 'unknown'")
+    themes: list[ReviewTheme]
+    game_day_take: str = Field(description="One sentence: what reviewers say about watching games here, or 'Reviewers don't mention game days.'")
+    official_site: Optional[str] = Field(description="The bar's own website URL if found, else null")
+    sources: list[str] = Field(description="URLs used")
+
+
+# ---- City Sweep ---------------------------------------------------------------------
+class SweepSpot(ScoutSpot):
+    team: str = Field(description="Official full team name, e.g. 'Chicago Bears', 'USC Trojans', 'Boston Red Sox'")
+
+
+class CitySweep(BaseModel):
+    spots: list[SweepSpot]
+    notes: str
+    safety_notes: list[str]

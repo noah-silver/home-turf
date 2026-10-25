@@ -23,8 +23,22 @@ from ui.pages import console as console_page  # noqa: E402
 from ui.pages import find as find_page  # noqa: E402
 from ui.pages import home as home_page  # noqa: E402
 
-app = Dash(__name__, title="Home Turf · find your fans on game day", suppress_callback_exceptions=True, update_title=None)
+FONTS = "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+app = Dash(__name__, title="Home Turf · find your fans on game day", suppress_callback_exceptions=True, update_title=None,
+           external_stylesheets=[FONTS])
 server = app.server
+
+
+@server.route("/mapframe/<token>")
+def mapframe(token: str):
+    from flask import Response
+
+    from ui.logo_map import get_frame
+
+    page = get_frame(token)
+    if page is None:
+        return Response("Map expired. Reload the page.", status=404, mimetype="text/plain")
+    return Response(page, mimetype="text/html")
 
 def serve_layout() -> html.Div:
     # A browser tab keeps its stored session; a new tab gets a fresh session id.
@@ -42,10 +56,12 @@ app.layout = serve_layout
 
 @app.callback(Output("topbar-slot", "children"), Input("url", "pathname"), State("session", "data"))
 def render_topbar(path, session):
+    from ui.fun import ticker
+
     bar = topbar(path or "/")
     user = (session or {}).get("user")
     bar.children.children[2].children[1].value = user or "guest"
-    return bar
+    return [bar, ticker()]
 
 
 @app.callback(Output("session", "data", allow_duplicate=True), Input("login-dd", "value"), State("session", "data"), prevent_initial_call=True)

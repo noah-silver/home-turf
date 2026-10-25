@@ -10,12 +10,23 @@ from agents.llm import AgentError
 from agents.matchmaker import rivalry_plan, season_plan
 from core import marketplace as mk
 from core.budget import BudgetExceeded, Run
+from ui.fun import football_spinner
 from ui.components import empty_state, notice, receipt
 
 
 def _login_needed(role_word: str) -> html.Div:
     return html.Div(className="page", children=html.Div(className="card", children=empty_state(
         "🔑", f"Log in as a {role_word}", "Use the Demo login menu at the top right. Each demo account is a fictional person running a labeled demo club or bar.")))
+
+
+def _team_avatar(team: str, sport: str) -> html.Div:
+    from ui.team_logos import lookup
+
+    t = lookup(team, sport)
+    if t["logo"]:
+        return html.Div(html.Img(src=t["logo"], style={"width": "46px", "height": "46px", "objectFit": "contain"}), className="avatar",
+                        style={"background": "#fff", "border": f"3px solid {t['color']}"})
+    return html.Div(t["abbr"], className="avatar")
 
 
 def layout(session: dict | None) -> html.Div:
@@ -30,7 +41,7 @@ def layout(session: dict | None) -> html.Div:
         dcc.Store(id="club-refresh", data=0),
         dcc.Store(id="rivalry-result"),
         html.Div(className="dash-head", children=[
-            html.Div(c["team"][:2].upper(), className="avatar"),
+            _team_avatar(c["team"], c["sport"]),
             html.Div([
                 html.Div("Club president dashboard", className="eyebrow"),
                 html.H1(c["name"], style={"fontSize": "1.9rem", "margin": 0}),
@@ -45,7 +56,7 @@ def layout(session: dict | None) -> html.Div:
                     html.P("Ranks every bar profile in your city for your club: capacity vs. your turnout, TVs, sound policy, location, and schedule clashes with other clubs already booked there.", className="small muted"),
                     html.Div(f"What you need: {c['needs']}", className="quote"),
                     html.Button("Rank bars for our season", id="season-go", className="btn btn-gold"),
-                    dcc.Loading(html.Div(id="season-out"), type="dot", color="#b8902f"),
+                    dcc.Loading(html.Div(id="season-out"), custom_spinner=football_spinner()),
                 ]),
                 html.Div(className="card", children=[
                     html.Div(className="card-head", children=[html.H3("Pitches from bars"), html.Span("inbox", className="badge navy")]),
@@ -61,7 +72,7 @@ def layout(session: dict | None) -> html.Div:
                                              or ("Packers" in r["team"] and "Bears" in c["team"]) or ("Bears" in r["team"] and "Packers" in c["team"])), None),
                                  placeholder="Choose a rival club", clearable=False),
                     html.Button("Plan rivalry watch party", id="rivalry-go", className="btn btn-gold", style={"marginTop": "10px"}),
-                    dcc.Loading(html.Div(id="rivalry-out"), type="dot", color="#b8902f"),
+                    dcc.Loading(html.Div(id="rivalry-out"), custom_spinner=football_spinner()),
                 ]),
                 html.Div(className="card", children=[
                     html.Div(className="card-head", children=[html.H3("Watch parties and approvals"), html.Span("human sign-off", className="badge navy")]),
@@ -128,7 +139,7 @@ def choose_home(clicks, club_id, session, refresh):
         return no_update, no_update
     bar_id = ctx.triggered_id["index"]
     mk.set_home_bar(club_id, bar_id, (session or {}).get("user"))
-    return notice("ok", f"Confirmed by you: {mk.bar(bar_id)['name']} is your {mk.config.CURRENT_SEASON} season home bar."), (refresh or 0) + 1
+    return notice("ok", f"🎉 Confirmed by you: {mk.bar(bar_id)['name']} is your {mk.config.CURRENT_SEASON} season home bar."), (refresh or 0) + 1
 
 
 @callback(Output("club-inbox", "children"), Input("club-refresh", "data"), State("club-id", "data"))
