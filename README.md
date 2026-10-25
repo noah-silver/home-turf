@@ -101,7 +101,7 @@ home-turf/
 ├── ui/                    pages: home, find, bar, clubs, bars, console; logo_map.py (MapLibre logo map), team_logos.py, fun.py (ticker, logo wall)
 ├── mcp_server/server.py   optional MCP server (read-only + drafts)
 ├── data/                  seed profiles, reviews, and a cache of real searches for instant demos
-├── tests/test_safety.py   22 safety, cost-control, and feature tests
+├── tests/test_safety.py   24 safety, cost-control, and feature tests
 ├── scripts/               measure_tokens.py, build_seed_cache.py, mcp_smoke_test.py
 └── docs/                  GUARDRAILS.md, measurements.json, screenshots, report.html, slides.html
 ```
@@ -109,7 +109,7 @@ home-turf/
 ## Tests
 
 ```bash
-python -m unittest -v tests.test_safety                      # 19 offline tests, no API cost
+python -m unittest -v tests.test_safety                      # 21 offline tests, no API cost
 HOME_TURF_LIVE=1 python -m unittest -v tests.test_safety     # + 3 live tests (~$0.001)
 ```
 
