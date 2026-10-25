@@ -13,6 +13,7 @@ a { color: #22406f; }
 .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 8.5pt; color: var(--gold); font-weight: 700; }
 .lead { font-size: 13pt; color: #2b3a52; }
 .title-block { border-bottom: 3px solid var(--navy); padding-bottom: 14px; margin-bottom: 14px; }
+.sec1 { font-family: Georgia, serif; color: var(--navy); font-weight: 700; font-size: 11pt; margin-top: 10px; }
 .meta { display: grid; grid-template-columns: 120px 1fr; gap: 3px 12px; font-size: 10pt; margin-top: 10px; }
 .meta b { color: var(--muted); font-weight: 600; }
 .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 14px 0; }
@@ -55,6 +56,7 @@ code { font-family: ui-monospace, Menlo, monospace; font-size: 9pt; background: 
   <h1>Home Turf</h1>
   <p class="lead">AI agents that find where your team's fan club watches the game in any city, verify it against the source,
   and help fan clubs and bars team up for the season, rivalry days included.</p>
+  <div class="sec1">1. Title and links</div>
   <div class="meta">
     <b>Author</b><span>Noah Silver</span>
     <b>GitHub repo</b><span><a href="https://github.com/noah-silver/home-turf">https://github.com/noah-silver/home-turf</a></span>
@@ -400,7 +402,8 @@ homework from this course.</p>
 <p><b>Automated tests.</b> <code>tests/test_safety.py</code> has 22 tests: 19 offline (no API cost, stubbed model) covering injection, personal info, length caps, invented numbers,
 SSRF, run and daily caps, injected source pages, unmappable addresses, invented bars, three-party approval, schedule-clash math, logo and league matching, map escaping, and fan-suggestion screening; plus 3 live tests against
 <code>gpt-6-luna</code> (spam, false profile claims, off-topic search). All 22 pass, including from a fresh clone on Python 3.11.</p>
-<p><b>Agent malfunction.</b> The model never writes coordinates; a geocoder does. Every claim must carry a source and a quote, which code re-checks. Agent failures are contained:
+<p><b>Agent malfunction.</b> Nothing can loop forever: every action is a fixed pipeline, not an open-ended agent loop, and each agent has a hard cap on
+model requests and tool calls (the Scout gets at most 3 web searches, the wide pass 4). The model never writes coordinates; a geocoder does. Every claim must carry a source and a quote, which code re-checks. Agent failures are contained:
 an exception becomes a polite message, the Guard fails <i>closed</i> (holds the post) if it can't reach the model, and a schedule failure lets matchmaking continue with a note.
 <b>Overspending.</b> Every call passes a budget check first (120k tokens per action, 600k per browser session, 3M per day app-wide), web searches are capped per agent,
 and the console shows live meters (Fig. 12). The audit trail (<code>runtime/audit_log.jsonl</code>) is append-only and records every agent call, tool call, Guard decision,
