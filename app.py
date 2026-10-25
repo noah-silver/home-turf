@@ -25,8 +25,9 @@ from ui.pages import home as home_page  # noqa: E402
 from ui.pages import season as season_page  # noqa: E402
 
 FONTS = "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+# When sharing through a slow tunnel, load Dash's own JavaScript from its public CDN (HOME_TURF_CDN=1).
 app = Dash(__name__, title="Home Turf · find your fans on game day", suppress_callback_exceptions=True, update_title=None,
-           external_stylesheets=[FONTS])
+           external_stylesheets=[FONTS], serve_locally=os.environ.get("HOME_TURF_CDN", "0") != "1")
 server = app.server
 
 
@@ -92,7 +93,7 @@ def login(value, session):
     Input("url", "pathname"), Input("session", "data"), State("url", "search"), State("page-user", "data"),
 )
 def route(path, session, search, page_user):
-    user = (session or {}).get("user") or "guest"
+    user = f"{(session or {}).get('user') or 'guest'}|{bool((session or {}).get('admin_ok'))}"
     if ctx.triggered_id == "session" and user == page_user:
         return no_update, no_update  # session refreshed but the logged-in user did not change
     return _render(path or "/", session, search), user
@@ -113,6 +114,13 @@ def _render(path, session, search):
     if path == "/bars":
         return bars_page.layout(session)
     if path in ("/admin", "/console"):  # operator console: not linked from the public site
+        if config.ADMIN_PASSWORD and not (session or {}).get("admin_ok"):
+            return html.Div(className="page", children=html.Div(className="card", style={"maxWidth": "420px", "margin": "40px auto"}, children=[
+                html.H3("Operator console"), html.P("Enter the operator password.", className="small muted"),
+                dcc.Input(id="admin-pw", type="password", n_submit=0, style={"width": "100%"}),
+                html.Button("Unlock", id="admin-go", className="btn btn-navy btn-sm", style={"marginTop": "10px"}),
+                html.Div(id="admin-msg"),
+            ]))
         return console_page.layout(session)
     return home_page.layout()
 
@@ -127,6 +135,19 @@ def bar_modal(clicks, _close):
         return "modal hidden", "about:blank", "#"
     bar_id = ctx.triggered_id["index"]
     return "modal", f"/bar/{bar_id}?embed=1", f"/bar/{bar_id}"
+
+
+@app.callback(
+    Output("session", "data", allow_duplicate=True), Output("admin-msg", "children"),
+    Input("admin-go", "n_clicks"), Input("admin-pw", "n_submit"), State("admin-pw", "value"), State("session", "data"),
+    prevent_initial_call=True,
+)
+def unlock_admin(_n, _s, pw, session):
+    import hmac
+
+    if pw and config.ADMIN_PASSWORD and hmac.compare_digest(pw, config.ADMIN_PASSWORD):
+        return {**(session or {}), "admin_ok": True}, None
+    return no_update, html.Div("Wrong password.", className="notice bad")
 
 
 if __name__ == "__main__":

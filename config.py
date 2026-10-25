@@ -58,6 +58,8 @@ CURRENT_SEASON = 2026
 # Operator mode shows run receipts (tokens, cost, agent steps) on every page. Off for the public site;
 # the operator console is always at /admin.
 SHOW_OPS = os.environ.get("HOME_TURF_OPS", "0") == "1"
+# Set when sharing the app publicly: /admin then asks for this password. Unset = open (local grading).
+ADMIN_PASSWORD = os.environ.get("HOME_TURF_ADMIN_PASSWORD", "")
 
 
 class MissingKeyError(RuntimeError):
