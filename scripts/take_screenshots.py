@@ -144,6 +144,17 @@ def main() -> None:
         click_text(page, "Rank bars for our season")
         wait_for(page, "#season-out .receipt", timeout=120)
         shot(page, "club_season", full=True)
+        # Bar quick-view pop-up: open a real bar (e.g. Theory) from the ranking
+        links = page.locator(".rank-card .bar-link")
+        names = [links.nth(i).inner_text() for i in range(links.count())]
+        pick = next((i for i, n in enumerate(names) if "Theory" in n), 0)
+        links.nth(pick).click()
+        page.wait_for_selector(".modal:not(.hidden)", timeout=10000)
+        page.frame_locator("#bar-modal-frame").locator("#rep-slot .rep-theme, #rep-slot .muted").first.wait_for(timeout=120000)
+        time.sleep(6)
+        shot(page, "bar_quickview")
+        page.click("#bar-modal-close")
+        time.sleep(0.5)
         shot(page, "season_card", "#season-go >> xpath=ancestor::div[contains(@class,'card')][1]")
 
         login(page, "pres_yale_nyc", "shots-yale-nyc")

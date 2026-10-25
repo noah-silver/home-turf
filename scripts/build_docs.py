@@ -329,7 +329,7 @@ Every model call goes through one doorway (<code>agents/llm.py</code>) that enfo
     ["Router", "Turns “Bears fans in Boston” (or just “Boston”) into intent, team, city; declines off-topic or unsafe requests", "None", "effort none; cached 30 days"],
     ["Scout", "Finds where fans or the official club watch: bar, street address, club, source URL, exact quote, season. If nothing usable turns up, a <b>wide second pass</b> searches the metro area and fan club directories and returns verified “shows every game” best bets", "OpenAI <code>web_search</code>", "max 3 searches, then max 4 only if needed"],
     ["City Sweep", "Maps many teams' fan bars in one city at once (NFL, college, other leagues) so the city map shows every team's logo; results become per-team cache entries", "<code>web_search</code>", "max 4 per league group; one batched verification"],
-    ["Reputation", "A real bar's public ratings and review themes, summarized in its own words with links out; photos from the bar's own website", "<code>web_search</code>, <code>site_photos</code>", "max 2 searches; cached 30 days"],
+    ["Reputation", "A real bar's public ratings and review themes, summarized in its own words with links out; photos from the bar's own website and a menu link. The bar page adds Google's keyless place card and Street View (often a 360° look inside)", "<code>web_search</code>, <code>site_photos</code>", "max 2 searches; cached 30 days"],
     ["Trip Parser", "Turns “home in New Haven, New York for the Columbia game, Chicago the week of The Game” into a city for every game date", "None", "effort low; fan text fenced as untrusted"],
     ["Season Planner", "Picks a bar and a backup for every game from verified candidates in that city, with a tip; kickoffs converted to local time in code; exports a calendar (.ics)", "Cached spots; Scout for new cities (max 4 per plan)", "picks validated against candidates"],
     ["Verifier", "Re-checks each candidate: geocodes the address, re-opens the source, looks for the bar's name and the current season. Model only for unclear cases, in one batched call", "<code>fetch_page</code>, <code>geocode</code> (OpenStreetMap)", "code first; effort low"],
@@ -365,11 +365,12 @@ The run receipt: 2 AI calls, 16,597 input tokens (5,311 cached), 553 output, 2 w
 <p>Search just “Chicago” (or click a city) and the map shows every team whose fans have a known spot there, each pin a <b>team logo</b> ringed in its
 verification color, with bars that host several clubs showing several logos. League buttons filter the map to NFL, NCAA, MLB, NBA, NHL, or Soccer. The data comes from
 cached verified searches, the <b>City Sweep</b> agent (which reads city-wide guides such as “a bar for every NFL team” and alumni watch-party listings), fan suggestions, and
-partner bars. A sweep costs about {money(FC.get('sweep_cost', 0.11), 2)} per city and adds roughly {FC.get('sweep_teams', 20)} teams; after that, every team search in that city is free.</p>
+partner bars. Clicking any bar, on the map or in a club president's shortlist, opens its profile with photos, reviews, menu, Google Maps, and Street View
+without leaving the page (Fig. 4e). A sweep costs about {money(FC.get('sweep_cost', 0.11), 2)} per city and adds roughly {FC.get('sweep_teams', 20)} teams; after that, every team search in that city is free.</p>
 {fig("city_chicago", "<b>Figure 4b.</b> City view of Chicago: 25 teams' logo pins, a legend grouped by league, and league filter buttons (All, NFL, NCAA, MLB, NBA, Soccer).", 1300, 820, "86%")}
 <div class="two">
 {fig("falcons_phoenix", "<b>Figure 4d.</b> A hard search (Falcons fans in Phoenix): no team bar exists online, so the wide pass finds the Arizona chapter of the Falcon Club of America and verified bars that show every NFL game.", 1300, 800)}
-{fig("reputation_card", "<b>Figure 4e.</b> Reputation agent on a real bar: photos from the bar's own site, the Google rating a source shows, and review themes in its own words, with links out.", 1000, 1100)}
+{fig("bar_quickview_crop", "<b>Figure 4e.</b> A club president clicks a shortlisted bar and its profile opens in a pop-up: logo map, photos from the bar's own site, review themes from the Reputation agent, and Google's place card (4.6★, 1,929 reviews); Street View and a menu link sit below.", 1300, 900)}
 </div>
 
 <h3>My Season: a plan for every game, wherever you are</h3>
@@ -609,7 +610,7 @@ def build_slides() -> str:
     <img src="{s_img('rivalry_card', 1500, 1100)}" class="shot tall">
     <div class="side">
       <img src="{s_img('approvals_confirmed')}" class="shot">
-      <ul class="tight small"><li>Finds Yale–Princeton (Nov 14), picks a neutral bar for 125 fans</li><li>3 drafted invitations, nothing sent</li><li>Confirmed only after all 3 parties approve · <b>{money(ACT['rivalry_match']['cost'], 4)}</b></li></ul>
+      <ul class="tight small"><li>Finds Yale–Princeton (Nov 14), neutral bar for 125</li><li>3 drafted invitations, nothing sent</li><li>Click any bar: photos, reviews, Street View</li><li>Confirmed only after all 3 parties approve · <b>{money(ACT['rivalry_match']['cost'], 4)}</b></li></ul>
     </div>
   </div>
 </section>
