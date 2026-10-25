@@ -66,7 +66,13 @@ html, body, #map { margin: 0; height: 100%; width: 100%; font-family: -apple-sys
 .pop .st { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; padding: 1px 6px; border-radius: 999px; color: #fff; margin-left: auto; white-space: nowrap; }
 .pop a.btn { display: inline-block; margin-top: 8px; background: #0f2240; color: #fff; padding: 6px 10px; border-radius: 7px; text-decoration: none; font-size: 12px; font-weight: 600; }
 .legend { position: absolute; top: 10px; right: 10px; z-index: 5; background: rgba(255,255,255,.96); border-radius: 10px; box-shadow: 0 3px 14px rgba(15,34,64,.2); padding: 8px 10px; max-height: 60%; overflow-y: auto; min-width: 190px; }
-.legend h4 { margin: 0 0 6px; font: 700 11px -apple-system, sans-serif; text-transform: uppercase; letter-spacing: .08em; color: #b8902f; }
+.legend h4 { margin: 0; font: 700 11px -apple-system, sans-serif; text-transform: uppercase; letter-spacing: .08em; color: #b8902f;
+  cursor: pointer; user-select: none; display: flex; align-items: center; gap: 6px; }
+.legend h4 .tog { margin-left: auto; color: #0f2240; font-size: 12px; }
+.legend h4:hover .tog { color: #b8902f; }
+.legend .lg-body { margin-top: 6px; }
+.legend.collapsed { min-width: 0; padding: 7px 10px; }
+.legend.collapsed .lg-body { display: none; }
 .legend label { display: flex; align-items: center; gap: 7px; font-size: 12px; margin: 3px 0; cursor: pointer; color: #1b2433; }
 .legend label.hl { font-weight: 700; }
 .legend img, .legend .mono { width: 20px; height: 20px; object-fit: contain; flex: none; }
@@ -120,12 +126,21 @@ if (!markers.length) { const e = document.createElement('div'); e.className = 'e
 if (D.legend.length) {
   const div = document.createElement('div'); div.className = 'legend';
   let last = null;
-  div.innerHTML = `<h4>${esc(D.title || 'Teams on this map')}</h4>` + D.legend.map(t => {
+  div.innerHTML = `<h4 title="Show or hide the team list">${esc(D.title || 'Teams on this map')} · ${D.legend.length}<span class="tog">▾</span></h4><div class="lg-body">` + D.legend.map(t => {
     const head = (!t.hl && t.group !== last) ? `<div class="grp" data-league="${esc(t.group)}">${esc(t.group)}</div>` : '';
     if (!t.hl) last = t.group;
     return head + `<label class="${t.hl ? 'hl' : ''}" data-league="${esc(t.group)}"><input type="checkbox" checked data-team="${esc(t.team)}">${badge(t)}<span>${esc(t.team)}</span><span class="n">${t.count}</span></label>`;
-  }).join('');
+  }).join('') + '</div>';
   document.body.appendChild(div);
+  // Collapsible: click the title. Starts folded on small maps (bar pages, pop-ups); the choice is remembered.
+  const KEY = 'ht-legend-collapsed';
+  let saved = null; try { saved = localStorage.getItem(KEY); } catch (e) {}
+  const setCollapsed = c => { div.classList.toggle('collapsed', c); div.querySelector('.tog').textContent = c ? '▸' : '▾'; };
+  setCollapsed(saved !== null ? saved === '1' : window.innerHeight < 420);
+  div.querySelector('h4').addEventListener('click', () => {
+    const c = !div.classList.contains('collapsed'); setCollapsed(c);
+    try { localStorage.setItem(KEY, c ? '1' : '0'); } catch (e) {}
+  });
   const teamLeague = Object.fromEntries(D.legend.map(t => [t.team, t.group]));
   let league = 'All';
   function apply() {
