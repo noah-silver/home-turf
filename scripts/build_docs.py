@@ -139,8 +139,8 @@ a { color: #22406f; }
 figure { margin: 8px 0 12px; page-break-inside: avoid; }
 figure img, figure svg { width: 100%; border: 1px solid var(--line); border-radius: 6px; display: block; }
 figcaption { font-size: 8.5pt; color: var(--muted); margin-top: 4px; }
-figure img { max-height: 3.3in; object-fit: cover; object-position: top left; }
-.two figure img { max-height: 2.7in; }
+figure img { max-height: 3.1in; object-fit: cover; object-position: top left; }
+.two figure img { max-height: 2.5in; }
 figcaption b { color: var(--navy); }
 .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
 .two figure { margin-top: 0; }
@@ -160,7 +160,7 @@ tr.total td { font-weight: 700; border-top: 2px solid var(--navy); }
 .tag { display: inline-block; font-size: 8pt; font-weight: 700; padding: 1px 7px; border-radius: 999px; background: #e4e9f3; color: var(--navy); }
 .ok { color: var(--green); font-weight: 700; } .no { color: var(--red); font-weight: 700; } .mid { color: var(--amber); font-weight: 700; }
 .small { font-size: 9pt; color: var(--muted); }
-.src { font-size: 8.5pt; color: var(--muted); }
+.src { font-size: 7.8pt; color: var(--muted); columns: 2; column-gap: 18px; }
 code { font-family: ui-monospace, Menlo, monospace; font-size: 9pt; background: #f2f4f8; padding: 1px 4px; border-radius: 4px; }
 .pb { page-break-before: always; }
 .toc { columns: 2; font-size: 10pt; margin: 6px 0 0; padding-left: 18px; }
@@ -287,8 +287,7 @@ def build_report() -> str:
   <div class="kpi"><div class="n">{FC.get("teams_mapped", 0)}</div><div class="l">teams mapped with verified spots across {FC.get("cities", 0)} cities</div></div>
 </div>
 
-<p class="small"><b>Contents:</b></p>
-<ol class="toc"><li>Title and links</li><li>Motivation</li><li>What is new here</li><li>The agents</li><li>Tokenomics</li><li>Safety</li><li>Impact</li><li>Limits and next steps</li></ol>
+
 
 <h2>2. Motivation</h2>
 <p><b>Who has this problem.</b> Fans who don't live where their team plays, and the volunteers who organize them. In one survey, only <b>36% of Americans
@@ -360,10 +359,7 @@ The other goes to the model in one batched call and comes back Likely.</li>
 The run receipt: 2 AI calls, 16,597 input tokens (5,311 cached), 553 output, 2 web searches, 5.8 s, <b>$0.0215</b>.</li>
 </ol>
 {fig("find_live", "<b>Figure 2.</b> A live search. Each card shows the evidence quote, the source, and which checks passed. Pins are team logos placed by the geocoder, never by the model.", 1300, 1000, "88%")}
-<div class="two">
-{fig("receipt_live", "<b>Figure 3.</b> The receipt under every result: tokens, cache, web searches, time, cost, and each agent's step.")}
-{fig("city_chicago_nfl", "<b>Figure 4.</b> City view of Chicago filtered to the NFL: one logo pin per team's bar, ringed by verification status.", 1300, 900)}
-</div>
+{fig("receipt_live", "<b>Figure 3.</b> The receipt for this run (operator mode): tokens, cache, web searches, time, cost, and each agent's step.", 1500, None, "52%")}
 
 <h3>The city view: every team's logo on one map</h3>
 <p>Search just “Chicago” (or click a city) and the map shows every team whose fans have a known spot there, each pin a <b>team logo</b> ringed in its
@@ -474,7 +470,7 @@ an exception becomes a polite message, the Guard fails <i>closed</i> (holds the 
 <b>Overspending.</b> Every call passes a budget check first (120k tokens per action, 600k per browser session, 3M per day app-wide), web searches are capped per agent,
 and the console shows live meters (Fig. 12). The audit trail (<code>runtime/audit_log.jsonl</code>) is append-only and records every agent call, tool call, Guard decision,
 and human approval, without secrets.</p>
-{fig("console", "<b>Figure 12.</b> The Cost &amp; safety console: total spend, cache savings, budget meters, and the attack tester.", 1300, None, "85%")}
+{fig("console", "<b>Figure 12.</b> The operator console (/admin): total spend, cache savings, budget meters, and the attack tester.", 1300, None, "62%")}
 
 <h2>7. Impact</h2>
 {user_test_section()}
@@ -495,6 +491,18 @@ return that many times over, and Home Turf's AI cost per user is a fraction of a
 Sundays ran about 6% above off-season Sundays nationally in Toast's 2023 point-of-sale data (and far higher in Green Bay).<sup>9</sup></p>
 <p><b>Something newly possible.</b> The rivalry watch party: no tool today can take two rival clubs in a city, find the game in both schedules, pick a neutral bar that fits both
 crowds, and get three parties to sign off. Home Turf does it in one click and under a tenth of a cent.</p>
+
+<h3>Business model: bars pay, alumni groups license, fans stay free</h3>
+<p>Fans never pay, because they are the audience bars want to reach. Revenue comes from the two sides that feel the cost of today's process. Prices are planning assumptions, not tested yet.</p>
+{table(["Revenue stream", "Who pays", "What they get", "Price (assumed)"], [
+    ["Bar Pro subscription", "Sports bars", "Pitch clubs, season and rivalry bookings, a clearly labeled “Featured” slot, demand analytics (“212 Packers fans searched near you”)", "$49 per month"],
+    ["Alumni and fan-club licensing", "Alumni associations, team fan programs", "A white-label “official watch party finder” and season matchmaking for their chapters (e.g. USC's host program, Notre Dame's ~275 clubs, Bills Backers' ~500 chapters)", "$5k–25k per year"],
+])}
+<p><b>An illustrative year one</b>, using the assumptions above: 200 bars on Pro is {money(200 * 49 * 12, 0)}, and 10 alumni or fan-club licenses at $10k is {money(10 * 10_000, 0)},
+for about {money(200 * 49 * 12 + 100_000, 0)} in revenue. Serving 10,000 users costs about {money(10_000 * blended(0.85) * 12, 0)} a year in AI, so the AI bill is under 1% of revenue and
+hosting, not AI, becomes the main cost. A single Pro bar's fee covers the AI for roughly {49 / blended(0.85):,.0f} users. Go to market: pilot with the Yale Alumni Association and
+the Yale Club of New York, whose clubs bring the first bars onto the platform. <b>One rule protects trust:</b> payment can buy visibility (labeled Featured) but never a
+Verified badge or a higher Matchmaker score; the Guard and the number check apply to paying bars exactly as they do to everyone else.</p>
 
 <h2>8. Limits and next steps</h2>
 <p><b>What doesn't work yet.</b></p>
@@ -660,8 +668,9 @@ def build_slides() -> str:
     <li><b>Send with approval:</b> email invitations only after a human clicks send</li>
     <li><b>Adaptive Scout:</b> 1 search first, escalate only if nothing verifies</li>
     <li><b>Hosted + mobile</b>, and the MCP server so assistants can use Home Turf</li>
+    <li><b>Business model:</b> bars pay $49/mo for Pro (pitch clubs, bookings, labeled Featured slot, analytics); alumni associations license a white-label finder ($5–25k/yr). Fans stay free; AI is about 1.4¢ per user per month</li>
   </ul>
-  <div class="ask"><b>The ask:</b> one bar manager and one fan-club president in Chicago or Boston to run a real season pilot.<br>
+  <div class="ask"><b>The ask:</b> a Yale Alumni Association club (start with the Yale Club of New York) and one partner bar to run a real season pilot.<br>
   Everything shown is live in the repo: <b>{REPO_URL.replace('https://', '')}</b></div>
 </section>
 """
