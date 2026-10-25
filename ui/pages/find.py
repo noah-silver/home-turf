@@ -5,7 +5,7 @@ from __future__ import annotations
 import time
 from urllib.parse import parse_qs
 
-from dash import Input, Output, State, callback, dcc, html, no_update
+from dash import ALL, Input, Output, State, callback, ctx, dcc, html, no_update
 
 from core import marketplace as mk
 from core.citymap import known_points, teams_in_city
@@ -47,7 +47,7 @@ def layout(search: str = "") -> html.Div:
                             custom_spinner=football_spinner(), overlay_style={"visibility": "visible", "opacity": 0.35},
                             children=html.Div(id="find-results", className="results", children=empty_state(
                                 "🏟️", "Search a team and a city, or just a city",
-                                "Every pin on the map is a team logo. Spots are checked against their sources before they show up. A new search takes about 10–20 seconds; searches we've seen before load instantly.")),
+                                "Every pin on the map is a team logo. We check each spot against its source before it shows up. New searches take a few seconds; popular ones load instantly.")),
                         ),
                     ]),
                     html.Div(className="card map-card", children=html.Iframe(id="find-map", src=map_src(known_points(), title="Every fan spot Home Turf knows"), style=iframe_style())),
@@ -69,7 +69,7 @@ def _suggest_form(team: str, city: str) -> html.Details:
         dcc.Input(id="sug-url", type="text", placeholder="Link that shows it (club page, bar site, article) — lets us verify it", maxLength=300, style={"marginTop": "8px"}),
         html.Div(className="row", style={"marginTop": "8px"}, children=[
             html.Button("Add this spot", id="sug-go", className="btn btn-navy btn-sm"),
-            html.Span("Screened by the Guard; verified automatically if the link names the bar and team.", className="tiny muted"),
+            html.Span("We check new spots before they appear. A link helps us verify it.", className="tiny muted"),
         ]),
         dcc.Loading(html.Div(id="sug-msg"), type="dot", color="#b8902f"),
     ])
@@ -96,13 +96,13 @@ def _city_overview(city: str) -> list:
     sweep = html.Div(className="suggest", children=[
         html.Div(className="row", children=[
             html.Div([html.B(f"Map every team's fans in {short}"),
-                      html.Div("The City Sweep agent reads city-wide guides (a bar for every NFL team, alumni watch parties, supporters' clubs), "
-                               "verifies each bar, and adds them to the map. About 1–2 minutes and roughly $0.10.", className="tiny muted")], style={"flex": 1}),
-            html.Button("Run City Sweep", id="sweep-go", className="btn btn-gold btn-sm"),
+                      html.Div("We'll scan city-wide guides (a bar for every NFL team, alumni watch parties, supporters' clubs), "
+                               "check each bar, and add them to the map. Takes about a minute or two.", className="tiny muted")], style={"flex": 1}),
+            html.Button("Map this city", id="sweep-go", className="btn btn-gold btn-sm"),
         ]),
         dcc.Store(id="sweep-city", data=city),
         dcc.Loading(html.Div(id="sweep-msg"), custom_spinner=football_spinner()),
-    ]) if not recently_swept(city) or len(teams) < 5 else html.Div(f"City Sweep ran for {short} in the last two weeks.", className="tiny muted")
+    ]) if not recently_swept(city) or len(teams) < 5 else None
     if not teams:
         return [head, notice("info", f"No fan spots on file for {city} yet."), sweep]
     groups: dict[str, list] = {}
@@ -164,14 +164,19 @@ def run_search(_clicks, _submit, autorun, value, session):
             if group.get("club_contact_url"):
                 club_line += [html.Span(" · "), html.A("club page", href=group["club_contact_url"], target="_blank")]
             head.append(html.Div(club_line, className="small"))
-        src = "from cache · no tokens" if group.get("from_cache") else "live search"
-        head.append(html.Div(f"{len(shown)} spot(s) · {src} · found {group.get('found_at', '')[:10]}", className="tiny", style={"color": "#9fb0cc", "marginTop": "4px"}))
+        head.append(html.Div(f"{len(shown)} spot(s) · updated {group.get('found_at', '')[:10]}", className="tiny", style={"color": "#c9d3e6", "marginTop": "4px"}))
         tinfo = lookup(group["team"], group.get("sport", ""))
         blocks.append(html.Div(head, className="group-head", style={"background": f"linear-gradient(135deg, {tinfo['color']} 0%, #0f2240 85%)"}))
         blocks += [spot_card(s) for s in shown]
         blocks += [_suggestion_card(s) for s in suggestions]
         if not shown and not suggestions:
             blocks.append(notice("info", f"No bar we could tie to {group['team']} fans in {group['city'].split(',')[0]} yet. {group.get('search_notes') or ''}"))
+        if not group.get("wide_done") and not any(x["status"] in ("confirmed", "likely") for x in shown):
+            blocks.append(html.Div(className="suggest", children=[
+                html.Div(className="row", children=[
+                    html.Div([html.B("Not sure about these?"), html.Div(f"Search the whole {group['city'].split(',')[0]} area, fan club directories, and every-game sports bars (about 10 s).", className="tiny muted")], style={"flex": 1}),
+                    html.Button("Search wider", id={"type": "widen-go", "index": f"{group['team']}|{group['city']}|{group.get('sport', '')}"}, className="btn btn-gold btn-sm"),
+                ])]))
         allgames = group.get("allgames") or []
         if allgames and not shown:
             blocks.append(html.Div(f"Best bets: verified sports bars that show every game", className="section-sub"))
@@ -225,9 +230,25 @@ def run_sweep(_n, city, session):
     t0 = time.perf_counter()
     try:
         out = city_sweep(run, city)
-        msg = notice("ok", f"City Sweep added {out['teams']} teams' verified spots to the {city.split(',')[0]} map.")
+        msg = notice("ok", f"🎉 Added {out['teams']} teams' fan spots to the {city.split(',')[0]} map.")
     except (BudgetExceeded, AgentError) as exc:
         msg = notice("bad", str(exc))
     rec = receipt(run.totals(), run.steps, time.perf_counter() - t0, title="City Sweep run")
     points = known_points(city)
     return [msg, *_city_overview(city), rec], map_src(points, center=None if points else _city_center(city), title=f"Teams in {city.split(',')[0]}")
+
+
+@callback(
+    Output("find-autorun", "data", allow_duplicate=True),
+    Input({"type": "widen-go", "index": ALL}, "n_clicks"),
+    State("find-q", "value"), State("session", "data"),
+    prevent_initial_call=True,
+)
+def widen(clicks, query, session):
+    from core.orchestrator import widen_search
+
+    if not ctx.triggered_id or not any(clicks or []):
+        return no_update
+    team, city, sport = ctx.triggered_id["index"].split("|")
+    widen_search(team, city, sport or None, (session or {}).get("sid", "anon"))
+    return query + " "  # re-run the (now cached) search to show the wider results

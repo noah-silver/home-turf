@@ -12,7 +12,7 @@ from core import db
 QUOTE_CHARS = ' "“”\''
 STATUS_LABEL = {"confirmed": "Verified", "likely": "Likely", "unverified": "Unverified", "rejected": "Rejected"}
 STATUS_COLOR = {"confirmed": "#1f7a4d", "likely": "#b7791f", "unverified": "#7b8699", "rejected": "#b42d2d"}
-NAV = [("/", "Home"), ("/find", "Find a watch spot"), ("/clubs", "For fan clubs"), ("/bars", "For bars"), ("/console", "Cost & safety")]
+NAV = [("/", "Home"), ("/find", "Find a watch spot"), ("/clubs", "For fan clubs"), ("/bars", "For bars")]
 
 
 def login_options() -> list[dict]:
@@ -89,14 +89,17 @@ def spot_card(spot: dict) -> html.Div:
                     check(spot.get("geocoded", False), "address on map"),
                 ],
             ),
-            html.Div(f"Why: {spot['status_reason']}  ({'code check' if spot.get('decided_by') == 'code' else 'Verifier agent'})", className="tiny muted", style={"marginTop": "6px"}),
+            html.Div(f"Why: {spot['status_reason']}", className="tiny muted", style={"marginTop": "6px"}),
             html.Div(actions, className="row", style={"marginTop": "8px"}) if actions else None,
         ],
     )
 
 
 def receipt(totals: dict | None, steps: list[dict] | None, seconds: float | None = None, title: str = "Run receipt") -> html.Div:
-    if not totals:
+    """Tokens, cost, and agent steps for one run. Shown only in operator mode (HOME_TURF_OPS=1)."""
+    import config
+
+    if not totals or not config.SHOW_OPS:
         return html.Div()
     t = totals["total"]
     lines = [

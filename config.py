@@ -55,6 +55,10 @@ MAX_PAGE_CHARS = 5000
 
 CURRENT_SEASON = 2026
 
+# Operator mode shows run receipts (tokens, cost, agent steps) on every page. Off for the public site;
+# the operator console is always at /admin.
+SHOW_OPS = os.environ.get("HOME_TURF_OPS", "0") == "1"
+
 
 class MissingKeyError(RuntimeError):
     pass

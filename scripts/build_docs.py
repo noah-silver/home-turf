@@ -116,10 +116,10 @@ def money(x: float, digits: int = 2) -> str:
 
 # ---------------------------------------------------------------------------------- report
 CSS = """
-@page { size: letter; margin: 0.6in 0.65in 0.65in; }
+@page { size: letter; margin: 0.55in 0.6in 0.6in; }
 :root { --navy:#0f2240; --gold:#b8902f; --gold-soft:#f4ead2; --ink:#1b2433; --muted:#5d6b82; --line:#e3e7ee; --green:#1f7a4d; --red:#b42d2d; --amber:#b7791f; }
 * { box-sizing: border-box; }
-body { margin: 0; background: #eef0f4; color: var(--ink); font: 10pt/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+body { margin: 0; background: #eef0f4; color: var(--ink); font: 9.8pt/1.42 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
 main { max-width: 8.5in; margin: 0 auto; background: #fff; padding: 0.7in 0.75in; box-shadow: 0 0 30px rgba(15,34,64,.12); }
 h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; color: var(--navy); line-height: 1.2; }
 h1 { font-size: 30pt; margin: 0 0 6px; }
@@ -139,12 +139,12 @@ a { color: #22406f; }
 figure { margin: 8px 0 12px; page-break-inside: avoid; }
 figure img, figure svg { width: 100%; border: 1px solid var(--line); border-radius: 6px; display: block; }
 figcaption { font-size: 8.5pt; color: var(--muted); margin-top: 4px; }
-figure img { max-height: 4.1in; object-fit: cover; object-position: top left; }
-.two figure img { max-height: 3.3in; }
+figure img { max-height: 3.7in; object-fit: cover; object-position: top left; }
+.two figure img { max-height: 3.0in; }
 figcaption b { color: var(--navy); }
 .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
 .two figure { margin-top: 0; }
-table { width: 100%; border-collapse: collapse; font-size: 9pt; margin: 6px 0 12px; }
+table { width: 100%; border-collapse: collapse; font-size: 8.6pt; margin: 6px 0 10px; }
 tr { page-break-inside: avoid; }
 th { text-align: left; background: var(--navy); color: #fff; font-weight: 600; padding: 6px 8px; font-size: 8.5pt; text-transform: uppercase; letter-spacing: .04em; }
 td { padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
@@ -312,7 +312,7 @@ visits each season, with no tool that checks schedule clashes. For the bar: empt
 surfaced: the Harvard and Yale clubs of Chicago both list the same bar for their 2026 Harvard–Yale viewing party, coordinated by hand on two separate club websites (Fig. 5).</p>
 
 <h2>3. What is new here</h2>
-<p>I looked at 14 existing products and sources (full list with links in the appendix). The pieces exist, but they're scattered across team sites, school sites, and general apps, and none of them verifies
+<p>I looked at 14 existing products and sources: Steelers Nation Unite, PackersEverywhere, Bills Backers, Browns Backers, USC, Notre Dame, and Harvard/Yale club pages, FANZO (MatchPint), DIRECTV Sports Bar Finder, CrowdKick, Yelp, Google Maps, Reddit, Meetup, Eventbrite, Peerspace, and ChatGPT/Perplexity search. The pieces exist, but they're scattered across team sites, school sites, and general apps, and none of them verifies
 what it shows or coordinates the people involved.</p>
 {table(["Existing option", "What it's good at", "What it lacks"], prior)}
 <p><b>What Home Turf does differently.</b> (1) <b>Any team, any city, one search</b>, instead of one team's map or one school's page, and a <b>city view</b> that shows every team's logo where its fans gather, filterable by league. (2) <b>Verification as a feature</b>:
@@ -349,13 +349,13 @@ retrieved text, which suits a small, cheap model. I varied <i>reasoning effort</
 
 <h3>One real run, step by step: “Seattle Seahawks fans in Denver”</h3>
 <ol class="steps">
-<li><b>Router</b> (about 920 tokens, $0.0001): <i>find: Seattle Seahawks in Denver, CO</i>. Not in the cache, so the Scout runs.</li>
+<li><b>Router</b>: <i>find: Seattle Seahawks in Denver, CO</i>, parsed instantly against the team table, so no model call. Not in the cache, so the Scout runs.</li>
 <li><b>Scout</b> runs two web searches and returns two candidates with addresses, quotes, and sources: Rhein Haus Denver (1415 Market St) and Clock Tower Grill.
 It also finds the official club, the Rocky Mountain Sea Hawkers.</li>
 <li><b>Verifier</b> re-opens each source. For Rhein Haus the page names the bar and mentions 2026, so free code settles it (“It's the official home of the Mile High Sea Hawkers”).
 The other goes to the model in one batched call and comes back Likely.</li>
 <li><b>Result</b>: a large Seahawks logo pin for each spot, ringed green (Verified) or amber (Likely), on a Denver map that also shows the Steelers bars already known in the city.
-The run receipt: 3 AI calls, 17,561 input tokens (5,311 cached), 592 output, 2 web searches, <b>$0.0216</b>.</li>
+The run receipt: 2 AI calls, 16,597 input tokens (5,311 cached), 553 output, 2 web searches, 5.8 s, <b>$0.0215</b>.</li>
 </ol>
 {fig("find_live", "<b>Figure 2.</b> A live search. Each card shows the evidence quote, the source, and which checks passed. Pins are team logos placed by the geocoder, never by the model.", 1300, 1000, "88%")}
 <div class="two">
@@ -390,7 +390,7 @@ and drafts three invitations. Nothing is sent: the proposing president's approva
 
 <h2>5. Tokenomics</h2>
 <p>All numbers below come from the app's own usage log, recorded on {M['measured_at'][:10]} by <code>scripts/measure_tokens.py</code> (raw data: <code>docs/measurements.json</code>).
-Every model call records input, cached-input, output, and reasoning tokens, web searches, latency, and cost; the app shows them to users on every result (Fig. 3) and in the console (Fig. 12).</p>
+Every model call records input, cached-input, output, and reasoning tokens, web searches, latency, and cost. The public site keeps this out of sight; in operator mode (<code>HOME_TURF_OPS=1</code>) every result shows its receipt (Fig. 3), and the operator console at <code>/admin</code> totals everything (Fig. 12).</p>
 
 <h3>One typical run: a new search</h3>
 {table(["Search (8 new team + city pairs)", "Input", "Cached", "Output", "Web searches", "Verified", "Time", "Cost"], live_rows, num_cols=(1, 2, 3, 4, 6, 7), total=True)}
@@ -411,6 +411,11 @@ constantly, and there are only a few thousand realistic team + city pairs, each 
 <p>At 10,000 users the AI bill is about <b>{money(10_000 * blended(0.85))} a month</b>, about {blended(0.85) * 100:.1f} cents per user, which a single bar subscription
 would cover many times over. Hosting would cost more than the AI. Note that the app's built-in daily cap (3M tokens, about 190 new searches a day) is sized for a class pilot and
 would be raised for a real launch.</p>
+
+<p><b>Speed.</b> After pilot feedback that search felt slow, I profiled a live search: Router 1–2 s, Scout web search 5–6 s, source re-checks and geocoding 1–2 s, Verifier 1.5 s,
+and the wide pass another 7.5 s when it ran. Three changes followed: plain searches (“Bears fans in Boston”, “Boston”) are parsed locally against the team table and skip the
+Router call; all source re-checks run in parallel; and the wide pass runs automatically only when nothing at all is found (otherwise the fan gets a “Search wider” button).
+Four fresh searches afterward took 5.8, 6.6, 9.0, and 18.6 s (the last one needed the wide pass), down from about 12 s typical. The Scout's web search is now the floor.</p>
 
 <h3>What I did to keep cost down</h3>
 <ol>
@@ -516,10 +521,6 @@ crowds, and get three parties to sign off. Home Turf does it in one click and un
 7. USC Alumni Association, Game Watch Party FAQ: https://alumni.usc.edu/game-watch/faq/<br>
 8. Columbia Journalism Review, Tow Center, “We compared eight AI search engines” (2025; news citations, used as an analogy): https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php<br>
 9. Toast, NFL cities food and alcohol trends (2023; all restaurants, not only sports bars): https://pos.toasttab.com/blog/on-the-line/nfl-cities-food-alcohol-trends<br>
-<b>Prior art reviewed:</b> Steelers Nation Unite fan club and bar map (steelers.com/fans/snufanclubs); PackersEverywhere (packers.com); Bills Backers map (buffalobills.com);
-Browns Backers Worldwide (fans.clevelandbrowns.com); USC game-watch listings (alumni.usc.edu/game-watch); Notre Dame Club Network; Harvard/Yale club watch-party pages
-(e.g., hcaustin.clubs.harvard.edu); FANZO, formerly MatchPint (App Store id502468923); DIRECTV Sports Bar Finder (directv.com/insider); CrowdKick; Yelp; Google Maps; Reddit;
-Meetup; Eventbrite; Peerspace; ChatGPT and Perplexity web search.<br>
 <b>Pricing:</b> OpenAI API pricing for gpt-6-luna and the web_search tool, https://developers.openai.com/api/docs/pricing (checked 2026-10-24).<br>
 <b>AI assistance:</b> the code and this report were drafted with an AI coding assistant (Claude Code); I reviewed the design, numbers, and claims, and all figures come from the app's own logs.
 </p>

@@ -19,17 +19,17 @@ def _stats() -> list[tuple[str, str]]:
         (f"{len(teams)}", "teams mapped"),
         (f"{len(cities)}", "cities"),
         (f"{bars}", "bars on Home Turf"),
-        ("$0.01", "about what a new search costs"),
+        (f"{db.one('SELECT COUNT(*) n FROM clubs')['n']}", "fan clubs"),
     ]
 
 
 def layout() -> html.Div:
     pipeline = [
-        ("Router", "Understands “USC fans in Chicago”", "no tools"),
-        ("Scout", "Searches the web for official club pages and fan lists", "web_search ×3 max"),
-        ("Verifier", "Re-opens every source, checks name + season, maps the address", "fetch_page · geocode"),
-        ("Matchmaker", "Ranks bars for a club’s season or a rivalry day", "profiles · schedule"),
-        ("Guard", "Screens every review, profile, and pitch", "code filter + agent"),
+        ("1 · Search", "Type a team and a city, or just a city", "“Bears fans in Boston”"),
+        ("2 · We scout", "Our AI reads official club pages, fan guides, and bar sites", "any team, any city"),
+        ("3 · We verify", "Every spot is re-checked against its source and placed on the map", "green = verified"),
+        ("4 · Show up", "Logo pins, sources, photos, and reviews from fans", "sound on, crowd loud"),
+        ("Clubs + bars", "Presidents pick a season home bar; bars pitch clubs", "rivalry days too"),
     ]
     steps = []
     for i, (who, what, tool) in enumerate(pipeline):
@@ -88,9 +88,9 @@ def layout() -> html.Div:
                     ]),
                 ],
             ),
-            html.Div("How the agents work", className="section-title"),
+            html.Div("How it works", className="section-title"),
             html.Div(className="card", children=[html.Div(steps, className="pipeline"),
-                html.P("Every claim cites a source. The model never writes addresses or map coordinates on its own. Commitments (booking a bar, confirming a watch party) are made only by people.",
+                html.P("Every spot links to its source, and nothing gets booked or sent until a person says yes.",
                        className="small muted", style={"marginTop": "14px", "marginBottom": 0})]),
             html.Div("Featured rivalry", className="section-title"),
             html.Div(

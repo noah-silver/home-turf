@@ -25,9 +25,6 @@ def ticker() -> html.Div:
         items.append(("🎉 CONFIRMED: " if e["status"] == "confirmed" else "🤝 Proposed: ") + e["title"])
     for r in db.query("SELECT b.name, r.rating, r.team FROM reviews r JOIN bars b ON b.id = r.bar_id WHERE r.status = 'posted' ORDER BY r.id DESC LIMIT 5"):
         items.append(f"⭐ {r['rating']}/5 for {r['name']}" + (f" from a {r['team']} fan" if r["team"] else ""))
-    blocked = db.one("SELECT COUNT(*) n FROM guard_log WHERE allowed = 0")["n"]
-    if blocked:
-        items.append(f"🛡️ Guard has blocked {blocked} spam or injection attempts")
     items = items or ["🏈 Search any team and city to find your people on game day"]
     random.Random(len(items)).shuffle(items)
     track = [html.Span(t, className="tick") for t in items]

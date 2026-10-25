@@ -11,6 +11,7 @@ agent in ONE batched call, with the page text wrapped as untrusted data.
 from __future__ import annotations
 
 import re
+from concurrent.futures import ThreadPoolExecutor
 
 import config
 from agents.llm import run_agent, untrusted
@@ -42,14 +43,22 @@ def _find_name(text_lower: str, name: str) -> int:
     return -1
 
 
+def _gather(spot: ScoutSpot, city: str) -> tuple[dict | None, dict]:
+    """Address lookup and source re-check for one candidate (runs in a thread pool)."""
+    geo = geocode(spot.address, city) if spot.address.lower() != "unknown" else None
+    if geo is None:
+        geo = geocode(f"{spot.bar_name}, {city}")
+    return geo, fetch_text(spot.source_url)
+
+
 def verify(run: Run, team: str, city: str, spots: list[ScoutSpot]) -> list[dict]:
     results: list[dict] = []
     ambiguous: list[tuple[int, str]] = []
+    # Re-check every source at the same time (geocoding stays at 1 request/second inside its own lock).
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        gathered = list(pool.map(lambda sp: _gather(sp, city), spots))
     for i, spot in enumerate(spots):
-        geo = geocode(spot.address, city) if spot.address.lower() != "unknown" else None
-        if geo is None:
-            geo = geocode(f"{spot.bar_name}, {city}")
-        page = fetch_text(spot.source_url)
+        geo, page = gathered[i]
         text = page["text"]
         lower = text.lower()
         name_at = _find_name(lower, spot.bar_name) if page["ok"] else -1

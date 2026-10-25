@@ -53,7 +53,7 @@ def update_bar_profile(bar_id: int, changes: dict[str, Any], session_id: str) ->
     if text:
         verdict = screen("profile", text, context=f"capacity {numbers['capacity']}, tvs {numbers['tvs']}", session_id=session_id)
         if not verdict["allow"]:
-            return {"ok": False, "message": f"Not saved. Guard: {verdict['reason']}", "guard": verdict}
+            return {"ok": False, "message": f"Not saved. {verdict['reason']}", "guard": verdict}
     db.update("bars", bar_id, changes)
     audit.log("profile_saved", bar_id=bar_id, fields=list(changes))
     return {"ok": True, "message": "Profile saved."}
@@ -85,7 +85,7 @@ def send_pitch(bar_id: int, club_id: int, subject: str, body: str, session_id: s
         return {"ok": False, "message": f"Not sent. These numbers aren't backed by your profile: {', '.join(bad)}. Add them to your profile first or remove them."}
     verdict = screen("pitch", f"{subject}\n{body}", context=facts, session_id=session_id)
     if not verdict["allow"]:
-        return {"ok": False, "message": f"Not sent. Guard: {verdict['reason']}", "guard": verdict}
+        return {"ok": False, "message": f"Not sent. {verdict['reason']}", "guard": verdict}
     pid = db.insert(
         "pitches",
         {"bar_id": bar_id, "club_id": club_id, "subject": subject, "body": body, "status": "in_club_inbox",
@@ -201,7 +201,7 @@ def suggest_spot(bar_name: str, address: str, city: str, team: str, source_url: 
         return {"ok": False, "message": "Please give the bar's name, the team, and the city."}
     verdict = screen("review", f"Suggested watch spot: {bar_name}, {address}, {city}, for {team} fans. Source: {source_url}", session_id=session_id)
     if not verdict["allow"]:
-        return {"ok": False, "message": f"Not added. Guard: {verdict['reason']}"}
+        return {"ok": False, "message": f"Not added. {verdict['reason']}"}
     geo = geocode(address, city) if address else None
     geo = geo or geocode(f"{bar_name}, {city}")
     status, reason = "suggested", "Added by a fan; not yet verified."

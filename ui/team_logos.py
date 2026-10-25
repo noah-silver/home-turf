@@ -33,6 +33,30 @@ def _teams() -> list[dict]:
 
 
 @lru_cache(maxsize=2048)
+def confident_match(text: str) -> dict | None:
+    """Exact-or-near match only (used to skip the Router model call for plain searches)."""
+    want = _tokens(text)
+    if not want:
+        return None
+    best, best_score = None, 0.0
+    for t in _teams():
+        for name in (t["name"], f"{t['location']} {t['nickname']}", t["short"], t["nickname"], t["location"]):
+            have = _tokens(name)
+            if not have:
+                continue
+            if have == want:
+                score = 100 if name in (t["name"], f"{t['location']} {t['nickname']}") else 70
+            else:
+                continue
+            if score > best_score:
+                best, best_score = t, score
+    ambiguous = sum(1 for t in _teams() if want in (_tokens(t["nickname"]), _tokens(t["location"]), _tokens(t["short"]))) > 1
+    if best is None or (best_score < 100 and ambiguous):
+        return None
+    return best
+
+
+@lru_cache(maxsize=2048)
 def lookup(team: str, sport: str = "") -> dict:
     """Best match for a team name. Always returns a dict with logo (or None), color, abbr, name."""
     want = _tokens(team)

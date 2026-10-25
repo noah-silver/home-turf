@@ -54,8 +54,8 @@ def layout(session: dict | None) -> html.Div:
         html.Div(className="grid-2", children=[
             html.Div([
                 html.Div(className="card", children=[
-                    html.Div(className="card-head", children=[html.H3("Your profile"), html.Span("Guard-screened", className="badge navy")]),
-                    html.P("Fan-club presidents and the Matchmaker see this. Text is checked for ranking manipulation and claims that contradict your numbers before it saves.", className="small muted"),
+                    html.Div(className="card-head", children=[html.H3("Your profile"), html.Span("public", className="badge navy")]),
+                    html.P("Fan-club presidents see this when they pick a season home bar. We check profile text before it goes live.", className="small muted"),
                     *inputs,
                     html.Button("Save profile", id="bp-save", className="btn btn-navy", style={"marginTop": "12px"}),
                     dcc.Loading(html.Div(id="bp-msg"), type="dot", color="#b8902f"),
@@ -64,7 +64,7 @@ def layout(session: dict | None) -> html.Div:
             html.Div([
                 html.Div(className="card", children=[
                     html.Div(className="card-head", children=[html.H3("Fan clubs in your city"), html.Span("leads", className="badge gold")]),
-                    html.P("Invite a club to make your bar its game-day home. The Pitch Writer drafts it from your profile only, and a code check blocks any number your profile doesn't support.", className="small muted"),
+                    html.P("Invite a club to make your bar its game-day home. We draft the pitch from your profile, so every promise matches what you actually offer.", className="small muted"),
                     *club_cards,
                 ]),
                 html.Div(className="card", id="pitch-card", children=[
@@ -124,7 +124,7 @@ def draft_pitch(clicks, bar_id, session):
     if out["unsupported_numbers"]:
         status.append(notice("warn", f"Check before sending: these numbers aren't in your profile: {', '.join(out['unsupported_numbers'])}"))
     elif out["retried"]:
-        status.append(notice("info", "The first draft invented a number not in your profile; the validator caught it and the agent rewrote it."))
+        status.append(notice("info", "We fixed a detail that wasn't in your profile."))
     status.append(html.Details([html.Summary("Facts the draft relies on", className="small muted"), html.Ul([html.Li(f, className="small") for f in p["facts_used"]])]))
     status.append(html.Div(receipt(run.totals(), run.steps, time.perf_counter() - t0, title="Pitch Writer run"), style={"marginTop": "8px"}))
     return status, p["subject"], p["body"], club_id

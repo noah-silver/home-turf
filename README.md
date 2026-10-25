@@ -44,6 +44,8 @@ Then open **http://127.0.0.1:8050**.
 
 **API key:** if there is no `.env` in this folder or the one above, copy `.env.example` to `.env` and fill in `PORTKEY_API_KEY` (or `OPENAI_API_KEY`). Without a key the app still opens, and the seeded demo searches load from cache, but new AI calls fail with a clear message.
 
+**Operator mode:** the public site hides costs and agent details. Start with `HOME_TURF_OPS=1 python app.py` to show a token/cost receipt under every result; the operator console is always at http://127.0.0.1:8050/admin.
+
 The first start creates `runtime/home_turf.db` from the seed files in `data/`. To reset all demo data, use the **Reset demo data** button on the *Cost & safety* page, or delete the `runtime/` folder.
 
 ---
@@ -51,7 +53,7 @@ The first start creates `runtime/home_turf.db` from the seed files in `data/`. T
 ## A 3-minute tour
 
 1. **Home → the "Chicago" chip**. This shows every team with a known fan spot in Chicago as logo pins. Use the league buttons on the map (NFL, NCAA, MLB, Soccer…) and click a logo for the bar's popup.
-2. **"USC fans in Chicago"** (chip). This one is cached, so it loads instantly at zero cost: Theory, 9 W Hubbard St, *Verified*, with two sources. The dark *receipt* under the results shows tokens, cost, and what each agent did.
+2. **"USC fans in Chicago"** (chip). This one is cached, so it loads instantly at zero cost: Theory, 9 W Hubbard St, *Verified*, with two sources. In operator mode, a dark *receipt* under the results shows tokens, cost, and what each agent did.
 3. **Type a new search**, e.g. "Seahawks fans in Denver". This runs live in about 10–20 s: Router → Scout (web search) → Verifier (re-opens each source, checks the bar's name and the season, places the address on the map). If nothing team-specific exists, a wider second pass searches the metro area and fan club directories, and returns verified "shows every game" best bets so you're never left empty-handed. You can also add a spot we missed.
 4. **Click "Bar page, photos & reviews"** on a real bar. The Reputation agent summarizes its public Google/Yelp reputation in its own words, with photos from the bar's own website and an embedded Google Maps place card.
 5. **Demo login (top right) → "Club president: Priya Shah · Yale Football Watch, Chicago"** → *For fan clubs*:
@@ -59,7 +61,7 @@ The first start creates `runtime/home_turf.db` from the seed files in `data/`. T
    - **Plan rivalry watch party** (Harvard preselected) finds The Game (Nov 21), picks a neutral bar that holds both clubs, and drafts three invitations. Then click **Propose**.
 6. **Demo login → "Bar manager: Maya Brooks · Fullerton Field House"** → *For bars*: approve the watch party, **Draft a pitch** to a club, and try editing in "$1 beers" before sending. The number check blocks it.
 7. **Demo login → "Club president: Ben Cohen · Harvard"** → approve. The event becomes *confirmed* only after all three humans approve.
-8. **Cost & safety**: live spend per agent, budget meters, cache savings, the Guard's decisions, and the audit trail. Use **Try to break it** to send a prompt injection through the Guard.
+8. **Operator console (`/admin`, not linked from the public site)**: live spend per agent, budget meters, cache savings, the Guard's decisions, and the audit trail. Use **Try to break it** to send a prompt injection through the Guard.
 
 All demo clubs, bars, people, and seed reviews are fictional and labeled **demo**. Watch spots in search results are real, from live web sources.
 

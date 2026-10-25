@@ -26,8 +26,7 @@ def _score_block(bar_id: int, sid: str) -> html.Div:
     if not s:
         return html.Div("No reviews yet, so no game-day score. Be the first to review a game here.", className="muted")
     pct = (s["overall"] / 5) * 100
-    t = run.totals()["total"]
-    cost_line = "score from cache (no tokens)" if s.get("cached") else f"scored by the Summarizer agent: {t['input'] + t['output']:,} tokens, ${t['cost']:.5f}"
+    cost_line = "summarized from fan reviews"
     return html.Div([
         html.Div(className="row", children=[
             html.Div(className="score-ring", style={"--pct": f"{pct:.0f}"}, children=html.Div(f"{s['overall']:.1f}")),
@@ -91,7 +90,7 @@ def layout(bar_id: int, session: dict | None) -> html.Div:
                     html.Div(f"Season home bar for: {', '.join(clubs_here)}", className="small", style={"marginTop": "10px"}) if clubs_here else None,
                     html.Div(f"“{b['pitch_line']}”", className="quote") if b["pitch_line"] else None, claim]),
                 html.Div(className="card", children=[
-                    html.Div(className="card-head", children=[html.H3("Photos & public reviews"), html.Span("Reputation agent", className="badge gold")]),
+                    html.Div(className="card-head", children=[html.H3("Photos & public reviews"), html.Span("from around the web", className="badge gold")]),
                     html.Div(className="ext-links", children=[
                         html.A("Open in Google Maps ↗", href=links["google"], target="_blank", className="btn btn-ghost btn-sm"),
                         html.A("Open on Yelp ↗", href=links["yelp"], target="_blank", className="btn btn-ghost btn-sm"),
@@ -104,13 +103,13 @@ def layout(bar_id: int, session: dict | None) -> html.Div:
                 html.Div(className="card", style={"padding": 0, "overflow": "hidden", "height": "280px"},
                          children=html.Iframe(src=map_src(here, highlight=[t["team"] for p in here for t in p["teams"]], title="Teams that watch here"), style=iframe_style("280px"))) if here else None,
                 html.Div(className="card", style={"padding": "0", "overflow": "hidden"}, children=[
-                    html.Div("Google Maps · place card, rating, and reviews", className="tiny muted", style={"padding": "10px 14px 6px"}),
+                    html.Div("On Google Maps", className="tiny muted", style={"padding": "10px 14px 6px"}),
                     html.Iframe(src=links["google_embed"], style={"width": "100%", "height": "340px", "border": "0", "display": "block"},
                                 referrerPolicy="no-referrer-when-downgrade"),
                 ]) if not b["is_demo"] else None,
                 html.Div(className="card", children=[
                     html.H3("Review a game here"),
-                    html.P("Every review is screened by the Guard before it posts (spam, abuse, personal info, and AI-manipulation attempts are blocked).", className="small muted"),
+                    html.P("Tell other fans about the TVs, the sound, and the crowd. Reviews are checked for spam before they post.", className="small muted"),
                     html.Div(className="row", children=[
                         dcc.Input(id="rev-team", type="text", placeholder="Your team (e.g. USC Trojans)", style={"flex": 2}),
                         dcc.Dropdown(id="rev-rating", options=[{"label": stars(i), "value": i} for i in range(5, 0, -1)], value=5, clearable=False, style={"flex": 1, "minWidth": "150px"}),
@@ -141,10 +140,9 @@ def post_review(_n, bar_id, team, rating, text, session):
         return notice("info", "Write a few words about your game day first."), no_update, no_update
     res = mk.post_review(bar_id, user["id"], user["display_name"], (team or "").strip()[:60], int(rating or 5), text.strip(), (session or {}).get("sid", "anon"))
     v = res["verdict"]
-    layer = "free code filter" if v["layer"] == "code" else "Guard agent"
     if res["ok"]:
-        return notice("ok", "Posted. Thanks! The game-day score will update on next load."), _reviews_list(bar_id), ""
-    return notice("bad", f"Blocked by the {layer} ({v['category']}): {v['reason']}"), no_update, no_update
+        return notice("ok", "🎉 Posted. Thanks! The game-day score updates on the next visit."), _reviews_list(bar_id), ""
+    return notice("bad", f"We couldn't post that review. {v['reason']}"), no_update, no_update
 
 
 @callback(Output("claim-msg", "children"), Input("claim-btn", "n_clicks"), State("bar-id", "data"), State("session", "data"), prevent_initial_call=True)
@@ -187,9 +185,8 @@ def load_reputation(bar_id, session):
         html.P(rep.get("game_day_take") or "", style={"marginTop": "8px", "fontWeight": 600}),
         html.Div([html.Div([html.Span(icon[t["sentiment"]] + " ", style={"color": color[t["sentiment"]]}), html.B(t["theme"] + ": "), t["detail"]], className="rep-theme")
                   for t in rep.get("themes", [])]),
-        html.Div(["Summarized by the Reputation agent in its own words from: "] +
+        html.Div(["Summary of public reviews from: "] +
                  [x for i, u in enumerate(rep.get("sources", [])[:4]) for x in ((" · " if i else ""), html.A(u.split("/")[2], href=u, target="_blank"))],
                  className="tiny muted", style={"marginTop": "8px"}),
-        html.Div("from cache · no tokens" if rep.get("cached") else "", className="tiny muted"),
         html.Div(receipt(run.totals(), run.steps, time.perf_counter() - t0, title="Reputation run"), style={"marginTop": "10px"}) if not rep.get("cached") else None,
     ])

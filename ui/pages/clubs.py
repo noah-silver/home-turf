@@ -52,8 +52,8 @@ def layout(session: dict | None) -> html.Div:
         html.Div(className="grid-2", children=[
             html.Div([
                 html.Div(className="card", children=[
-                    html.Div(className="card-head", children=[html.H3("Season Matchmaker"), html.Span("agent", className="badge gold")]),
-                    html.P("Ranks every bar profile in your city for your club: capacity vs. your turnout, TVs, sound policy, location, and schedule clashes with other clubs already booked there.", className="small muted"),
+                    html.Div(className="card-head", children=[html.H3("Find our season home bar"), html.Span("🏠", className="badge gold")]),
+                    html.P("We rank every bar in your city for your club: room for your crowd, TVs, game sound, location, and clashes with other clubs' games at the same bar.", className="small muted"),
                     html.Div(f"What you need: {c['needs']}", className="quote"),
                     html.Button("Rank bars for our season", id="season-go", className="btn btn-gold"),
                     dcc.Loading(html.Div(id="season-out"), custom_spinner=football_spinner()),
@@ -65,8 +65,8 @@ def layout(session: dict | None) -> html.Div:
             ]),
             html.Div([
                 html.Div(className="card", children=[
-                    html.Div(className="card-head", children=[html.H3("Rivalry watch party"), html.Span("agent", className="badge gold")]),
-                    html.P("Pick a rival club in your city. The Matchmaker finds your game, shortlists bars that can hold both crowds (preferring neutral ground), and drafts invitations to both presidents and the bar. Nothing is sent or booked until all three approve.", className="small muted"),
+                    html.Div(className="card-head", children=[html.H3("Rivalry watch party"), html.Span("⚔️", className="badge gold")]),
+                    html.P("Pick a rival club in your city. We find your game, shortlist neutral bars that can hold both crowds, and draft invitations for both presidents and the bar. Nothing is sent or booked until all three say yes.", className="small muted"),
                     dcc.Dropdown(id="rival-dd", options=[{"label": f"{r['name']} ({r['team']})", "value": r["id"]} for r in rivals],
                                  value=next((r["id"] for r in rivals if ("Harvard" in r["team"] and "Yale" in c["team"]) or ("Yale" in r["team"] and "Harvard" in c["team"])
                                              or ("Packers" in r["team"] and "Bears" in c["team"]) or ("Bears" in r["team"] and "Packers" in c["team"])), None),
@@ -75,7 +75,7 @@ def layout(session: dict | None) -> html.Div:
                     dcc.Loading(html.Div(id="rivalry-out"), custom_spinner=football_spinner()),
                 ]),
                 html.Div(className="card", children=[
-                    html.Div(className="card-head", children=[html.H3("Watch parties and approvals"), html.Span("human sign-off", className="badge navy")]),
+                    html.Div(className="card-head", children=[html.H3("Watch parties and approvals"), html.Span("everyone signs off", className="badge navy")]),
                     html.Div(id="club-events"),
                 ]),
             ]),

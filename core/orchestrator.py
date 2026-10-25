@@ -8,6 +8,7 @@ Each action is one Run with its own token cap; failures are contained and explai
 from __future__ import annotations
 
 import re
+from concurrent.futures import ThreadPoolExecutor
 from typing import Any
 
 import config
@@ -94,6 +95,49 @@ def merge_duplicates(spots: list[dict]) -> list[dict]:
     return sorted(out, key=lambda s: STATUS_RANK[s["status"]])
 
 
+def _wide_pass(run: Run, team: str, city: str, sport: str | None, spots: list[dict], report):
+    """Second, wider Scout pass: metro area, fan club directories, plus verified every-game bars."""
+    wide = scout(run, team, city, sport, wide=True, max_searches=config.MAX_WEB_SEARCHES_WIDE, tried=report.search_notes)
+    if wide.spots:
+        seen = {s["bar_name"].lower() for s in spots}
+        fresh = [w for w in wide.spots if w.bar_name.lower() not in seen][:5]
+        spots = merge_duplicates(spots + verify(run, team, city, fresh)) if fresh else spots
+    allgames: list[dict] = []
+    if wide.allgames_spots:
+        allgames = [a for a in merge_duplicates(verify(run, team, city, wide.allgames_spots[:3])) if a["status"] != "rejected"]
+        for a in allgames:
+            a["kind"] = "allgames"
+    report.search_notes = wide.search_notes or report.search_notes
+    report.club_name = report.club_name or wide.club_name
+    report.club_contact_url = report.club_contact_url or wide.club_contact_url
+    return spots, allgames, report
+
+
+def widen_search(team: str, city: str, sport: str | None, session_id: str) -> dict[str, Any]:
+    """User clicked "Search wider": run the wide pass and merge it into the cached result."""
+    run = Run(kind="search_wider", session_id=session_id)
+    key = search_key(team, city)
+    cached = db.cache_get(key, config.SEARCH_CACHE_DAYS * 24) or {"team": team, "sport": sport or "", "city": city, "spots": [], "allgames": []}
+
+    class _Notes:  # the wide pass only needs these fields from the first report
+        search_notes = cached.get("search_notes") or ""
+        club_name = cached.get("club_name")
+        club_contact_url = cached.get("club_contact_url")
+        safety_notes: list = []
+
+    try:
+        spots, allgames, notes = _wide_pass(run, team, city, sport, cached.get("spots", []), _Notes())
+    except (BudgetExceeded, AgentError) as exc:
+        return {"ok": False, "message": str(exc), "run": run}
+    for spot in spots + allgames:
+        spot["team"] = team
+        spot["bar_id"] = _link_bar(spot, city)
+    cached.update(spots=spots, allgames=allgames, wide_done=True, search_notes=notes.search_notes,
+                  club_name=notes.club_name, club_contact_url=notes.club_contact_url, found_at=db.now_iso())
+    db.cache_put(key, "spots", cached)
+    return {"ok": True, "group": {**cached, "from_cache": False}, "run": run}
+
+
 def _spots_for(run: Run, team: str, city: str, sport: str | None) -> dict[str, Any]:
     key = search_key(team, city)
     cached = db.cache_get(key, config.SEARCH_CACHE_DAYS * 24)
@@ -109,21 +153,11 @@ def _spots_for(run: Run, team: str, city: str, sport: str | None) -> dict[str, A
     report = scout(run, team, city, sport)
     spots = merge_duplicates(verify(run, team, city, report.spots[:5])) if report.spots else []
     allgames: list[dict] = []
-    if not any(s["status"] in ("confirmed", "likely") for s in spots):
-        # Adaptive escalation: only hard searches pay for a second, wider pass.
-        wide = scout(run, team, city, sport, wide=True, max_searches=config.MAX_WEB_SEARCHES_WIDE, tried=report.search_notes)
-        if wide.spots:
-            seen = {s["bar_name"].lower() for s in spots}
-            fresh = [w for w in wide.spots if w.bar_name.lower() not in seen][:5]
-            spots = merge_duplicates(spots + verify(run, team, city, fresh)) if fresh else spots
-        if wide.allgames_spots:
-            # Best bets so the fan is never left empty-handed: verified bars that show every game.
-            allgames = [a for a in merge_duplicates(verify(run, team, city, wide.allgames_spots[:3])) if a["status"] != "rejected"]
-            for a in allgames:
-                a["kind"] = "allgames"
-        report.search_notes = wide.search_notes or report.search_notes
-        report.club_name = report.club_name or wide.club_name
-        report.club_contact_url = report.club_contact_url or wide.club_contact_url
+    wide_done = False
+    if not any(s["status"] != "rejected" for s in spots):
+        # Nothing at all: escalate automatically (the Falcons-in-Phoenix case).
+        spots, allgames, report = _wide_pass(run, team, city, sport, spots, report)
+        wide_done = True
     for spot in spots + allgames:
         spot["team"] = team
         spot["bar_id"] = _link_bar(spot, city)
@@ -133,6 +167,7 @@ def _spots_for(run: Run, team: str, city: str, sport: str | None) -> dict[str, A
         "city": city,
         "spots": spots,
         "allgames": allgames,
+        "wide_done": wide_done,
         "club_name": report.club_name,
         "club_contact_url": report.club_contact_url,
         "search_notes": report.search_notes,
@@ -177,9 +212,9 @@ def find_watch_spots(query: str, session_id: str = "cli") -> dict[str, Any]:
         if not intent.city or not intent.team:
             missing = "city" if not intent.city else "team"
             return {"ok": False, "message": f"Which {missing}? Try “{intent.team or 'USC'} fans in {intent.city or 'Chicago'}”.", "run": run}
-        groups = [_spots_for(run, intent.team, intent.city, intent.sport)]
-        if intent.intent == "rivalry" and intent.team_b:
-            groups.append(_spots_for(run, intent.team_b, intent.city, intent.sport))
+        teams = [intent.team] + ([intent.team_b] if intent.intent == "rivalry" and intent.team_b else [])
+        with ThreadPoolExecutor(max_workers=2) as pool:  # rivalry: both teams at once
+            groups = list(pool.map(lambda t: _spots_for(run, t, intent.city, intent.sport), teams))
         return {"ok": True, "intent": intent.model_dump(), "groups": groups, "city": intent.city, "run": run}
     except BudgetExceeded as exc:
         audit.log("budget_stop", run_id=run.run_id, message=str(exc))

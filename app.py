@@ -97,7 +97,7 @@ def _render(path, session, search):
         return clubs_page.layout(session)
     if path == "/bars":
         return bars_page.layout(session)
-    if path == "/console":
+    if path in ("/admin", "/console"):  # operator console: not linked from the public site
         return console_page.layout(session)
     return home_page.layout()
 
