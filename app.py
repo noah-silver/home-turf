@@ -8,7 +8,7 @@ from __future__ import annotations
 import os
 import uuid
 
-from dash import Dash, Input, Output, State, ctx, dcc, html, no_update
+from dash import ALL, Dash, Input, Output, State, ctx, dcc, html, no_update
 
 import config
 from core import db
@@ -52,16 +52,25 @@ def serve_layout() -> html.Div:
         dcc.Store(id="page-user", data="__none__"),
         html.Div(id="topbar-slot"),
         html.Div(id="page"),
+        # Bar quick-view: opens a bar's full profile over any dashboard without leaving it.
+        html.Div(id="bar-modal", className="modal hidden", children=html.Div(className="modal-box", children=[
+            html.Div(className="modal-head", children=[html.Span("Bar profile", className="eyebrow"), html.Div(className="spacer"),
+                                                       html.A("Open full page ↗", id="bar-modal-link", href="#", target="_blank", className="btn btn-ghost btn-sm"),
+                                                       html.Button("✕ Close", id="bar-modal-close", className="btn btn-navy btn-sm")]),
+            html.Iframe(id="bar-modal-frame", src="about:blank", className="modal-frame"),
+        ])),
     ])
 
 
 app.layout = serve_layout
 
 
-@app.callback(Output("topbar-slot", "children"), Input("url", "pathname"), State("session", "data"))
-def render_topbar(path, session):
+@app.callback(Output("topbar-slot", "children"), Input("url", "pathname"), State("session", "data"), State("url", "search"))
+def render_topbar(path, session, search):
     from ui.fun import ticker
 
+    if "embed=1" in (search or ""):
+        return None  # bar quick-view inside a pop-up: no nav bar
     bar = topbar(path or "/")
     user = (session or {}).get("user")
     bar.children.children[2].children[1].value = user or "guest"
@@ -106,6 +115,18 @@ def _render(path, session, search):
     if path in ("/admin", "/console"):  # operator console: not linked from the public site
         return console_page.layout(session)
     return home_page.layout()
+
+
+@app.callback(
+    Output("bar-modal", "className"), Output("bar-modal-frame", "src"), Output("bar-modal-link", "href"),
+    Input({"type": "view-bar", "index": ALL}, "n_clicks"), Input("bar-modal-close", "n_clicks"),
+    prevent_initial_call=True,
+)
+def bar_modal(clicks, _close):
+    if ctx.triggered_id == "bar-modal-close" or not ctx.triggered_id or not any(clicks or []):
+        return "modal hidden", "about:blank", "#"
+    bar_id = ctx.triggered_id["index"]
+    return "modal", f"/bar/{bar_id}?embed=1", f"/bar/{bar_id}"
 
 
 if __name__ == "__main__":

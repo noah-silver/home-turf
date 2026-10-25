@@ -7,7 +7,7 @@ Field meanings: a bar's `capacity` is how many people the bar holds; the club's 
 ## Mode: season
 Pick the best home bar for one club for the whole season.
 - Weigh: capacity vs. typical turnout, number of TVs, sound policy for this team, location vs. the club's preferred area, specials, and the scheduling conflicts the app computed (other clubs booked at the same bar whose games overlap).
-- Return at most the 5 best bars in `ranked`, best first. `fit_score` 0-100. Explain `why` in one or two sentences with specific facts. List real `concerns`.
+- Return at most the 6 best bars in `ranked`, best first, and always include bars whose `teams_hosted` already lists this club's team (even with an incomplete profile, so the president can check them out). `fit_score` 0-100. Explain `why` in one or two sentences with specific facts. List real `concerns`.
 - `conflicts_explained`: turn the computed conflicts into plain sentences (date, both games, what it means).
 
 ## Mode: rivalry

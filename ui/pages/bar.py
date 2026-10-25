@@ -7,7 +7,7 @@ from dash import Input, Output, State, callback, dcc, html, no_update
 import time
 
 from agents.llm import AgentError
-from agents.reputation import external_links, reputation
+from agents.reputation import external_links, reputation, street_view
 from agents.summarizer import summarize
 from core import marketplace as mk
 from core.budget import BudgetExceeded, Run
@@ -103,10 +103,19 @@ def layout(bar_id: int, session: dict | None) -> html.Div:
                 html.Div(className="card", style={"padding": 0, "overflow": "hidden", "height": "280px"},
                          children=html.Iframe(src=map_src(here, highlight=[t["team"] for p in here for t in p["teams"]], title="Teams that watch here"), style=iframe_style("280px"))) if here else None,
                 html.Div(className="card", style={"padding": "0", "overflow": "hidden"}, children=[
-                    html.Div("On Google Maps", className="tiny muted", style={"padding": "10px 14px 6px"}),
-                    html.Iframe(src=links["google_embed"], style={"width": "100%", "height": "340px", "border": "0", "display": "block"},
+                    html.Div(className="row", style={"padding": "10px 14px 6px"}, children=[
+                        html.B("On Google Maps", className="small"), html.Div(className="spacer"),
+                        html.A("Photos, menu & reviews on Google ↗", href=links["google"], target="_blank", className="btn btn-ghost btn-sm"),
+                    ]),
+                    html.Iframe(src=links["google_embed"], style={"width": "100%", "height": "320px", "border": "0", "display": "block"},
                                 referrerPolicy="no-referrer-when-downgrade"),
                 ]) if not b["is_demo"] else None,
+                html.Div(className="card", style={"padding": "0", "overflow": "hidden"}, children=[
+                    html.Div([html.B("Look inside & outside", className="small"),
+                              html.Span(" · Google Street View: drag to look around", className="tiny muted")], style={"padding": "10px 14px 6px"}),
+                    html.Iframe(src=street_view(b["lat"], b["lon"]), style={"width": "100%", "height": "300px", "border": "0", "display": "block"},
+                                referrerPolicy="no-referrer-when-downgrade"),
+                ]) if not b["is_demo"] and b["lat"] is not None else None,
                 html.Div(className="card", children=[
                     html.H3("Review a game here"),
                     html.P("Tell other fans about the TVs, the sound, and the crowd. Reviews are checked for spam before they post.", className="small muted"),
@@ -182,6 +191,10 @@ def load_reputation(bar_id, session):
         html.Div("No photos published on the bar's website.", className="tiny muted"),
         html.Div(photos and f"Photos: the bar's own website ({(rep.get('official_site') or '').replace('https://', '').strip('/')})" or "", className="tiny muted"),
         html.Div(ratings + [html.Span(rep.get("review_volume") or "", className="tiny muted")], className="row", style={"marginTop": "10px"}),
+        html.Div(className="ext-links", children=[
+            html.A("🍔 Menu ↗", href=rep["menu_url"], target="_blank", className="btn btn-ghost btn-sm") if rep.get("menu_url") else None,
+            html.A("🌐 Bar website ↗", href=rep["official_site"], target="_blank", className="btn btn-ghost btn-sm") if rep.get("official_site") else None,
+        ]),
         html.P(rep.get("game_day_take") or "", style={"marginTop": "8px", "fontWeight": 600}),
         html.Div([html.Div([html.Span(icon[t["sentiment"]] + " ", style={"color": color[t["sentiment"]]}), html.B(t["theme"] + ": "), t["detail"]], className="rep-theme")
                   for t in rep.get("themes", [])]),

@@ -60,7 +60,7 @@ You start logged in as **Jordan, a Yale fan in New Haven**. Switch roles any tim
 4. **"Bar page, photos & reviews"** on a real bar: public rating and review themes in the agent's own words, photos from the bar's own site, and an embedded Google Maps card.
 5. **My season** (nav): Yale is preselected. *Use example* → *Build my game-day plan* gives a bar, backup, and local kickoff for every remaining game in the cities you'll be in. *Add to my calendar (.ics)* exports it.
 6. **Demo login → "Chris Park · Yale Club of NYC Football Watch"** → *For fan clubs*:
-   - **Find our season home bar** ranks New York bars for the club and flags clashes with other clubs' games.
+   - **Find our season home bar** ranks New York bars for the club and flags clashes with other clubs' games. Click any bar's name (or *View bar*) to open its profile in a pop-up: reviews, game-day score, photos, menu link, Google Maps card, and Street View (often a 360° look inside).
    - **Plan rivalry watch party** (Princeton preselected) finds Yale–Princeton (Nov 14), picks a neutral bar that holds both clubs, and drafts three invitations. Click **Propose**. (USC vs. UCLA in Chicago works the same way.)
 7. **Demo login → the recommended bar's manager** (e.g. "Leo Grant · Brooklyn Bullpen" or "Rosa Diaz · Midtown Tailgate") → *For bars*: approve the watch party, **Draft a pitch** to a club, and try adding "$1 beers" before sending; the number check blocks it.
 8. **Demo login → "Hannah Kim · Princeton Tigers of NYC"** → approve. The party is *confirmed* only after all three people approve.

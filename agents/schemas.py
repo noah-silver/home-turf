@@ -137,6 +137,7 @@ class Reputation(BaseModel):
     themes: list[ReviewTheme]
     game_day_take: str = Field(description="One sentence: what reviewers say about watching games here, or 'Reviewers don't mention game days.'")
     official_site: Optional[str] = Field(description="The bar's own website URL if found, else null")
+    menu_url: Optional[str] = Field(description="Link to the bar's menu page (its own site or a menu listing) if found, else null")
     sources: list[str] = Field(description="URLs used")
 
 

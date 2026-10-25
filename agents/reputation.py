@@ -19,6 +19,13 @@ from tools.fetch_page import site_photos
 CACHE_HOURS = 24 * 30
 
 
+def street_view(lat: float | None, lon: float | None) -> str | None:
+    """Google's keyless Street View embed at the bar: often a 360° tour inside, otherwise the storefront."""
+    if lat is None or lon is None:
+        return None
+    return f"https://maps.google.com/maps?q=&layer=c&cbll={lat},{lon}&cbp=11,0,0,0,0&output=svembed"
+
+
 def external_links(name: str, address: str, city: str) -> dict:
     where = address if address and address.lower() != "unknown" and "demo" not in address.lower() else city
     return {

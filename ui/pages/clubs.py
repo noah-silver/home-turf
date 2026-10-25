@@ -104,7 +104,7 @@ def _rank_cards(ranked: list[dict], facts: dict, recommended: int, choose_type: 
         top = r["bar_id"] == recommended
         cards.append(html.Div(className=f"rank-card{' top' if top else ''}", style={"marginTop": "10px"}, children=[
             html.Div(className="row", children=[
-                html.H4(f"{i + 1}. {f.get('name', r['bar_id'])}", style={"margin": 0}),
+                html.Button(f"{i + 1}. {f.get('name', r['bar_id'])}", id={"type": "view-bar", "index": r["bar_id"]}, className="bar-link h4", title="View bar profile"),
                 html.Span("recommended", className="badge gold") if top else None,
                 html.Span(f.get("neighborhood") or "", className="small muted"),
             ]),
@@ -113,7 +113,10 @@ def _rank_cards(ranked: list[dict], facts: dict, recommended: int, choose_type: 
             html.P(r["why"], className="small", style={"margin": "6px 0"}),
             *[html.Div("⚠ " + x, className="concern") for x in r["concerns"][:3]],
             *[html.Div(f"Schedule clash ({cf['kind']}): {cf['date']} · your game {cf['our_game']} vs. {cf['their_club']}: {cf['their_game']}", className="conflict") for cf in conflicts[:3]],
-            html.Button("Make this our season home bar", id={"type": choose_type, "index": r["bar_id"]}, className="btn btn-navy btn-sm", style={"marginTop": "8px"}) if choose_type else None,
+            html.Div(className="row", style={"marginTop": "8px"}, children=[
+                html.Button("👀 View bar: photos, reviews, menu", id={"type": "view-bar", "index": r["bar_id"]}, className="btn btn-ghost btn-sm"),
+                html.Button("Make this our season home bar", id={"type": choose_type, "index": r["bar_id"]}, className="btn btn-navy btn-sm") if choose_type else None,
+            ]),
         ]))
     return cards
 
@@ -164,7 +167,8 @@ def render_inbox(_r, club_id):
     for p in rows:
         pending = p["status"] == "in_club_inbox"
         out.append(html.Div(className="rank-card", style={"marginTop": "10px"}, children=[
-            html.Div(className="row", children=[html.B(p["bar_name"]), html.Span(p["status"].replace("_", " "), className="badge navy"), html.Span(p["created_at"][:10], className="tiny muted")]),
+            html.Div(className="row", children=[html.Button(p["bar_name"], id={"type": "view-bar", "index": p["bar_id"]}, className="bar-link", title="View bar profile"),
+                                                html.Span(p["status"].replace("_", " "), className="badge navy"), html.Span(p["created_at"][:10], className="tiny muted")]),
             html.Div(p["subject"], style={"fontWeight": 600, "marginTop": "6px"}),
             html.Div(p["body"], className="draft", style={"marginTop": "6px"}),
             html.Div(className="row", style={"marginTop": "8px"}, children=[

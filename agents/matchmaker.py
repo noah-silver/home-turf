@@ -66,9 +66,12 @@ def candidate_bars(city: str, teams: tuple[str, ...] = ()) -> list[dict]:
     """Bars with a filled-in profile, plus found bars already known for one of these teams."""
     rows = [b for b in db.query("SELECT * FROM bars") if _city_key(b["city"]) == _city_key(city)]
     team_keys = [t.lower() for t in teams]
-    keep = [b for b in rows if b["capacity"] or any(t in (b["teams_hosted"] or "").lower() for t in team_keys)]
-    keep.sort(key=lambda b: (b["capacity"] is None, -(b["capacity"] or 0)))
-    return keep[:MAX_CANDIDATES]
+    hosts_team = lambda b: any(t in (b["teams_hosted"] or "").lower() for t in team_keys)  # noqa: E731
+    # Real bars the web ties to this team (often no profile yet) always make the shortlist, up to 3,
+    # so presidents can open their photos, reviews, and Google Maps card; partner profiles fill the rest.
+    real = [b for b in rows if not b["is_demo"] and hosts_team(b)][:3]
+    partners = sorted([b for b in rows if b["capacity"] and b not in real], key=lambda b: -(b["capacity"] or 0))
+    return (real + partners)[:MAX_CANDIDATES]
 
 
 def _bar_facts(bar: dict) -> dict:
