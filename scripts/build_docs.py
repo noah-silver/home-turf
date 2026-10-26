@@ -280,8 +280,8 @@ def build_report() -> str:
   <div class="sec1">1. Title and links</div>
   <div class="meta">
     <b>Author</b><span>Noah Silver</span>
-    <b>GitHub repo</b><span><a href="{REPO_URL}">{REPO_URL}</a></span>
-    <b>App</b><span>Runs locally from a fresh clone in about 5 minutes (README). Python + Dash; model <code>gpt-6-luna</code> via the course Portkey key.</span>
+    <b>GitHub repo</b><span><a href="{REPO_URL}"><b>{REPO_URL}</b></a> (public). Clone: <code>git clone {REPO_URL}.git</code></span>
+    <b>App</b><span>Runs locally from a fresh clone in about 2 minutes (README). Python + Dash; model <code>gpt-6-luna</code> via the course Portkey key.</span>
     <b>One sentence</b><span>Type “Yale fans in Chicago” and Home Turf's agents return the bar where Yale alumni gather for the game, with sources and a map of
     every team's fans in the city; fans plan their whole season city by city, and club presidents and bars use the same agents to pick home bars and plan rivalry watch parties.</span>
   </div>
@@ -573,7 +573,7 @@ def build_slides() -> str:
     <div class="eyebrow light">AI Foundations for Managers · Final project · Yale SOM</div>
     <h1>Home <span class="g">Turf</span></h1>
     <p class="pitch">Find where <b>your people</b> watch the game, in any city.<br>AI agents find, verify, and map every fan club's bar, plan your whole season, and help clubs and bars team up.</p>
-    <p class="by">Noah Silver &nbsp;·&nbsp; {REPO_URL.replace('https://', '')}</p>
+    <p class="by">Noah Silver &nbsp;·&nbsp; <a class="repo" href="{REPO_URL}">{REPO_URL}</a> (public repo)</p>
   </div>
   <img class="t-shot" src="{s_img('home', 1500, 1200)}">
 </section>
@@ -739,7 +739,7 @@ def build_slides() -> str:
     <div><b>Send with approval</b><span>invitations go out by email only after a human clicks send</span></div>
     <div><b>Hosted + mobile</b><span>for fans on a sidewalk in a new city; MCP server already built</span></div>
   </div>
-  <div class="ask">Try it: <b>{REPO_URL.replace('https://', '')}</b> · runs locally in about 5 minutes</div>
+  <div class="ask">Public repo: <a class="repo dark" href="{REPO_URL}">{REPO_URL}</a><br><span class="clone">git clone {REPO_URL}.git</span> · runs locally in about 2 minutes (see README)</div>
   <img class="end-shot" src="{s_img('rivalry_card', 900, 900)}">
 </section>
 """
@@ -838,7 +838,10 @@ def build_slides() -> str:
 .reveal .next div { background: rgba(255,255,255,.07); border-top-color: var(--turf); padding: 18px 20px; }
 .reveal .next b { display: block; font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: 1.15em; color: #ffd36b; }
 .reveal .next span { display: block; font-size: .46em; color: #c9d3e6; }
-.reveal .ask { margin-top: 24px; background: var(--gold); color: var(--navy); border-radius: 14px; padding: 14px 20px; font-size: .55em; font-weight: 600; display: inline-block; }
+.reveal a.repo { color: #ffd36b; text-decoration: underline; }
+.reveal a.repo.dark { color: var(--navy); font-weight: 700; }
+.reveal .clone { font-family: ui-monospace, Menlo, monospace; font-size: .85em; }
+.reveal .ask { max-width: 740px; margin-top: 24px; background: var(--gold); color: var(--navy); border-radius: 14px; padding: 14px 20px; font-size: .55em; font-weight: 600; display: inline-block; }
 .reveal .slide-number { background: rgba(15,34,64,.7); font-size: 14px; }
 .reveal .progress { color: var(--gold); height: 5px; }
 """
