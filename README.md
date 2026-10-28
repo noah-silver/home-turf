@@ -56,6 +56,8 @@ The first `pip install` takes about 1–2 minutes. A fresh clone to a working ap
 
 **Operator mode (for graders):** the public site hides costs and agent details. Start with `HOME_TURF_OPS=1 python app.py` (Windows: `$env:HOME_TURF_OPS=1`) to show a token/cost receipt under every result. The operator console (spend, budget meters, Guard decisions, audit trail, prompt-injection tester, and a *Reset demo data* button) is always at **http://127.0.0.1:8050/admin**.
 
+**Host it online for free (optional):** the repo includes `render.yaml`. On render.com: *New → Blueprint →* pick this repo, paste your API key when asked, and deploy (about 5 minutes). The hosted version runs in **real-data mode** (`HOME_TURF_REAL_ONLY=1`): maps and searches show only real web data, the sample marketplace is labeled, and visitors start as a guest with `HOME_TURF_DEFAULT_TEAM` / `HOME_TURF_DEFAULT_CITY` as the defaults. `/admin` is locked with a generated password (see the service's *Environment* tab). Free Render services sleep after 15 idle minutes and take about a minute to wake.
+
 **Sharing it publicly (optional):** to let someone try it over the internet from your laptop, set `HOME_TURF_ADMIN_PASSWORD=...` (locks `/admin`) and `HOME_TURF_CDN=1` (loads Dash's JavaScript from its CDN so a tunnel stays fast), start the app, then run a Cloudflare quick tunnel: `cloudflared tunnel --url http://localhost:8050`. Anyone with the link spends your API key, within the app's daily cap.
 
 **Tests:** `python -m unittest -v tests.test_safety` (21 offline tests, no API cost; `HOME_TURF_LIVE=1` adds 3 live ones).

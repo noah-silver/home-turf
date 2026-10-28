@@ -35,10 +35,17 @@ def external_links(name: str, address: str, city: str) -> dict:
     }
 
 
+def rep_key(bar: dict) -> str:
+    """Cache key by name + city (bar ids differ between databases built from the same seed)."""
+    import re
+
+    return "rep|" + re.sub(r"[^a-z0-9]+", " ", bar["name"].lower()).strip() + "|" + (bar.get("city") or "").split(",")[0].strip().lower()
+
+
 def reputation(run: Run, bar: dict) -> dict | None:
     if bar.get("is_demo"):
         return None  # fictional demo venues have no public reviews
-    key = f"rep|{bar['id']}"
+    key = rep_key(bar)
     cached = db.cache_get(key, CACHE_HOURS)
     if cached:
         run.add_step("Reputation", f"{bar['name']}: from cache (no tokens)")

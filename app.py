@@ -42,7 +42,8 @@ def mapframe(token: str):
         return Response("Map expired. Reload the page.", status=404, mimetype="text/plain")
     return Response(page, mimetype="text/html")
 
-DEFAULT_USER = "fan_jordan"  # visitors start as a Yale fan in New Haven (switch any time in Demo login)
+# Visitors start as a Yale fan in New Haven (switch any time in Demo login); real-data mode starts as a guest.
+DEFAULT_USER = None if config.REAL_ONLY else "fan_jordan"
 
 
 def serve_layout() -> html.Div:

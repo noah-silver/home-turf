@@ -992,5 +992,222 @@
   "lon": -73.993252,
   "display": "199, Bowery, Manhattan Community Board 3, Manhattan, New York County, New York, 10002, United States",
   "ok": 1
+ },
+ {
+  "address": "85 Causeway St., Boston, MA 02114",
+  "lat": 42.364582,
+  "lon": -71.0624441,
+  "display": "The Harp, 85, Causeway Street, West End, Boston, Suffolk County, Massachusetts, 02114, United States",
+  "ok": 1
+ },
+ {
+  "address": "82A Lansdowne St, Boston, MA 02215",
+  "lat": 42.3470437,
+  "lon": -71.0967137,
+  "display": "Bleacher Bar, 82A, Lansdowne Street, Fenway-Kenmore, Boston, Suffolk County, Massachusetts, 02215, United States",
+  "ok": 1
+ },
+ {
+  "address": "512 Massachusetts Ave, Cambridge, MA 02139",
+  "lat": 42.3640906,
+  "lon": -71.1018824,
+  "display": "Phoenix Landing, 512, Massachusetts Avenue, Cambridgeport, Cambridge, Middlesex County, Massachusetts, 02139, United States",
+  "ok": 1
+ },
+ {
+  "address": "9 Bowdoin St, Boston, MA 02114",
+  "lat": 42.3610023,
+  "lon": -71.0631984,
+  "display": "9, Bowdoin Street, Beacon Hill, Boston, Suffolk County, Massachusetts, 02114, United States",
+  "ok": 1
+ },
+ {
+  "address": "475 Providence Hwy, Norwood, Boston, MA",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "82 Lansdowne Street, Boston, MA",
+  "lat": 42.3470487,
+  "lon": -71.0984891,
+  "display": "Game On!, 82, Lansdowne Street, Fenway-Kenmore, Boston, Suffolk County, Massachusetts, 02215, United States",
+  "ok": 1
+ },
+ {
+  "address": "40 Broad Street, Boston, MA 02109",
+  "lat": 42.3581128,
+  "lon": -71.0539425,
+  "display": "Warehouse Kitchen and Sports Bar, 40, Broad Street, Dock Square, Downtown, Boston, Suffolk County, Massachusetts, 02109, United States",
+  "ok": 1
+ },
+ {
+  "address": "Jake n JOES Sports Grille — Norwood, Boston, MA",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "M.J. O’Connor’s (Downtown), Boston, MA",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "Game On Fenway, Boston, MA",
+  "lat": 42.3470487,
+  "lon": -71.0984891,
+  "display": "Game On!, 82, Lansdowne Street, Fenway-Kenmore, Boston, Suffolk County, Massachusetts, 02215, United States",
+  "ok": 1
+ },
+ {
+  "address": "239 Holland St, Somerville, MA 02144",
+  "lat": 42.4027899,
+  "lon": -71.1267807,
+  "display": "PJ Ryan’s, 239, Holland Street, Teele Square, Ball Square, Somerville, Middlesex County, Massachusetts, 02144, United States",
+  "ok": 1
+ },
+ {
+  "address": "27 Columbus Ave, Boston, MA 02116",
+  "lat": 42.3474417,
+  "lon": -71.0733043,
+  "display": "Columbus Avenue, Back Bay, Boston, Suffolk County, Massachusetts, 02117, United States",
+  "ok": 1
+ },
+ {
+  "address": "565 Broadway, Somerville, MA",
+  "lat": 42.398511,
+  "lon": -71.10776,
+  "display": "565, Broadway, Magoun Square, Ball Square, Somerville, Middlesex County, Massachusetts, 02145, United States",
+  "ok": 1
+ },
+ {
+  "address": "82 Lansdowne Street, Boston",
+  "lat": 42.3470487,
+  "lon": -71.0984891,
+  "display": "Game On!, 82, Lansdowne Street, Fenway-Kenmore, Boston, Suffolk County, Massachusetts, 02215, United States",
+  "ok": 1
+ },
+ {
+  "address": "480 Memorial Drive, Chicopee, Massachusetts, US 01020",
+  "lat": 42.1710492,
+  "lon": -72.5770755,
+  "display": "480, Memorial Drive, Chicopee Falls, Chicopee, Hampden County, Massachusetts, 01020, United States",
+  "ok": 1
+ },
+ {
+  "address": "1 Chelsea St, Charlestown, MA 02129",
+  "lat": 42.372152,
+  "lon": -71.06023,
+  "display": "1, Chelsea Street, Charlestown, Boston, Suffolk County, Massachusetts, 02129, United States",
+  "ok": 1
+ },
+ {
+  "address": "70 Market Place Dr., Waltham, MA",
+  "lat": 42.3798272,
+  "lon": -71.2629286,
+  "display": "Jake & Joe's, 70, Market Place Drive, 1265 Main, Waltham, Middlesex County, Massachusetts, 02451, United States",
+  "ok": 1
+ },
+ {
+  "address": "475 Providence Hwy, Norwood, MA",
+  "lat": 42.1567474,
+  "lon": -71.2024756,
+  "display": "Boston Providence Highway, Walpole, Norfolk County, Massachusetts, 02032, United States",
+  "ok": 1
+ },
+ {
+  "address": "230 Mishawum Rd, Woburn, MA 01801",
+  "lat": 42.5029981,
+  "lon": -71.1403597,
+  "display": "Jake n Joes, 230, Mishawum Road, Mishawum, Woburn, Middlesex County, Massachusetts, 01801, United States",
+  "ok": 1
+ },
+ {
+  "address": "475 Providence Hwy, Norwood, MA 02062",
+  "lat": 42.1567474,
+  "lon": -71.2024756,
+  "display": "Boston Providence Highway, Walpole, Norfolk County, Massachusetts, 02032, United States",
+  "ok": 1
+ },
+ {
+  "address": "150 Canal Street, Boston, MA 02114",
+  "lat": 42.3648417,
+  "lon": -71.0607328,
+  "display": "Hurricane's at the Garden, 150, Canal Street, Bulfinch Triangle, West End, Boston, Suffolk County, Massachusetts, 02114, United States",
+  "ok": 1
+ },
+ {
+  "address": "222 Friend St, Boston, MA 02114",
+  "lat": 42.3641289,
+  "lon": -71.0610794,
+  "display": "222,224, Friend Street, Bulfinch Triangle, West End, Boston, Suffolk County, Massachusetts, 02114, United States",
+  "ok": 1
+ },
+ {
+  "address": "70 Market Place Dr, Waltham, MA 02451",
+  "lat": 42.3798272,
+  "lon": -71.2629286,
+  "display": "Jake & Joe's, 70, Market Place Drive, 1265 Main, Waltham, Middlesex County, Massachusetts, 02451, United States",
+  "ok": 1
+ },
+ {
+  "address": "Union Street Restaurant, Boston, MA",
+  "lat": null,
+  "lon": null,
+  "display": "",
+  "ok": 0
+ },
+ {
+  "address": "730 Massachusetts Avenue, Cambridge, MA 02139",
+  "lat": 42.3660159,
+  "lon": -71.1051419,
+  "display": "730 Tavern, Kitchen & Patio, 730, Massachusetts Avenue, Riverside, Cambridge, Middlesex County, Massachusetts, 02139, United States",
+  "ok": 1
+ },
+ {
+  "address": "151 N First St, Cambridge, MA 02141",
+  "lat": 42.3726749,
+  "lon": -71.0762147,
+  "display": "Tap 151, 151, North First Street, East Cambridge, Cambridge, Middlesex County, Massachusetts, 02141, United States",
+  "ok": 1
+ },
+ {
+  "address": "166 Canal Street, Boston, MA 02114",
+  "lat": 42.3650161,
+  "lon": -71.0609394,
+  "display": "The Fours, 166, Canal Street, Bulfinch Triangle, West End, Boston, Suffolk County, Massachusetts, 02114, United States",
+  "ok": 1
+ },
+ {
+  "address": "Game On! (Fenway), Boston, MA",
+  "lat": 42.3470487,
+  "lon": -71.0984891,
+  "display": "Game On!, 82, Lansdowne Street, Fenway-Kenmore, Boston, Suffolk County, Massachusetts, 02215, United States",
+  "ok": 1
+ },
+ {
+  "address": "222 Friend Street, Boston, MA 02114",
+  "lat": 42.3641289,
+  "lon": -71.0610794,
+  "display": "222,224, Friend Street, Bulfinch Triangle, West End, Boston, Suffolk County, Massachusetts, 02114, United States",
+  "ok": 1
+ },
+ {
+  "address": "903 Boylston St, Boston, MA 02115",
+  "lat": 42.3484206,
+  "lon": -71.0842079,
+  "display": "Lir, 903, Boylston Street, Block G, Back Bay, Boston, Suffolk County, Massachusetts, 02115, United States",
+  "ok": 1
+ },
+ {
+  "address": "70 Market Place Dr., Waltham, MA 02451",
+  "lat": 42.3798272,
+  "lon": -71.2629286,
+  "display": "Jake & Joe's, 70, Market Place Drive, 1265 Main, Waltham, Middlesex County, Massachusetts, 02451, United States",
+  "ok": 1
  }
 ]

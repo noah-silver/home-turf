@@ -21,9 +21,13 @@ def ticker() -> html.Div:
         good = [s for s in p.get("spots", []) if s.get("status") in ("confirmed", "likely")]
         if good:
             items.append(f"📍 {p['team']} fans → {good[0]['bar_name']}, {p['city'].split(',')[0]}")
-    for e in db.query("SELECT title, status FROM events ORDER BY id DESC LIMIT 5"):
+    import config
+
+    for e in [] if config.REAL_ONLY else db.query("SELECT title, status FROM events ORDER BY id DESC LIMIT 5"):
         items.append(("🎉 CONFIRMED: " if e["status"] == "confirmed" else "🤝 Proposed: ") + e["title"])
-    for r in db.query("SELECT b.name, r.rating, r.team FROM reviews r JOIN bars b ON b.id = r.bar_id WHERE r.status = 'posted' ORDER BY r.id DESC LIMIT 5"):
+    review_sql = ("SELECT b.name, r.rating, r.team FROM reviews r JOIN bars b ON b.id = r.bar_id WHERE r.status = 'posted'"
+                  + (" AND r.is_seed = 0 AND b.is_demo = 0" if config.REAL_ONLY else "") + " ORDER BY r.id DESC LIMIT 5")
+    for r in db.query(review_sql):
         items.append(f"⭐ {r['rating']}/5 for {r['name']}" + (f" from a {r['team']} fan" if r["team"] else ""))
     items = items or ["🏈 Search any team and city to find your people on game day"]
     random.Random(len(items)).shuffle(items)

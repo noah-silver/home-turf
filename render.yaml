@@ -1,0 +1,25 @@
+# One-click hosting on Render (free plan): Dashboard → New → Blueprint → pick this repo.
+# Render asks for the API key (stored as a secret, never in the repo). The free plan sleeps after
+# 15 idle minutes; the first visit after that takes about a minute to wake up.
+services:
+  - type: web
+    name: home-turf
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt gunicorn==23.0.0
+    # One worker (SQLite + in-memory map pages), several threads for parallel requests.
+    startCommand: gunicorn app:server --workers 1 --threads 8 --timeout 180 --bind 0.0.0.0:$PORT
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: PORTKEY_API_KEY          # paste the key when Render asks; or use OPENAI_API_KEY instead
+        sync: false
+      - key: HOME_TURF_REAL_ONLY      # public link shows only real web data
+        value: "1"
+      - key: HOME_TURF_DEFAULT_TEAM
+        value: New York Giants
+      - key: HOME_TURF_DEFAULT_CITY
+        value: Boston, MA
+      - key: HOME_TURF_ADMIN_PASSWORD # locks /admin; Render generates a random value (see the service's Environment tab)
+        generateValue: true

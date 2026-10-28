@@ -50,7 +50,11 @@ def layout(session: dict | None) -> html.Div:
     c = mk.club(user["club_id"])
     home = mk.bar(c["home_bar_id"]) if c["home_bar_id"] else None
     rivals = [r for r in mk.clubs_in_city(c["city"]) if r["id"] != c["id"]]
-    return html.Div(className="page", children=[
+    import config
+
+    sample = [html.Div("Sample marketplace: these clubs, bars, and people are fictional, to show how clubs and bars would use Home Turf. Fan searches and maps use real data.",
+                       className="notice info", style={"marginBottom": "14px"})] if config.REAL_ONLY else []
+    return html.Div(className="page", children=[*sample,
         dcc.Store(id="club-id", data=c["id"]),
         dcc.Store(id="club-refresh", data=0),
         dcc.Store(id="rivalry-result"),

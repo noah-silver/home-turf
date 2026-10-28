@@ -8075,136 +8075,6 @@
   }
  },
  {
-  "key": "schedule|new england patriots|2026",
-  "kind": "schedule",
-  "payload": {
-   "team": "New England Patriots",
-   "season": "2026",
-   "games": [
-    {
-     "date": "2026-09-09",
-     "opponent": "Seattle Seahawks",
-     "home_away": "away",
-     "kickoff_et": "TBD",
-     "tv": "TBD"
-    },
-    {
-     "date": "2026-09-20",
-     "opponent": "Pittsburgh Steelers",
-     "home_away": "home",
-     "kickoff_et": "TBD",
-     "tv": "TBD"
-    },
-    {
-     "date": "2026-09-27",
-     "opponent": "Jacksonville Jaguars",
-     "home_away": "away",
-     "kickoff_et": "TBD",
-     "tv": "TBD"
-    },
-    {
-     "date": "2026-10-04",
-     "opponent": "Buffalo Bills",
-     "home_away": "away",
-     "kickoff_et": "TBD",
-     "tv": "TBD"
-    },
-    {
-     "date": "2026-10-11",
-     "opponent": "Las Vegas Raiders",
-     "home_away": "home",
-     "kickoff_et": "TBD",
-     "tv": "TBD"
-    },
-    {
-     "date": "2026-10-18",
-     "opponent": "New York Jets",
-     "home_away": "home",
-     "kickoff_et": "TBD",
-     "tv": "TBD"
-    },
-    {
-     "date": "2026-10-22",
-     "opponent": "Chicago Bears",
-     "home_away": "away",
-     "kickoff_et": "TBD",
-     "tv": "TBD"
-    },
-    {
-     "date": "2026-11-01",
-     "opponent": "Miami Dolphins",
-     "home_away": "away",
-     "kickoff_et": "4:25 PM ET",
-     "tv": "CBS"
-    },
-    {
-     "date": "2026-11-08",
-     "opponent": "Green Bay Packers",
-     "home_away": "home",
-     "kickoff_et": "4:25 PM ET",
-     "tv": "FOX"
-    },
-    {
-     "date": "2026-11-15",
-     "opponent": "Detroit Lions",
-     "home_away": "neutral",
-     "kickoff_et": "9:30 AM ET",
-     "tv": "FOX"
-    },
-    {
-     "date": "2026-11-29",
-     "opponent": "Los Angeles Chargers",
-     "home_away": "away",
-     "kickoff_et": "8:20 PM ET",
-     "tv": "NBC"
-    },
-    {
-     "date": "2026-12-06",
-     "opponent": "Buffalo Bills",
-     "home_away": "home",
-     "kickoff_et": "4:25 PM ET",
-     "tv": "CBS"
-    },
-    {
-     "date": "2026-12-10",
-     "opponent": "Minnesota Vikings",
-     "home_away": "home",
-     "kickoff_et": "8:15 PM ET",
-     "tv": "PRIME VIDEO"
-    },
-    {
-     "date": "2026-12-21",
-     "opponent": "Kansas City Chiefs",
-     "home_away": "away",
-     "kickoff_et": "8:15 PM ET",
-     "tv": "ESPN"
-    },
-    {
-     "date": "2026-12-27",
-     "opponent": "New York Jets",
-     "home_away": "away",
-     "kickoff_et": "1:00 PM ET",
-     "tv": "CBS"
-    },
-    {
-     "date": "TBD",
-     "opponent": "Denver Broncos",
-     "home_away": "home",
-     "kickoff_et": "TBD",
-     "tv": "TBD"
-    },
-    {
-     "date": "TBD",
-     "opponent": "Miami Dolphins",
-     "home_away": "home",
-     "kickoff_et": "TBD",
-     "tv": "TBD"
-    }
-   ],
-   "source_url": "https://www.patriots.com/schedule/"
-  }
- },
- {
   "key": "schedule|buffalo bills|2026",
   "kind": "schedule",
   "payload": {
@@ -9308,6 +9178,3488 @@
     }
    ],
    "source_url": "https://goprincetontigers.com/sports/football/schedule/text/2026"
+  }
+ },
+ {
+  "key": "spots|new york giants|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "New York Giants",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "The Greatest Bar",
+     "address": "262 Friend St, Boston, MA 02114",
+     "club_name": "Big Blue Boston",
+     "evidence_quote": "“home of Big Blue Boston on game days”",
+     "source_url": "https://2ndhomesports.com/blogs/new-york-giants-bars-in-boston/",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 42.3645642,
+     "lon": -71.0614221,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://2ndhomesports.com/blogs/new-york-giants-bars-in-boston/",
+       "quote": "“home of Big Blue Boston on game days”",
+       "status": "confirmed",
+       "official": true,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "New York Giants",
+     "bar_id": 126
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "Big Blue Boston",
+   "club_contact_url": null,
+   "search_notes": "A 2026 bar guide identifies The Greatest Bar as a Giants fan gathering spot and gives its street address. No official club page or current-season club confirmation was found.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:10:08+00:00"
+  }
+ },
+ {
+  "key": "spots|buffalo bills|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Buffalo Bills",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "The Harp Boston",
+     "address": "85 Causeway St., Boston, MA 02114",
+     "club_name": "Bills Backers of Boston",
+     "evidence_quote": "“The Harp hosts the Bills Backers of Boston”",
+     "source_url": "https://2ndhomesports.com/blogs/buffalo-bills-bars-in-boston/",
+     "season_seen": "2026",
+     "official_source": false,
+     "lat": 42.364582,
+     "lon": -71.0624441,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://2ndhomesports.com/blogs/buffalo-bills-bars-in-boston/",
+       "quote": "“The Harp hosts the Bills Backers of Boston”",
+       "status": "confirmed",
+       "official": false,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "Buffalo Bills",
+     "bar_id": 139
+    },
+    {
+     "bar_name": "Bleacher Bar",
+     "address": "82A Lansdowne St, Boston, MA 02215",
+     "club_name": "Bills Backers of Fenway",
+     "evidence_quote": "“The Bleacher Bar of Fenway is a part of the Bills Mafia!”",
+     "source_url": "https://www.bleacherbarboston.com/news/bills-backers-of-fenway/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 42.3470437,
+     "lon": -71.0967137,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "Bleacher Bar’s page says it is part of the Bills Mafia and expects Buffalo Bills fans on game days, but the page gives no date establishing this for the current or most recent season.",
+     "sources": [
+      {
+       "url": "https://www.bleacherbarboston.com/news/bills-backers-of-fenway/",
+       "quote": "“The Bleacher Bar of Fenway is a part of the Bills Mafia!”",
+       "status": "likely",
+       "official": true,
+       "reason": "Bleacher Bar’s page says it is part of the Bills Mafia and expects Buffalo Bills fans on game days, but the page gives no date establishing this for the current or most recent season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "team": "Buffalo Bills",
+     "bar_id": 140
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "Bills Backers of Boston",
+   "club_contact_url": null,
+   "search_notes": "Found two Boston-area watch spots. Bleacher Bar’s own page confirms Bills fans gather there; a 2026 guide identifies The Harp as the Bills Backers of Boston venue. No 2026 season-specific confirmation was found for Bleacher Bar.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:10:39+00:00"
+  }
+ },
+ {
+  "key": "spots|carolina panthers|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Carolina Panthers",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "Teddy’s On The Hill",
+     "address": "9 Bowdoin St, Boston, MA 02114",
+     "club_name": "BeanTown Riot",
+     "evidence_quote": "BeanTown Riot’s New England hub—catch the Panthers with sound",
+     "source_url": "https://2ndhomesports.com/blogs/carolina-panthers-bars-in-boston/",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 42.3610023,
+     "lon": -71.0631984,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://2ndhomesports.com/blogs/carolina-panthers-bars-in-boston/",
+       "quote": "BeanTown Riot’s New England hub—catch the Panthers with sound",
+       "status": "confirmed",
+       "official": true,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "Carolina Panthers",
+     "bar_id": 141
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "BeanTown Riot",
+   "club_contact_url": "unknown",
+   "search_notes": "A 2026 source lists Teddy’s On The Hill as BeanTown Riot’s Panthers watch hub. Another directory lists The Banshee but says there is no recent activity, so it is not included.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:10:40+00:00"
+  }
+ },
+ {
+  "key": "spots|cincinnati bengals|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Cincinnati Bengals",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "The Phoenix Landing",
+     "address": "512 Massachusetts Ave, Cambridge, MA 02139",
+     "club_name": "unknown",
+     "evidence_quote": "NFL Cincinnati Bengals",
+     "source_url": "https://www.gamewatch.info/bars/the-phoenix-landing-cambridge-ma",
+     "season_seen": "unknown",
+     "official_source": false,
+     "lat": 42.3640906,
+     "lon": -71.1018824,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The source page is empty, and the Scout’s brief quote does not establish a link between The Phoenix Landing and Bengals fans in Boston.",
+     "sources": [
+      {
+       "url": "https://www.gamewatch.info/bars/the-phoenix-landing-cambridge-ma",
+       "quote": "NFL Cincinnati Bengals",
+       "status": "unverified",
+       "official": false,
+       "reason": "The source page is empty, and the Scout’s brief quote does not establish a link between The Phoenix Landing and Bengals fans in Boston.",
+       "page_loaded": true,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "Cincinnati Bengals",
+     "bar_id": 40
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": null,
+   "club_contact_url": null,
+   "search_notes": "Found one Bengals watch listing in nearby Cambridge, not Boston proper. The listing marks Bengals coverage low confidence; no 2026-specific club watch information was found.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:10:40+00:00"
+  }
+ },
+ {
+  "key": "spots|denver broncos|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Denver Broncos",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [],
+   "allgames": [
+    {
+     "bar_name": "Game On Fenway",
+     "address": "82 Lansdowne Street, Boston, MA",
+     "club_name": "unknown",
+     "evidence_quote": "NFL SUNDAY TICKET – Catch EVERY Game!",
+     "source_url": "https://www.findglocal.com/US/Boston/228124910635559/Game-On-Fenway",
+     "season_seen": "2026",
+     "official_source": false,
+     "lat": 42.3470487,
+     "lon": -71.0984891,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://www.findglocal.com/US/Boston/228124910635559/Game-On-Fenway",
+       "quote": "NFL SUNDAY TICKET – Catch EVERY Game!",
+       "status": "confirmed",
+       "official": false,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "kind": "allgames",
+     "team": "Denver Broncos",
+     "bar_id": 142
+    },
+    {
+     "bar_name": "Warehouse Kitchen + Sports Bar",
+     "address": "40 Broad Street, Boston, MA 02109",
+     "club_name": "unknown",
+     "evidence_quote": "NFL Sunday Ticket",
+     "source_url": "https://www.thewarehouseboston.com/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 42.3581128,
+     "lon": -71.0539425,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The page identifies Warehouse Kitchen + Sports Bar at 40 Broad Street in Boston and describes it as a sports bar, but does not mention Denver Broncos fans or a Broncos club.",
+     "sources": [
+      {
+       "url": "https://www.thewarehouseboston.com/",
+       "quote": "NFL Sunday Ticket",
+       "status": "unverified",
+       "official": true,
+       "reason": "The page identifies Warehouse Kitchen + Sports Bar at 40 Broad Street in Boston and describes it as a sports bar, but does not mention Denver Broncos fans or a Broncos club.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "Denver Broncos",
+     "bar_id": 143
+    }
+   ],
+   "wide_done": true,
+   "club_name": null,
+   "club_contact_url": null,
+   "search_notes": "No Boston Broncos fan bar or chapter was identified. Checked the Broncos official Bar Network, team-specific Boston bar listings, and broader Boston-area searches; Game On Fenway and Warehouse Kitchen + Sports Bar are general NFL viewing options, not verified Broncos gathering spots.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:10:46+00:00"
+  }
+ },
+ {
+  "key": "spots|atlanta falcons|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Atlanta Falcons",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [],
+   "allgames": [
+    {
+     "bar_name": "Jake n JOES Sports Grille — Norwood",
+     "address": "475 Providence Hwy, Norwood",
+     "club_name": "unknown",
+     "evidence_quote": "Every Jake n JOES location has NFL Sunday Ticket!",
+     "source_url": "https://www.jakenjoes.com/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": null,
+     "lon": null,
+     "geocoded": false,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The page lists a Norwood location and says every location has NFL Sunday Ticket, but it does not tie the bar to Atlanta Falcons fans or a Falcons club in Boston.",
+     "sources": [
+      {
+       "url": "https://www.jakenjoes.com/",
+       "quote": "Every Jake n JOES location has NFL Sunday Ticket!",
+       "status": "unverified",
+       "official": true,
+       "reason": "The page lists a Norwood location and says every location has NFL Sunday Ticket, but it does not tie the bar to Atlanta Falcons fans or a Falcons club in Boston.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "Atlanta Falcons",
+     "bar_id": 144
+    }
+   ],
+   "wide_done": true,
+   "club_name": null,
+   "club_contact_url": null,
+   "search_notes": "No reliable Boston-area source found tying a bar or local Falcons club to Atlanta Falcons watch parties. Checked Falcons-specific Boston bar listings, a Falcons fan-bar directory, the Falcons fan-club chapter map, and team-specific searches; Jake n JOES’ website lists NFL Sunday Ticket, but does not link the venue to Falcons fans. The cited directory showed no Falcons bars listed for Boston.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:10:50+00:00"
+  }
+ },
+ {
+  "key": "spots|dallas cowboys|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Dallas Cowboys",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "M.J. O’Connor’s (Downtown)",
+     "address": "unknown",
+     "club_name": "unknown",
+     "evidence_quote": "Cowboys fans have watched games here in the past",
+     "source_url": "https://www.gamewatch.info/cities/boston-ma/dallas-cowboys",
+     "season_seen": "unknown",
+     "official_source": false,
+     "lat": null,
+     "lon": null,
+     "geocoded": false,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The source page text is empty and does not mention M.J. O’Connor’s or tie it to Cowboys fans in Boston.",
+     "sources": [
+      {
+       "url": "https://www.gamewatch.info/cities/boston-ma/dallas-cowboys",
+       "quote": "Cowboys fans have watched games here in the past",
+       "status": "unverified",
+       "official": false,
+       "reason": "The source page text is empty and does not mention M.J. O’Connor’s or tie it to Cowboys fans in Boston.",
+       "page_loaded": true,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "Dallas Cowboys",
+     "bar_id": 145
+    },
+    {
+     "bar_name": "Game On Fenway",
+     "address": "unknown",
+     "club_name": "unknown",
+     "evidence_quote": "Dallas Cowboys Game On Fenway",
+     "source_url": "https://www.gamewatch.info/cities/boston-ma/dallas-cowboys",
+     "season_seen": "unknown",
+     "official_source": false,
+     "lat": 42.3470487,
+     "lon": -71.0984891,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The source page text is empty and does not mention Game On Fenway or tie it to Cowboys fans in Boston.",
+     "sources": [
+      {
+       "url": "https://www.gamewatch.info/cities/boston-ma/dallas-cowboys",
+       "quote": "Dallas Cowboys Game On Fenway",
+       "status": "unverified",
+       "official": false,
+       "reason": "The source page text is empty and does not mention Game On Fenway or tie it to Cowboys fans in Boston.",
+       "page_loaded": true,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "Dallas Cowboys",
+     "bar_id": 142
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": null,
+   "club_contact_url": null,
+   "search_notes": "GameWatch.info lists two Boston Cowboys watch locations, but rates both low confidence and notes no recent activity for its top pick. No official Cowboys fan club or current-season source was found.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:10:52+00:00"
+  }
+ },
+ {
+  "key": "spots|detroit lions|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Detroit Lions",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "PJ Ryan’s",
+     "address": "239 Holland St, Somerville, MA 02144",
+     "club_name": "Detroit Lions Fans in Boston",
+     "evidence_quote": "“PJ Ryan’s (Somerville) Irish pub with craft beer and a lively crowd of Lions faithful on game days.”",
+     "source_url": "https://2ndhomesports.com/blogs/detroit-lions-bars-in-boston/",
+     "season_seen": "2026",
+     "official_source": false,
+     "lat": 42.4027899,
+     "lon": -71.1267807,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://2ndhomesports.com/blogs/detroit-lions-bars-in-boston/",
+       "quote": "“PJ Ryan’s (Somerville) Irish pub with craft beer and a lively crowd of Lions faithful on game days.”",
+       "status": "confirmed",
+       "official": false,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "Detroit Lions",
+     "bar_id": 146
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "Detroit Lions Fans in Boston",
+   "club_contact_url": null,
+   "search_notes": "A 2026 guide names PJ Ryan’s and the Detroit Lions Fans in Boston group. The club’s public contact page was not verified.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:10:52+00:00"
+  }
+ },
+ {
+  "key": "spots|cleveland browns|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Cleveland Browns",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "M.J. O’Connor’s",
+     "address": "27 Columbus Ave, Boston, MA 02116",
+     "club_name": "Boston Browns Backers",
+     "evidence_quote": "the Boston Browns Backers pack on Sundays",
+     "source_url": "https://2ndhomesports.com/blogs/cleveland-browns-bars-in-boston/",
+     "season_seen": "2026",
+     "official_source": false,
+     "lat": 42.3474417,
+     "lon": -71.0733043,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://2ndhomesports.com/blogs/cleveland-browns-bars-in-boston/",
+       "quote": "the Boston Browns Backers pack on Sundays",
+       "status": "confirmed",
+       "official": false,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "Cleveland Browns",
+     "bar_id": 34
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "Boston Browns Backers",
+   "club_contact_url": null,
+   "search_notes": "A February 2026 Browns-watch guide identifies M.J. O’Connor’s as a Boston Browns Backers gathering spot. Another source points to Bushwood Cocktail Club but refers to the 2023 season, so it was not included as current-season evidence.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:10:54+00:00"
+  }
+ },
+ {
+  "key": "spots|jacksonville jaguars|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Jacksonville Jaguars",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "Public Tavern",
+     "address": "565 Broadway, Somerville, MA",
+     "club_name": "unknown",
+     "evidence_quote": "Any other Jacksonville Jaguars fans up here in Boston?!?!? If so please join me at The Public Taven",
+     "source_url": "https://www.thebostoncalendar.com/events/jacksonville-jaguars-playoffs-watch-party",
+     "season_seen": "2026",
+     "official_source": false,
+     "lat": 42.398511,
+     "lon": -71.10776,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://www.thebostoncalendar.com/events/jacksonville-jaguars-playoffs-watch-party",
+       "quote": "Any other Jacksonville Jaguars fans up here in Boston?!?!? If so please join me at The Public Taven",
+       "status": "confirmed",
+       "official": false,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "Jacksonville Jaguars",
+     "bar_id": 147
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": null,
+   "club_contact_url": null,
+   "search_notes": "Found one 2026 fan-organized Jaguars watch-party listing at Public Tavern in Somerville. No official Boston Jaguars fan club or current-season recurring watch spot was found.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:10:59+00:00"
+  }
+ },
+ {
+  "key": "spots|houston texans|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Houston Texans",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [],
+   "allgames": [
+    {
+     "bar_name": "Game On",
+     "address": "82 Lansdowne Street, Boston",
+     "club_name": "unknown",
+     "evidence_quote": "Every sport, every game, all day.",
+     "source_url": "https://www.gameonboston.com/about/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 42.3470487,
+     "lon": -71.0984891,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://www.gameonboston.com/about/",
+       "quote": "Every sport, every game, all day.",
+       "status": "confirmed",
+       "official": true,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "kind": "allgames",
+     "team": "Houston Texans",
+     "bar_id": 148
+    },
+    {
+     "bar_name": "Warehouse Kitchen + Sports Bar",
+     "address": "40 Broad Street, Boston, MA 02109",
+     "club_name": "unknown",
+     "evidence_quote": "NFL Sunday Ticket",
+     "source_url": "https://www.thewarehouseboston.com/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 42.3581128,
+     "lon": -71.0539425,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The page identifies Warehouse Kitchen + Sports Bar at 40 Broad Street in Boston, but does not mention the Houston Texans or their fans; “NFL Sunday Ticket” is only the Scout’s quote.",
+     "sources": [
+      {
+       "url": "https://www.thewarehouseboston.com/",
+       "quote": "NFL Sunday Ticket",
+       "status": "unverified",
+       "official": true,
+       "reason": "The page identifies Warehouse Kitchen + Sports Bar at 40 Broad Street in Boston, but does not mention the Houston Texans or their fans; “NFL Sunday Ticket” is only the Scout’s quote.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "Houston Texans",
+     "bar_id": 143
+    }
+   ],
+   "wide_done": true,
+   "club_name": null,
+   "club_contact_url": null,
+   "search_notes": "Checked the Houston Texans’ official Texans Takeover page, team-specific Boston searches, and metro-area results. No reliable source tied a Boston-area bar or club to Texans fans; GameWatch.info also lists no Boston Texans bar. The best-bet venues are NFL-wide options, not confirmed Texans fan gatherings.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:11:03+00:00"
+  }
+ },
+ {
+  "key": "spots|los angeles chargers|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Los Angeles Chargers",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "Blackmoor Bar and Kitchen",
+     "address": "1 Chelsea St, Charlestown, MA 02129",
+     "club_name": "Diehard Bolt Club Boston",
+     "evidence_quote": "home base for Diehard Bolt Club Boston",
+     "source_url": "https://2ndhomesports.com/blogs/los-angeles-chargers-bars-in-boston/",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 42.372152,
+     "lon": -71.06023,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://2ndhomesports.com/blogs/los-angeles-chargers-bars-in-boston/",
+       "quote": "home base for Diehard Bolt Club Boston",
+       "status": "confirmed",
+       "official": true,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "Los Angeles Chargers",
+     "bar_id": 149
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "Diehard Bolt Club Boston",
+   "club_contact_url": "unknown",
+   "search_notes": "Found one Boston-area Chargers watch spot in a 2026 listing from 2nd Home Sports; a 2023 Boston Move article also connects the club with Blackmoor. I did not find a current 2026 club page.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:11:09+00:00"
+  }
+ },
+ {
+  "key": "spots|indianapolis colts|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Indianapolis Colts",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [],
+   "allgames": [
+    {
+     "bar_name": "Game On",
+     "address": "82 Lansdowne Street, Boston, MA",
+     "club_name": "unknown",
+     "evidence_quote": "We run every major sport on every major network — all day, every day.",
+     "source_url": "https://www.gameonboston.com/about/",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 42.3470487,
+     "lon": -71.0984891,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://www.gameonboston.com/about/",
+       "quote": "We run every major sport on every major network — all day, every day.",
+       "status": "confirmed",
+       "official": true,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "kind": "allgames",
+     "team": "Indianapolis Colts",
+     "bar_id": 148
+    },
+    {
+     "bar_name": "Jake n JOES Sports Grille — Waltham",
+     "address": "70 Market Place Dr., Waltham, MA",
+     "club_name": "unknown",
+     "evidence_quote": "Every Jake n JOES location has NFL Sunday Ticket!",
+     "source_url": "https://www.jakenjoes.com/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 42.3798272,
+     "lon": -71.2629286,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The page lists a Waltham location and NFL Sunday Ticket at every location, but does not connect this bar to Indianapolis Colts fans or a Colts club in Boston.",
+     "sources": [
+      {
+       "url": "https://www.jakenjoes.com/",
+       "quote": "Every Jake n JOES location has NFL Sunday Ticket!",
+       "status": "unverified",
+       "official": true,
+       "reason": "The page lists a Waltham location and NFL Sunday Ticket at every location, but does not connect this bar to Indianapolis Colts fans or a Colts club in Boston.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "Indianapolis Colts",
+     "bar_id": 150
+    },
+    {
+     "bar_name": "Jake n JOES Sports Grille — Norwood",
+     "address": "475 Providence Hwy, Norwood, MA",
+     "club_name": "unknown",
+     "evidence_quote": "Every Jake n JOES location has NFL Sunday Ticket!",
+     "source_url": "https://www.jakenjoes.com/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 42.1567474,
+     "lon": -71.2024756,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The page lists a Norwood location and NFL Sunday Ticket at every location, but does not connect this bar to Indianapolis Colts fans or a Colts club in Boston.",
+     "sources": [
+      {
+       "url": "https://www.jakenjoes.com/",
+       "quote": "Every Jake n JOES location has NFL Sunday Ticket!",
+       "status": "unverified",
+       "official": true,
+       "reason": "The page lists a Norwood location and NFL Sunday Ticket at every location, but does not connect this bar to Indianapolis Colts fans or a Colts club in Boston.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "Indianapolis Colts",
+     "bar_id": 144
+    }
+   ],
+   "wide_done": true,
+   "club_name": null,
+   "club_contact_url": null,
+   "search_notes": "The official Colts fan-club directory lists U.S. chapters but no Boston chapter; searches for Colts-specific Boston or metro-area watch spots found no reliable team-specific tie. The bars listed are NFL viewing alternatives, not confirmed Colts fan gathering spots; Jake n JOES addresses omit ZIP codes on its site.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:11:17+00:00"
+  }
+ },
+ {
+  "key": "spots|miami dolphins|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Miami Dolphins",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "Hurricane's at the Garden",
+     "address": "150 Canal Street, Boston, MA 02114",
+     "club_name": "Miami Dolphins Fans of Boston",
+     "evidence_quote": "The Miami Dolphins Fans of Boston have a new home this season: Hurricane's at the Garden!",
+     "source_url": "https://www.thebostoncalendar.com/events/miami-dolphins-fans-of-boston-week-1-watch-party",
+     "season_seen": "2026",
+     "official_source": false,
+     "lat": 42.3648417,
+     "lon": -71.0607328,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://www.thebostoncalendar.com/events/miami-dolphins-fans-of-boston-week-1-watch-party",
+       "quote": "The Miami Dolphins Fans of Boston have a new home this season: Hurricane's at the Garden!",
+       "status": "confirmed",
+       "official": false,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "Miami Dolphins",
+     "bar_id": 151
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "Miami Dolphins Fans of Boston",
+   "club_contact_url": "https://www.facebook.com/PhinsBoston/",
+   "search_notes": "A 2026 season watch-party listing names Hurricane's at the Garden as the club’s new home. The Miami Dolphins’ official fan-club gallery also lists Miami Dolphins Fans of Boston, but no official 2026 Boston watch location was found.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:11:26+00:00"
+  }
+ },
+ {
+  "key": "spots|las vegas raiders|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Las Vegas Raiders",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "Buffalo Wild Wings",
+     "address": "480 Memorial Drive, Chicopee, Massachusetts, US 01020",
+     "club_name": "The Black Hole New England Chapter",
+     "evidence_quote": "Official Watch Party Location — Destination Buffalo Wild Wings",
+     "source_url": "https://theblackhole.com/pages/chapter-chicopee",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 42.1710492,
+     "lon": -72.5770755,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "rejected",
+     "status_reason": "The page names Buffalo Wild Wings as the chapter’s official watch-party location at 480 Memorial Drive in Chicopee, not in Boston.",
+     "sources": [
+      {
+       "url": "https://theblackhole.com/pages/chapter-chicopee",
+       "quote": "Official Watch Party Location — Destination Buffalo Wild Wings",
+       "status": "rejected",
+       "official": true,
+       "reason": "The page names Buffalo Wild Wings as the chapter’s official watch-party location at 480 Memorial Drive in Chicopee, not in Boston.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "team": "Las Vegas Raiders",
+     "bar_id": null
+    }
+   ],
+   "allgames": [
+    {
+     "bar_name": "Jake n JOES Sports Grille — Norwood",
+     "address": "475 Providence Hwy, Norwood, MA 02062",
+     "club_name": "unknown",
+     "evidence_quote": "Every Jake n JOES location has NFL Sunday Ticket!",
+     "source_url": "https://www.jakenjoes.com/locations/norwood/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 42.1567474,
+     "lon": -71.2024756,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The page confirms the Norwood location and NFL Sunday Ticket, but does not mention Las Vegas Raiders fans or a Raiders club.",
+     "sources": [
+      {
+       "url": "https://www.jakenjoes.com/locations/norwood/",
+       "quote": "Every Jake n JOES location has NFL Sunday Ticket!",
+       "status": "unverified",
+       "official": true,
+       "reason": "The page confirms the Norwood location and NFL Sunday Ticket, but does not mention Las Vegas Raiders fans or a Raiders club.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "Las Vegas Raiders",
+     "bar_id": 144
+    },
+    {
+     "bar_name": "Jake n JOES Sports Grille — Woburn",
+     "address": "230 Mishawum Rd, Woburn, MA 01801",
+     "club_name": "unknown",
+     "evidence_quote": "Every Jake n JOES location has NFL Sunday Ticket!",
+     "source_url": "https://www.jakenjoes.com/locations/woburn/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 42.5029981,
+     "lon": -71.1403597,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The page confirms the Woburn location and NFL Sunday Ticket, but does not mention Las Vegas Raiders fans or a Raiders club.",
+     "sources": [
+      {
+       "url": "https://www.jakenjoes.com/locations/woburn/",
+       "quote": "Every Jake n JOES location has NFL Sunday Ticket!",
+       "status": "unverified",
+       "official": true,
+       "reason": "The page confirms the Woburn location and NFL Sunday Ticket, but does not mention Las Vegas Raiders fans or a Raiders club.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "Las Vegas Raiders",
+     "bar_id": 152
+    }
+   ],
+   "wide_done": true,
+   "club_name": "The Black Hole New England Chapter",
+   "club_contact_url": "https://theblackhole.com/pages/chapter-chicopee",
+   "search_notes": "Checked the Raiders’ official booster-club directory, The Black Hole New England chapter page, and Boston-area Raiders bar/watch-party searches. No reliable source tied a Boston-metro bar to Raiders fans or a club; the chapter result is for Chicopee, not Boston. For a general NFL option, Jake n JOES says all its locations have NFL Sunday Ticket; the listed locations are in the wider metro area, not Boston proper.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:11:26+00:00"
+  }
+ },
+ {
+  "key": "spots|los angeles rams|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Los Angeles Rams",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [],
+   "allgames": [
+    {
+     "bar_name": "Warehouse Kitchen + Sports Bar",
+     "address": "40 Broad Street, Boston, MA 02109",
+     "club_name": "unknown",
+     "evidence_quote": "NFL Sunday Ticket",
+     "source_url": "https://www.thewarehouseboston.com/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 42.3581128,
+     "lon": -71.0539425,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The page identifies Warehouse Kitchen + Sports Bar in Boston but does not mention the Los Angeles Rams or their fans.",
+     "sources": [
+      {
+       "url": "https://www.thewarehouseboston.com/",
+       "quote": "NFL Sunday Ticket",
+       "status": "unverified",
+       "official": true,
+       "reason": "The page identifies Warehouse Kitchen + Sports Bar in Boston but does not mention the Los Angeles Rams or their fans.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "Los Angeles Rams",
+     "bar_id": 143
+    },
+    {
+     "bar_name": "The North Star",
+     "address": "222 Friend St, Boston, MA 02114",
+     "club_name": "unknown",
+     "evidence_quote": "NFL Sunday Ticket",
+     "source_url": "https://northstarboston.com/about/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 42.3641289,
+     "lon": -71.0610794,
+     "geocoded": true,
+     "page_loaded": false,
+     "page_error": "ConnectError",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The page could not be loaded, and the Scout’s generic “NFL Sunday Ticket” quote does not tie The North Star to Rams fans.",
+     "sources": [
+      {
+       "url": "https://northstarboston.com/about/",
+       "quote": "NFL Sunday Ticket",
+       "status": "unverified",
+       "official": true,
+       "reason": "The page could not be loaded, and the Scout’s generic “NFL Sunday Ticket” quote does not tie The North Star to Rams fans.",
+       "page_loaded": false,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "Los Angeles Rams",
+     "bar_id": 153
+    }
+   ],
+   "wide_done": true,
+   "club_name": null,
+   "club_contact_url": null,
+   "search_notes": "Checked Rams fan-club and team bar-network sources, Boston-specific Rams bar listings, and wider Boston NFL watch-bar results. Found no reliable source tying a Boston-area bar or chapter specifically to Rams fans; these best bets advertise NFL Sunday Ticket but do not verify 2026 details.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:11:29+00:00"
+  }
+ },
+ {
+  "key": "spots|kansas city chiefs|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Kansas City Chiefs",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [],
+   "allgames": [
+    {
+     "bar_name": "Jake n JOES Sports Grille — Waltham",
+     "address": "70 Market Place Dr, Waltham, MA 02451",
+     "club_name": "unknown",
+     "evidence_quote": "Every Jake n JOES location has NFL Sunday Ticket!",
+     "source_url": "https://www.jakenjoes.com/locations/waltham/",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 42.3798272,
+     "lon": -71.2629286,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The Waltham location page confirms the bar, address, and NFL Sunday Ticket, but does not tie the bar to Kansas City Chiefs fans or a Chiefs club.",
+     "sources": [
+      {
+       "url": "https://www.jakenjoes.com/locations/waltham/",
+       "quote": "Every Jake n JOES location has NFL Sunday Ticket!",
+       "status": "unverified",
+       "official": true,
+       "reason": "The Waltham location page confirms the bar, address, and NFL Sunday Ticket, but does not tie the bar to Kansas City Chiefs fans or a Chiefs club.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "Kansas City Chiefs",
+     "bar_id": 150
+    }
+   ],
+   "wide_done": true,
+   "club_name": null,
+   "club_contact_url": "https://www.chiefs.com/fans/chiefskingdomworldwide",
+   "search_notes": "Checked Chiefs Kingdom Worldwide, Boston/metro Chiefs bar searches, and team-specific watch-party listings. No reliable source confirmed a Boston-area Chiefs fan club or bar as a regular Chiefs watch spot; the Greatest Bar listing is for a future Patriots–Chiefs event, not a Chiefs fan-club home bar.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:11:33+00:00"
+  }
+ },
+ {
+  "key": "spots|new orleans saints|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "New Orleans Saints",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "Union Street Restaurant",
+     "address": "unknown",
+     "club_name": "unknown",
+     "evidence_quote": "they are now hosting the New Orleans Saints Fans in Boston",
+     "source_url": "https://www.facebook.com/UnionStreetRestaurant/posts/calling-all-saints-fans-make-sure-to-catch-the-action-with-us-on-sunday/10158788826768235/",
+     "season_seen": "2021",
+     "official_source": true,
+     "lat": null,
+     "lon": null,
+     "geocoded": false,
+     "page_loaded": false,
+     "page_error": "HTTP 400",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The page could not be loaded, but the Scout’s specific quote says Union Street Restaurant hosted New Orleans Saints fans in Boston; the claimed season is 2021.",
+     "sources": [
+      {
+       "url": "https://www.facebook.com/UnionStreetRestaurant/posts/calling-all-saints-fans-make-sure-to-catch-the-action-with-us-on-sunday/10158788826768235/",
+       "quote": "they are now hosting the New Orleans Saints Fans in Boston",
+       "status": "likely",
+       "official": true,
+       "reason": "The page could not be loaded, but the Scout’s specific quote says Union Street Restaurant hosted New Orleans Saints fans in Boston; the claimed season is 2021.",
+       "page_loaded": false,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "New Orleans Saints",
+     "bar_id": 154
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": null,
+   "club_contact_url": null,
+   "search_notes": "Found one bar explicitly linked to Saints fans, but the source is from 2021 and does not confirm watch parties for the 2026 season. Current sources did not establish another reliable Saints-specific Boston spot.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:11:37+00:00"
+  }
+ },
+ {
+  "key": "spots|minnesota vikings|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Minnesota Vikings",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "730 Tavern, Kitchen & Patio",
+     "address": "730 Massachusetts Avenue, Cambridge, MA 02139",
+     "club_name": "Skol Boston",
+     "evidence_quote": "Home of the Minnesota Vikings Fans in Boston",
+     "source_url": "https://www.findglocal.com/US/Cambridge/143158192948237/730-Tavern%2C-Kitchen-%26-Patio",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 42.3660159,
+     "lon": -71.1051419,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://www.findglocal.com/US/Cambridge/143158192948237/730-Tavern%2C-Kitchen-%26-Patio",
+       "quote": "Home of the Minnesota Vikings Fans in Boston",
+       "status": "confirmed",
+       "official": true,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "Minnesota Vikings",
+     "bar_id": 155
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "Skol Boston",
+   "club_contact_url": "https://www.vikings.com/fans/clubs-watch-bars",
+   "search_notes": "The Vikings’ official fan-club directory lists Skol Boston. 730 Tavern’s public business page identifies it as home of Boston Vikings fans; current 2026 listing. The address differs from an older third-party listing, so this uses the business page’s Cambridge address.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:11:37+00:00"
+  }
+ },
+ {
+  "key": "spots|new york jets|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "New York Jets",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "Tap 151 Bar & Grill",
+     "address": "151 N First St, Cambridge, MA 02141",
+     "club_name": "Boston JETS Club",
+     "evidence_quote": "Boston JETS Club headquarters",
+     "source_url": "https://2ndhomesports.com/blogs/new-york-jets-bars-in-boston/",
+     "season_seen": "2026",
+     "official_source": false,
+     "lat": 42.3726749,
+     "lon": -71.0762147,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://2ndhomesports.com/blogs/new-york-jets-bars-in-boston/",
+       "quote": "Boston JETS Club headquarters",
+       "status": "confirmed",
+       "official": false,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "New York Jets",
+     "bar_id": 156
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "Boston JETS Club",
+   "club_contact_url": null,
+   "search_notes": "Found one Jets-linked spot in the Boston area: Tap 151 Bar & Grill in Cambridge. The source is a third-party guide published in 2026, not the club or bar’s own page.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:11:38+00:00"
+  }
+ },
+ {
+  "key": "spots|philadelphia eagles|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Philadelphia Eagles",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "Scores",
+     "address": "166 Canal Street, Boston, MA 02114",
+     "club_name": "Philadelphia Eagles Fans of Boston",
+     "evidence_quote": "Scores is the only bar in Boston that will be showing every Eagles game on every TV, all season long!",
+     "source_url": "https://phillyfansbos.com/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 42.3650161,
+     "lon": -71.0609394,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The page says Scores shows every Eagles game and describes Philadelphia Eagles Fans of Boston watch parties, but it does not establish that this information is current for the 2026 season.",
+     "sources": [
+      {
+       "url": "https://phillyfansbos.com/",
+       "quote": "Scores is the only bar in Boston that will be showing every Eagles game on every TV, all season long!",
+       "status": "likely",
+       "official": true,
+       "reason": "The page says Scores shows every Eagles game and describes Philadelphia Eagles Fans of Boston watch parties, but it does not establish that this information is current for the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "team": "Philadelphia Eagles",
+     "bar_id": 157
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "Philadelphia Eagles Fans of Boston",
+   "club_contact_url": "https://phillyfansbos.com/",
+   "search_notes": "The club’s website identifies Scores as its Eagles watch spot and lists every Eagles game; it does not specify a season. The bar’s own website confirms the address.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:11:43+00:00"
+  }
+ },
+ {
+  "key": "spots|san francisco 49ers|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "San Francisco 49ers",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "The Point Boston",
+     "address": "147 Hanover St, Boston, MA 02108",
+     "club_name": "49ers Faithful Of Boston",
+     "evidence_quote": "Meet the 49ers Faithful of Boston at this North End mainstay",
+     "source_url": "https://2ndhomesports.com/blogs/san-francisco-49ers-bars-in-boston/",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 42.3617706,
+     "lon": -71.0569489,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": true,
+     "injection_on_page": false,
+     "decided_by": "code",
+     "status": "confirmed",
+     "status_reason": "Source page names the bar and mentions the 2026 season.",
+     "sources": [
+      {
+       "url": "https://2ndhomesports.com/blogs/san-francisco-49ers-bars-in-boston/",
+       "quote": "Meet the 49ers Faithful of Boston at this North End mainstay",
+       "status": "confirmed",
+       "official": true,
+       "reason": "Source page names the bar and mentions the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": true
+      }
+     ],
+     "team": "San Francisco 49ers",
+     "bar_id": 158
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": "49ers Faithful Of Boston",
+   "club_contact_url": null,
+   "search_notes": "A February 2026 49ers bar guide explicitly links The Point Boston with the local fan group; 49ers Webzone also lists the bar as a place playing 49ers games. The official 49ers chapter directory did not provide a Boston club link in the results.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:11:46+00:00"
+  }
+ },
+ {
+  "key": "spots|washington commanders|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Washington Commanders",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "Game On! (Fenway)",
+     "address": "unknown",
+     "club_name": "unknown",
+     "evidence_quote": "“Washington Commanders fans in the Boston area regularly gather at Game On!”",
+     "source_url": "https://teambarfinder.com/fan-bar-tag/commanders-bar-near-boston/",
+     "season_seen": "unknown",
+     "official_source": false,
+     "lat": 42.3470487,
+     "lon": -71.0984891,
+     "geocoded": true,
+     "page_loaded": false,
+     "page_error": "HTTP 409",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The page could not be loaded (HTTP 409), but the Scout provides a specific quote saying Washington Commanders fans in the Boston area regularly gather at Game On!.",
+     "sources": [
+      {
+       "url": "https://teambarfinder.com/fan-bar-tag/commanders-bar-near-boston/",
+       "quote": "“Washington Commanders fans in the Boston area regularly gather at Game On!”",
+       "status": "likely",
+       "official": false,
+       "reason": "The page could not be loaded (HTTP 409), but the Scout provides a specific quote saying Washington Commanders fans in the Boston area regularly gather at Game On!.",
+       "page_loaded": false,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "team": "Washington Commanders",
+     "bar_id": 159
+    }
+   ],
+   "allgames": [],
+   "wide_done": false,
+   "club_name": null,
+   "club_contact_url": null,
+   "search_notes": "Found one directory listing that explicitly connects Game On! (Fenway) with Washington Commanders fans in Boston. The listing does not identify a season or street address, and no official local fan club source was found.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:11:55+00:00"
+  }
+ },
+ {
+  "key": "spots|tampa bay buccaneers|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Tampa Bay Buccaneers",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [],
+   "allgames": [
+    {
+     "bar_name": "The North Star",
+     "address": "222 Friend Street, Boston, MA 02114",
+     "club_name": "unknown",
+     "evidence_quote": "NFL Sunday Ticket",
+     "source_url": "https://northstarboston.com/about/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 42.3641289,
+     "lon": -71.0610794,
+     "geocoded": true,
+     "page_loaded": false,
+     "page_error": "ConnectError",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The source page could not be loaded, and the Scout’s quote (“NFL Sunday Ticket”) does not tie The North Star to Buccaneers fans or a club in Boston.",
+     "sources": [
+      {
+       "url": "https://northstarboston.com/about/",
+       "quote": "NFL Sunday Ticket",
+       "status": "unverified",
+       "official": true,
+       "reason": "The source page could not be loaded, and the Scout’s quote (“NFL Sunday Ticket”) does not tie The North Star to Buccaneers fans or a club in Boston.",
+       "page_loaded": false,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "Tampa Bay Buccaneers",
+     "bar_id": 153
+    }
+   ],
+   "wide_done": true,
+   "club_name": null,
+   "club_contact_url": null,
+   "search_notes": "Checked the Buccaneers' official fan page, Buccaneers-specific Boston bar searches and Boston NFL bar directories. No source found tying a Boston-area bar or local Bucs chapter to Buccaneers watch gatherings; The North Star is listed as a general NFL Sunday Ticket option, not a Bucs fan spot.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:12:00+00:00"
+  }
+ },
+ {
+  "key": "spots|seattle seahawks|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Seattle Seahawks",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [
+    {
+     "bar_name": "Lir",
+     "address": "903 Boylston St, Boston, MA 02115",
+     "club_name": "unknown",
+     "evidence_quote": "Lir hosts the 12s crowd",
+     "source_url": "https://www.bostonmove.com/publications/blog/24/Where-to-watch-your-favorite-NFL-teams-in-Boston.html",
+     "season_seen": "unknown",
+     "official_source": false,
+     "lat": 42.3484206,
+     "lon": -71.0842079,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "likely",
+     "status_reason": "The page says Seattle fans traditionally watch the Seahawks at Lir and that it hosts the 12s crowd, but the page is from 2022 and does not establish the listing for the 2026 season.",
+     "sources": [
+      {
+       "url": "https://www.bostonmove.com/publications/blog/24/Where-to-watch-your-favorite-NFL-teams-in-Boston.html",
+       "quote": "Lir hosts the 12s crowd",
+       "status": "likely",
+       "official": false,
+       "reason": "The page says Seattle fans traditionally watch the Seahawks at Lir and that it hosts the 12s crowd, but the page is from 2022 and does not establish the listing for the 2026 season.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "team": "Seattle Seahawks",
+     "bar_id": 160
+    }
+   ],
+   "allgames": [
+    {
+     "bar_name": "The North Star",
+     "address": "222 Friend St, Boston, MA 02114",
+     "club_name": "unknown",
+     "evidence_quote": "NFL Sunday Ticket",
+     "source_url": "https://northstarboston.com/about/",
+     "season_seen": "unknown",
+     "official_source": true,
+     "lat": 42.3641289,
+     "lon": -71.0610794,
+     "geocoded": true,
+     "page_loaded": false,
+     "page_error": "ConnectError",
+     "name_on_page": false,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The source page could not be loaded, and the Scout’s quote (“NFL Sunday Ticket”) does not specifically connect The North Star to Seattle Seahawks fans in Boston.",
+     "sources": [
+      {
+       "url": "https://northstarboston.com/about/",
+       "quote": "NFL Sunday Ticket",
+       "status": "unverified",
+       "official": true,
+       "reason": "The source page could not be loaded, and the Scout’s quote (“NFL Sunday Ticket”) does not specifically connect The North Star to Seattle Seahawks fans in Boston.",
+       "page_loaded": false,
+       "name_on_page": false,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "Seattle Seahawks",
+     "bar_id": 153
+    }
+   ],
+   "wide_done": true,
+   "club_name": null,
+   "club_contact_url": null,
+   "search_notes": "Found an older Boston guide identifying Lir as a Seahawks/12s gathering spot, but it does not establish that the regular watch is current for the 2026 season. Checked the official Sea Hawkers chapter directory and current Boston Seahawks-bar listings; no Boston chapter or other current team-specific spot was confirmed. The North Star's site says it carries NFL Sunday Ticket, making it a general NFL option, not a Seahawks fan gathering.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:12:05+00:00"
+  }
+ },
+ {
+  "key": "spots|tennessee titans|boston",
+  "kind": "spots",
+  "payload": {
+   "team": "Tennessee Titans",
+   "sport": "NFL",
+   "city": "Boston, MA",
+   "spots": [],
+   "allgames": [
+    {
+     "bar_name": "Jake n JOES Sports Grille - Waltham",
+     "address": "70 Market Place Dr., Waltham, MA 02451",
+     "club_name": "unknown",
+     "evidence_quote": "Every Jake n JOES location has NFL Sunday Ticket!",
+     "source_url": "https://www.jakenjoes.com/",
+     "season_seen": "2026",
+     "official_source": true,
+     "lat": 42.3798272,
+     "lon": -71.2629286,
+     "geocoded": true,
+     "page_loaded": true,
+     "page_error": "",
+     "name_on_page": true,
+     "season_on_page": false,
+     "injection_on_page": false,
+     "decided_by": "model",
+     "status": "unverified",
+     "status_reason": "The page lists a Waltham location and says every location has NFL Sunday Ticket, but it does not tie the bar to Tennessee Titans fans or a Titans club in Boston.",
+     "sources": [
+      {
+       "url": "https://www.jakenjoes.com/",
+       "quote": "Every Jake n JOES location has NFL Sunday Ticket!",
+       "status": "unverified",
+       "official": true,
+       "reason": "The page lists a Waltham location and says every location has NFL Sunday Ticket, but it does not tie the bar to Tennessee Titans fans or a Titans club in Boston.",
+       "page_loaded": true,
+       "name_on_page": true,
+       "season_on_page": false
+      }
+     ],
+     "kind": "allgames",
+     "team": "Tennessee Titans",
+     "bar_id": 161
+    }
+   ],
+   "wide_done": true,
+   "club_name": null,
+   "club_contact_url": "https://www.tennesseetitans.com/fans/fan-clubs",
+   "search_notes": "No Boston-area Titans bar or chapter was identified in the official Titans fan-club directory or GameWatch.info’s Boston Titans listing. For an NFL fallback, Jake n JOES states every location has NFL Sunday Ticket; its Waltham location is in the metro area. The team directory was checked during this search; the GameWatch listing was last crawled three months ago.",
+   "safety_notes": [],
+   "found_at": "2026-10-28T16:12:09+00:00"
+  }
+ },
+ {
+  "key": "schedule|new york giants|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "New York Giants",
+   "season": "2026",
+   "games": [
+    {
+     "date": "2026-11-08",
+     "opponent": "Philadelphia Eagles",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-11-12",
+     "opponent": "Washington Commanders",
+     "home_away": "home",
+     "kickoff_et": "8:15 PM ET",
+     "tv": "Prime Video"
+    },
+    {
+     "date": "2026-11-22",
+     "opponent": "Jacksonville Jaguars",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-11-29",
+     "opponent": "Indianapolis Colts",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-12-06",
+     "opponent": "San Francisco 49ers",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-12-13",
+     "opponent": "Seattle Seahawks",
+     "home_away": "away",
+     "kickoff_et": "4:25 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-12-20",
+     "opponent": "Cleveland Browns",
+     "home_away": "home",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-12-28",
+     "opponent": "Detroit Lions",
+     "home_away": "away",
+     "kickoff_et": "8:15 PM ET",
+     "tv": "ESPN"
+    },
+    {
+     "date": "2027-01-03",
+     "opponent": "Dallas Cowboys",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "TBD",
+     "opponent": "Philadelphia Eagles",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://www.giants.com/schedule/"
+  }
+ },
+ {
+  "key": "schedule|new england patriots|2026",
+  "kind": "schedule",
+  "payload": {
+   "team": "New England Patriots",
+   "season": "2026",
+   "games": [
+    {
+     "date": "2026-11-01",
+     "opponent": "Miami Dolphins",
+     "home_away": "away",
+     "kickoff_et": "4:25 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-11-08",
+     "opponent": "Green Bay Packers",
+     "home_away": "home",
+     "kickoff_et": "4:25 PM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-11-15",
+     "opponent": "Detroit Lions",
+     "home_away": "neutral",
+     "kickoff_et": "9:30 AM ET",
+     "tv": "FOX"
+    },
+    {
+     "date": "2026-11-29",
+     "opponent": "Los Angeles Chargers",
+     "home_away": "away",
+     "kickoff_et": "8:20 PM ET",
+     "tv": "NBC"
+    },
+    {
+     "date": "2026-12-06",
+     "opponent": "Buffalo Bills",
+     "home_away": "home",
+     "kickoff_et": "4:25 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "2026-12-10",
+     "opponent": "Minnesota Vikings",
+     "home_away": "home",
+     "kickoff_et": "8:15 PM ET",
+     "tv": "Prime Video"
+    },
+    {
+     "date": "2026-12-21",
+     "opponent": "Kansas City Chiefs",
+     "home_away": "away",
+     "kickoff_et": "8:15 PM ET",
+     "tv": "ESPN"
+    },
+    {
+     "date": "2026-12-27",
+     "opponent": "New York Jets",
+     "home_away": "away",
+     "kickoff_et": "1:00 PM ET",
+     "tv": "CBS"
+    },
+    {
+     "date": "TBD",
+     "opponent": "Denver Broncos",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    },
+    {
+     "date": "TBD",
+     "opponent": "Miami Dolphins",
+     "home_away": "home",
+     "kickoff_et": "TBD",
+     "tv": "TBD"
+    }
+   ],
+   "source_url": "https://www.patriots.com/schedule/"
+  }
+ },
+ {
+  "key": "rep|greatest bar|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 3.9,
+   "yelp_rating": null,
+   "review_volume": "1,169 Google reviews",
+   "themes": [
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "mixed",
+     "detail": "Reviewers describe an energetic, high-volume venue, though the noise and crowds can be a drawback."
+    },
+    {
+     "theme": "Large screens",
+     "sentiment": "positive",
+     "detail": "Reviewers value the large screens and say they make games easy to follow."
+    },
+    {
+     "theme": "Game-day energy",
+     "sentiment": "mixed",
+     "detail": "Sports gatherings can feel exciting and animated, but some visitors report packed rooms."
+    },
+    {
+     "theme": "Service consistency",
+     "sentiment": "mixed",
+     "detail": "Some reviewers praise attentive staff, while others describe disappointing service or seating experiences."
+    }
+   ],
+   "game_day_take": "Reviewers mention large screens and an energetic, sometimes packed and loud game-day atmosphere; service and seating experiences vary.",
+   "official_site": "https://thegreatestbar.com/",
+   "menu_url": "https://thegreatestbar.com/restaurant-menu/",
+   "sources": [
+    "https://restaurantguru.com/The-Greatest-Bar-Boston",
+    "https://www.chamberofcommerce.com/business-directory/massachusetts/boston/bar/41157880-the-greatest-bar",
+    "https://thegreatestbar.com/",
+    "https://thegreatestbar.com/restaurant-menu/"
+   ],
+   "photos": [
+    "https://thegreatestbar.com/wp-content/uploads/2026/07/10_29.png",
+    "https://thegreatestbar.com/wp-content/uploads/2026/07/10_30.png",
+    "https://thegreatestbar.com/wp-content/uploads/2026/07/10_31.png",
+    "https://thegreatestbar.com/wp-content/uploads/2026/08/10.31.webp"
+   ]
+  }
+ },
+ {
+  "key": "rep|the greatest bar|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 3.9,
+   "yelp_rating": 2.5,
+   "review_volume": "Google: 1,169 reviews; Yelp: 400 reviews",
+   "themes": [
+    {
+     "theme": "Game-day screens",
+     "sentiment": "positive",
+     "detail": "Reviewers praise the large screens and say they make it easy to watch games."
+    },
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "mixed",
+     "detail": "Visitors describe an energetic, crowded venue, especially around games and events, though it can feel loud."
+    },
+    {
+     "theme": "Staff and service",
+     "sentiment": "mixed",
+     "detail": "Some reviewers appreciate friendly, attentive staff, while others report disappointing service."
+    }
+   ],
+   "game_day_take": "Reviewers mention large screens and an energetic, sometimes packed and loud game-day atmosphere.",
+   "official_site": "https://thegreatestbar.com/",
+   "menu_url": null,
+   "sources": [
+    "https://restaurantguru.com/The-Greatest-Bar-Boston",
+    "https://local.yahoo.com/info-10161839-the-greatest-bar-boston/",
+    "https://thegreatestbar.com/"
+   ],
+   "photos": [
+    "https://thegreatestbar.com/wp-content/uploads/2026/07/10_29.png",
+    "https://thegreatestbar.com/wp-content/uploads/2026/07/10_30.png",
+    "https://thegreatestbar.com/wp-content/uploads/2026/07/10_31.png",
+    "https://thegreatestbar.com/wp-content/uploads/2026/08/10.31.webp"
+   ]
+  }
+ },
+ {
+  "key": "rep|cask n flagon|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "555 Tripadvisor reviews",
+   "themes": [
+    {
+     "theme": "Game-day atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe it as a lively, convenient stop before or after Red Sox games."
+    },
+    {
+     "theme": "TVs and sports",
+     "sentiment": "positive",
+     "detail": "Reviewers mention large screens for watching games."
+    },
+    {
+     "theme": "Food and drinks",
+     "sentiment": "positive",
+     "detail": "Reviewers frequently praise the food, appetizers, and beer selection."
+    },
+    {
+     "theme": "Service",
+     "sentiment": "positive",
+     "detail": "Many reviewers describe staff as attentive and accommodating."
+    }
+   ],
+   "game_day_take": "Reviewers describe a busy pre-game crowd and a fun atmosphere, with large screens showing Red Sox games.",
+   "official_site": "https://casknflagon.com/locations/boston/",
+   "menu_url": "https://casknflagon.com/menus/boston/",
+   "sources": [
+    "https://www.tripadvisor.com/Restaurant_Review-g60745-d789610-Reviews-Cask_n_Flagon-Boston_Massachusetts.html",
+    "https://casknflagon.com/locations/boston/",
+    "https://casknflagon.com/menus/boston/"
+   ],
+   "photos": []
+  }
+ },
+ {
+  "key": "rep|730 tavern|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.1,
+   "yelp_rating": null,
+   "review_volume": "1,576 Google reviews",
+   "themes": [
+    {
+     "theme": "Friendly service",
+     "sentiment": "positive",
+     "detail": "Review summaries often praise the staff as welcoming and the service as prompt."
+    },
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe a warm, energetic setting for casual meals and gatherings."
+    },
+    {
+     "theme": "Food variety",
+     "sentiment": "positive",
+     "detail": "Review summaries highlight a broad menu, including popular appetizers and entrees."
+    },
+    {
+     "theme": "Food consistency",
+     "sentiment": "mixed",
+     "detail": "Some reviewers praise the food, while others report that quality can vary."
+    },
+    {
+     "theme": "Busy-game energy",
+     "sentiment": "positive",
+     "detail": "Reviews mention game-related visits and an energetic crowd."
+    }
+   ],
+   "game_day_take": "Reviewers mention watching games and a lively sports-bar atmosphere, but specific details about TV visibility or sound are unknown.",
+   "official_site": "https://730tavern.com/",
+   "menu_url": "https://www.opentable.com/r/730-tavern-and-patio-cambridge",
+   "sources": [
+    "https://730tavern.com/",
+    "https://restaurantguru.com/730-Tavern-Kitchen-and-Patio-Cambridge",
+    "https://www.opentable.com/r/730-tavern-and-patio-cambridge"
+   ],
+   "photos": [
+    "https://static.spotapps.co/web/730tavern--com/custom/events.jpg",
+    "https://static.spotapps.co/web/placeholder.png"
+   ]
+  }
+ },
+ {
+  "key": "rep|the harp boston|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.0,
+   "yelp_rating": null,
+   "review_volume": "1,030 Google reviews (as shown by Restaurant Guru)",
+   "themes": [
+    {
+     "theme": "Game-night crowds",
+     "sentiment": "mixed",
+     "detail": "Reviewers note that the bar can become very crowded on game nights."
+    },
+    {
+     "theme": "Service experience",
+     "sentiment": "mixed",
+     "detail": "Reviews describe varied service experiences, including reports of waiting for staff and being told the venue was not yet open."
+    },
+    {
+     "theme": "Sports-bar atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe it as a lively sports bar near TD Garden."
+    }
+   ],
+   "game_day_take": "Reviewers describe game nights as lively and sometimes very crowded; the venue is noted as a sports bar, but specific comments about TV visibility or sound are limited.",
+   "official_site": "https://www.theharp.com/",
+   "menu_url": "https://www.theharp.com/the-harp-boston-menu/",
+   "sources": [
+    "https://restaurantguru.com/The-Harp-Boston",
+    "https://local.yahoo.com/info-10162904-the-harp-boston/",
+    "https://www.theharp.com/",
+    "https://www.theharp.com/the-harp-boston-menu/"
+   ],
+   "photos": [
+    "https://images.getbento.com/accounts/efdcf2eda6e558b1200bb8aaffcbe8b2/media/images/16205the-harp-logo.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+    "https://images.getbento.com/accounts/efdcf2eda6e558b1200bb8aaffcbe8b2/media/images/16205the-harp-logo.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+    "https://www.facebook.com/tr?id=484445958888530&ev=PageView&noscript=1",
+    "https://images.getbento.com/accounts/efdcf2eda6e558b1200bb8aaffcbe8b2/media/images/38387glass-house-long.png?w=1200&fit=crop&auto=compress,format&cs=origin&crop=focalpoint&fp-x=0.5&fp-y=0.5|resize(786)"
+   ]
+  }
+ },
+ {
+  "key": "rep|bleacher bar|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.5,
+   "yelp_rating": null,
+   "review_volume": "2,035 Google reviews; 486 Tripadvisor reviews",
+   "themes": [
+    {
+     "theme": "Fenway field view",
+     "sentiment": "positive",
+     "detail": "Reviewers frequently praise the unusual view of Fenway Park from inside the bar."
+    },
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "mixed",
+     "detail": "Visitors enjoy the sports-focused setting, though some find it crowded and noisy."
+    },
+    {
+     "theme": "Food and drinks",
+     "sentiment": "mixed",
+     "detail": "Reviewers often like the burgers, snacks, and beer, while some report inconsistent food or service."
+    },
+    {
+     "theme": "Friendly service",
+     "sentiment": "mixed",
+     "detail": "Some reviewers describe staff as welcoming and helpful, while others report slow or frustrating service."
+    }
+   ],
+   "game_day_take": "Reviewers highlight the Fenway view and lively, sometimes crowded atmosphere; the bar's site says the view opens directly onto the field, but reviews provide limited detail about TV coverage or sound.",
+   "official_site": "https://www.bleacherbarboston.com/",
+   "menu_url": "https://www.bleacherbarboston.com/menus/",
+   "sources": [
+    "https://restaurantguru.com/Bleacher-Bar-Boston",
+    "https://www.tripadvisor.com/Restaurant_Review-g60745-d1992229-Reviews-Bleacher_Bar-Boston_Massachusetts.html",
+    "https://www.restaurantji.com/ma/boston/bleacher-bar-/",
+    "https://www.bleacherbarboston.com/",
+    "https://www.bleacherbarboston.com/menus/"
+   ],
+   "photos": [
+    "https://bleacherbarboston.com/assets/happenings_crowd_thumb2560.jpg",
+    "https://bleacherbarboston.com/assets/happenings_crowd_thumb2560.jpg"
+   ]
+  }
+ },
+ {
+  "key": "rep|teddy s on the hill|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.5,
+   "yelp_rating": null,
+   "review_volume": "147 Google ratings",
+   "themes": [
+    {
+     "theme": "Friendly service",
+     "sentiment": "positive",
+     "detail": "Review summaries frequently praise attentive, welcoming staff."
+    },
+    {
+     "theme": "Comfort food",
+     "sentiment": "positive",
+     "detail": "Guests often compliment the pub food, especially wings, pizza, and generous portions."
+    },
+    {
+     "theme": "Relaxed atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe a casual neighborhood feel with quirky touches."
+    },
+    {
+     "theme": "Busy occasions",
+     "sentiment": "mixed",
+     "detail": "The bar can become busy during major events, including Red Sox games."
+    }
+   ],
+   "game_day_take": "A reviewer described watching a FIFA World Cup game there, and another review mentions multiple TVs showing sports; reports about game-day sound and crowd levels are limited.",
+   "official_site": "https://www.teddysboston.com/",
+   "menu_url": "https://www.teddysboston.com/general-8",
+   "sources": [
+    "https://restaurantguru.com/Teddys-on-the-Hill-Boston",
+    "https://www.restaurantji.com/ma/boston/teddys-on-the-hill-/",
+    "https://local.yahoo.com/info-230983859-teddy%E2%80%99s-on-the-hill-boston/",
+    "https://www.teddysboston.com/",
+    "https://www.teddysboston.com/general-8"
+   ],
+   "photos": [
+    "https://static.wixstatic.com/media/a67851_fbfe7fdb51b9437abe284a042b9f22ef~mv2.jpg/v1/fill/w_147,h_98,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/a67851_fbfe7fdb51b9437abe284a042b9f22ef~mv2.jpg",
+    "https://static.wixstatic.com/media/a67851_25e4ba571b324eabb50827a838bb2b35~mv2.jpg/v1/fill/w_147,h_98,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/a67851_25e4ba571b324eabb50827a838bb2b35~mv2.jpg",
+    "https://static.wixstatic.com/media/8339a1_a55a28847ad64600b2565e6b7ad4dc43~mv2.jpg/v1/fill/w_407,h_208,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Boston%E2%80%99s%20Red%20Hat-1_edited_edited.jpg",
+    "https://static.wixstatic.com/media/8339a1_afbf60b38e0a4db5963a62254028e4a7~mv2.png/v1/fill/w_624,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/png%20115%20Years.png"
+   ]
+  }
+ },
+ {
+  "key": "rep|warehouse kitchen sports bar|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "70 Tripadvisor reviews",
+   "themes": [
+    {
+     "theme": "Friendly service",
+     "sentiment": "positive",
+     "detail": "Reviewers describe staff as welcoming, attentive, and helpful."
+    },
+    {
+     "theme": "Enjoyable food",
+     "sentiment": "positive",
+     "detail": "Reviewers speak favorably about the food, including classic sports-bar dishes."
+    },
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe the space as relaxed and lively, with a casual sports-bar feel."
+    }
+   ],
+   "game_day_take": "Reviewers mention plentiful TVs and a game-friendly atmosphere, though specific game-day crowd or sound details are limited.",
+   "official_site": "https://www.thewarehouseboston.com/",
+   "menu_url": "https://www.thewarehouseboston.com/menus/",
+   "sources": [
+    "https://www.tripadvisor.com/Restaurant_Review-g60745-d5567546-Reviews-Warehouse_Kitchen_Sports_Bar-Boston_Massachusetts.html",
+    "https://www.restaurantji.com/ma/boston/warehouse-bar-and-grille-/",
+    "https://www.thewarehouseboston.com/",
+    "https://www.thewarehouseboston.com/menus/"
+   ],
+   "photos": [
+    "https://images.getbento.com/accounts/5f8d28a3f1079fa40a1281a292a2707d/media/images/38315Warehouse_Kitchen__Sports_Bar.svg?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=ffffff&pad=100",
+    "https://images.getbento.com/accounts/5f8d28a3f1079fa40a1281a292a2707d/media/images/38315Warehouse_Kitchen__Sports_Bar.svg?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=ffffff&pad=100"
+   ]
+  }
+ },
+ {
+  "key": "rep|jake n joes sports grille norwood|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "1,936 customer reviews shown on Birdeye; this is an aggregate, not a Google or Yelp count.",
+   "themes": [
+    {
+     "theme": "Food and portions",
+     "sentiment": "positive",
+     "detail": "Review summaries often praise the food and generous portions, though some mention individual dishes that disappointed."
+    },
+    {
+     "theme": "Friendly service",
+     "sentiment": "positive",
+     "detail": "Reviewers frequently describe staff as friendly and attentive, including during busy periods."
+    },
+    {
+     "theme": "Sports viewing",
+     "sentiment": "positive",
+     "detail": "Review summaries highlight the many TVs and say the venue suits sports fans."
+    },
+    {
+     "theme": "Busy atmosphere",
+     "sentiment": "mixed",
+     "detail": "Reviewers describe the restaurant as lively and sometimes crowded, with some noting that service remains efficient."
+    }
+   ],
+   "game_day_take": "The bar’s website and OpenTable describe numerous TVs and game audio; review summaries praise the sports-viewing setup, but specific reviewer comments about game-day crowds or sound are not available in these sources.",
+   "official_site": "https://www.jakenjoes.com/",
+   "menu_url": "https://www.jakenjoes.com/",
+   "sources": [
+    "https://birdeye.com/jake-n-joes-sports-grille-norwood-162855921540917",
+    "https://www.restaurantji.com/ma/norwood/jake-n-joes-sports-grille-norwood-/",
+    "https://www.opentable.com/r/jake-n-joes-sports-grille-norwood",
+    "https://www.jakenjoes.com/"
+   ],
+   "photos": [
+    "https://www.jakenjoes.com/wp-content/uploads/2026/05/jnj_apps-1024x717.webp",
+    "https://www.jakenjoes.com/wp-content/uploads/2026/10/kissedcaramel.webp",
+    "https://www.jakenjoes.com/wp-content/uploads/2026/10/samadamsoctoberfest.webp",
+    "https://www.jakenjoes.com/wp-content/uploads/2026/02/TakeoutTues_happening_2.26.webp"
+   ]
+  }
+ },
+ {
+  "key": "rep|m j o connor s downtown|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": 3.0,
+   "review_volume": "393 Yelp reviews",
+   "themes": [
+    {
+     "theme": "Pub food",
+     "sentiment": "positive",
+     "detail": "Reviewers often praise the pub dishes, including chowder and other comfort-food options."
+    },
+    {
+     "theme": "Friendly service",
+     "sentiment": "positive",
+     "detail": "Reviewers commonly describe the staff as welcoming and helpful."
+    },
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "mixed",
+     "detail": "Reviewers enjoy the warm, energetic setting, though it can feel busy or loud."
+    }
+   ],
+   "game_day_take": "The bar is described as a game-watch destination, but available reviews don’t establish consistent details about TVs, sound, or game-day crowds.",
+   "official_site": "https://www.mjoconnors.com/",
+   "menu_url": "https://www.mjoconnors.com/menus/",
+   "sources": [
+    "https://local.yahoo.com/info-215425957-m-j-oconnor-s-boston/",
+    "https://www.mjoconnors.com/",
+    "https://www.mjoconnors.com/menus/",
+    "https://www.tripadvisor.com/Restaurant_Review-g60745-d322056-Reviews-M_J_O_Connor_s_Back_Bay-Boston_Massachusetts.html"
+   ],
+   "photos": [
+    "https://images.getbento.com/accounts/19147d23a90dba3b89bce72e89d63b48/media/images/mjs-icon-white.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=fff&pad=100",
+    "https://images.getbento.com/accounts/19147d23a90dba3b89bce72e89d63b48/media/images/mjs-icon-white.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=fff&pad=100",
+    "https://www.facebook.com/tr?id=484445958888530&ev=PageView&noscript=1",
+    "https://images.getbento.com/accounts/19147d23a90dba3b89bce72e89d63b48/media/images/145223263glass_house-300.png?w=1200&fit=crop&auto=compress,format&cs=origin&crop=focalpoint&fp-x=0.5&fp-y=0.5|resize(786)"
+   ]
+  }
+ },
+ {
+  "key": "rep|pj ryan s|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "unknown",
+   "themes": [
+    {
+     "theme": "Friendly service",
+     "sentiment": "positive",
+     "detail": "Review excerpts on the bar’s site praise attentive, helpful staff."
+    },
+    {
+     "theme": "Food and drinks",
+     "sentiment": "positive",
+     "detail": "Reviewers describe the food and beer selection favorably, with several mentioning brunch and pub dishes."
+    },
+    {
+     "theme": "Cozy neighborhood feel",
+     "sentiment": "positive",
+     "detail": "Reviewers characterize the pub as welcoming and comfortable, though it may get crowded on busy nights."
+    }
+   ],
+   "game_day_take": "The bar’s site describes sports viewing, and a reviewer mentions watching football at Sunday brunch; reviews do not specify TV or sound quality or how crowded it gets on game days.",
+   "official_site": "https://pjryans.com/",
+   "menu_url": "https://pjryans.com/somerville-teele-square-pj-ryan-s-food-menu",
+   "sources": [
+    "https://pjryans.com/",
+    "https://pjryans.com/somerville-teele-square-pj-ryan-s-food-menu",
+    "https://www.restaurantji.com/ma/somerville/pj-ryans-/"
+   ],
+   "photos": [
+    "https://static.spotapps.co/website_images/ab_websites/40864_website_v1/social_share.jpg",
+    "https://static.spotapps.co/website_images/ab_websites/40864_website_v1/social_share.jpg",
+    "https://static.spotapps.co/web/placeholder.png"
+   ]
+  }
+ },
+ {
+  "key": "rep|public tavern|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "49 Restaurantji ratings",
+   "themes": [
+    {
+     "theme": "Friendly service",
+     "sentiment": "positive",
+     "detail": "Reviewers describe the bartenders and staff as welcoming and helpful."
+    },
+    {
+     "theme": "Games and activities",
+     "sentiment": "positive",
+     "detail": "Reviewers appreciate the pool table and other games as part of the pub atmosphere."
+    },
+    {
+     "theme": "Good value",
+     "sentiment": "positive",
+     "detail": "Reviewers mention affordable food and drinks."
+    },
+    {
+     "theme": "Crowds and seating",
+     "sentiment": "mixed",
+     "detail": "Some reviewers say the bar can get busy, making seating harder and service slower."
+    }
+   ],
+   "game_day_take": "Reviewers mention watching games here and describe it as a good spot, but say crowds can make seating and service slower.",
+   "official_site": "https://publicsomerville.com/",
+   "menu_url": "https://publicsomerville.com/menu/",
+   "sources": [
+    "https://www.restaurantji.com/ma/somerville/public-tavern-/",
+    "https://publicsomerville.com/",
+    "https://publicsomerville.com/menu/"
+   ],
+   "photos": [
+    "https://publicsomerville.com/wp-content/uploads/2024/01/special-3-dollar-apps.png",
+    "https://publicsomerville.com/wp-content/uploads/2023/07/publictavernonblack-100.jpeg",
+    "https://publicsomerville.com/wp-content/uploads/2024/01/special-3-dollar-apps-768x1024.png",
+    "https://publicsomerville.com/wp-content/uploads/2024/11/poke-tourneys-every-wednesday--832x1024.png"
+   ]
+  }
+ },
+ {
+  "key": "rep|blackmoor bar and kitchen|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "355 ratings listed on Restaurantji; 223 reviews listed on Tripadvisor",
+   "themes": [
+    {
+     "theme": "Food and drinks",
+     "sentiment": "positive",
+     "detail": "Restaurantji reviews highlight the food and broad beer and cocktail selection."
+    },
+    {
+     "theme": "Atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe the atmosphere favorably."
+    },
+    {
+     "theme": "Service",
+     "sentiment": "positive",
+     "detail": "Some reviewers praise the service they received."
+    }
+   ],
+   "game_day_take": "Tripadvisor lists television among the amenities and includes a photo caption noting room to watch games; specific reviewer comments about game-day sound or crowds are unknown.",
+   "official_site": "https://blackmoorbar.com/",
+   "menu_url": "https://blackmoorbar.com/menu/",
+   "sources": [
+    "https://www.restaurantji.com/ma/charlestown/blackmoor-bar-and-kitchen-/",
+    "https://www.tripadvisor.com/Restaurant_Review-g60745-d10286946-Reviews-or15-Blackmoor_Bar_and_Kitchen-Boston_Massachusetts.html",
+    "https://blackmoorbar.com/",
+    "https://blackmoorbar.com/menu/"
+   ],
+   "photos": [
+    "https://blackmoorbar.com/wp-content/uploads/2015/08/Blackmoor-Name_Black-sm.png",
+    "https://blackmoorbar.com/wp-content/uploads/2015/08/Blackmoor-HomeSlider-25-1024x439.jpg",
+    "https://magounssaloon.com/wp-content/uploads/2023/09/AdobeStock_629603323-Oktoberfest-sm-1024x683.jpg"
+   ]
+  }
+ },
+ {
+  "key": "rep|the point|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.4,
+   "yelp_rating": null,
+   "review_volume": "846 Google reviews",
+   "themes": [
+    {
+     "theme": "Friendly service",
+     "sentiment": "positive",
+     "detail": "Reviews describe staff as welcoming, attentive, and helpful."
+    },
+    {
+     "theme": "Pub food",
+     "sentiment": "positive",
+     "detail": "Reviewers praise comfort-food favorites, including chowder, wings, and nachos."
+    },
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "positive",
+     "detail": "Visitors enjoy the relaxed pub feel, drinks, and upstairs entertainment."
+    }
+   ],
+   "game_day_take": "The bar identifies itself as a sports bar with game watches, and reviewers mention watching Celtics games and football; Google describes TVs, but reviews give limited detail about game-day sound or crowd levels.",
+   "official_site": "https://www.thepointboston.com/",
+   "menu_url": "https://www.thepointboston.com/menus/",
+   "sources": [
+    "https://www.google.com/maps/search/The%2BPoint%2BBoston%2C%2B147%2BHanover%2BStreet%2C%2BBoston%2C%2BMA",
+    "https://www.thepointboston.com/",
+    "https://www.restaurantji.com/ma/boston/the-point-/",
+    "https://www.thepointboston.com/menus/"
+   ],
+   "photos": [
+    "https://images.getbento.com/accounts/8da929088177ff537580438ee2b941ed/media/images/65592Untitled_design-2.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+    "https://images.getbento.com/accounts/8da929088177ff537580438ee2b941ed/media/images/65592Untitled_design-2.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+    "https://images.getbento.com/accounts/8da929088177ff537580438ee2b941ed/media/images/65592Untitled_design-2.png",
+    "https://images.getbento.com/accounts/8da929088177ff537580438ee2b941ed/media/19M5T4sTGecY9eKiMBng_DSCF2862.jpg?w=1200&fit=max&auto=compress,format&cs=origin"
+   ]
+  }
+ },
+ {
+  "key": "rep|hurricane s at the garden|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.0,
+   "yelp_rating": null,
+   "review_volume": "497 Google reviews, as shown by Birdeye",
+   "themes": [
+    {
+     "theme": "Friendly service",
+     "sentiment": "positive",
+     "detail": "Some recent reviewers describe the staff as friendly and helpful."
+    },
+    {
+     "theme": "Solid bar food",
+     "sentiment": "positive",
+     "detail": "Reviewers mention straightforward bar food and positive food experiences."
+    },
+    {
+     "theme": "Event-night entry",
+     "sentiment": "negative",
+     "detail": "One recent reviewer reported difficulty getting clear information after being denied entry following a TD Garden event."
+    },
+    {
+     "theme": "Sports atmosphere",
+     "sentiment": "positive",
+     "detail": "A recent diner noted a live sports-talk broadcast and described the venue as a place to visit during TD Garden events."
+    }
+   ],
+   "game_day_take": "Reviewers mention a live sports-talk broadcast and a lively sports atmosphere; the bar’s website says it has TVs throughout for Celtics and Bruins games.",
+   "official_site": "https://www.hurricanesboston.com/",
+   "menu_url": "https://www.hurricanesboston.com/menus/",
+   "sources": [
+    "https://reviews.birdeye.com/hurricanes-at-the-garden-178421413782658",
+    "https://www.opentable.com/r/hurricanes-at-the-garden-boston",
+    "https://www.hurricanesboston.com/",
+    "https://www.hurricanesboston.com/menus/"
+   ],
+   "photos": [
+    "https://images.getbento.com/accounts/e8cf89ff4ef82c5475c42f39d7a8d584/media/images/28084hurricanes-at-the-garden_Logo.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+    "https://images.getbento.com/accounts/e8cf89ff4ef82c5475c42f39d7a8d584/media/images/28084hurricanes-at-the-garden_Logo.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+    "https://www.facebook.com/tr?id=484445958888530&ev=PageView&noscript=1",
+    "https://images.getbento.com/accounts/e8cf89ff4ef82c5475c42f39d7a8d584/media/images/7516glass-house-long-white.png?w=1200&fit=crop&auto=compress,format&cs=origin&crop=focalpoint&fp-x=0.5&fp-y=0.5|resize(786)"
+   ]
+  }
+ },
+ {
+  "key": "rep|jake n joes sports grille woburn|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.0,
+   "yelp_rating": null,
+   "review_volume": "1,296 Google reviews (as reported by Birdeye)",
+   "themes": [
+    {
+     "theme": "Attentive service",
+     "sentiment": "positive",
+     "detail": "Review summaries often praise staff for being attentive and helpful."
+    },
+    {
+     "theme": "Game-friendly atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe a lively setting with multiple TVs for following games."
+    },
+    {
+     "theme": "Food and portions",
+     "sentiment": "mixed",
+     "detail": "Many reviewers enjoy the food, though some say portions can feel small."
+    },
+    {
+     "theme": "Group visits",
+     "sentiment": "positive",
+     "detail": "Reviewers describe it as an enjoyable place to gather with friends and watch sports."
+    }
+   ],
+   "game_day_take": "Reviewers mention plenty of TVs and a lively game-watching atmosphere; the business listing also describes a sound system, but reviewer comments about game-day sound are limited.",
+   "official_site": "https://www.jakenjoes.com/locations/woburn/",
+   "menu_url": "https://www.jakenjoes.com/menus/",
+   "sources": [
+    "https://birdeye.com/jake-n-joes-sports-grille-woburn-162855930771295",
+    "https://www.tripadvisor.com/Restaurant_Review-g41948-d9742500-Reviews-Jake_n_JOES_Sports_Grille_Woburn-Woburn_Massachusetts.html",
+    "https://www.jakenjoes.com/locations/woburn/",
+    "https://www.jakenjoes.com/menus/"
+   ],
+   "photos": [
+    "https://www.jakenjoes.com/wp-content/uploads/2024/10/wobun6-768x511.webp",
+    "https://www.jakenjoes.com/wp-content/uploads/2024/10/woburn5-768x511.webp",
+    "https://www.jakenjoes.com/wp-content/uploads/2024/10/woburn4-768x511.webp",
+    "https://www.jakenjoes.com/wp-content/uploads/2024/10/woburn3-768x511.webp"
+   ]
+  }
+ },
+ {
+  "key": "rep|the north star|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.2,
+   "yelp_rating": null,
+   "review_volume": "49 Google reviews",
+   "themes": [
+    {
+     "theme": "Food before games",
+     "sentiment": "positive",
+     "detail": "One reviewer praised the food and appetizers before heading to TD Garden."
+    },
+    {
+     "theme": "Tight quarters",
+     "sentiment": "mixed",
+     "detail": "A reviewer described the bar as getting crowded and feeling tight."
+    }
+   ],
+   "game_day_take": "Reviewers mention stopping in before Bruins games, but the available reviews do not describe TVs or sound.",
+   "official_site": "https://northstarboston.com/",
+   "menu_url": "https://northstarboston.com/menu/",
+   "sources": [
+    "https://reviews.birdeye.com/the-north-star-149289328930319",
+    "https://northstarboston.com/",
+    "https://northstarboston.com/menu/"
+   ],
+   "photos": []
+  }
+ },
+ {
+  "key": "rep|union street restaurant|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.1,
+   "yelp_rating": null,
+   "review_volume": "476 Google reviews",
+   "themes": [
+    {
+     "theme": "Food quality",
+     "sentiment": "mixed",
+     "detail": "Reviewers praise some dishes but others describe the food as average or inconsistent."
+    },
+    {
+     "theme": "Service",
+     "sentiment": "mixed",
+     "detail": "Some reviewers appreciate attentive staff, while others report slow or unfriendly service."
+    },
+    {
+     "theme": "Atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers mention a comfortable setting with space for groups and outdoor seating."
+    },
+    {
+     "theme": "Value for money",
+     "sentiment": "mixed",
+     "detail": "Some reviewers like the prices, while others feel the food is not worth the cost."
+    }
+   ],
+   "game_day_take": "A reviewer mentions multiple TVs showing ESPN, but the available reviews do not establish how busy or loud it gets on game days.",
+   "official_site": "http://unionst.com/",
+   "menu_url": "https://restaurantguru.com/Union-Street-Boston/menu",
+   "sources": [
+    "https://restaurantguru.com/Union-Street-Boston",
+    "https://www.chamberofcommerce.com/united-states/massachusetts/newton/american-restaurant/2005443093-union-street-restaurant-and-bar"
+   ],
+   "photos": [
+    "https://unionst.com/og.png",
+    "https://unionst.com/og.png"
+   ]
+  }
+ },
+ {
+  "key": "rep|730 tavern kitchen patio|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.1,
+   "yelp_rating": null,
+   "review_volume": "1,576 Google reviews",
+   "themes": [
+    {
+     "theme": "Friendly service",
+     "sentiment": "positive",
+     "detail": "Reviewers often praise staff for being welcoming, attentive, and efficient."
+    },
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe an energetic setting that works well for casual meals and group gatherings."
+    },
+    {
+     "theme": "Food and portions",
+     "sentiment": "mixed",
+     "detail": "Guests often enjoy the menu and generous portions, though some report inconsistency."
+    },
+    {
+     "theme": "TV noise",
+     "sentiment": "mixed",
+     "detail": "Some guests appreciate the sports-bar setting, while others find the televisions and other activity loud."
+    }
+   ],
+   "game_day_take": "Reviewers describe the tavern as a lively place to watch games, with televisions and an energetic crowd.",
+   "official_site": "https://730tavern.com/",
+   "menu_url": "https://730tavern.com/cambridge-central-square-730-tavern-kitchen-and-patio-food-menu",
+   "sources": [
+    "https://restaurantguru.com/730-Tavern-Kitchen-and-Patio-Cambridge",
+    "https://www.restaurantji.com/ma/cambridge/730-tavern-kitchen-and-patio-/",
+    "https://730tavern.com/",
+    "https://730tavern.com/cambridge-central-square-730-tavern-kitchen-and-patio-food-menu"
+   ],
+   "photos": [
+    "https://static.spotapps.co/web/730tavern--com/custom/events.jpg",
+    "https://static.spotapps.co/web/placeholder.png"
+   ]
+  }
+ },
+ {
+  "key": "rep|tap 151 bar grill|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.3,
+   "yelp_rating": null,
+   "review_volume": "232 Google reviews",
+   "themes": [
+    {
+     "theme": "Food quality",
+     "sentiment": "positive",
+     "detail": "Review summaries describe the food favorably."
+    },
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe an energetic setting, including a crowded game-night visit."
+    },
+    {
+     "theme": "Service",
+     "sentiment": "mixed",
+     "detail": "Some review summaries praise the service, while others report slow or inattentive bar service."
+    }
+   ],
+   "game_day_take": "A Tripadvisor reviewer described a roaring crowd during a soccer match; the bar’s website also presents it as suitable for game nights.",
+   "official_site": "https://tap151.com/",
+   "menu_url": "https://tap151.com/cambridge-tap-151-bar-and-grill-food-menu",
+   "sources": [
+    "https://www.tripadvisor.com/Restaurant_Review-g60890-d31847797-Reviews-Tap_151_Bar_And_Grill-Cambridge_Massachusetts.html",
+    "https://reviews.birdeye.com/tap-151-bar-and-grill-178445684952604",
+    "https://tap151.com/",
+    "https://tap151.com/cambridge-tap-151-bar-and-grill-food-menu"
+   ],
+   "photos": [
+    "https://static.spotapps.co/website_images/ab_websites/227601_website_v0/shared_image.jpg",
+    "https://static.spotapps.co/website_images/ab_websites/227601_website_v0/shared_image.jpg",
+    "https://static.spotapps.co/web/placeholder.png"
+   ]
+  }
+ },
+ {
+  "key": "rep|scores|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "2 Tripadvisor reviews; 138 reviews listed by Restaurantji",
+   "themes": [
+    {
+     "theme": "Helpful service",
+     "sentiment": "positive",
+     "detail": "Some reviewers describe staff as welcoming and attentive."
+    },
+    {
+     "theme": "Sports-bar atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers mention a lively, comfortable setting with a good crowd."
+    },
+    {
+     "theme": "Bar food",
+     "sentiment": "mixed",
+     "detail": "Some reviewers praise the wings and other food, while at least one recent review criticizes the value of a dish."
+    },
+    {
+     "theme": "Seating space",
+     "sentiment": "mixed",
+     "detail": "One reviewer found some seating close together but considered the bar seating a good option."
+    }
+   ],
+   "game_day_take": "Reviewers mention good TVs and a game-day crowd, including hockey playoff viewing, but the available comments give limited detail about sound or how crowded it gets.",
+   "official_site": "https://www.scores-boston.com/",
+   "menu_url": "https://www.scores-boston.com/menus/",
+   "sources": [
+    "https://www.tripadvisor.com/Restaurant_Review-g60745-d25650601-Reviews-Scores-Boston_Massachusetts.html",
+    "https://www.restaurantji.com/ma/boston/scores-/",
+    "https://www.mapquest.com/us/massachusetts/scores-532268696",
+    "https://www.scores-boston.com/",
+    "https://www.scores-boston.com/menus/"
+   ],
+   "photos": [
+    "https://images.getbento.com/accounts/6f9d60804b3e371d16bc8172abb4ad02/media/images/72341logo1.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+    "https://images.getbento.com/accounts/6f9d60804b3e371d16bc8172abb4ad02/media/images/72341logo1.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100"
+   ]
+  }
+ },
+ {
+  "key": "rep|the point boston|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.2,
+   "yelp_rating": null,
+   "review_volume": "722 reviews (Chamber of Commerce listing)",
+   "themes": [],
+   "game_day_take": "A restaurant listing describes multiple TVs showing game action, but specific reviewer comments about game-day sound or crowds were not found.",
+   "official_site": "https://www.thepointboston.com/",
+   "menu_url": "https://www.thepointboston.com/menus/",
+   "sources": [
+    "https://www.chamberofcommerce.com/business-directory/massachusetts/boston/bar/2003801982-the-point-boston",
+    "https://www.opentable.com/r/the-point-boston",
+    "https://www.thepointboston.com/",
+    "https://www.thepointboston.com/menus/"
+   ],
+   "photos": [
+    "https://images.getbento.com/accounts/8da929088177ff537580438ee2b941ed/media/images/65592Untitled_design-2.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+    "https://images.getbento.com/accounts/8da929088177ff537580438ee2b941ed/media/images/65592Untitled_design-2.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+    "https://images.getbento.com/accounts/8da929088177ff537580438ee2b941ed/media/images/65592Untitled_design-2.png",
+    "https://images.getbento.com/accounts/8da929088177ff537580438ee2b941ed/media/19M5T4sTGecY9eKiMBng_DSCF2862.jpg?w=1200&fit=max&auto=compress,format&cs=origin"
+   ]
+  }
+ },
+ {
+  "key": "rep|game on fenway|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "177 Tripadvisor reviews",
+   "themes": [
+    {
+     "theme": "Lively sports atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe an energetic setting, especially around games and Fenway events."
+    },
+    {
+     "theme": "Food and drinks",
+     "sentiment": "mixed",
+     "detail": "Some reviewers enjoy the pizza, wings, and drinks, while others find the food or beer selection ordinary."
+    },
+    {
+     "theme": "Service consistency",
+     "sentiment": "mixed",
+     "detail": "Feedback on service varies, with some guests praising staff and others reporting slow or poor service."
+    }
+   ],
+   "game_day_take": "Reviewers mention watching football and games near Fenway, but one recent reviewer reported that the bar lacked an ESPN subscription; reviews also mention game-day noise and crowds.",
+   "official_site": "https://www.gameonboston.com/fenway/",
+   "menu_url": "https://www.gameonboston.com/menus/",
+   "sources": [
+    "https://www.tripadvisor.com/Restaurant_Review-g60745-d844713-Reviews-Game_On-Boston_Massachusetts.html",
+    "https://www.gameonboston.com/fenway/",
+    "https://www.gameonboston.com/menus/"
+   ],
+   "photos": [
+    "https://api.getapexinsights.com/api/website/assets/cdn-or-proxy?url=https%3A%2F%2Fstorage.googleapis.com%2Fsw-web-content%2Fstatic-assets%2Fgame_on%2Fhero_interior_1.jpg",
+    "https://api.getapexinsights.com/api/website/assets/cdn-or-proxy?url=https%3A%2F%2Fstorage.googleapis.com%2Fsw-web-content%2Fstatic-assets%2Fgame_on%2Fhero_interior_1.jpg",
+    "https://api.getapexinsights.com/api/website/assets/cdn-or-proxy?url=https%3A%2F%2Fstorage.googleapis.com%2Fsw-web-content%2Fstatic-assets%2Fgame_on%2Fhero_interior_2.jpg",
+    "https://api.getapexinsights.com/api/website/assets/cdn-or-proxy?url=https%3A%2F%2Fstorage.googleapis.com%2Fsw-web-content%2Fstatic-assets%2Fgame_on%2Fhero_interior_3.jpg"
+   ]
+  }
+ },
+ {
+  "key": "rep|lir|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "619 reviews shown by Chamber of Commerce; review platform unspecified",
+   "themes": [
+    {
+     "theme": "Friendly service",
+     "sentiment": "positive",
+     "detail": "Reviewers describe staff as welcoming and service as efficient."
+    },
+    {
+     "theme": "Food quality",
+     "sentiment": "positive",
+     "detail": "Reviewers often praise the pub food, including wings and other familiar dishes."
+    },
+    {
+     "theme": "Atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers appreciate the relaxed pub atmosphere and say it works well for groups."
+    },
+    {
+     "theme": "Menu selection",
+     "sentiment": "mixed",
+     "detail": "One reviewer liked the food but felt the menu selection was limited."
+    }
+   ],
+   "game_day_take": "A reviewer described LIR as a good place to watch soccer, especially Arsenal matches; a listing also describes multiple HDTVs, but the available reviews do not establish typical game-day sound or crowd levels.",
+   "official_site": "http://lironboylston.com/",
+   "menu_url": "https://places.singleplatform.com/lir-irish-pub--restaurant/menu",
+   "sources": [
+    "https://www.chamberofcommerce.com/united-states/massachusetts/boston/irish-pub/3197908-lir",
+    "https://usarestaurants.info/explore/united-states/massachusetts/suffolk-county/boston/lir-617-778-0089.htm",
+    "https://places.singleplatform.com/lir-irish-pub--restaurant/menu"
+   ],
+   "photos": [
+    "https://www.lironboylston.com/wp-content/uploads/2020/12/ppp-why-wont-anyone-rescue-restaurants-FT-BLOG0420.jpg",
+    "https://www.lironboylston.com/wp-content/uploads/2020/12/cropped-healthy-diet.jpg",
+    "https://www.lironboylston.com/wp-content/uploads/2026/07/brooke-lark-HlNcigvUi4Q-unsplash.jpg",
+    "https://www.lironboylston.com/wp-content/uploads/2026/07/mateusz-zatorski-vXYglqFX01Q-unsplash.jpg"
+   ]
+  }
+ },
+ {
+  "key": "rep|jake n joes sports grille waltham|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "unknown",
+   "themes": [
+    {
+     "theme": "Attentive service",
+     "sentiment": "mixed",
+     "detail": "Reviewers often appreciate friendly, accommodating staff, though service can be less focused when the restaurant is crowded."
+    },
+    {
+     "theme": "Sports-bar atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe a lively, comfortable setting suited to watching sports."
+    },
+    {
+     "theme": "Food selection",
+     "sentiment": "mixed",
+     "detail": "Reviewers praise several pub-food options but some note that dishes or menu changes do not always meet their expectations."
+    },
+    {
+     "theme": "Outdoor gathering space",
+     "sentiment": "positive",
+     "detail": "Reviewers value the patio as a spacious option for groups and families."
+    }
+   ],
+   "game_day_take": "Reviewers mention plenty of TVs and an enthusiastic football crowd; the venue says it has TVs and a sound system for games. ([birdeye.com](https://birdeye.com/jake-n-joes-sports-grille-waltham-162855927150162))",
+   "official_site": "https://www.jakenjoes.com/",
+   "menu_url": "https://www.jakenjoes.com/locations/waltham/",
+   "sources": [
+    "https://www.jakenjoes.com/locations/waltham/",
+    "https://www.opentable.com/r/jake-n-joes-sports-grille-waltham",
+    "https://birdeye.com/jake-n-joes-sports-grille-waltham-162855927150162"
+   ],
+   "photos": [
+    "https://www.jakenjoes.com/wp-content/uploads/2026/05/jnj_apps-1024x717.webp",
+    "https://www.jakenjoes.com/wp-content/uploads/2026/10/kissedcaramel.webp",
+    "https://www.jakenjoes.com/wp-content/uploads/2026/10/samadamsoctoberfest.webp",
+    "https://www.jakenjoes.com/wp-content/uploads/2026/02/TakeoutTues_happening_2.26.webp"
+   ]
+  }
+ },
+ {
+  "key": "rep|the kinsale|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "54 TripAdvisor reviews shown; other review counts unknown",
+   "themes": [
+    {
+     "theme": "Friendly service",
+     "sentiment": "positive",
+     "detail": "Reviewers often describe staff as welcoming and service as attentive."
+    },
+    {
+     "theme": "Pub food",
+     "sentiment": "positive",
+     "detail": "Reviewers praise hearty Irish-style pub dishes and report enjoying meals such as shepherd’s pie."
+    },
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe a sociable setting that can become busy, especially around after-work hours."
+    },
+    {
+     "theme": "Sports screens",
+     "sentiment": "positive",
+     "detail": "Reviewers mention numerous TVs that make it possible to follow matches from different seats."
+    }
+   ],
+   "game_day_take": "Reviewers mention multiple TVs and describe watching English Premier League and Liverpool matches; some also report a lively crowd.",
+   "official_site": "http://www.classicirish.com/",
+   "menu_url": "https://www.opentable.com/r/the-kinsale-irish-pub-and-restaurant-boston",
+   "sources": [
+    "https://www.tripadvisor.com/Attraction_Review-g60745-d5833413-Reviews-Kinsale_Irish_Pub_Restaurant-Boston_Massachusetts.html",
+    "https://www.opentable.com/r/the-kinsale-irish-pub-and-restaurant-boston",
+    "https://www.classicirish.com/"
+   ],
+   "photos": []
+  }
+ },
+ {
+  "key": "rep|causeway restaurant bar|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.2,
+   "yelp_rating": null,
+   "review_volume": "861 Google reviews, as reported by Restaurant Guru",
+   "themes": [
+    {
+     "theme": "Smoked wings",
+     "sentiment": "positive",
+     "detail": "Review summaries frequently praise the smoked wings for their flavor and texture."
+    },
+    {
+     "theme": "Friendly atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe a welcoming, relaxed setting and staff who can make visitors feel at home."
+    },
+    {
+     "theme": "Service consistency",
+     "sentiment": "mixed",
+     "detail": "Some visitors report prompt, friendly service, while others describe long waits and missed orders."
+    }
+   ],
+   "game_day_take": "A recent Tripadvisor reviewer said the bar filled with Garden-bound patrons and service was reasonably prompt on game night; reviewers do not specify the TV setup or sound.",
+   "official_site": "https://www.causeway.boston/",
+   "menu_url": "https://www.causeway.boston/food-and-drinks",
+   "sources": [
+    "https://restaurantguru.com/Causeway-Restaurant-and-Bar-Boston",
+    "https://www.restaurantji.com/ma/boston/causeway-restaurant-and-bar-/",
+    "https://www.tripadvisor.com/Restaurant_Review-g60745-d7105010-Reviews-Causeway_Restaurant_Bar-Boston_Massachusetts.html",
+    "https://www.causeway.boston/",
+    "https://www.causeway.boston/food-and-drinks"
+   ],
+   "photos": [
+    "https://images.squarespace-cdn.com/content/v1/670bf6372ba9a24102191b7b/ea29b884-981c-46a6-b5da-ae1f00510754/A2ADB893-068A-4584-8D04-B462BB15CD53.PNG",
+    "https://images.squarespace-cdn.com/content/v1/670bf6372ba9a24102191b7b/9258567a-a1dc-4d6a-b6bb-9503ac4edb9f/20220614_MFS_6003.jpg"
+   ]
+  }
+ },
+ {
+  "key": "rep|the banshee pub|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.5,
+   "yelp_rating": null,
+   "review_volume": "865 Google reviews",
+   "themes": [
+    {
+     "theme": "Welcoming service",
+     "sentiment": "positive",
+     "detail": "Reviewers often praise the friendly, attentive staff."
+    },
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "positive",
+     "detail": "Visitors describe an energetic pub environment, especially during events and games."
+    },
+    {
+     "theme": "Pub food",
+     "sentiment": "positive",
+     "detail": "Reviewers frequently like the food, including fish and chips, wings, and other pub favorites."
+    },
+    {
+     "theme": "Fan gathering spot",
+     "sentiment": "positive",
+     "detail": "Some visitors recommend it as a place for Packers fans and other supporters to gather."
+    }
+   ],
+   "game_day_take": "Reviewers describe lively soccer and Packers viewing, and the pub’s site says it has multiple TVs for live sports.",
+   "official_site": "https://www.bansheeboston.com/",
+   "menu_url": "https://www.bansheeboston.com/menus/all-day-menu/",
+   "sources": [
+    "https://restaurantguru.com/The-Banshee-Boston",
+    "https://www.bansheeboston.com/",
+    "https://www.bansheeboston.com/menus/all-day-menu/"
+   ],
+   "photos": [
+    "https://www.bansheeboston.com/wp-content/uploads/2025/11/Banshee-Chelsea-v-Liverpool-e1763066339392.jpg",
+    "https://www.bansheeboston.com/wp-content/uploads/2025/11/Untitled-design-2025-11-13T145413.036-1024x1024.png",
+    "https://www.bansheeboston.com/wp-content/uploads/2025/11/Banshee-Chelsea-v-Liverpool-e1763066339392-1024x576.jpg",
+    "https://www.bansheeboston.com/wp-content/uploads/2025/11/Pizza-Banshee-scaled-e1763067228511-1024x578.jpg"
+   ]
+  }
+ },
+ {
+  "key": "rep|warehouse boston|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.2,
+   "yelp_rating": null,
+   "review_volume": "1,063 reviews (Google reviews shown on Birdeye)",
+   "themes": [
+    {
+     "theme": "Friendly service",
+     "sentiment": "positive",
+     "detail": "Reviewers often appreciate attentive staff and welcoming service."
+    },
+    {
+     "theme": "Enjoyable food",
+     "sentiment": "positive",
+     "detail": "Reviews praise the food, including burgers, fries, and other bar dishes."
+    },
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "positive",
+     "detail": "Visitors describe a spacious, energetic setting that works well for groups."
+    },
+    {
+     "theme": "Busy game periods",
+     "sentiment": "mixed",
+     "detail": "March Madness reviews mention a busy room, with one guest unhappy about being asked to leave before the game ended."
+    }
+   ],
+   "game_day_take": "Reviewers mention lively college-basketball and March Madness crowds; the bar’s own site says it has TVs and sports channels for games. ([chamberofcommerce.com](https://www.chamberofcommerce.com/business-directory/massachusetts/boston/sports-bar/1329776979-warehouse-bar-grille))",
+   "official_site": "https://www.thewarehouseboston.com/",
+   "menu_url": "https://www.thewarehouseboston.com/menus/",
+   "sources": [
+    "https://reviews.birdeye.com/warehouse-bar-grill-146942837059760",
+    "https://www.chamberofcommerce.com/business-directory/massachusetts/boston/sports-bar/1329776979-warehouse-bar-grille",
+    "https://www.thewarehouseboston.com/",
+    "https://www.thewarehouseboston.com/menus/"
+   ],
+   "photos": [
+    "https://images.getbento.com/accounts/5f8d28a3f1079fa40a1281a292a2707d/media/images/38315Warehouse_Kitchen__Sports_Bar.svg?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=ffffff&pad=100",
+    "https://images.getbento.com/accounts/5f8d28a3f1079fa40a1281a292a2707d/media/images/38315Warehouse_Kitchen__Sports_Bar.svg?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=ffffff&pad=100"
+   ]
+  }
+ },
+ {
+  "key": "rep|game on|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "177 Tripadvisor reviews",
+   "themes": [
+    {
+     "theme": "Game-day atmosphere",
+     "sentiment": "mixed",
+     "detail": "Some visitors enjoy the lively sports-bar setting, while others report issues with game access or the experience."
+    },
+    {
+     "theme": "Food and drinks",
+     "sentiment": "mixed",
+     "detail": "Reviews mention pizza, wings, and pub-style food, with opinions varying on food quality and value."
+    },
+    {
+     "theme": "Service",
+     "sentiment": "mixed",
+     "detail": "Visitors describe both helpful service and disappointing experiences."
+    },
+    {
+     "theme": "Noise and crowds",
+     "sentiment": "mixed",
+     "detail": "The bar can be lively and noisy, particularly around Fenway events."
+    }
+   ],
+   "game_day_take": "Reviewers describe it as a place to watch games, but one visitor reported that a desired game was unavailable because the bar lacked the channel subscription; other reviews mention the game-day atmosphere.",
+   "official_site": "https://www.gameonboston.com/",
+   "menu_url": "https://www.gameonboston.com/menus/",
+   "sources": [
+    "https://www.tripadvisor.com/Restaurant_Review-g60745-d844713-Reviews-Game_On-Boston_Massachusetts.html",
+    "https://www.gameonboston.com/",
+    "https://www.gameonboston.com/menus/"
+   ],
+   "photos": [
+    "https://api.getapexinsights.com/api/website/assets/cdn-or-proxy?url=https%3A%2F%2Fstorage.googleapis.com%2Fsw-web-content%2Fstatic-assets%2Fgame_on%2Fhero_interior_1.jpg",
+    "https://api.getapexinsights.com/api/website/assets/cdn-or-proxy?url=https%3A%2F%2Fstorage.googleapis.com%2Fsw-web-content%2Fstatic-assets%2Fgame_on%2Fhero_interior_1.jpg",
+    "https://api.getapexinsights.com/api/website/assets/cdn-or-proxy?url=https%3A%2F%2Fstorage.googleapis.com%2Fsw-web-content%2Fstatic-assets%2Fgame_on%2Fhero_interior_2.jpg",
+    "https://gameonboston.com/assets/mohegan-sun__lanes_thumb2560.jpg"
+   ]
+  }
+ },
+ {
+  "key": "rep|m j o connor s|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "603 Tripadvisor reviews for Back Bay; 477 for Seaport",
+   "themes": [
+    {
+     "theme": "Irish pub atmosphere",
+     "sentiment": "positive",
+     "detail": "The listings present both locations as Irish pubs with a welcoming atmosphere."
+    },
+    {
+     "theme": "Pub food",
+     "sentiment": "mixed",
+     "detail": "Listings describe American and Irish pub fare, including familiar comfort-food options."
+    },
+    {
+     "theme": "Television available",
+     "sentiment": "mixed",
+     "detail": "Both Tripadvisor listings indicate that televisions are available."
+    }
+   ],
+   "game_day_take": "Reviewers don't mention game days in the available review information; the official site says the Back Bay location hosts college football, NFL Sunday Ticket, and Premier League watches.",
+   "official_site": "https://www.mjoconnors.com/",
+   "menu_url": "https://www.mjoconnors.com/menus/",
+   "sources": [
+    "https://www.mjoconnors.com/",
+    "https://www.mjoconnors.com/location/mj-oconnors-back-bay/",
+    "https://www.tripadvisor.com/Restaurant_Review-g60745-d322056-Reviews-M_J_O_Connor_s_Back_Bay-Boston_Massachusetts.html",
+    "https://www.tripadvisor.com/Restaurant_Review-g60745-d2691538-Reviews-M_J_O_Connor_s_Seaport-Boston_Massachusetts.html"
+   ],
+   "photos": [
+    "https://images.getbento.com/accounts/19147d23a90dba3b89bce72e89d63b48/media/images/mjs-icon-white.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=fff&pad=100",
+    "https://images.getbento.com/accounts/19147d23a90dba3b89bce72e89d63b48/media/images/mjs-icon-white.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=fff&pad=100",
+    "https://www.facebook.com/tr?id=484445958888530&ev=PageView&noscript=1",
+    "https://images.getbento.com/accounts/19147d23a90dba3b89bce72e89d63b48/media/images/145223263glass_house-300.png?w=1200&fit=crop&auto=compress,format&cs=origin&crop=focalpoint&fp-x=0.5&fp-y=0.5|resize(786)"
+   ]
+  }
+ },
+ {
+  "key": "rep|central wharf co|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.4,
+   "yelp_rating": null,
+   "review_volume": "1,864 Google reviews shown",
+   "themes": [
+    {
+     "theme": "Attentive service",
+     "sentiment": "positive",
+     "detail": "Reviewers often praise staff for being friendly, helpful, and attentive."
+    },
+    {
+     "theme": "Enjoyable atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe the setting as comfortable and appealing for meals or gatherings."
+    },
+    {
+     "theme": "Food and portions",
+     "sentiment": "positive",
+     "detail": "Reviewers compliment the food, with some highlighting generous portions."
+    },
+    {
+     "theme": "Group events",
+     "sentiment": "positive",
+     "detail": "Reviewers say the staff help make private gatherings run smoothly."
+    }
+   ],
+   "game_day_take": "Reviewers don't mention game days.",
+   "official_site": "https://www.centralwharfco.com/",
+   "menu_url": "https://www.centralwharfco.com/menu/",
+   "sources": [
+    "https://restaurantguru.com/Central-Wharf-Boston",
+    "https://www.centralwharfco.com/",
+    "https://www.centralwharfco.com/menu/"
+   ],
+   "photos": [
+    "https://images.getbento.com/6qPl8FDeQW27haBItLrA_centralwhard.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+    "https://images.getbento.com/6qPl8FDeQW27haBItLrA_centralwhard.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+    "https://images.getbento.com/6qPl8FDeQW27haBItLrA_centralwhard.png",
+    "https://images.getbento.com/accounts/cc9fbb6b063d9c3cd4ce965e4ee6bf0e/media/images/99908central_stickyt.png"
+   ]
+  }
+ },
+ {
+  "key": "rep|clery s|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "unknown",
+   "themes": [
+    {
+     "theme": "Friendly service",
+     "sentiment": "positive",
+     "detail": "Many reviewers appreciate the attentive, welcoming service."
+    },
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe an energetic setting with different areas for socializing."
+    },
+    {
+     "theme": "Food and drinks",
+     "sentiment": "mixed",
+     "detail": "Some reviewers praise the food and drinks, while others report mixed experiences."
+    },
+    {
+     "theme": "Wait times",
+     "sentiment": "mixed",
+     "detail": "Some reviewers mention prompt service, while others report delays getting a server or bartender."
+    }
+   ],
+   "game_day_take": "Reviewers mention an upstairs area for catching games and some TV coverage concerns; they do not provide a consistent picture of game-day sound or crowds.",
+   "official_site": "https://www.clerysboston.com/",
+   "menu_url": "https://www.clerysboston.com/menu/",
+   "sources": [
+    "https://www.restaurantji.com/ma/boston/clerys-/",
+    "https://www.clerysboston.com/",
+    "https://www.clerysboston.com/menu/"
+   ],
+   "photos": [
+    "https://images.getbento.com/dcRLBLR5SGyNSlxEg9BU_LEPCdpSBSKiztYufx6hN_Logo-1.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+    "https://images.getbento.com/dcRLBLR5SGyNSlxEg9BU_LEPCdpSBSKiztYufx6hN_Logo-1.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+    "https://images.getbento.com/accounts/8e4ecd8f6cc1c59b266d2aa6f784333a/media/images/584264413110881coogans-white.png?w=1200&fit=max&auto=compress,format&cs=origin|resize(786)",
+    "https://images.getbento.com/accounts/8e4ecd8f6cc1c59b266d2aa6f784333a/media/images/63716824996536dillons-white.png?w=1200&fit=max&auto=compress,format&cs=origin|resize(786)"
+   ]
+  }
+ },
+ {
+  "key": "rep|the dubliner|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.4,
+   "yelp_rating": null,
+   "review_volume": "1,275 Google reviews (reported by Restaurant Guru)",
+   "themes": [
+    {
+     "theme": "Food and portions",
+     "sentiment": "positive",
+     "detail": "Reviews often praise the Irish dishes, especially fish and chips, pies, and generous portions."
+    },
+    {
+     "theme": "Friendly service",
+     "sentiment": "positive",
+     "detail": "Many reviewers describe staff as attentive and welcoming, though experiences vary."
+    },
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers mention an attractive, energetic pub setting with live music."
+    },
+    {
+     "theme": "Service inconsistency",
+     "sentiment": "mixed",
+     "detail": "Some reviewers report slow or inattentive service."
+    }
+   ],
+   "game_day_take": "A listing says the pub shows live sports, but the reviews found here provide limited detail about TVs, sound, or game-day crowds.",
+   "official_site": "https://www.thedublinerboston.com/",
+   "menu_url": "https://www.thedublinerboston.com/menus",
+   "sources": [
+    "https://restaurantguru.com/The-Dubliner-Irish-Pub-Boston",
+    "https://www.tripadvisor.com/Restaurant_Review-g60745-d24146321-Reviews-The_Dubliner_Irish_Pub_Boston-Boston_Massachusetts.html",
+    "https://www.thedublinerboston.com/",
+    "https://www.thedublinerboston.com/menus"
+   ],
+   "photos": [
+    "https://static.wixstatic.com/media/53fe18_90dcdc640a6f4562b03289560b8c4910%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/53fe18_90dcdc640a6f4562b03289560b8c4910%7Emv2.jpg",
+    "https://static.wixstatic.com/media/53fe18_90dcdc640a6f4562b03289560b8c4910%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/53fe18_90dcdc640a6f4562b03289560b8c4910%7Emv2.jpg",
+    "https://static.wixstatic.com/media/8d6893330740455c96d218258a458aa4.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/8d6893330740455c96d218258a458aa4.png",
+    "https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e316f544f9094143b9eac01f1f19e697.png"
+   ]
+  }
+ },
+ {
+  "key": "rep|dillon s|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.1,
+   "yelp_rating": null,
+   "review_volume": "1,017 Google reviews (shown by Restaurant Guru)",
+   "themes": [
+    {
+     "theme": "Welcoming atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers often describe the bar as lively and comfortable, with a pleasant patio."
+    },
+    {
+     "theme": "Friendly staff",
+     "sentiment": "mixed",
+     "detail": "Some reviewers praise attentive, welcoming service, while others report slow or inattentive visits."
+    },
+    {
+     "theme": "Food and drinks",
+     "sentiment": "positive",
+     "detail": "Reviewers highlight pub-style food and a broad beer and cocktail selection."
+    }
+   ],
+   "game_day_take": "Reviewers mention Arsenal match crowds and basketball on the TVs, and one review notes a large outdoor TV; reports suggest an energetic game-day atmosphere. ([restaurantji.com](https://www.restaurantji.com/ma/boston/dillons-/))",
+   "official_site": "https://www.dillonsboston.com/",
+   "menu_url": "https://www.dillonsboston.com/menus/",
+   "sources": [
+    "https://restaurantguru.com/Dillons-Boston",
+    "https://www.restaurantji.com/ma/boston/dillons-/",
+    "https://www.tripadvisor.com/Restaurant_Review-g60745-d322338-Reviews-Dillon_s_Restaurant_and_Bar-Boston_Massachusetts.html",
+    "https://www.dillonsboston.com/",
+    "https://www.dillonsboston.com/menus/"
+   ],
+   "photos": [
+    "https://images.getbento.com/iuS60hjqTrWVTjeVBuq3_AynhyBDhQbS68z07U1Sh_42634dillons.wht.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+    "https://images.getbento.com/iuS60hjqTrWVTjeVBuq3_AynhyBDhQbS68z07U1Sh_42634dillons.wht.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+    "https://images.getbento.com/iuS60hjqTrWVTjeVBuq3_AynhyBDhQbS68z07U1Sh_42634dillons.wht.png",
+    "https://images.getbento.com/accounts/92d996560cd15a3f5da8f4eb2891bad6/media/images/7576068094cooganswhite.png?w=1200&fit=max&auto=compress,format&cs=origin|resize(786)"
+   ]
+  }
+ },
+ {
+  "key": "rep|the banshee|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": 4.5,
+   "yelp_rating": null,
+   "review_volume": "865 Google reviews; 29 TripAdvisor reviews",
+   "themes": [
+    {
+     "theme": "Welcoming service",
+     "sentiment": "positive",
+     "detail": "Reviewers often praise the attentive, friendly staff."
+    },
+    {
+     "theme": "Food and portions",
+     "sentiment": "positive",
+     "detail": "Reviews frequently mention satisfying pub food and generous portions."
+    },
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers describe an energetic pub environment, especially for gatherings and events."
+    },
+    {
+     "theme": "Sports viewing",
+     "sentiment": "positive",
+     "detail": "Reviewers mention soccer and football watch parties, with fans gathering to cheer on their teams."
+    }
+   ],
+   "game_day_take": "Reviewers describe an energetic game-day atmosphere; the bar's website says it has 14 TVs across two floors for live sports.",
+   "official_site": "https://www.bansheeboston.com/",
+   "menu_url": "https://www.bansheeboston.com/menus/all-day-menu/",
+   "sources": [
+    "https://restaurantguru.com/The-Banshee-Boston",
+    "https://www.tripadvisor.com/Restaurant_Review-g60745-d322439-Reviews-Banshee-Boston_Massachusetts.html",
+    "https://www.bansheeboston.com/",
+    "https://www.bansheeboston.com/menus/all-day-menu/"
+   ],
+   "photos": [
+    "https://www.bansheeboston.com/wp-content/uploads/2025/11/Banshee-Chelsea-v-Liverpool-e1763066339392.jpg",
+    "https://www.bansheeboston.com/wp-content/uploads/2025/11/Untitled-design-2025-11-13T145413.036-1024x1024.png",
+    "https://www.bansheeboston.com/wp-content/uploads/2025/11/Banshee-Chelsea-v-Liverpool-e1763066339392-1024x576.jpg",
+    "https://www.bansheeboston.com/wp-content/uploads/2025/11/Pizza-Banshee-scaled-e1763067228511-1024x578.jpg"
+   ]
+  }
+ },
+ {
+  "key": "rep|the phoenix landing|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "unknown",
+   "themes": [
+    {
+     "theme": "Friendly staff",
+     "sentiment": "positive",
+     "detail": "Reviewers describe staff as welcoming and helpful, including during busy match screenings."
+    },
+    {
+     "theme": "Lively atmosphere",
+     "sentiment": "positive",
+     "detail": "Reviewers praise the energetic pub atmosphere and the mix of sports, music, and socializing."
+    },
+    {
+     "theme": "Pub food",
+     "sentiment": "mixed",
+     "detail": "Reviews mention familiar pub dishes, including fish and chips, with opinions varying across visits."
+    },
+    {
+     "theme": "Football watch spot",
+     "sentiment": "positive",
+     "detail": "Reviewers identify the bar as a popular place to watch Liverpool and Premier League matches."
+    }
+   ],
+   "game_day_take": "Reviewers describe lively, sometimes packed match days and say the bar is a welcoming place to watch football; the bar's site says games are shown on more than ten TVs. ([tripadvisor.com](https://www.tripadvisor.com/Attraction_Review-g60890-d651093-Reviews-Phoenix_Landing-Cambridge_Massachusetts.html))",
+   "official_site": "https://www.thephoenixlanding.com/",
+   "menu_url": "https://www.thephoenixlanding.com/",
+   "sources": [
+    "https://www.tripadvisor.com/Restaurant_Review-g60890-d803500-Reviews-The_Phoenix_Landing-Cambridge_Massachusetts.html",
+    "https://www.tripadvisor.com/Attraction_Review-g60890-d651093-Reviews-Phoenix_Landing-Cambridge_Massachusetts.html",
+    "https://www.thephoenixlanding.com/"
+   ],
+   "photos": [
+    "https://images.squarespace-cdn.com/content/v1/5faa960e2fb3bd69c50ce118/1620238011641-B61S6ZC0S3G6YGCFHEJ8/IMG_9022.jpg",
+    "https://images.squarespace-cdn.com/content/v1/5faa960e2fb3bd69c50ce118/764ac5d4-2680-4d14-8aa4-76ba6bc1384b/janette-beckman-lfc-fans-liverpool-supporters.jpg"
+   ]
+  }
+ },
+ {
+  "key": "rep|the chemist|boston",
+  "kind": "reputation",
+  "payload": {
+   "google_rating": null,
+   "yelp_rating": null,
+   "review_volume": "unknown",
+   "themes": [
+    {
+     "theme": "Creative cocktails",
+     "sentiment": "positive",
+     "detail": "Reviewers praise the cocktail selection and describe the drinks as a highlight."
+    },
+    {
+     "theme": "Music and atmosphere",
+     "sentiment": "mixed",
+     "detail": "Some reviewers enjoy the lounge’s music and lively feel, while others say the DJ or late-night club atmosphere is not for them."
+    },
+    {
+     "theme": "Food and service",
+     "sentiment": "mixed",
+     "detail": "Reviewers mention good food and attentive service, but some report disappointing meals or service problems."
+    }
+   ],
+   "game_day_take": "Reviewers mention watching a Scotland football match with an energetic crowd, and a Tripadvisor reviewer says the bar shows Liverpool matches; reviews do not specifically describe its TVs or game sound.",
+   "official_site": "https://www.thechemistbar.com/",
+   "menu_url": "https://www.thechemistbar.com/food",
+   "sources": [
+    "https://www.thechemistbar.com/",
+    "https://www.thechemistbar.com/food",
+    "https://www.tripadvisor.com/Restaurant_Review-g60745-d32971614-Reviews-Chemist_Cocktail_Bar-Boston_Massachusetts.html",
+    "https://www.chamberofcommerce.com/business-directory/massachusetts/boston/cocktail-bar/2026540909-chemist-cocktail-bar",
+    "https://www.mapquest.com/us/massachusetts/chemist-cocktail-bar-645558260"
+   ],
+   "photos": [
+    "https://images.squarespace-cdn.com/content/v1/6503698c1b639f64f74376c8/33686166-88f7-42e9-89fe-617c746392c6/The_Chemist_Space-0%5B1%5D.jpg",
+    "https://images.squarespace-cdn.com/content/v1/6503698c1b639f64f74376c8/c01ad34f-a19f-4766-9526-0b28c1924269/DSCF0875.jpg",
+    "https://images.squarespace-cdn.com/content/v1/6503698c1b639f64f74376c8/6db44689-4a08-4ca3-9b6e-be0a4c843e37/Chemist-BG-4.png",
+    "https://images.squarespace-cdn.com/content/v1/6503698c1b639f64f74376c8/26ab8630-7adc-4193-bbdc-5cf5d7af68c8/Interior_02.jpg"
+   ]
   }
  }
 ]

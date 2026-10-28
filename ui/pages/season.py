@@ -39,8 +39,8 @@ def _logo(team: str, size: int = 40):
 
 def layout(session: dict | None) -> html.Div:
     user = mk.user((session or {}).get("user"))
-    team = (user or {}).get("favorite_team") or "Yale Bulldogs"
-    home = (user or {}).get("home_city") or "New Haven, CT"
+    team = (user or {}).get("favorite_team") or config.DEFAULT_TEAM
+    home = (user or {}).get("home_city") or config.DEFAULT_CITY
     return html.Div(className="page", children=[
         dcc.Store(id="season-plan"),
         dcc.Download(id="season-ics"),

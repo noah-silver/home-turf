@@ -58,7 +58,7 @@ def known_points(city: str | None = None) -> list[dict]:
             continue
         _add(points, name=s["bar_name"], address=s["address"], lat=s["lat"], lon=s["lon"], bar_id=s["bar_id"], city=s["city"],
              team=s["team"], status="confirmed" if s["status"] == "verified" else "suggested", club="", source_url=s["source_url"] or "")
-    rows = db.query(
+    rows = [] if config.REAL_ONLY else db.query(  # demo partner bookings are fictional
         "SELECT b.id bar_id, b.name, b.address, b.lat, b.lon, b.city, c.team, c.name club, c.sport FROM bookings k "
         "JOIN bars b ON b.id = k.bar_id JOIN clubs c ON c.id = k.club_id WHERE k.status = 'confirmed' AND k.season = ?",
         (config.CURRENT_SEASON,),

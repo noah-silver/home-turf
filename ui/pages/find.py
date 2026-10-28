@@ -18,6 +18,13 @@ from ui.team_logos import LEAGUE_ORDER, lookup
 CHIPS = ["Yale fans in Chicago", "Yale fans in New York", "Yale vs Princeton in New York", "Patriots fans in New York", "New Haven", "Boston", "New York"]
 
 
+def _chips() -> list[str]:
+    from ui.pages.home import examples
+    import config
+
+    return examples() if config.REAL_ONLY else CHIPS
+
+
 def team_badge(team: str, sport: str = "", size: int = 34) -> html.Span:
     t = lookup(team, sport)
     if t["logo"]:
@@ -42,7 +49,7 @@ def layout(search: str = "") -> html.Div:
                             dcc.Input(id="find-q", type="text", value=q, placeholder="Team + city (“USC fans in Chicago”) or just a city (“Boston”)", n_submit=0, maxLength=300),
                             html.Button("Search", id="find-go", className="btn btn-gold"),
                         ]),
-                        html.Div([dcc.Link(c, href=search_href(c), className="chip light") for c in CHIPS], className="chips"),
+                        html.Div([dcc.Link(c, href=search_href(c), className="chip light") for c in _chips()], className="chips"),
                         dcc.Loading(
                             custom_spinner=football_spinner(), overlay_style={"visibility": "visible", "opacity": 0.35},
                             children=html.Div(id="find-results", className="results", children=empty_state(

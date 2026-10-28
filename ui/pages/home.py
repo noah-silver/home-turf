@@ -14,6 +14,11 @@ EXAMPLES = ["Yale fans in Chicago", "Yale fans in New York", "Yale vs Princeton 
 def _stats() -> list[tuple[str, str]]:
     teams = mapped_teams(limit=10_000)
     cities = {c for t in teams for c in t["cities"]}
+    import config
+
+    real_bars = db.one("SELECT COUNT(*) n FROM bars WHERE is_demo = 0")["n"]
+    if config.REAL_ONLY:
+        return [(f"{len(teams)}", "teams mapped"), (f"{len(cities)}", "cities"), (f"{real_bars}", "real bars found"), ("✓", "every spot checked against its source")]
     bars = db.one("SELECT COUNT(*) n FROM bars")["n"]
     return [
         (f"{len(teams)}", "teams mapped"),
@@ -21,6 +26,16 @@ def _stats() -> list[tuple[str, str]]:
         (f"{bars}", "bars on Home Turf"),
         (f"{db.one('SELECT COUNT(*) n FROM clubs')['n']}", "fan clubs"),
     ]
+
+
+def examples() -> list[str]:
+    import config
+
+    if not config.REAL_ONLY:
+        return EXAMPLES
+    team = config.DEFAULT_TEAM.split()[-1]  # "New York Giants" -> "Giants"
+    city = config.DEFAULT_CITY.split(",")[0]
+    return [f"{team} fans in {city}", city, "Yale fans in Chicago", "Steelers fans in Denver", "New York", "Chicago"]
 
 
 def layout() -> html.Div:
@@ -57,7 +72,7 @@ def layout() -> html.Div:
                             html.Button("Find my people", id="home-go", className="btn btn-gold"),
                         ],
                     ),
-                    html.Div([dcc.Link(e, href=search_href(e), className="chip") for e in EXAMPLES], className="chips"),
+                    html.Div([dcc.Link(e, href=search_href(e), className="chip") for e in examples()], className="chips"),
                 ],
             ),
             html.Div([html.Div([html.Div(n, className="num"), html.Div(l, className="lbl")], className="stat") for n, l in _stats()], className="stat-strip"),
@@ -93,6 +108,7 @@ def layout() -> html.Div:
             html.Div(className="card", children=[html.Div(steps, className="pipeline"),
                 html.P("Every spot links to its source, and nothing gets booked or sent until a person says yes.",
                        className="small muted", style={"marginTop": "14px", "marginBottom": 0})]),
+            *([] if __import__('config').REAL_ONLY else [
             html.Div("Featured rivalry", className="section-title"),
             html.Div(
                 className="card",
@@ -106,6 +122,7 @@ def layout() -> html.Div:
                     dcc.Link("Plan it as a club president →", href="/clubs", className="btn btn-gold"),
                 ]),
             ),
+            ]),
             html.Div("Home Turf · Yale SOM AI Foundations for Managers final project · Demo profiles are labeled “demo”; watch spots come from live web sources.", className="footer"),
         ],
     )

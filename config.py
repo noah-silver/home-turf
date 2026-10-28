@@ -60,6 +60,10 @@ CURRENT_SEASON = 2026
 SHOW_OPS = os.environ.get("HOME_TURF_OPS", "0") == "1"
 # Set when sharing the app publicly: /admin then asks for this password. Unset = open (local grading).
 ADMIN_PASSWORD = os.environ.get("HOME_TURF_ADMIN_PASSWORD", "")
+# Real-data mode (for a public link): fan views show only real web data; the sample marketplace is labeled.
+REAL_ONLY = os.environ.get("HOME_TURF_REAL_ONLY", "0") == "1"
+DEFAULT_TEAM = os.environ.get("HOME_TURF_DEFAULT_TEAM", "Yale Bulldogs")
+DEFAULT_CITY = os.environ.get("HOME_TURF_DEFAULT_CITY", "New Haven, CT")
 
 
 class MissingKeyError(RuntimeError):

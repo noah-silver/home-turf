@@ -41,7 +41,11 @@ def layout(session: dict | None) -> html.Div:
             html.Button("Draft a pitch", id={"type": "pitch-draft", "index": c["id"]}, className="btn btn-ghost btn-sm", style={"marginTop": "8px"},
                         disabled=bool(home and home["id"] == b["id"])),
         ]))
-    return html.Div(className="page", children=[
+    import config
+
+    sample = [html.Div("Sample marketplace: these clubs, bars, and people are fictional, to show how clubs and bars would use Home Turf. Fan searches and maps use real data.",
+                       className="notice info", style={"marginBottom": "14px"})] if config.REAL_ONLY else []
+    return html.Div(className="page", children=[*sample,
         dcc.Store(id="bar-dash-id", data=b["id"]),
         dcc.Store(id="bar-refresh", data=0),
         dcc.Store(id="pitch-club"),
